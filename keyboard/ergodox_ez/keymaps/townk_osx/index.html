@@ -1,86 +1,149 @@
 <!DOCTYPE html>
 <html>
-<title>Hello Strapdown</title>
+<title>QMK Firmware</title>
 
-<xmp theme="united" style="display:none;">
-# Townk's Keymap
 
-Trying to take care of an enjury on my arm I borrow an ergonomic keyboard from
-a frient ([Kinesis Advantage](http://www.kinesis-ergo.com/shop/advantage-pro-for-pc-mac/)).
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="townks-keymap">Townk's Keymap</h1>
+<p>Trying to take care of an enjury on my arm I borrow an ergonomic keyboard from<br />
+a frient (<a href="http://www.kinesis-ergo.com/shop/advantage-pro-for-pc-mac/">Kinesis Advantage</a>).</p>
+<p>I really enjoyed my time with it but there were some anoyancies:</p>
+<ul>
+<li>The curvature on the keys bothered me since I'm a Vim user and using the<br />
+motion keys on my editor was awkard.</li>
+<li>I had to spend too much time remapping the keyboard to make some symbol keys<br />
+more accessible to me.</li>
+<li>The fact that my hands had to stay close to each other was a bit stressfull<br />
+to my sholders.</li>
+</ul>
+<p>After a long research I find out that Ergodox EZ would be perfect for my needs<br />
+and purchase one. Before the keyboard even got in my hands I started to think<br />
+on the layout I would use on it and soon enough I planed couple adjustments<br />
+from the Kinesis I was using so far.</p>
+<h2 id="the-layout">The layout</h2>
+<p>Here are the layout mapping in images so you can have a glimpse on it:</p>
+<p><img src="townk_osx_base.png" alt="Base Layout" /><br />
+<img src="townk_osx_fn.png" alt="fn Layout" /><br />
+<img src="townk_osx_keypad.png" alt="Keypad &amp; Mouse Layout" /></p>
+<p>Notice that, differently from the default behavior, my layer keys are not transparent<br />
+by default, which means that if you press any non-labeled white key, nothing will be<br />
+handled to the OS.</p>
+<h3 id="one-shot-keys">One shot keys</h3>
+<p>It all started with the access to the function keys (F1, F2, F3...), since<br />
+those keys are located on a different layer I needed a way to press them with<br />
+minimal effort without disrupting my flow.</p>
+<p>For me, togglihg a layer to press a button and than toggle it back is a waste<br />
+of time (although I admit it's a single tap from what I have), so I decided to<br />
+do it as a one shot key. I could press it and the next pressed key would be<br />
+handled by the target layer which just after it delivers the key to the OS it<br />
+would get back to the previous layer.</p>
+<p>After setting up my layout to do just that I realized that occasionally I<br />
+would stop myseld on the middle of the process and the one shot layer would be<br />
+still triggered until I press any other key. So to prevent me from tapping<br />
+keys I don't want I added a timeout of 3 seconds for the one shot actions.</p>
+<p>Ultimately I tested the shift key as a one shot one and really like it, so<br />
+here you have it, all the one shot keys on my layout.</p>
+<h2 id="glossary">Glossary</h2>
+<p>If you're not familiar with the Mac symbols used on some keys, here is a<br />
+reference to them:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">⌘</td>
+<td>Command</td>
+</tr>
+<tr class="even">
+<td align="center">⇪</td>
+<td>Caps Lock</td>
+</tr>
+<tr class="odd">
+<td align="center">⇧</td>
+<td>Shift</td>
+</tr>
+<tr class="even">
+<td align="center">⌥</td>
+<td>Option (alt)</td>
+</tr>
+<tr class="odd">
+<td align="center">⎋</td>
+<td>Esc</td>
+</tr>
+<tr class="even">
+<td align="center">⇥</td>
+<td>Tab forward</td>
+</tr>
+<tr class="odd">
+<td align="center">⇤</td>
+<td>Tab backward</td>
+</tr>
+<tr class="even">
+<td align="center">⌃</td>
+<td>Control</td>
+</tr>
+<tr class="odd">
+<td align="center">␣</td>
+<td>Space</td>
+</tr>
+<tr class="even">
+<td align="center">⌫</td>
+<td>Backspace</td>
+</tr>
+<tr class="odd">
+<td align="center">⌦</td>
+<td>Delete</td>
+</tr>
+<tr class="even">
+<td align="center">⏎</td>
+<td>Enter</td>
+</tr>
+<tr class="odd">
+<td align="center">⌤</td>
+<td>Return</td>
+</tr>
+<tr class="even">
+<td align="center">⌽</td>
+<td>Power on/off button</td>
+</tr>
+<tr class="odd">
+<td align="center">↖</td>
+<td>Home</td>
+</tr>
+<tr class="even">
+<td align="center">↘</td>
+<td>End</td>
+</tr>
+<tr class="odd">
+<td align="center">⇞</td>
+<td>Page up</td>
+</tr>
+<tr class="even">
+<td align="center">⇟</td>
+<td>Page down</td>
+</tr>
+<tr class="odd">
+<td align="center">⌧</td>
+<td>Clear</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
 
-I really enjoyed my time with it but there were some anoyancies:
-
-* The curvature on the keys bothered me since I'm a Vim user and using the
-  motion keys on my editor was awkard.
-* I had to spend too much time remapping the keyboard to make some symbol keys
-  more accessible to me.
-* The fact that my hands had to stay close to each other was a bit stressfull
-  to my sholders.
-
-After a long research I find out that Ergodox EZ would be perfect for my needs
-and purchase one. Before the keyboard even got in my hands I started to think
-on the layout I would use on it and soon enough I planed couple adjustments
-from the Kinesis I was using so far.
-
-## The layout
-
-Here are the layout mapping in images so you can have a glimpse on it:
-
-![Base Layout](townk_osx_base.png)
-![fn Layout](townk_osx_fn.png)
-![Keypad & Mouse Layout](townk_osx_keypad.png)
-
-Notice that, differently from the default behavior, my layer keys are not transparent
-by default, which means that if you press any non-labeled white key, nothing will be
-handled to the OS.
-
-### One shot keys
-
-It all started with the access to the function keys (F1, F2, F3...), since
-those keys are located on a different layer I needed a way to press them with
-minimal effort without disrupting my flow.
-
-For me, togglihg a layer to press a button and than toggle it back is a waste
-of time (although I admit it's a single tap from what I have), so I decided to
-do it as a one shot key. I could press it and the next pressed key would be
-handled by the target layer which just after it delivers the key to the OS it
-would get back to the previous layer.
-
-After setting up my layout to do just that I realized that occasionally I
-would stop myseld on the middle of the process and the one shot layer would be
-still triggered until I press any other key. So to prevent me from tapping
-keys I don't want I added a timeout of 3 seconds for the one shot actions.
-
-Ultimately I tested the shift key as a one shot one and really like it, so
-here you have it, all the one shot keys on my layout.
-
-## Glossary
-
-If you're not familiar with the Mac symbols used on some keys, here is a
-reference to them:
-
-| Symbol | Description         |
-| :----: | ------------------- |
-|   ⌘    | Command             |
-|   ⇪    | Caps Lock           |
-|   ⇧    | Shift               |
-|   ⌥    | Option (alt)        |
-|   ⎋    | Esc                 |
-|   ⇥    | Tab forward         |
-|   ⇤    | Tab backward        |
-|   ⌃    | Control             |
-|   ␣    | Space               |
-|   ⌫    | Backspace           |
-|   ⌦    | Delete              |
-|   ⏎    | Enter               |
-|   ⌤    | Return              |
-|   ⌽    | Power on/off button |
-|   ↖    | Home                |
-|   ↘    | End                 |
-|   ⇞    | Page up             |
-|   ⇟    | Page down           |
-|   ⌧    | Clear               |
-</xmp>
 
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 </html>
