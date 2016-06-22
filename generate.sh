@@ -7,4 +7,8 @@ pandoc https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/README.
 --template standalone.html --toc --toc-depth 3
 
 # for i in $(find . -name "README.md" -o -name "readme.md"); do MARKDOWN=$(<$i) mo/mo templates/readme.mo > ${i%/*}/index.html; done;
-# for i in $(find . -name "README.md" -o -name "readme.md"); do pandoc --from markdown_github --to html --standalone $i --output ${i%/*}/index.html --template templates/template.html --css templates/template.css --self-contained --toc --toc-depth 2; done;
+for i in $(find . -name "README.md" -o -name "readme.md"); do \
+pandoc $i \
+-f markdown_github --to html --standalone --output ${i%/*}/index.html \
+--template standalone.html --toc --toc-depth 3 \
+; done;
