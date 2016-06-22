@@ -1,0 +1,3 @@
+[submodule "mo"]
+	path = mo
+	url = https://github.com/tests-always-included/mo.git
