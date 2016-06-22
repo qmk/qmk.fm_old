@@ -3112,4 +3112,37 @@ table {
    .toc ul:first-child > li.last {
     background: none;
    }
-  
+
+.button {
+  border-radius: 5px;
+  padding: 13px 17px;
+  line-height: 60px;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+
+.button:hover, .button:active, .button:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.button.download {
+  background: hsl(120, 34%, 43%);
+  border: hsl(120, 50%, 37%) 1px solid;
+}
+
+.button.download:hover, .button.download:active {
+  background: hsl(120, 50%, 37%);
+}
+
+.button.view {
+  background: hsl(0, 0%, 96%);
+  border: hsl(0, 0%, 89%) 1px solid;
+  color: hsl(200, 79%, 45%);
+  margin-right: 10px;
+}
+
+.button.view:hover, .button.view:active {
+  background: hsl(0, 0%, 89%);
+}

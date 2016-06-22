@@ -7,11 +7,12 @@
                 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
         <![endif]-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
   <meta http-equiv="Content-Style-Type" content="text/css" />
 
   <link rel="stylesheet" type="text/css" href="/template.css" />
 
-   <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
 
 
 
@@ -74,6 +75,12 @@ $endfor$
     <div class="row">
       $if(toc)$
       <div id="$idprefix$TOC" class="span4">
+
+      $if(keymap)$
+        <a href="$keymap$" class="button view">View keymap.c</a>
+        <a href="compiled.hex" class="button download">Download .hex</a>
+      $endif$
+      
         <div class="well toc">
 
         $toc$
