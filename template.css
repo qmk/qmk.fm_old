@@ -3105,11 +3105,11 @@ table {
      background: hsl(0, 0%, 96%) url(lastnode.png) no-repeat;
    }
 
-   .toc > ul:first-child {
+   .toc > ul {
     background: none;
    }
 
-   .toc ul:first-child > li.last {
+   .toc > ul > li, .toc > ul > li.last {
     background: none;
    }
 

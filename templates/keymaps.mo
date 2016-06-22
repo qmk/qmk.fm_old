@@ -1,0 +1,5 @@
+### Keymaps
+
+{{#KEYMAPS}}
+* [{{.}}](keymaps/{{.}}/)
+{{/KEYMAPS}}
