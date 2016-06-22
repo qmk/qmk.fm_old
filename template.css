@@ -212,7 +212,7 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
   color: #333333;
   background-color: #ffffff;
 }
@@ -688,9 +688,6 @@ ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
-}
-li {
-  line-height: 20px;
 }
 ul.unstyled,
 ol.unstyled {
@@ -1587,7 +1584,7 @@ table th[class*="span"],
 }
 .navbar-static-top {
   position: static;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .navbar-static-top .navbar-inner {
   -webkit-border-radius: 0;
