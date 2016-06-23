@@ -1,4 +1,4 @@
 ### Keymaps
 
-* [default](keymaps/default/)
-* [lxol](keymaps/lxol/)
+* [default](keymaps/default/) <a href="keymaps/default">Go</a>
+* [lxol](keymaps/lxol/) <a href="keymaps/lxol">Go</a>

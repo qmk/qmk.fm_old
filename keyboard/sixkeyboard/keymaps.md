@@ -1,3 +1,3 @@
 ### Keymaps
 
-* [default](keymaps/default/)
+* [default](keymaps/default/) <a href="keymaps/default">Go</a>
