@@ -35,23 +35,41 @@
   <title>QMK Firmware</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
+div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
 table.sourceCode { width: 100%; line-height: 100%; }
 td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
 td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
 </head>
 <body>
@@ -60,7 +78,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
   <div class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
-        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/planck">planck</a> / keymaps / <a href="/keyboard/planck/keymaps/cbbrowne/">cbbrowne</a></span>
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/planck">planck</a> / keymaps / <a href="/keyboards/planck/keymaps/cbbrowne/">cbbrowne</a></span>
         <ul class="nav pull-right doc-info">
           <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
         </ul>
@@ -95,44 +113,66 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
       </div>
             <div class="span8">
-            <h1 id="cbbrowne-custom-keyboard"><a href="#cbbrowne-custom-keyboard">cbbrowne custom keyboard</a></h1>
+            <h1 id="cbbrowne-custom-keyboard">cbbrowne custom keyboard</h1>
 <p>Due to <script type="text/javascript">
 <!--
 h='&#x61;&#x63;&#x6d;&#46;&#x6f;&#114;&#x67;';a='&#64;';n='&#x63;&#98;&#98;&#114;&#x6f;&#x77;&#110;&#x65;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
-</script><noscript>&#x63;&#98;&#98;&#114;&#x6f;&#x77;&#110;&#x65;&#32;&#x61;&#116;&#32;&#x61;&#x63;&#x6d;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript><br />Christopher Browne</p>
-<p>This was originally based on the default keyboard map, but I have been<br />doing sundry experimentation:</p>
-<h2 id="experiments"><a href="#experiments">1. Experiments</a></h2>
+</script><noscript>&#x63;&#98;&#98;&#114;&#x6f;&#x77;&#110;&#x65;&#32;&#x61;&#116;&#32;&#x61;&#x63;&#x6d;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript><br />
+Christopher Browne</p>
+<p>This was originally based on the default keyboard map, but I have been<br />
+doing sundry experimentation:</p>
+<h2 id="experiments">1. Experiments</h2>
 <ul>
-<li>To figure things out about the toolset<br /></li>
-<li>I'm an Emacs guy, so will be needing a fair bit of tuning<br /></li>
-<li>It made sense to mess around some with keyboard maps.<br /></li>
-<li><p>I tried added Workman alongside Dvorak and Colemak</p>
+<li>To figure things out about the toolset</li>
+<li>I'm an Emacs guy, so will be needing a fair bit of tuning</li>
+<li>It made sense to mess around some with keyboard maps.</li>
+<li>I tried added Workman alongside Dvorak and Colemak
 <ul>
-<li>Boy, oh boy, these don't help!!!<br /></li>
-<li>I have done 30 years of learning of Emacs key mappings, and<br /> these alternative keyboards massively mess me up<br /></li>
+<li>Boy, oh boy, these don't help!!!</li>
+<li>I have done 30 years of learning of Emacs key mappings, and<br />
+these alternative keyboards massively mess me up</li>
 </ul></li>
-<li>I added a keypad, originally based on keymaps/numpad.c, but<br /> mighty substantially revised, as that one seems to be rotated 90<br /> degrees from usual conventions for number pads<br /></li>
-<li>The keypad layer also includes some sample &quot;hacks&quot; of cool things,<br /> all using actions attached in using the function action_get_macro()<br /></li>
-<li>Key [1][2] aka &quot;q&quot; types out my name, cbbrowne, as a fun example<br /> of a key generating a bunch of keystrokes. The keystroke is<br /> sufficiently inconvenient that it isn't terribly practical for me<br /> to use it, but hey, it shows how others might use this facility<br /> in a more useful context.<br /></li>
-<li>Key [2][2] aka &quot;a&quot; uses a random number generator to select a digit 0-9 at random<br /></li>
-<li>Key [3][2] aka &quot;z&quot; uses a random number generator to select a letter a-z at random<br /></li>
-<li><p>Key [1][3] aka &quot;e&quot; spits out the keymap version number</p></li>
+<li>I added a keypad, originally based on keymaps/numpad.c, but<br />
+mighty substantially revised, as that one seems to be rotated 90<br />
+degrees from usual conventions for number pads</li>
+<li>The keypad layer also includes some sample &quot;hacks&quot; of cool things,<br />
+all using actions attached in using the function action_get_macro()</li>
+<li>Key [1][2] aka &quot;q&quot; types out my name, cbbrowne, as a fun example<br />
+of a key generating a bunch of keystrokes. The keystroke is<br />
+sufficiently inconvenient that it isn't terribly practical for me<br />
+to use it, but hey, it shows how others might use this facility<br />
+in a more useful context.</li>
+<li>Key [2][2] aka &quot;a&quot; uses a random number generator to select a digit 0-9 at random</li>
+<li>Key [3][2] aka &quot;z&quot; uses a random number generator to select a letter a-z at random</li>
+<li>Key [1][3] aka &quot;e&quot; spits out the keymap version number</li>
 </ul>
-<h2 id="some-code-structure-ideas"><a href="#some-code-structure-ideas">2. Some code structure ideas</a></h2>
-<p>Each layer is given a name to aid in readability, which is then<br /> used in the keymap matrix below. The underscores do not denote<br /> anything - you can have a layer called STUFF or any other name.</p>
-<p>Layer names don't all need to be of the same length, obviously, and<br /> you could also skip them entirely and just use numbers, though that<br /> means needing to manage the numbers.</p>
-<p>It is preferable to keep the symbols short so that a line worth of<br /> key mappings fits compactly onto a line of code. It might be an<br /> interesting idea to express the maps rotated 90%, so that you<br /> only need to fit 4 symbols onto each line, rather than 12.</p>
-<p>I used enums to manage layer IDs and macro IDs so that I don't need<br /> to care (beyond &quot;start at 0&quot;, and arguably that's not needed) about<br /> their values.</p>
-<h2 id="things-i-did-not-like-about-the-default-mapping"><a href="#things-i-did-not-like-about-the-default-mapping">3. Things I did not like about the default mapping</a></h2>
+<h2 id="some-code-structure-ideas">2. Some code structure ideas</h2>
+<p>Each layer is given a name to aid in readability, which is then<br />
+used in the keymap matrix below. The underscores do not denote<br />
+anything - you can have a layer called STUFF or any other name.</p>
+<p>Layer names don't all need to be of the same length, obviously, and<br />
+you could also skip them entirely and just use numbers, though that<br />
+means needing to manage the numbers.</p>
+<p>It is preferable to keep the symbols short so that a line worth of<br />
+key mappings fits compactly onto a line of code. It might be an<br />
+interesting idea to express the maps rotated 90%, so that you<br />
+only need to fit 4 symbols onto each line, rather than 12.</p>
+<p>I used enums to manage layer IDs and macro IDs so that I don't need<br />
+to care (beyond &quot;start at 0&quot;, and arguably that's not needed) about<br />
+their values.</p>
+<h2 id="things-i-did-not-like-about-the-default-mapping">3. Things I did not like about the default mapping</h2>
 <ul>
-<li>I found control too hard to get to. I use it more than Tab, so<br /> switched it there.<br /></li>
-<li>Having dash on [lower-j] is a bit nonintuitive, but may be OK<br /></li>
-<li>I switched ESC/TAB/M(0) around<br /></li>
-<li>I'm suspicious that I want to shift M(0) from [4][1] to [4][2],<br /> and shift ESC off the first column so KC_LCTL and KC_LALT can<br /> be on the first column.<br /></li>
+<li>I found control too hard to get to. I use it more than Tab, so<br />
+switched it there.</li>
+<li>Having dash on [lower-j] is a bit nonintuitive, but may be OK</li>
+<li>I switched ESC/TAB/M(0) around</li>
+<li>I'm suspicious that I want to shift M(0) from [4][1] to [4][2],<br />
+and shift ESC off the first column so KC_LCTL and KC_LALT can<br />
+be on the first column.</li>
 <li><p>I needed to swap ' and ENTER</p>
-<h1><a href="#makefile">Makefile</a></h1></li>
+<h1 id="makefile">Makefile</h1></li>
 </ul>
 <pre><code>
 
@@ -159,8 +199,8 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 ifndef QUANTUM_DIR
     include ../../../../Makefile
 endif</code></pre>
-<h1 id="config.h"><a href="#config.h">config.h</a></h1>
-<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
 <span class="ot">#define CONFIG_USER_H</span>
 
 <span class="ot">#include &quot;../../config.h&quot;</span>
@@ -174,7 +214,7 @@ endif</code></pre>
 <span class="ot">#endif</span>
 
 
-</code></pre>
+</code></pre></div>
             </div>
     </div>
   </div>

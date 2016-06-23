@@ -41,7 +41,7 @@
   <div class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
-        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/planck">planck</a> / keymaps / <a href="/keyboard/planck/keymaps/ab/">ab</a></span>
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/planck">planck</a> / keymaps / <a href="/keyboards/planck/keymaps/ab/">ab</a></span>
         <ul class="nav pull-right doc-info">
           <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
         </ul>
@@ -73,22 +73,23 @@
 
       </div>
             <div class="span8">
-            <h1 id="practical-keymap-for-planck-ortholinear-40-mechanical-keyboard"><a href="#practical-keymap-for-planck-ortholinear-40-mechanical-keyboard">Practical keymap for Planck Ortholinear 40% Mechanical Keyboard</a></h1>
+            <h1 id="practical-keymap-for-planck-ortholinear-40-mechanical-keyboard">Practical keymap for Planck Ortholinear 40% Mechanical Keyboard</h1>
 <p>A practical keymap that emulates standard QWERTY keyboard for Planck. Once you get comfortable with this keymap, you may fork and customize it for your own needs.</p>
-<p><img src="keyboard-layout.png" title="Practical Keymap" alt="Layout" /><br /><img src="keyboard-photo.jpg" title="Planck Keyboard" alt="Photo" /></p>
+<p><img src="keyboard-layout.png" title="Practical Keymap" alt="Layout" /><br />
+<img src="keyboard-photo.jpg" title="Planck Keyboard" alt="Photo" /></p>
 <ul>
-<li>Online keyboard layout editor: <a href="http://goo.gl/mlLAFZ">http://goo.gl/mlLAFZ</a></li>
+<li>Online keyboard layout editor: <a href="http://goo.gl/mlLAFZ" class="uri">http://goo.gl/mlLAFZ</a></li>
 </ul>
-<h1 id="programming-instructions"><a href="#programming-instructions">Programming Instructions:</a></h1>
+<h1 id="programming-instructions">Programming Instructions:</h1>
 <p>Enter into programming mode and run the following command.</p>
 <pre><code>$ sudo KEYMAP=ab make dfu</code></pre>
-<h1 id="notes"><a href="#notes">Notes</a></h1>
+<h1 id="notes">Notes</h1>
 <ul>
-<li>Simultaneous RAISE+LOWER enters CUSTOM layer. You may add your own macros and custom keys here.<br /></li>
-<li>RAISE and LOWER also acts as PgUp and PgDn when tapped.<br /></li>
-<li>[CapsLock] also acts as [Ctrl] key when you press and hold. It is convenient for GNU Emacs users.<br /></li>
+<li>Simultaneous RAISE+LOWER enters CUSTOM layer. You may add your own macros and custom keys here.</li>
+<li>RAISE and LOWER also acts as PgUp and PgDn when tapped.</li>
+<li>[CapsLock] also acts as [Ctrl] key when you press and hold. It is convenient for GNU Emacs users.</li>
 <li><p>Bracket keys are placed in the center of the keyboard for programmer's convenience.</p>
-<h1><a href="#makefile">Makefile</a></h1></li>
+<h1 id="makefile">Makefile</h1></li>
 </ul>
 <pre><code>#----------------------------------------------------------------------------
 # On command line:

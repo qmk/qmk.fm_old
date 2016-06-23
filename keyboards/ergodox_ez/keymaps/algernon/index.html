@@ -35,23 +35,41 @@
   <title>QMK Firmware</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
+div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
 table.sourceCode { width: 100%; line-height: 100%; }
 td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
 td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
 </head>
 <body>
@@ -60,7 +78,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
   <div class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
-        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/ergodox_ez">ergodox_ez</a> / keymaps / <a href="/keyboard/ergodox_ez/keymaps/algernon/">algernon</a></span>
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox_ez">ergodox_ez</a> / keymaps / <a href="/keyboards/ergodox_ez/keymaps/algernon/">algernon</a></span>
         <ul class="nav pull-right doc-info">
           <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
         </ul>
@@ -112,125 +130,194 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
       </div>
             <div class="span8">
-            <h1 id="algernons-layout"><a href="#algernons-layout">algernon's layout</a></h1>
-<p>This is an unconventional layout for the ErgoDox EZ. For more details about the<br />history of the layout, see my<br /><a href="https://asylum.madhouse-project.org/blog/tags/ergodox/">blog posts about my ErgoDox journey</a>.</p>
-<p>Some of the things in the layout only work when one uses Spacemacs and GNOME<br />under Linux. Your mileage may vary.</p>
-<h2 id="table-of-contents"><a href="#table-of-contents">Table of Contents</a></h2>
+            <h1 id="algernons-layout">algernon's layout</h1>
+<p>This is an unconventional layout for the ErgoDox EZ. For more details about the<br />
+history of the layout, see my<br />
+<a href="https://asylum.madhouse-project.org/blog/tags/ergodox/">blog posts about my ErgoDox journey</a>.</p>
+<p>Some of the things in the layout only work when one uses Spacemacs and GNOME<br />
+under Linux. Your mileage may vary.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li><a href="#layouts">Layouts</a><br /></li>
-<li><a href="#base-layer">Base layer</a><br /></li>
-<li><a href="#experimental-layer">Experimental layer</a><br /></li>
-<li><a href="#hungarian-layer">Hungarian layer</a><br /></li>
-<li><a href="#navigation-and-media-layer">Navigation and media layer</a><br /></li>
-<li><a href="#one-handed-layer">One-handed layer</a><br /></li>
-<li><a href="#steno-layer">Steno layer</a><br /></li>
-<li><a href="#led-states">LED states</a><br /></li>
-<li><a href="#building">Building</a><br /></li>
-<li><a href="#using-on-windows">Using on Windows</a><br /></li>
-<li><a href="#changelog">Changelog</a><br /></li>
+<li><a href="#layouts">Layouts</a></li>
+<li><a href="#base-layer">Base layer</a></li>
+<li><a href="#experimental-layer">Experimental layer</a></li>
+<li><a href="#hungarian-layer">Hungarian layer</a></li>
+<li><a href="#navigation-and-media-layer">Navigation and media layer</a></li>
+<li><a href="#one-handed-layer">One-handed layer</a></li>
+<li><a href="#steno-layer">Steno layer</a></li>
+<li><a href="#led-states">LED states</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#using-on-windows">Using on Windows</a></li>
+<li><a href="#changelog">Changelog</a></li>
 <li><a href="#license">License</a></li>
 </ul>
-<h1 id="layouts"><a href="#layouts">Layouts</a></h1>
-<h2 id="base-layer"><a href="#base-layer">Base layer</a></h2>
+<h1 id="layouts">Layouts</h1>
+<h2 id="base-layer">Base layer</h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/28f7eb305fdbff943613e1dc7aa9e82b"><img src="images/base-layer.png" alt="Base layer" /></a></p>
-<p>At its core, this is a Dvorak layout, with some minor changes. The more<br />interesting parts are how certain keys behave:</p>
+<p>At its core, this is a Dvorak layout, with some minor changes. The more<br />
+interesting parts are how certain keys behave:</p>
 <ul>
-<li>The keys on the number row double as function keys, when held for a bit longer<br /> than an usual tap. This allows me to use the function keys without having to<br /> switch layers.<br /></li>
-<li>The <code>Shift</code>, <code>Alt</code>, and <code>Control</code> modifiers are one-shot. When tapped, they<br /> are considered active for the next key press only. When double tapped, they<br /> toggle on, until a third, single tap sometime later. When held, they act as<br /> expected. My usual pattern is that I use these for the next keypress only, so<br /> this behaviour is perfect. If I need them held, I'll just double-tap.<br /></li>
-<li>The <code>GUI</code> key is special, because when I double-tap it, it sends <code>GUI + w</code>,<br /> which pops up an application selector. It also switches to a one-shot layer,<br /> where the number row on the left half turns into app selector macros, for the<br /> most common things I usually want to switch to. Otherwise it behaves as on a<br /> normal layout.<br /></li>
-<li>The <code>ESC</code> key also doubles as a one-shot cancel key: if tapped while any of<br /> the one-shot modifiers are in-flight (as in, single-tapped, and not expired<br /> yet), it cancels all one-shot modifiers. It also cancels the <strong>Hun</strong> layer, if<br /> active. Otherwise it sends the usual keycode.<br /></li>
-<li>The <strong>Media</strong>, <strong>Arrow</strong>, and <strong>Hun</strong> layer keys are one-shot, the <strong>1Hand</strong><br /> and <strong>STENO</strong> keys are toggles.<br /></li>
-<li>Toggling the <strong>Arrow</strong> layer toggles between the cursor arrows and the paging<br /> keys on the bottom row.<br /></li>
-<li>Tapping the <code>:</code> key once yields <code>:</code>, tapping it twice yields <code>;</code>.<br /></li>
-<li><p>The <strong>Lead</strong> key allows me to type in a sequence of keys, and trigger some<br /> actions:</p>
+<li>The keys on the number row double as function keys, when held for a bit longer<br />
+than an usual tap. This allows me to use the function keys without having to<br />
+switch layers.</li>
+<li>The <code>Shift</code>, <code>Alt</code>, and <code>Control</code> modifiers are one-shot. When tapped, they<br />
+are considered active for the next key press only. When double tapped, they<br />
+toggle on, until a third, single tap sometime later. When held, they act as<br />
+expected. My usual pattern is that I use these for the next keypress only, so<br />
+this behaviour is perfect. If I need them held, I'll just double-tap.</li>
+<li>The <code>GUI</code> key is special, because when I double-tap it, it sends <code>GUI + w</code>,<br />
+which pops up an application selector. It also switches to a one-shot layer,<br />
+where the number row on the left half turns into app selector macros, for the<br />
+most common things I usually want to switch to. Otherwise it behaves as on a<br />
+normal layout.</li>
+<li>The <code>ESC</code> key also doubles as a one-shot cancel key: if tapped while any of<br />
+the one-shot modifiers are in-flight (as in, single-tapped, and not expired<br />
+yet), it cancels all one-shot modifiers. It also cancels the <strong>Hun</strong> layer, if<br />
+active. Otherwise it sends the usual keycode.</li>
+<li>The <strong>Media</strong>, <strong>Arrow</strong>, and <strong>Hun</strong> layer keys are one-shot, the <strong>1Hand</strong><br />
+and <strong>STENO</strong> keys are toggles.</li>
+<li>Toggling the <strong>Arrow</strong> layer toggles between the cursor arrows and the paging<br />
+keys on the bottom row.</li>
+<li>Tapping the <code>:</code> key once yields <code>:</code>, tapping it twice yields <code>;</code>.</li>
+<li>The <strong>Lead</strong> key allows me to type in a sequence of keys, and trigger some<br />
+actions:
 <ul>
-<li><code>LEAD u</code> enters unicode input mode, by sending the GTK+ key sequence that<br /> does this.<br /></li>
-<li><code>LEAD l</code> uses the unicode input method to enter a <code>λ</code>.<br /></li>
-<li><code>LEAD s</code> does a lot of magic to type in a shruggie: <code>¯\_(ツ)_/¯</code><br /></li>
-<li><code>LEAD y</code> types <code>\o/</code>.<br /></li>
-<li><code>LEAD w m</code> maximises the currently focused window.<br /></li>
-<li><code>LEAD e</code> makes the <a href="#experimental-layer">experimental layer</a> the default.<br /></li>
+<li><code>LEAD u</code> enters unicode input mode, by sending the GTK+ key sequence that<br />
+does this.</li>
+<li><code>LEAD l</code> uses the unicode input method to enter a <code>λ</code>.</li>
+<li><code>LEAD s</code> does a lot of magic to type in a shruggie: <code>¯\_(ツ)_/¯</code></li>
+<li><code>LEAD y</code> types <code>\o/</code>.</li>
+<li><code>LEAD w m</code> maximises the currently focused window.</li>
+<li><code>LEAD e</code> makes the <a href="#experimental-layer">experimental layer</a> the default.</li>
 <li><code>LEAD v</code> prints the firmware version, the keyboard and the keymap.</li>
 </ul></li>
 </ul>
-<h2 id="experimental-layer"><a href="#experimental-layer">Experimental layer</a></h2>
+<h2 id="experimental-layer">Experimental layer</h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/6ff50bf71248e05aab5b3fec4fae3d08"><img src="images/experimental-layer.png" alt="Experimental layer" /></a></p>
-<p>While using the standard Dvorak layout, I encountered a number of<br />inconveniences, and on this layer, I am playing with ideas to make the layout<br />feel better. Initially, it was based on <a href="http://www.michaelcapewell.com/projects/keyboard/layout_capewell-dvorak.htm">Capewell-Dvorak</a>, but that too,<br />had shortcomings I was not happy with. So now this is something inbetween, with<br />own observations thrown in. How it works out in the long run remains to be seen.</p>
-<h2 id="hungarian-layer"><a href="#hungarian-layer">Hungarian layer</a></h2>
+<p>While using the standard Dvorak layout, I encountered a number of<br />
+inconveniences, and on this layer, I am playing with ideas to make the layout<br />
+feel better. Initially, it was based on <a href="http://www.michaelcapewell.com/projects/keyboard/layout_capewell-dvorak.htm">Capewell-Dvorak</a>, but that too,<br />
+had shortcomings I was not happy with. So now this is something inbetween, with<br />
+own observations thrown in. How it works out in the long run remains to be seen.</p>
+<h2 id="hungarian-layer">Hungarian layer</h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/b160f6ec90d58c127c114c89f66e9dc9"><img src="images/hun-layer.png" alt="Hungarian layer" /></a></p>
-<p>On this layer, the accented characters are at the same position as their base<br />variant. For some, which can have other diatribes, the long one is on top,<br />short's on bottom. Tapping any of the accented characters takes us back to the<br />base layer.</p>
-<h2 id="navigation-and-media-layer"><a href="#navigation-and-media-layer">Navigation and media layer</a></h2>
+<p>On this layer, the accented characters are at the same position as their base<br />
+variant. For some, which can have other diatribes, the long one is on top,<br />
+short's on bottom. Tapping any of the accented characters takes us back to the<br />
+base layer.</p>
+<h2 id="navigation-and-media-layer">Navigation and media layer</h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/c59c453f9fe1a3238ba1494e7e5c6892"><img src="images/nav-n-media-layer.png" alt="Navigation and media layer" /></a></p>
-<p>This layer is primarily for navigating with the cursor or the mouse, and some<br />media things.</p>
-<h2 id="one-handed-layer"><a href="#one-handed-layer">One-handed layer</a></h2>
+<p>This layer is primarily for navigating with the cursor or the mouse, and some<br />
+media things.</p>
+<h2 id="one-handed-layer">One-handed layer</h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/edff2495135955b8963198dace7f7ece"><img src="images/one-handed-layer.png" alt="One-handed layer" /></a></p>
-<p>The one-handed layer is used in situations where the right hand is occupied, by<br />mousing around, for example. Tapping the <code>OTHER</code> key switches which side is<br />active. For the most part, keys remain in their usual position. When the right<br />half is active, keys are mirrored to the left half.</p>
+<p>The one-handed layer is used in situations where the right hand is occupied, by<br />
+mousing around, for example. Tapping the <code>OTHER</code> key switches which side is<br />
+active. For the most part, keys remain in their usual position. When the right<br />
+half is active, keys are mirrored to the left half.</p>
 <p>The differences are as follows:</p>
 <ul>
-<li>The <code>ESC</code> key has been moved to the bottom row, so the <code>OTHER</code> key is easier<br /> to tap.<br /></li>
-<li><p>Most keys on the thumb cluster now have dual uses, and these do not change<br /> when switching sides:</p>
+<li>The <code>ESC</code> key has been moved to the bottom row, so the <code>OTHER</code> key is easier<br />
+to tap.</li>
+<li>Most keys on the thumb cluster now have dual uses, and these do not change<br />
+when switching sides:
 <ul>
-<li>The <code>Space</code>/<code>Backspace</code> key sends <code>Space</code> on tap, <code>Backspace</code> when held<br /> for longer than a normal tap.<br /></li>
-<li>The <code>Enter</code>/<code>Shift</code> key sends <code>Enter</code> on short-tap, <code>Shift</code> on long-tap.<br /></li>
+<li>The <code>Space</code>/<code>Backspace</code> key sends <code>Space</code> on tap, <code>Backspace</code> when held<br />
+for longer than a normal tap.</li>
+<li>The <code>Enter</code>/<code>Shift</code> key sends <code>Enter</code> on short-tap, <code>Shift</code> on long-tap.</li>
 </ul></li>
-<li><p>The <code>Apps</code>/<code>BASE</code> key can be used to go back to the base layer, by<br /> long-tapping it. A short-tap will send the <code>App</code> key, as usual.</p></li>
+<li>The <code>Apps</code>/<code>BASE</code> key can be used to go back to the base layer, by<br />
+long-tapping it. A short-tap will send the <code>App</code> key, as usual.</li>
 </ul>
-<h2 id="steno-layer"><a href="#steno-layer">Steno layer</a></h2>
+<h2 id="steno-layer">Steno layer</h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/401ef9a84369e47c57f9aedcf0a0d667"><img src="images/steno-layer.png" alt="Steno layer for Plover" /></a></p>
-<p>This is to be used with <a href="http://www.openstenoproject.org/plover/">Plover</a>,<br />nothing really fancy here. The <strong>STENO</strong> key toggles the layer on and off, and<br />sends the toggle command to Plover too.</p>
-<h2 id="led-states"><a href="#led-states">LED states</a></h2>
-<p>The primary purpose of the LEDs is to show the modifier status, a secondary, to<br />show which layer is active. Each modifier, <code>Shift</code>, <code>Alt</code> and <code>Control</code> each<br />have their designated LEDs: the <em>red</em>, <em>green</em> and <em>blue</em>, respectively. When a<br />modifier is in a one-shot state, the respective LED will turn on with a dimmer<br />light. If the modifier is toggled on, the brightness of the LED turns full.</p>
+<p>This is to be used with <a href="http://www.openstenoproject.org/plover/">Plover</a>,<br />
+nothing really fancy here. The <strong>STENO</strong> key toggles the layer on and off, and<br />
+sends the toggle command to Plover too.</p>
+<h2 id="led-states">LED states</h2>
+<p>The primary purpose of the LEDs is to show the modifier status, a secondary, to<br />
+show which layer is active. Each modifier, <code>Shift</code>, <code>Alt</code> and <code>Control</code> each<br />
+have their designated LEDs: the <em>red</em>, <em>green</em> and <em>blue</em>, respectively. When a<br />
+modifier is in a one-shot state, the respective LED will turn on with a dimmer<br />
+light. If the modifier is toggled on, the brightness of the LED turns full.</p>
 <p>For the layers, the following rules apply:</p>
 <ul>
-<li>When the <a href="#experimental-layer">Experimental layer</a> is toggled on, LEDs will<br /> light up from left to right in a sequence, then turn off. When the layer is<br /> toggled off, the LEDs light up and turn off in the other direction. No LEDs<br /> are on while the layer is active.<br /></li>
-<li>When the <a href="#hungarian-layer">Hungarian layer</a> is active, the <em>green</em> and <em>blue</em><br /> LEDs are on.<br /></li>
-<li>When the <a href="#navigation-and-media-layer">Navigation and media layer</a> is active,<br /> the <em>red</em> and <em>green</em> ones are on.<br /></li>
-<li>When the <a href="#one-handed-layer">One-handed layer</a> is active, the <em>green</em> LED is<br /> on and bright, and either the <em>red</em> or the <em>blue</em> one is going to slowly<br /> blink, depending on the currently active side.<br /></li>
+<li>When the <a href="#experimental-layer">Experimental layer</a> is toggled on, LEDs will<br />
+light up from left to right in a sequence, then turn off. When the layer is<br />
+toggled off, the LEDs light up and turn off in the other direction. No LEDs<br />
+are on while the layer is active.</li>
+<li>When the <a href="#hungarian-layer">Hungarian layer</a> is active, the <em>green</em> and <em>blue</em><br />
+LEDs are on.</li>
+<li>When the <a href="#navigation-and-media-layer">Navigation and media layer</a> is active,<br />
+the <em>red</em> and <em>green</em> ones are on.</li>
+<li>When the <a href="#one-handed-layer">One-handed layer</a> is active, the <em>green</em> LED is<br />
+on and bright, and either the <em>red</em> or the <em>blue</em> one is going to slowly<br />
+blink, depending on the currently active side.</li>
 <li>For the <a href="#steno-layer">Steno layer</a>, all LEDs will be turned on.</li>
 </ul>
-<p>Unless noted otherwise, the layers use a dim light for the LEDs, while modifiers<br />use a stronger one, and modifiers override any layer preferences. For example,<br />when on the one-handed layer, with the left side active (<em>red</em> light blinking),<br />if <code>Shift</code> is on, the <em>red</em> light will be constantly on.</p>
-<h1 id="building"><a href="#building">Building</a></h1>
-<p>To make my workflow easier, this layout is maintained in<br /><a href="https://github.com/algernon/ergodox-layout">its own repository</a>. To build it, you will need the<br /><a href="https://github.com/jackhumbert/qmk_firmware">QMK</a> firmware checked out, and this repo either checked out to something<br />like <code>keyboards/ergodox_ez/algernon-master</code>. One way to achieve that is this:</p>
+<p>Unless noted otherwise, the layers use a dim light for the LEDs, while modifiers<br />
+use a stronger one, and modifiers override any layer preferences. For example,<br />
+when on the one-handed layer, with the left side active (<em>red</em> light blinking),<br />
+if <code>Shift</code> is on, the <em>red</em> light will be constantly on.</p>
+<h1 id="building">Building</h1>
+<p>To make my workflow easier, this layout is maintained in<br />
+<a href="https://github.com/algernon/ergodox-layout">its own repository</a>. To build it, you will need the<br />
+<a href="https://github.com/jackhumbert/qmk_firmware">QMK</a> firmware checked out, and this repo either checked out to something<br />
+like <code>keyboards/ergodox_ez/algernon-master</code>. One way to achieve that is this:</p>
 <pre><code>$ git clone https://github.com/jackhumbert/qmk_firmware.git
 $ cd qmk_firmware
 $ git clone https://github.com/algernon/ergodox-layout.git \
             keyboards/ergodox_ez/keymaps/algernon-master
 $ make KEYBOARD=ergodox_ez KEYMAP=algernon-master</code></pre>
-<p>From time to time, updates may be submitted back to the QMK repository. If you<br />are reading it there, you can build the firmware like any other firmware<br />included with it (assuming you are in the root directory of the firmware):</p>
+<p>From time to time, updates may be submitted back to the QMK repository. If you<br />
+are reading it there, you can build the firmware like any other firmware<br />
+included with it (assuming you are in the root directory of the firmware):</p>
 <pre><code>$ make KEYBOARD=ergodox_ez KEYMAP=algernon</code></pre>
-<h2 id="using-on-windows"><a href="#using-on-windows">Using on Windows</a></h2>
-<p>The keymap default to forcing NKRO, which seems to upset Windows, and except the<br />modifiers, none of them work. If you experience this problem, recompile the<br />firmware with <code>FORCE_NKRO=no</code> added to the <code>make</code> command line.</p>
-<h1 id="changelog"><a href="#changelog">Changelog</a></h1>
-<h2 id="v1.2---2016-06-22"><a href="#v1.2---2016-06-22">v1.2 - 2016-06-22</a></h2>
+<h2 id="using-on-windows">Using on Windows</h2>
+<p>The keymap default to forcing NKRO, which seems to upset Windows, and except the<br />
+modifiers, none of them work. If you experience this problem, recompile the<br />
+firmware with <code>FORCE_NKRO=no</code> added to the <code>make</code> command line.</p>
+<h1 id="changelog">Changelog</h1>
+<h2 id="v1.2---2016-06-22">v1.2 - 2016-06-22</h2>
 <ul>
-<li>The forced NKRO mode can be easily toggled off at compile-time, to make the<br /> firmware compatible with <a href="#using-on-windows">certain operating systems</a>.<br /></li>
-<li>The <code>:;</code> key has changed behaviour: to access the <code>;</code> symbol, the key needs to<br /> be double-tapped, instead of shifted.<br /></li>
-<li>The <code>=</code> and <code>\</code> keys were swapped, <code>=</code> moved to the home row, on both the<br /> <a href="#base-layer">base</a> and the <a href="#experimental-layer">experimental</a> layers.<br /></li>
-<li>The arrow and navigation keys were redone, they are now more accessible, but<br /> the navigation keys require an extra tap to access.<br /></li>
-<li>The <strong>Emacs</strong> layer is gone, replaced by a simplified<br /> <a href="#navigation-and-media-layer">navigation and media</a> layer.<br /></li>
-<li><code>LEAD v</code> types the firmware version, and the keymap version.<br /></li>
-<li>On the <a href="#experimental-layer">experimental</a> layer, the <code>L</code> and <code>Q</code>, and the <code>K</code><br /> and <code>G</code> keys were swapped.<br /></li>
-<li>The <a href="#steno-layer">Steno</a> layer gained a few more <code>#</code> and <code>*</code> keys, to make it<br /> easier on my fingers.</li>
+<li>The forced NKRO mode can be easily toggled off at compile-time, to make the<br />
+firmware compatible with <a href="#using-on-windows">certain operating systems</a>.</li>
+<li>The <code>:;</code> key has changed behaviour: to access the <code>;</code> symbol, the key needs to<br />
+be double-tapped, instead of shifted.</li>
+<li>The <code>=</code> and <code>\</code> keys were swapped, <code>=</code> moved to the home row, on both the<br />
+<a href="#base-layer">base</a> and the <a href="#experimental-layer">experimental</a> layers.</li>
+<li>The arrow and navigation keys were redone, they are now more accessible, but<br />
+the navigation keys require an extra tap to access.</li>
+<li>The <strong>Emacs</strong> layer is gone, replaced by a simplified<br />
+<a href="#navigation-and-media-layer">navigation and media</a> layer.</li>
+<li><code>LEAD v</code> types the firmware version, and the keymap version.</li>
+<li>On the <a href="#experimental-layer">experimental</a> layer, the <code>L</code> and <code>Q</code>, and the <code>K</code><br />
+and <code>G</code> keys were swapped.</li>
+<li>The <a href="#steno-layer">Steno</a> layer gained a few more <code>#</code> and <code>*</code> keys, to make it<br />
+easier on my fingers.</li>
 </ul>
-<h2 id="v1.1---2016-06-14"><a href="#v1.1---2016-06-14">v1.1 - 2016-06-14</a></h2>
+<h2 id="v1.1---2016-06-14">v1.1 - 2016-06-14</h2>
 <ul>
-<li>The keyboard starts in NKRO mode, bootmagic and other things are disabled.<br /></li>
-<li>A <a href="#steno-layer">Steno</a> layer was added, to be used with Plover.<br /></li>
-<li>An <a href="#experimental-layer">experimental</a> layer was added, something halfway<br /> between Dvorak and Capewell-Dvorak. A work in progress.<br /></li>
-<li><code>LEAD y</code> types <code>\o/</code>.<br /></li>
-<li>Some keys on the <a href="#base-layer">Base</a> layer have been moved around:<br /></li>
-<li><code>?</code> moved to the left pinky, left of <code>Q</code>.<br /></li>
-<li><code>=</code> shifted one row down, but <code>F11</code> stayed where it was.<br /></li>
-<li><code>-</code> on the left half was replaced by <code>Tab</code>.<br /></li>
-<li><code>Tab</code>'s original position is taken by a <code>Media Next</code>/<code>Media Prev</code> key.<br /></li>
-<li><code>:</code> now inputs <code>;</code> when shifted.<br /></li>
+<li>The keyboard starts in NKRO mode, bootmagic and other things are disabled.</li>
+<li>A <a href="#steno-layer">Steno</a> layer was added, to be used with Plover.</li>
+<li>An <a href="#experimental-layer">experimental</a> layer was added, something halfway<br />
+between Dvorak and Capewell-Dvorak. A work in progress.</li>
+<li><code>LEAD y</code> types <code>\o/</code>.</li>
+<li>Some keys on the <a href="#base-layer">Base</a> layer have been moved around:</li>
+<li><code>?</code> moved to the left pinky, left of <code>Q</code>.</li>
+<li><code>=</code> shifted one row down, but <code>F11</code> stayed where it was.</li>
+<li><code>-</code> on the left half was replaced by <code>Tab</code>.</li>
+<li><code>Tab</code>'s original position is taken by a <code>Media Next</code>/<code>Media Prev</code> key.</li>
+<li><code>:</code> now inputs <code>;</code> when shifted.</li>
 <li><code>ESC</code> cancels the <a href="#hungarian-layer">Hungarian</a> layer too, not just modifiers.</li>
 </ul>
-<h2 id="v1.0---2016-05-26"><a href="#v1.0---2016-05-26">v1.0 - 2016-05-26</a></h2>
+<h2 id="v1.0---2016-05-26">v1.0 - 2016-05-26</h2>
 <p>Initial version.</p>
-<h1 id="license"><a href="#license">License</a></h1>
-<p>The layout, being a derivative of the original TMK firmware which is under the<br />GPL-2+, this layout is under the GPL as well, but GPL-3+, rather than the older<br />version.</p>
-<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<h1 id="license">License</h1>
+<p>The layout, being a derivative of the original TMK firmware which is under the<br />
+GPL-2+, this layout is under the GPL as well, but GPL-3+, rather than the older<br />
+version.</p>
+<h1 id="makefile">Makefile</h1>
 <pre><code>BOOTMAGIC_ENABLE=no
 COMMAND_ENABLE=no
 SLEEP_LED_ENABLE=no
@@ -258,8 +345,8 @@ ifndef QUANTUM_DIR
     include ../../../../Makefile
 endif
 </code></pre>
-<h1 id="config.h"><a href="#config.h">config.h</a></h1>
-<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_ALGERNON_H</span>
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_ALGERNON_H</span>
 <span class="ot">#define CONFIG_ALGERNON_H</span>
 
 <span class="ot">#include &quot;../../config.h&quot;</span>
@@ -285,7 +372,7 @@ endif
 <span class="ot">#undef LEADER_TIMEOUT</span>
 <span class="ot">#define LEADER_TIMEOUT 1000</span>
 
-<span class="ot">#endif</span></code></pre>
+<span class="ot">#endif</span></code></pre></div>
             </div>
     </div>
   </div>

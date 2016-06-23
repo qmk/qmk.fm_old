@@ -48,9 +48,9 @@ for i in $(find . -name "README.md" -o -name "readme.md"); do
 	fi
 done
 
-export KEYBOARDS=( $(for i in $(ls -d ./keyboards/*/); do echo $i | sed -e 's/.*\/keyboards\/\([^\/]*\).*/\1/'; done) )
-. mo/mo
-mo templates/keyboards.mo > keyboards.md
-pandoc keyboards.md \
+# export KEYBOARDS=( $(for i in $(ls -d ./keyboards/*/); do echo $i | sed -e 's/.*\/keyboards\/\([^\/]*\).*/\1/'; done) )
+# . mo/mo
+# mo templates/keyboards.mo > keyboards.md
+pandoc keyboards/readme.md \
 -f markdown_github --to html --standalone --output keyboards/index.html \
 --template standalone.html --toc --toc-depth 3
