@@ -1,55 +1,55 @@
 ### Keymaps
 
-* [ab](keymaps/ab/) <a href="keymaps/ab">Go</a>
-* [adnw_k_o_y](keymaps/adnw_k_o_y/) <a href="keymaps/adnw_k_o_y">Go</a>
-* [alexjj](keymaps/alexjj/) <a href="keymaps/alexjj">Go</a>
-* [algernon](keymaps/algernon/) <a href="keymaps/algernon">Go</a>
-* [andrew_osx](keymaps/andrew_osx/) <a href="keymaps/andrew_osx">Go</a>
-* [bepo](keymaps/bepo/) <a href="keymaps/bepo">Go</a>
-* [coderkun_neo2](keymaps/coderkun_neo2/) <a href="keymaps/coderkun_neo2">Go</a>
-* [colemak](keymaps/colemak/) <a href="keymaps/colemak">Go</a>
-* [colemak_osx_pc_no](keymaps/colemak_osx_pc_no/) <a href="keymaps/colemak_osx_pc_no">Go</a>
-* [csharp_dev](keymaps/csharp_dev/) <a href="keymaps/csharp_dev">Go</a>
-* [dave](keymaps/dave/) <a href="keymaps/dave">Go</a>
-* [default](keymaps/default/) <a href="keymaps/default">Go</a>
-* [default_osx](keymaps/default_osx/) <a href="keymaps/default_osx">Go</a>
-* [dragon788](keymaps/dragon788/) <a href="keymaps/dragon788">Go</a>
-* [dvorak](keymaps/dvorak/) <a href="keymaps/dvorak">Go</a>
-* [dvorak_intl_squisher](keymaps/dvorak_intl_squisher/) <a href="keymaps/dvorak_intl_squisher">Go</a>
-* [dvorak_spanish](keymaps/dvorak_spanish/) <a href="keymaps/dvorak_spanish">Go</a>
-* [emacs_osx_dk](keymaps/emacs_osx_dk/) <a href="keymaps/emacs_osx_dk">Go</a>
-* [erez_experimental](keymaps/erez_experimental/) <a href="keymaps/erez_experimental">Go</a>
-* [german-kinergo](keymaps/german-kinergo/) <a href="keymaps/german-kinergo">Go</a>
-* [german-manuneo](keymaps/german-manuneo/) <a href="keymaps/german-manuneo">Go</a>
-* [german](keymaps/german/) <a href="keymaps/german">Go</a>
-* [j3rn](keymaps/j3rn/) <a href="keymaps/j3rn">Go</a>
-* [jack](keymaps/jack/) <a href="keymaps/jack">Go</a>
-* [jacobono](keymaps/jacobono/) <a href="keymaps/jacobono">Go</a>
-* [jgarr](keymaps/jgarr/) <a href="keymaps/jgarr">Go</a>
-* [kastyle](keymaps/kastyle/) <a href="keymaps/kastyle">Go</a>
-* [kines-ish](keymaps/kines-ish/) <a href="keymaps/kines-ish">Go</a>
-* [mpiechotka](keymaps/mpiechotka/) <a href="keymaps/mpiechotka">Go</a>
-* [msc](keymaps/msc/) <a href="keymaps/msc">Go</a>
-* [naps62](keymaps/naps62/) <a href="keymaps/naps62">Go</a>
-* [ordinary](keymaps/ordinary/) <a href="keymaps/ordinary">Go</a>
-* [osx_de](keymaps/osx_de/) <a href="keymaps/osx_de">Go</a>
-* [osx_de_adnw_koy](keymaps/osx_de_adnw_koy/) <a href="keymaps/osx_de_adnw_koy">Go</a>
-* [osx_de_experimental](keymaps/osx_de_experimental/) <a href="keymaps/osx_de_experimental">Go</a>
-* [osx_fr](keymaps/osx_fr/) <a href="keymaps/osx_fr">Go</a>
-* [osx_kinesis_pnut](keymaps/osx_kinesis_pnut/) <a href="keymaps/osx_kinesis_pnut">Go</a>
-* [plover](keymaps/plover/) <a href="keymaps/plover">Go</a>
-* [plums](keymaps/plums/) <a href="keymaps/plums">Go</a>
-* [romanzolotarev-norman-osx](keymaps/romanzolotarev-norman-osx/) <a href="keymaps/romanzolotarev-norman-osx">Go</a>
-* [romanzolotarev-norman-plover-osx-hjkl](keymaps/romanzolotarev-norman-plover-osx-hjkl/) <a href="keymaps/romanzolotarev-norman-plover-osx-hjkl">Go</a>
-* [romanzolotarev-norman-plover-osx](keymaps/romanzolotarev-norman-plover-osx/) <a href="keymaps/romanzolotarev-norman-plover-osx">Go</a>
-* [romanzolotarev-norman-qwerty-osx](keymaps/romanzolotarev-norman-qwerty-osx/) <a href="keymaps/romanzolotarev-norman-qwerty-osx">Go</a>
-* [sneako](keymaps/sneako/) <a href="keymaps/sneako">Go</a>
-* [software_neo2](keymaps/software_neo2/) <a href="keymaps/software_neo2">Go</a>
-* [supercoder](keymaps/supercoder/) <a href="keymaps/supercoder">Go</a>
-* [techtomas](keymaps/techtomas/) <a href="keymaps/techtomas">Go</a>
-* [tm2030](keymaps/tm2030/) <a href="keymaps/tm2030">Go</a>
-* [tonyabra_osx](keymaps/tonyabra_osx/) <a href="keymaps/tonyabra_osx">Go</a>
-* [townk_osx](keymaps/townk_osx/) <a href="keymaps/townk_osx">Go</a>
-* [twey](keymaps/twey/) <a href="keymaps/twey">Go</a>
-* [workman_osx_mdw](keymaps/workman_osx_mdw/) <a href="keymaps/workman_osx_mdw">Go</a>
-* [zweihander-osx](keymaps/zweihander-osx/) <a href="keymaps/zweihander-osx">Go</a>
+* [ab](keymaps/ab/)
+* [adnw_k_o_y](keymaps/adnw_k_o_y/)
+* [alexjj](keymaps/alexjj/)
+* [algernon](keymaps/algernon/)
+* [andrew_osx](keymaps/andrew_osx/)
+* [bepo](keymaps/bepo/)
+* [coderkun_neo2](keymaps/coderkun_neo2/)
+* [colemak](keymaps/colemak/)
+* [colemak_osx_pc_no](keymaps/colemak_osx_pc_no/)
+* [csharp_dev](keymaps/csharp_dev/)
+* [dave](keymaps/dave/)
+* [default](keymaps/default/)
+* [default_osx](keymaps/default_osx/)
+* [dragon788](keymaps/dragon788/)
+* [dvorak](keymaps/dvorak/)
+* [dvorak_intl_squisher](keymaps/dvorak_intl_squisher/)
+* [dvorak_spanish](keymaps/dvorak_spanish/)
+* [emacs_osx_dk](keymaps/emacs_osx_dk/)
+* [erez_experimental](keymaps/erez_experimental/)
+* [german-kinergo](keymaps/german-kinergo/)
+* [german-manuneo](keymaps/german-manuneo/)
+* [german](keymaps/german/)
+* [j3rn](keymaps/j3rn/)
+* [jack](keymaps/jack/)
+* [jacobono](keymaps/jacobono/)
+* [jgarr](keymaps/jgarr/)
+* [kastyle](keymaps/kastyle/)
+* [kines-ish](keymaps/kines-ish/)
+* [mpiechotka](keymaps/mpiechotka/)
+* [msc](keymaps/msc/)
+* [naps62](keymaps/naps62/)
+* [ordinary](keymaps/ordinary/)
+* [osx_de](keymaps/osx_de/)
+* [osx_de_adnw_koy](keymaps/osx_de_adnw_koy/)
+* [osx_de_experimental](keymaps/osx_de_experimental/)
+* [osx_fr](keymaps/osx_fr/)
+* [osx_kinesis_pnut](keymaps/osx_kinesis_pnut/)
+* [plover](keymaps/plover/)
+* [plums](keymaps/plums/)
+* [romanzolotarev-norman-osx](keymaps/romanzolotarev-norman-osx/)
+* [romanzolotarev-norman-plover-osx-hjkl](keymaps/romanzolotarev-norman-plover-osx-hjkl/)
+* [romanzolotarev-norman-plover-osx](keymaps/romanzolotarev-norman-plover-osx/)
+* [romanzolotarev-norman-qwerty-osx](keymaps/romanzolotarev-norman-qwerty-osx/)
+* [sneako](keymaps/sneako/)
+* [software_neo2](keymaps/software_neo2/)
+* [supercoder](keymaps/supercoder/)
+* [techtomas](keymaps/techtomas/)
+* [tm2030](keymaps/tm2030/)
+* [tonyabra_osx](keymaps/tonyabra_osx/)
+* [townk_osx](keymaps/townk_osx/)
+* [twey](keymaps/twey/)
+* [workman_osx_mdw](keymaps/workman_osx_mdw/)
+* [zweihander-osx](keymaps/zweihander-osx/)

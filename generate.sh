@@ -14,7 +14,7 @@ for i in $(find . -name "README.md" -o -name "readme.md"); do
 	 	if [ -f ${KEYMAP_URL}/config.h ]
 	 	then
 			rm -f ${KEYMAP_URL}/config.h.md
-		 	printf "# config.h\n\n\`\`\`c\n" > ${KEYMAP_URL}/config.h.md
+		 	printf "\n\n---\n\n# config.h\n\n\`\`\`c\n" > ${KEYMAP_URL}/config.h.md
 		 	cat ${KEYMAP_URL}/config.h >> ${KEYMAP_URL}/config.h.md
 		 	printf "\n\`\`\`\n" >> ${KEYMAP_URL}/config.h.md
 		else
@@ -24,7 +24,7 @@ for i in $(find . -name "README.md" -o -name "readme.md"); do
 	 	if [ -f ${KEYMAP_URL}/Makefile ]
 	 	then
 			rm -f ${KEYMAP_URL}/Makefile.md
-		 	printf "# Makefile\n\n\`\`\`\n" > ${KEYMAP_URL}/Makefile.md
+		 	printf "\n\n---\n\n# Makefile\n\n\`\`\`\n" > ${KEYMAP_URL}/Makefile.md
 		 	cat ${KEYMAP_URL}/Makefile >> ${KEYMAP_URL}/Makefile.md
 		 	printf "\n\`\`\`\n" >> ${KEYMAP_URL}/Makefile.md
 		else

@@ -1,5 +1,5 @@
 ### Keymaps
 
 {{#KEYMAPS}}
-* [{{.}}](keymaps/{{.}}/) <a href="keymaps/{{.}}">Go</a>
+* [{{.}}](keymaps/{{.}}/)
 {{/KEYMAPS}}
