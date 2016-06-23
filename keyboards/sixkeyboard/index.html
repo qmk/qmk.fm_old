@@ -1,0 +1,97 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/sixkeyboard">sixkeyboard</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#techkeys-sixkeyboard">Techkeys SixKeyBoard</a></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+          <ul>
+          <li><a href="keymaps/default/">default</a> <a href="keymaps/default">Go</a></li>
+          </ul>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="techkeys-sixkeyboard"><a href="#techkeys-sixkeyboard">Techkeys SixKeyBoard</a></h1>
+<p><a href="http://techkeys.us/collections/accessories/products/sixkeyboard">Get one here!</a></p>
+<p>The schematic is like this:</p>
+<pre><code> switches       leds
+,--+--+--.   ,--+--+--.
+|C7|B7|B5|   |C6|B6|B4|
++--+--+--+   +--+--+--+
+|D6|D1|D4|   |D5|D2|D3|
+`--+--+--&#39;   `--+--+--&#39;</code></pre>
+<p>The LED on the bottom is <code>C4</code>. All 7 of the leds are turned on when the keyboard boots-up in the <code>sixkeyboard.c</code> file - backlight_enable is not required. The MCU is an Atmega16u2, so the flash memory is limited to 0x3000 bytes - the current setup uses just about all of that! I'm sure things can be opitimised a bit.</p>
+<p>There is a jumper on the bottom of the board (next to the USB port) that serves as a reset button - I drilled a hole in my case to allow for quick access via a screwdriver/metal object.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/ergodox_ez">ergodox_ez</a> / keymaps / <a href="/keyboard/ergodox_ez/keymaps/alexjj/">alexjj</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/alexjj/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_ez_alexjj.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#englishman-in-new-york">Englishman in New York</a><ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#layout">Layout</a><ul>
+        <li><a href="#base-layer">Base Layer</a></li>
+        <li><a href="#symbol-layer">Symbol Layer</a></li>
+        <li><a href="#media-layer">Media Layer</a></li>
+        <li><a href="#unicode-layer">Unicode Layer</a></li>
+        </ul></li>
+        <li><a href="#usage">Usage</a><ul>
+        <li><a href="#unicode">Unicode</a></li>
+        </ul></li>
+        <li><a href="#changelog">Changelog</a><ul>
+        <li><a href="#section">[0.2.1] - 2016-04-05</a></li>
+        <li><a href="#section-1">[0.2.0] - 2016-03-27</a></li>
+        <li><a href="#section-2">[0.1.1] - 2016-03-23</a></li>
+        <li><a href="#section-3">[0.1.0] - 2016-03-22</a></li>
+        <li><a href="#section-4">[0.0.1] - 2016-03-21</a></li>
+        </ul></li>
+        <li><a href="#issues">Issues</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="englishman-in-new-york"><a href="#englishman-in-new-york">Englishman in New York</a></h1>
+<p>:microphone: :tea:</p>
+<h2 id="about"><a href="#about">About</a></h2>
+<p>After using the massdrop configurator to get the basics, I wanted to add a<br />little extra to my ergodox. Notably the Hyper hotkey, the press and hold,<br />and a way to have my beloved £ :pound: symbol available<sup><a href="#unicode">1</a></sup>. Why not switch to a GB<br />layout? Well the computers I use are US keymap'd and I can't always change<br />that. Plus I've got used to 2/@ and 3/# and moving to the ergodox was hard<br />enough. :sweat_smile:</p>
+<p>I started from the default and edited from there as I needed. It's somewhat<br />similar to a regular layout, particularly R1 and shift/controls. I ended up<br />with a few keys that were blank, so I'm testing out some shortcuts. Alt+F4 for<br />quitting things in Windows, is one example, but I felt it was better placed on<br />the 1st layer - in case of fat fingers.</p>
+<h2 id="layout"><a href="#layout">Layout</a></h2>
+<p><img src="rl-layout.jpg" title="Isn&#39;t it lovely" alt="Layout" /></p>
+<h3 id="base-layer"><a href="#base-layer">Base Layer</a></h3>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|   ESC  |  1!  |  2@  |  3#  |  4$  |  5%  |  6^  |           |  7&amp;  |  8*  |  9(  |  0)  |  -_  |  +=  |  BkSp  |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+| Tab    |   Q  |   W  |   E  |   R  |   T  |  {   |           |   }  |   Y  |   U  |   I  |   O  |   P  |  |\    |
+|--------+------+------+------+------+------|  [   |           |   ]  |------+------+------+------+------+--------|
+| Win    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  :;  |  &#39;&quot;    |
+|--------+------+------+------+------+------| Home |           | End  |------+------+------+------+------+--------|
+| LShift |Z/Alt |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  | Alt  | RShift |
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |LCtrl | COPY | PASTE| Left | Right|                                       | Down |  Up  |Hyper |  `~  | RCtrl |
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+  Hyper = Ctrl+Super+Alt+Shift         | ~L3  |  F5  |       |  F2  | ~L2  |
+                                ,------|------|------|       |------+------+------.
+                                |      |      | PgUp |       | Ins  |      |      |
+                                | Enter| BkSp |------|       |------| ~L1  |Space |
+                                |      |      | PgDn |       | Del  |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="symbol-layer"><a href="#symbol-layer">Symbol Layer</a></h3>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|        |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |           |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |PrintScr|
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|        |   !  |   @  |   {  |   }  |   |  |      |           |      |   Up |   7  |   8  |   9  |   *  |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |   #  |   $  |   (  |   )  |   `  |------|           |------| Down |   4  |   5  |   6  |   +  |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |   %  |   ^  |   [  |   ]  |   ~  |      |           |      |   &amp;  |   1  |   2  |   3  |   \  |        |
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |      |   £  |      |      |      |                                       |      |    . |   0  |   =  |Alt+F4|
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+             ↑                         ,-------------.       ,-------------.
+          THERE!                       |      |      |       |      |      |
+                                ,------|------|------|       |------+------+------.
+   CAD = Ctrl + Alt + Delete    |      |      |      |       |      |      |      |
+                                |      |      |------|       |------|      |      |
+                                |      |      |      |       | CAD  |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="media-layer"><a href="#media-layer">Media Layer</a></h3>
+<p>Not touched this, not used either.</p>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+| TEENSY |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|        |      |      | MsUp |      |      |      |           |      |      |      |      |      |      |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |      |MsLeft|MsDown|MsRght|      |------|           |------|      |      |      |      |      |  Play  |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |      |      |      |      |      |      |           |      |      |      | Prev | Next |      |        |
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |      |      |      | Lclk | Rclk |                                       |VolDn |VolUp | Mute |      |      |
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |      |      |
+                                ,------|------|------|       |------+------+------.
+                                |      |      |      |       |      |      |Brwser|
+                                |      |      |------|       |------|      |Back  |
+                                |      |      |      |       |      |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="unicode-layer"><a href="#unicode-layer">Unicode Layer</a></h3>
+<p>Used to enter/test unicode input on Windows. All numbers are numpad keys.</p>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|  Alt   |  1   |   2  |  3   |  4   |   5  |  6   |           |   7  |  8   |   9  |  0   |  +   |  +   |        |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|  Alt   |      |      |   E  |      |      |      |           |      |      |   7  |   8  |  9   |  +   |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|  Alt   |   A  |      |   D  |   F  |      |------|           |------|      |   4  |   5  |  6   |  +   |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|  Alt   |      |      |   C  |      |   B  |      |           |      |      |   1  |   2  |  3   |  +   |        |
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  | Alt  |  Alt | Alt  |      |      |                                       |   0  |   0  |  0   |  +   |       |
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+     WINDOWS ONLY SETUP!!              | ~L3  |      |       |      |      |
+                                ,------|------|------|       |------+------+------.
+                                |      |      |      |       |      |      |      |
+                                |  Alt |  Alt |------|       |------|  Alt | Alt  |
+                                |      |      |      |       |      |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h2 id="usage"><a href="#usage">Usage</a></h2>
+<p>~L1 / L2 / L3 will momentarily switch to a layer if held and another key is pressed.<br />If pressed and released will remain on layer until pressed again.</p>
+<h3 id="unicode"><a href="#unicode">Unicode</a></h3>
+<p>This layout is for Windows only. To enter a character Press and Hold Alt, type + and hex code then release Alt.</p>
+<h2 id="changelog"><a href="#changelog">Changelog</a></h2>
+<h3 id="section"><a href="#section">[0.2.1] - 2016-04-05</a></h3>
+<ul>
+<li>Changed £ to alt code in Windows. Windows sucks at unicode.</li>
+</ul>
+<h3 id="section-1"><a href="#section-1">[0.2.0] - 2016-03-27</a></h3>
+<ul>
+<li>Added unicode layer<br /></li>
+<li>Moved Copy/Paste to left hand side<br /></li>
+<li>Switched Enter and Space (again)<br /></li>
+<li>Added L3 (unicode layer) toggle<br /></li>
+<li>Removed Press and Hold for Alt on right hand size (/)<br /></li>
+<li>Swapped Volume Up/Down to match arrows<br /></li>
+<li>Tried fixing £ macro<br /></li>
+<li>Removed * in the matrix function things (upstream change)</li>
+</ul>
+<h3 id="section-2"><a href="#section-2">[0.1.1] - 2016-03-23</a></h3>
+<ul>
+<li>Changed £ input to a macro</li>
+</ul>
+<h3 id="section-3"><a href="#section-3">[0.1.0] - 2016-03-22</a></h3>
+<p>After actually using the keyboard, I've made some changes:</p>
+<ul>
+<li>Swapped Enter and Space<br /></li>
+<li>Moved backspace to thumb keys (top right still remains)<br /></li>
+<li>Added Ctrl+Alt+Delete<br /></li>
+<li>Added Teensy Reset on 2nd layer<br /></li>
+<li>Switched Up and Down<br /></li>
+<li>Changed copy/paste to be Ctrl+c and Ctrl+v as KC_COPY/PASTE didn't work (in Windows)<br /></li>
+<li>Moved ~L2 to replace +L1 after learning how the function works (notes above)<br /></li>
+<li>Hopefully fixed GBP symbol (unicode enabled in MakeFile)</li>
+</ul>
+<h3 id="section-4"><a href="#section-4">[0.0.1] - 2016-03-21</a></h3>
+<p>First version</p>
+<h2 id="issues"><a href="#issues">Issues</a></h2>
+<p>Space for feedback and notes for future improvements</p>
+<hr />
+<p><sup><a name="unicode">1</a></sup>: For Windows only, and you have to edit the <a href="https://en.wikipedia.org/wiki/Unicode_input#Hexadecimal_code_input">registry</a>.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

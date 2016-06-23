@@ -1,0 +1,113 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/ergodox_ez">ergodox_ez</a> / keymaps / <a href="/keyboard/ergodox_ez/keymaps/osx_de/">osx_de</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/osx_de/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_ez_osx_de.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#ergodox-ez-fur-osx">Ergodox EZ für OSX</a></li>
+        <li><a href="#erstellt-mit-dem-ergodoxlayoutgenerator">Erstellt Mit Dem ErgodoxLayoutGenerator</a></li>
+        <li><a href="#ergodox-ez-for-osx">ErgoDox EZ for OSX</a></li>
+        <li><a href="#created-using-the-ergodoxlayoutgenerator">Created Using the ErgodoxLayoutGenerator</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="ergodox-ez-fur-osx"><a href="#ergodox-ez-fur-osx">Ergodox EZ für OSX</a></h1>
+<p>Dies ist nur ein kleiner Tweak der bestehenden firmware für das ErgoDox-EZ-Keyboard. Leider passte das layout nicht wirklich für OSX, deswegen habe ich einige Anpassungen gemacht. Dabei wurden folgende features umgesetzt:</p>
+<ul>
+<li>Die Umlaute sollten an einigermassen sinnvollen Plätzen liegen<br /></li>
+<li>der Umstieg sollte dadurch erleichtert werden, dass einige Tasten an ihren &quot;normalen&quot; Platz zurückgewandert sind. Z.B. ESC, Tab,...<br /></li>
+<li>die Leertaste ist jetzt auf der rechten seite, neben Enter. Dafür hat der linke Daumen nun Backspace und Delete.<br /></li>
+<li>die CMD- und Alt-Tasten sind in der Mitte einfach erreichbar.<br /></li>
+<li>es gibt eine neue Layer die für Spiele genutzt werden kann (egosooter wie Counter Strike). Dort liegen die wichtigsten Tasten auf der linken Seite, im Daumenblock z.B. space und ctrl sowie die F-Tasten 1-4. Diese Layer ist über die Symbollayer erreichbar.<br /></li>
+<li>Die Symbollayer wurde dahingehend angepasst, dass die klammern, etc nun auf beiden hälften der Tastatur zu finden sind<br /></li>
+<li>der Zehnerblock wurde in eine eigene Layer umgezogen<br /></li>
+<li>die Meh und Hyper-Tasten wurden in die Daumenblöcke umgezogen</li>
+</ul>
+<h1 id="erstellt-mit-dem-ergodoxlayoutgenerator"><a href="#erstellt-mit-dem-ergodoxlayoutgenerator">Erstellt Mit Dem ErgodoxLayoutGenerator</a></h1>
+<p>Der ErgodoxLayoutGenerator ist ein kleines Werkzeug, welches die Erstellung und Pflege der eigenen Keymaps erleichtern soll. Es ist in java geschrieben und kann <a href="https://github.com/sboesebeck/ErgodoxLayoutGenerator/releases">hier</a> heruntergeladen werden. Damit das Tool funktioniert sollte das offizielle Oracle JDK in aktueller Version installiert sein.<br />Die Dokumentation für den ELG kann man <a href="https://boesebeck.name/2016/04/16/ergodoxlayoutgenerator-documentation/">hier</a> nachlesen (momentan leider nur in Englisch verfügbar).</p>
+<hr />
+<h1 id="ergodox-ez-for-osx"><a href="#ergodox-ez-for-osx">ErgoDox EZ for OSX</a></h1>
+<p>This is only a little tweak of the existing default layout for the ErgoDox keyboard. Unfortunately the default layout did not work well with german OSX, so I created som adjustments. These were the features added and changed:</p>
+<ul>
+<li>the umlaut-keys should be at their useful place more or less<br /></li>
+<li>the switching should be made more easy so some other keys (like tab, esc) were moved to their default place<br /></li>
+<li>the space key can now be used with both hands<br /></li>
+<li>the CMD- and ALT-Keys moved to the middle, can be reached more easily.<br /></li>
+<li>there is a new layer for using the cursor-keys, placed like on the default keyboard. This makes them useable for games also<br /></li>
+<li>the symbollayer now has only symbols<br /></li>
+<li>the number block was moved to a special layer<br /></li>
+<li>meh and hyper went down to the thumb block</li>
+</ul>
+<h1 id="created-using-the-ergodoxlayoutgenerator"><a href="#created-using-the-ergodoxlayoutgenerator">Created Using the ErgodoxLayoutGenerator</a></h1>
+<p>The ErgodoxLayoutGenerator (ELG) is a little tool, which makes the creation and maintenance of keycaps a lot easier. It was written in Java and can be downloaded <a href="https://github.com/sboesebeck/ErgodoxLayoutGenerator/releases">here</a>. To use the tool, you need to have a current version of Oracles JDK installed.</p>
+<p>The documentation of the ELG can be viewed <a href="https://boesebeck.name/2016/04/16/ergodoxlayoutgenerator-documentation/">here</a>.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

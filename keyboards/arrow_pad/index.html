@@ -1,0 +1,107 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/arrow_pad">arrow_pad</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#arrow_pad-keyboard-firmware">arrow_pad keyboard firmware</a><ul>
+        <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
+        <li><a href="#building">Building</a><ul>
+        <li><a href="#default">Default</a></li>
+        <li><a href="#other-keymaps">Other Keymaps</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+          <ul>
+          <li><a href="keymaps/default/">default</a> <a href="keymaps/default">Go</a></li>
+          <li><a href="keymaps/pad_21/">pad_21</a> <a href="keymaps/pad_21">Go</a></li>
+          <li><a href="keymaps/pad_24/">pad_24</a> <a href="keymaps/pad_24">Go</a></li>
+          </ul>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="arrow_pad-keyboard-firmware"><a href="#arrow_pad-keyboard-firmware">arrow_pad keyboard firmware</a></h1>
+<h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
+<p>For the full Quantum feature list, see <a href="/README.md">the parent README.md</a>.</p>
+<h2 id="building"><a href="#building">Building</a></h2>
+<p>Download or clone the whole firmware and navigate to the keyboards/arrow_pad folder. Once your dev env is setup, you'll be able to type <code>make</code> to generate your .hex - you can then use the Teensy Loader to program your .hex file.</p>
+<p>Depending on which keymap you would like to use, you will have to compile slightly differently.</p>
+<h3 id="default"><a href="#default">Default</a></h3>
+<p>To build with the default keymap, simply run <code>make</code>.</p>
+<h3 id="other-keymaps"><a href="#other-keymaps">Other Keymaps</a></h3>
+<p>Several version of keymap are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create file named <code>&lt;name&gt;.c</code> in the keymaps folder, and see keymap document (you can find in top README.md) and existent keymap files.</p>
+<p>To build the firmware binary hex file with a keymap just do <code>make</code> with <code>KEYMAP</code> option like:</p>
+<pre><code>$ make KEYMAP=[default|jack|&lt;name&gt;]</code></pre>
+<p>Keymaps follow the format <strong><strong>\<name\>.c</strong></strong> and are stored in the <code>keymaps</code> folder.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

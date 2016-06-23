@@ -1,0 +1,158 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/kc60">kc60</a> / keymaps / <a href="/keyboard/kc60/keymaps/ws2812/">ws2812</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/kc60/keymaps/ws2812/keymap.c" class="button view">View keymap.c</a>
+        <a href="kc60_ws2812.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#kc60-with-ws2812-rgb-underglow">KC60 with WS2812 RGB Underglow</a><ul>
+        <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
+        <li><a href="#ws2812-support">WS2812 Support</a><ul>
+        <li><a href="#build">Build</a></li>
+        <li><a href="#reference-images">Reference Images</a></li>
+        <li><a href="#additional-credits">Additional Credits</a></li>
+        </ul></li>
+        </ul></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="kc60-with-ws2812-rgb-underglow"><a href="#kc60-with-ws2812-rgb-underglow">KC60 with WS2812 RGB Underglow</a></h1>
+<p><img src="ws2812_example.jpg" alt="Image of KC60 with RGB Underglow" /></p>
+<h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
+<p>For the full Quantum feature list, see <a href="/README.md">the parent README.md</a>.</p>
+<h2 id="ws2812-support"><a href="#ws2812-support">WS2812 Support</a></h2>
+<p>By default, it is now setup for 16 LEDs on the PF5 breakout pin. See <a href="ws2812_wiring.jpg">included image</a> for wiring reference.</p>
+<h3 id="build"><a href="#build">Build</a></h3>
+<p>To build this keymap with WS2812 enabled, simply run <code>make KEYMAP=ws2812</code>.</p>
+<h3 id="reference-images"><a href="#reference-images">Reference Images</a></h3>
+<p><img src="ws2812_wiring.jpg" alt="Wiring Reference" /><br /><img src="ws2812_underside-lit.jpg" alt="RGB Strip turned on" /><br /><img src="ws2812_underside.jpg" alt="RGB Strip turned off" /></p>
+<h3 id="additional-credits"><a href="#additional-credits">Additional Credits</a></h3>
+<p>Keymap based on work by <a href="https://github.com/TerryMathews">TerryMatthews</a> for GH60 Satan.</p>
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code>
+
+# Build Options
+#   change yes to no to disable
+#
+BOOTMAGIC_ENABLE ?= yes      # Virtual DIP switch configuration(+1000)
+MOUSEKEY_ENABLE ?= yes       # Mouse keys(+4700)
+EXTRAKEY_ENABLE ?= yes       # Audio control and System control(+450)
+CONSOLE_ENABLE ?= yes        # Console for debug(+400)
+COMMAND_ENABLE ?= yes        # Commands for debug and configuration
+KEYBOARD_LOCK_ENABLE ?= yes  # Allow locking of keyboard via magic key
+BACKLIGHT_ENABLE ?= yes      # Enable keyboard backlight functionality
+RGBLIGHT_ENABLE ?= yes           # Enable WS2812 underglow RGB strip
+MIDI_ENABLE ?= no            # MIDI controls
+UNICODE_ENABLE ?= no         # Unicode
+BLUETOOTH_ENABLE ?= no       # Enable Bluetooth with the Adafruit EZ-Key HID
+AUDIO_ENABLE ?= no           # Audio output on port C6
+# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
+SLEEP_LED_ENABLE ?= no       # Breathing sleep LED during USB suspend
+# if this doesn&#39;t work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+NKRO_ENABLE ?= no            # USB Nkey Rollover
+
+ifndef QUANTUM_DIR
+    include ../../Makefile
+endif
+</code></pre>
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="co">/* WS2812B RGB Underglow LED */</span>
+<span class="ot">#define ws2812_PORTREG  PORTF</span>
+<span class="ot">#define ws2812_DDRREG   DDRF</span>
+<span class="ot">#define ws2812_pin PF5        </span><span class="co">// Based on wiring depicted in ws2812_wiring.jpg</span>
+<span class="ot">#define RGBLED_NUM 16         </span><span class="co">// Number of LEDs. Change this to match your use case.</span>
+<span class="ot">#define RGBLIGHT_HUE_STEP 8</span>
+<span class="ot">#define RGBLIGHT_SAT_STEP 8</span>
+<span class="ot">#define RGBLIGHT_VAL_STEP 8</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
