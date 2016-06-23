@@ -1,0 +1,261 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/atreus">atreus</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#atreus-keyboard-firmware">atreus keyboard firmware</a><ul>
+        <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
+        <li><a href="#atreus-specific-information">Atreus specific information</a></li>
+        <li><a href="#quick-aliases-to-common-actions">Quick aliases to common actions</a><ul>
+        <li><a href="#switching-and-toggling-layers">Switching and toggling layers</a></li>
+        <li><a href="#fun-with-modifier-keys">Fun with modifier keys</a></li>
+        <li><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></li>
+        <li><a href="#remember-these-are-just-aliases">Remember: These are just aliases</a></li>
+        </ul></li>
+        <li><a href="#macro-shortcuts-send-a-whole-string-when-pressing-just-one-key">Macro shortcuts: Send a whole string when pressing just one key</a><ul>
+        <li><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></li>
+        </ul></li>
+        <li><a href="#additional-language-support">Additional language support</a></li>
+        <li><a href="#unicode-support">Unicode support</a></li>
+        <li><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></li>
+        <li><a href="#midi-functionalty">MIDI functionalty</a></li>
+        <li><a href="#bluetooth-functionality">Bluetooth functionality</a></li>
+        <li><a href="#building">Building</a><ul>
+        <li><a href="#default">Default</a></li>
+        <li><a href="#other-keymaps">Other Keymaps</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+          <ul>
+          <li><a href="keymaps/default/">default</a></li>
+          <li><a href="keymaps/gerb/">gerb</a></li>
+          </ul>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="atreus-keyboard-firmware"><a href="#atreus-keyboard-firmware">atreus keyboard firmware</a></h1>
+<h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
+<p>You have access to a bunch of goodies! Check out the Makefile to enable/disable some of the features. Uncomment the <code>#</code> to enable them. Setting them to <code>no</code> does nothing and will only confuse future you.</p>
+<pre><code>BACKLIGHT_ENABLE = yes # Enable keyboard backlight functionality
+MIDI_ENABLE = yes      # MIDI controls
+# UNICODE_ENABLE = yes # Unicode support - this is commented out, just as an example. You have to use #, not //
+BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID</code></pre>
+<h2 id="atreus-specific-information"><a href="#atreus-specific-information">Atreus specific information</a></h2>
+<p>These configuration files are specifically for the Atreus keyboards created by Phil Hagelberg (@technomancy). This keyboard is available in two variants: one powered by a Teensy 2, one powered by an A-Star. This repository currently assumes that you have an A-Star powered Atreus. If you are using a Teensy2, specify that by adding <code>TEENSY2=yes</code> to your <code>make</code> commands.</p>
+<p>If you are coming from the <a href="https://github.com/technomancy/atreus-firmware">atreus-firmware</a>, we've also brought forward the <code>make upload</code> command for you to use.</p>
+<h2 id="quick-aliases-to-common-actions"><a href="#quick-aliases-to-common-actions">Quick aliases to common actions</a></h2>
+<p>Your keymap can include shortcuts to common operations (called &quot;function actions&quot; in tmk).</p>
+<h3 id="switching-and-toggling-layers"><a href="#switching-and-toggling-layers">Switching and toggling layers</a></h3>
+<p><code>MO(layer)</code> - momentary switch to <em>layer</em>. As soon as you let go of the key, the layer is deactivated and you pop back out to the previous layer. When you apply this to a key, that same key must be set as <code>KC_TRNS</code> on the destination layer. Otherwise, you won't make it back to the original layer when you release the key (and you'll get a keycode sent). You can only switch to layers <em>above</em> your current layer. If you're on layer 0 and you use <code>MO(1)</code>, that will switch to layer 1 just fine. But if you include <code>MO(3)</code> on layer 5, that won't do anything for you -- because layer 3 is lower than layer 5 on the stack.</p>
+<p><code>LT(layer, kc)</code> - momentary switch to <em>layer</em> when held, and <em>kc</em> when tapped. Like <code>MO()</code>, this only works upwards in the layer stack (<code>layer</code> must be higher than the current layer).</p>
+<p><code>TG(layer)</code> - toggles a layer on or off. As with <code>MO()</code>, you should set this key as <code>KC_TRNS</code> in the destination layer so that tapping it again actually toggles back to the original layer. Only works upwards in the layer stack.</p>
+<h3 id="fun-with-modifier-keys"><a href="#fun-with-modifier-keys">Fun with modifier keys</a></h3>
+<ul>
+<li><code>LSFT(kc)</code> - applies left Shift to <em>kc</em> (keycode) - <code>S(kc)</code> is an alias<br /></li>
+<li><code>RSFT(kc)</code> - applies right Shift to <em>kc</em><br /></li>
+<li><code>LCTL(kc)</code> - applies left Control to <em>kc</em><br /></li>
+<li><code>RCTL(kc)</code> - applies right Control to <em>kc</em><br /></li>
+<li><code>LALT(kc)</code> - applies left Alt to <em>kc</em><br /></li>
+<li><code>RALT(kc)</code> - applies right Alt to <em>kc</em><br /></li>
+<li><code>LGUI(kc)</code> - applies left GUI (command/win) to <em>kc</em><br /></li>
+<li><code>RGUI(kc)</code> - applies right GUI (command/win) to <em>kc</em></li>
+</ul>
+<p>You can also chain these, like this:</p>
+<pre><code>LALT(LCTL(KC_DEL)) -- this makes a key that sends Alt, Control, and Delete in a single keypress.</code></pre>
+<p>The following shortcuts automatically add <code>LSFT()</code> to keycodes to get commonly used symbols. Their long names are also available and documented in <code>/quantum/keymap_common.h</code>.</p>
+<pre><code>KC_TILD  ~
+KC_EXLM  !
+KC_AT    @
+KC_HASH  #
+KC_DLR   $
+KC_PERC  %
+KC_CIRC  ^
+KC_AMPR  &amp;
+KC_ASTR  *
+KC_LPRN  (
+KC_RPRN  )
+KC_UNDS  _
+KC_PLUS  +
+KC_LCBR  {
+KC_RCBR  }
+KC_PIPE  |
+KC_COLN  :</code></pre>
+<p><code>MT(mod, kc)</code> - is <em>mod</em> (modifier key - MOD_LCTL, MOD_LSFT) when held, and <em>kc</em> when tapped. In other words, you can have a key that sends Esc (or the letter O or whatever) when you tap it, but works as a Control key or a Shift key when you hold it down.</p>
+<p>These are the values you can use for the <code>mod</code> in <code>MT()</code> (right-hand modifiers are not available):</p>
+<ul>
+<li>MOD_LCTL<br /></li>
+<li>MOD_LSFT<br /></li>
+<li>MOD_LALT<br /></li>
+<li>MOD_LGUI</li>
+</ul>
+<p>These can also be combined like <code>MOD_LCTL | MOD_LSFT</code> e.g. <code>MT(MOD_LCTL | MOD_LSFT, KC_ESC)</code> which would activate Control and Shift when held, and send Escape when tapped.</p>
+<p>We've added shortcuts to make common modifier/tap (mod-tap) mappings more compact:</p>
+<ul>
+<li><code>CTL_T(kc)</code> - is LCTL when held and <em>kc</em> when tapped<br /></li>
+<li><code>SFT_T(kc)</code> - is LSFT when held and <em>kc</em> when tapped<br /></li>
+<li><code>ALT_T(kc)</code> - is LALT when held and <em>kc</em> when tapped<br /></li>
+<li><code>GUI_T(kc)</code> - is LGUI when held and <em>kc</em> when tapped<br /></li>
+<li><code>ALL_T(kc)</code> - is Hyper (all mods) when held and <em>kc</em> when tapped. To read more about what you can do with a Hyper key, see <a href="http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/">this blog post by Brett Terpstra</a></li>
+</ul>
+<h3 id="temporarily-setting-the-default-layer"><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></h3>
+<p><code>DF(layer)</code> - sets default layer to <em>layer</em>. The default layer is the one at the &quot;bottom&quot; of the layer stack - the ultimate fallback layer. This currently does not persist over power loss. When you plug the keyboard back in, layer 0 will always be the default. It is theoretically possible to work around that, but that's not what <code>DF</code> does.</p>
+<h3 id="remember-these-are-just-aliases"><a href="#remember-these-are-just-aliases">Remember: These are just aliases</a></h3>
+<p>These functions work the same way that their <code>ACTION_*</code> functions do - they're just quick aliases. To dig into all of the tmk ACTION_* functions, please see the <a href="https://github.com/jackhumbert/qmk_firmware/blob/master/tmk_core/doc/keymap.md#2-action">TMK documentation</a>.</p>
+<p>Instead of using <code>FNx</code> when defining <code>ACTION_*</code> functions, you can use <code>F(x)</code> - the benefit here is being able to use more than 32 function actions (up to 4096), if you happen to need them.</p>
+<h2 id="macro-shortcuts-send-a-whole-string-when-pressing-just-one-key"><a href="#macro-shortcuts-send-a-whole-string-when-pressing-just-one-key">Macro shortcuts: Send a whole string when pressing just one key</a></h2>
+<p>Instead of using the <code>ACTION_MACRO</code> function, you can simply use <code>M(n)</code> to access macro <em>n</em> - <em>n</em> will get passed into the <code>action_get_macro</code> as the <code>id</code>, and you can use a switch statement to trigger it. This gets called on the keydown and keyup, so you'll need to use an if statement testing <code>record-&gt;event.pressed</code> (see keymap_default.c).</p>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="dt">const</span> macro_t *action_get_macro(keyrecord_t *record, <span class="dt">uint8_t</span> id, <span class="dt">uint8_t</span> opt) <span class="co">// this is the function signature -- just copy/paste it into your keymap file as it is.</span>
+{
+  <span class="kw">switch</span>(id) {
+    <span class="kw">case</span> <span class="dv">0</span>: <span class="co">// this would trigger when you hit a key mapped as M(0)</span>
+      <span class="kw">if</span> (record-&gt;event.pressed) {
+        <span class="kw">return</span> MACRO( I(<span class="dv">255</span>), T(H), T(E), T(L), T(L), W(<span class="dv">255</span>), T(O), END  ); <span class="co">// this sends the string &#39;hello&#39; when the macro executes</span>
+      } 
+      <span class="kw">break</span>;
+  }
+  <span class="kw">return</span> MACRO_NONE;
+};</code></pre>
+<p>A macro can include the following commands:</p>
+<ul>
+<li>I() change interval of stroke in milliseconds.<br /></li>
+<li>D() press key.<br /></li>
+<li>U() release key.<br /></li>
+<li>T() type key(press and release).<br /></li>
+<li>W() wait (milliseconds).<br /></li>
+<li>END end mark.</li>
+</ul>
+<p>So above you can see the stroke interval changed to 255ms between each keystroke, then a bunch of keys being typed, waits a while, then the macro ends.</p>
+<p>Note: Using macros to have your keyboard send passwords for you is a bad idea.</p>
+<h3 id="additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc"><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></h3>
+<p>Everything is assuming you're in Qwerty (in software) by default, but there is built-in support for using a Colemak or Dvorak layout by including this at the top of your keymap:</p>
+<p>#include &quot;keymap_<layout>.h&quot;</p>
+<p>Where <layout> is &quot;colemak&quot; or &quot;dvorak&quot;. After including this line, you will get access to:</p>
+<ul>
+<li><code>CM_*</code> for all of the Colemak-equivalent characters<br /></li>
+<li><code>DV_*</code> for all of the Dvorak-equivalent characters</li>
+</ul>
+<p>These implementations assume you're using Colemak or Dvorak on your OS, not on your keyboard - this is referred to as a software-implemented layout. If your computer is in Qwerty and your keymap is in Colemak or Dvorak, this is referred to as a firmware-implemented layout, and you won't need these features.</p>
+<p>To give an example, if you're using software-implemented Colemak, and want to get an <code>F</code>, you would use <code>CM_F</code> - <code>KC_F</code> under these same circumstances would result in <code>T</code>.</p>
+<h2 id="additional-language-support"><a href="#additional-language-support">Additional language support</a></h2>
+<p>In <code>quantum/keymap_extras/</code>, you'll see various language files - these work the same way as the alternative layout ones do. Most are defined by their two letter country/language code followed by an underscore and a 4-letter abbreviation of its name. <code>FR_UGRV</code> which will result in a <code>ù</code> when using a software-implemented AZERTY layout. It's currently difficult to send such characters in just the firmware (but it's being worked on - see Unicode support).</p>
+<h2 id="unicode-support"><a href="#unicode-support">Unicode support</a></h2>
+<p>You can currently send 4 hex digits with your OS-specific modifier key (RALT for OSX with the &quot;Unicode Hex Input&quot; layout) - this is currently limited to supporting one OS at a time, and requires a recompile for switching. 8 digit hex codes are being worked on. The keycode function is <code>UC(n)</code>, where <em>n</em> is a 4 digit hexidecimal. Enable from the Makefile.</p>
+<h2 id="other-firmware-shortcut-keycodes"><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></h2>
+<ul>
+<li><code>RESET</code> - puts the MCU in DFU mode for flashing new firmware (with <code>make dfu</code>)<br /></li>
+<li><code>DEBUG</code> - the firmware into debug mode - you'll need hid_listen to see things<br /></li>
+<li><code>BL_ON</code> - turns the backlight on<br /></li>
+<li><code>BL_OFF</code> - turns the backlight off<br /></li>
+<li><code>BL_&lt;n&gt;</code> - sets the backlight to level <em>n</em><br /></li>
+<li><code>BL_INC</code> - increments the backlight level by one<br /></li>
+<li><code>BL_DEC</code> - decrements the backlight level by one<br /></li>
+<li><code>BL_TOGG</code> - toggles the backlight<br /></li>
+<li><code>BL_STEP</code> - steps through the backlight levels</li>
+</ul>
+<p>Enable the backlight from the Makefile.</p>
+<h2 id="midi-functionalty"><a href="#midi-functionalty">MIDI functionalty</a></h2>
+<p>This is still a WIP, but check out <code>quantum/keymap_midi.c</code> to see what's happening. Enable from the Makefile.</p>
+<h2 id="bluetooth-functionality"><a href="#bluetooth-functionality">Bluetooth functionality</a></h2>
+<p>This requires <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/3psx0q/the_planck_keyboard_with_bluetooth_guide_and/?ref=search_posts">some hardware changes</a>, but can be enabled via the Makefile. The firmware will still output characters via USB, so be aware of this when charging via a computer. It would make sense to have a switch on the Bluefruit to turn it off at will.</p>
+<h2 id="building"><a href="#building">Building</a></h2>
+<p>Download or clone the whole firmware and navigate to the keyboard/planck folder. Once your dev env is setup, you'll be able to type <code>make</code> to generate your .hex - you can then use <code>make dfu</code> to program your PCB once you hit the reset button.</p>
+<p>Depending on which keymap you would like to use, you will have to compile slightly differently.</p>
+<h3 id="default"><a href="#default">Default</a></h3>
+<p>To build with the default keymap, simply run <code>make</code>.</p>
+<h3 id="other-keymaps"><a href="#other-keymaps">Other Keymaps</a></h3>
+<p>Several version of keymap are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create file named <code>&lt;name&gt;.c</code> and see keymap document (you can find in top README.md) and existent keymap files.</p>
+<p>To build the firmware binary hex file with a keymap just do <code>make</code> with <code>KEYMAP</code> option like:</p>
+<pre><code>$ make KEYMAP=[default|jack|&lt;name&gt;]</code></pre>
+<p>Keymaps follow the format <strong><strong>\<name\>.c</strong></strong> and are stored in the <code>keymaps</code> folder.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

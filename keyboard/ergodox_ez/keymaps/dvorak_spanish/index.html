@@ -1,0 +1,187 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboard/">keyboards</a> / <a href="/keyboard/ergodox_ez">ergodox_ez</a> / keymaps / <a href="/keyboard/ergodox_ez/keymaps/dvorak_spanish/">dvorak_spanish</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboard/ergodox_ez/keymaps/dvorak_spanish/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_ez_dvorak_spanish.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#ergodox-spanish-dvorak-layout">Ergodox Spanish Dvorak Layout</a><ul>
+        <li><a href="#keymap-layers">Keymap Layers</a><ul>
+        <li><a href="#keymap-0-base-layer">Keymap 0: Base layer</a></li>
+        <li><a href="#keymap-1-aux-layer">Keymap 1: Aux layer</a></li>
+        <li><a href="#keymap-2-qwerty-layer">Keymap 2: QWERTY layer</a></li>
+        </ul></li>
+        <li><a href="#generation-of-.hex-file">Generation of .hex file</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="ergodox-spanish-dvorak-layout"><a href="#ergodox-spanish-dvorak-layout">Ergodox Spanish Dvorak Layout</a></h1>
+<ul>
+<li>See spanish dvorak layout <a href="http://djelibeibi.unex.es/dvorak/">here</a><br /></li>
+<li>Software layout must be set to SPANISH QWERTY to work properly</li>
+</ul>
+<h2 id="keymap-layers"><a href="#keymap-layers">Keymap Layers</a></h2>
+<ul>
+<li>L0: spanish dvorak with some customizations (see layout below)<br /></li>
+<li>L1: auxiliary keys (includes qwerty shortcuts, numpad...)<br /></li>
+<li>L2: qwerty layout with customizations</li>
+</ul>
+<h3 id="keymap-0-base-layer"><a href="#keymap-0-base-layer">Keymap 0: Base layer</a></h3>
+<p>Keys with double values (like Esc/Ctrl) correspond to the 'tapped' key and the 'held' key, respectively</p>
+<pre><code>
+
+,--------------------------------------------------.           ,--------------------------------------------------.
+|   \    |   1  |   2  |   3  |   4  |   5  |  <>  |           |   ¡  |   6  |   7  |   8  |   9  |   0  |   '    |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+| F1/~L1 |   .  |   ,  |   Ñ  |   P  |   Y  |MEH_T |           |  L1  |   F  |   G  |   C  |   H  |   L  |ALL_T/+ |
+|--------+------+------+------+------+------| DEL  |           | ~L1  |------+------+------+------+------+--------|
+|Esc/Ctrl|   A  |   O  |   E  |   U  |   I  |------|           |------|   D  |   R  |   T  |   N  |   S  |'/RCtrl |
+|--------+------+------+------+------+------| LGUI |           | RALT |------+------+------+------+------+--------|
+| {/LSft |   -  |   Q  |   J  |   K  |   X  |      |           |      |   B  |   M  |   W  |   V  |   Z  | }/RSft |
+'--------+------+------+------+------+-------------'           '-------------+------+------+------+------+--------'
+  |[/LALT| HOME |PGDOWN| PGUP | END  |                                       | LEFT | DOWN |  UP  |RIGHT |]/LALT|
+  '----------------------------------'                                       '----------------------------------'
+                                       ,-------------.       ,-------------.
+                                       |F5/CAG|F6/~L1|       |F7/~L1|F8/CAG|
+                                ,------|------|------|       |------+--------+------.
+                                |      |      |F4/CA |       |F11/CA|        |      |
+                                | ENTER| TAB  |------|       |------|  BSPC  | SPACE|
+                                |      |      |F3/SA |       |F12/SA|        |      |
+                                '--------------------'       '----------------------'
+ CAG = CTRL-ALT-GUI
+  CA = CTRL-ALT
+  SA = SHIFT-ALT
+
+</pre>
+<p></code></p>
+<h3 id="keymap-1-aux-layer"><a href="#keymap-1-aux-layer">Keymap 1: Aux layer</a></h3>
+<pre><code>
+
+,--------------------------------------------------.           ,--------------------------------------------------.
+|        |  F1  |  F2  |  F3  |  F4  |  F5  | SLEEP|           | PWR  |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|        |  <   |  >   | MsUp |      |      |      |           | ~L0  |      |   7  |   8  |   9  |   *  |  '^    |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |      |MsLeft|MsDown|MsRght|      |------|           |------|      |   4  |   5  |   6  |   +  |   Ç    |
+|--------+------+------+------+------+------|      |           |PSCR  |------+------+------+------+------+--------|
+|CAPSLOCK|      |      |      |      |      |      |           |      |      |   1  |   2  |   3  |   /  |        |
+'--------+------+------+------+------+-------------'           '-------------+------+------+------+------+--------'
+  |CTRL-S|CTRL-Z|CTRL-X|CTRL-C|CTRL-V|                                       |      |    . |   0  |   =  |      |
+  '----------------------------------'                                       '----------------------------------'
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |      | Play |
+                                ,------|------|------|       |------+------+------.
+                                |      |      |      |       | VolUp|      |      |
+                                | Lclk | Rclk |------|       |------| Prev | Next |
+                                |      |      |  L2  |       | VolDn|      |      |
+                                '--------------------'       '--------------------'
+
+</pre>
+<p></code></p>
+<h3 id="keymap-2-qwerty-layer"><a href="#keymap-2-qwerty-layer">Keymap 2: QWERTY layer</a></h3>
+<pre><code>
+
+,--------------------------------------------------.           ,--------------------------------------------------.
+|   \    |   1  |   2  |   3  |   4  |   5  |  <>  |           |   ¡  |   6  |   7  |   8  |   9  |   0  |   '    |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|  TRANS |   Q  |   W  |   E  |   R  |   T  |MEH_T |           | TRANS|   Y  |   U  |   I  |   O  |   P  |ALL_T/+ |
+|--------+------+------+------+------+------| DEL  |           |      |------+------+------+------+------+--------|
+|Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   Ñ  |'/RCtrl |
+|--------+------+------+------+------+------| LGUI |           | RALT |------+------+------+------+------+--------|
+| {/LSft |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   -  | }/RSft |
+'--------+------+------+------+------+-------------'           '-------------+------+------+------+------+--------'
+  |[/LALT| HOME |PGDOWN| PGUP | END  |                                       | LEFT | DOWN |  UP  |RIGHT |]/LALT|
+  '----------------------------------'                                       '----------------------------------'
+                                       ,-------------.       ,-------------.
+                                       |F5/CAG| TRANS|       | TRANS|F8/CAG|
+                                ,------|------|------|       |------+--------+------.
+                                |      |      |F4/CA |       |F11/CA|        |      |
+                                | ENTER| TAB  |------|       |------|  BSPC  | SPACE|
+                                |      |      | TRANS|       |F12/SA|        |      |
+                                '--------------------'       '----------------------'
+ CAG = CTRL-ALT-GUI
+  CA = CTRL-ALT
+  SA = SHIFT-ALT
+
+</pre>
+<p></code></p>
+<h2 id="generation-of-.hex-file"><a href="#generation-of-.hex-file">Generation of .hex file</a></h2>
+<blockquote>
+<p><a href="https://github.com/johgh/keyboard/tree/master/ergodox">Download scripts from here</a></p>
+</blockquote>
+<blockquote>
+<p>Execute install.sh and generate.sh scripts.</p>
+</blockquote>
+<blockquote>
+<p>Flash with <code>teensy_loader</code> binary (should be installed from previous step)</p>
+</blockquote>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
