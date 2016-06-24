@@ -96,8 +96,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
         <ul>
         <li><a href="#the-default-planck-layout">The Default Planck Layout</a></li>
-        <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -111,6 +112,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       </div>
             <div class="span8">
             <h1 id="the-default-planck-layout">The Default Planck Layout</h1>
+<hr />
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#define LEADER_TIMEOUT 300</span>
+
+<span class="ot">#endif</span></code></pre></div>
 <hr />
 <h1 id="makefile">Makefile</h1>
 <pre><code>
@@ -139,7 +150,7 @@ ifndef QUANTUM_DIR
     include ../../../../Makefile
 endif</code></pre>
 <hr />
-<h1 id="config.h">config.h</h1>
+<h1 id="config.h-1">config.h</h1>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
 <span class="ot">#define CONFIG_USER_H</span>
 

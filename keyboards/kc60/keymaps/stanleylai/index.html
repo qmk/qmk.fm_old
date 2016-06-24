@@ -105,8 +105,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         <li><a href="#build">Build</a></li>
         </ul></li>
         </ul></li>
-        <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -122,7 +123,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <h1 id="stanley-lais-split-right-shift-with-dedicated-arrow-keys">Stanley Lai's Split Right Shift with Dedicated Arrow Keys</h1>
 <p><img src="../ws2812/ws2812_example.jpg" alt="Image of KC60 with RGB Underglow" /></p>
 <h2 id="quantum-mk-firmware">Quantum MK Firmware</h2>
-<p>For the full Quantum feature list, see <a href="/README.md">the parent README.md</a>.</p>
+<p>For the full Quantum feature list, see <a href="/readme.md">the parent readme.md</a>.</p>
 <h2 id="keymap-notes">Keymap Notes</h2>
 <ul>
 <li>Keymap setup with split Right Shift in mind.</li>
@@ -141,6 +142,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>By default, it is now setup for 16 LEDs on the PF5 breakout pin. See <a href="../ws2812/ws2812_wiring.jpg">included image</a> for wiring reference.</p>
 <h3 id="build">Build</h3>
 <p>To build this keymap, simply run <code>make KEYMAP=stanleylai</code>.</p>
+<hr />
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="co">// Use configs from WS2812 enabled Keymap</span>
+
+<span class="ot">#include &quot;../ws2812/config.h&quot;</span></code></pre></div>
 <hr />
 <h1 id="makefile">Makefile</h1>
 <pre><code>
@@ -170,7 +176,7 @@ ifndef QUANTUM_DIR
 endif
 </code></pre>
 <hr />
-<h1 id="config.h">config.h</h1>
+<h1 id="config.h-1">config.h</h1>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="co">// Use configs from WS2812 enabled Keymap</span>
 
 <span class="ot">#include &quot;../ws2812/config.h&quot;</span></code></pre></div>

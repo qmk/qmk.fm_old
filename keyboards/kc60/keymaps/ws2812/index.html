@@ -103,8 +103,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         <li><a href="#additional-credits">Additional Credits</a></li>
         </ul></li>
         </ul></li>
-        <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -120,7 +121,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <h1 id="kc60-with-ws2812-rgb-underglow">KC60 with WS2812 RGB Underglow</h1>
 <p><img src="ws2812_example.jpg" alt="Image of KC60 with RGB Underglow" /></p>
 <h2 id="quantum-mk-firmware">Quantum MK Firmware</h2>
-<p>For the full Quantum feature list, see <a href="/README.md">the parent README.md</a>.</p>
+<p>For the full Quantum feature list, see <a href="/readme.md">the parent readme.md</a>.</p>
 <h2 id="ws2812-support">WS2812 Support</h2>
 <p>By default, it is now setup for 16 LEDs on the PF5 breakout pin. See <a href="ws2812_wiring.jpg">included image</a> for wiring reference.</p>
 <h3 id="build">Build</h3>
@@ -131,6 +132,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="ws2812_underside.jpg" alt="RGB Strip turned off" /></p>
 <h3 id="additional-credits">Additional Credits</h3>
 <p>Keymap based on work by <a href="https://github.com/TerryMathews">TerryMatthews</a> for GH60 Satan.</p>
+<hr />
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="co">/* WS2812B RGB Underglow LED */</span>
+<span class="ot">#define ws2812_PORTREG  PORTF</span>
+<span class="ot">#define ws2812_DDRREG   DDRF</span>
+<span class="ot">#define ws2812_pin PF5        </span><span class="co">// Based on wiring depicted in ws2812_wiring.jpg</span>
+<span class="ot">#define RGBLED_NUM 16         </span><span class="co">// Number of LEDs. Change this to match your use case.</span>
+<span class="ot">#define RGBLIGHT_HUE_STEP 8</span>
+<span class="ot">#define RGBLIGHT_SAT_STEP 8</span>
+<span class="ot">#define RGBLIGHT_VAL_STEP 8</span></code></pre></div>
 <hr />
 <h1 id="makefile">Makefile</h1>
 <pre><code>
@@ -160,7 +173,7 @@ ifndef QUANTUM_DIR
 endif
 </code></pre>
 <hr />
-<h1 id="config.h">config.h</h1>
+<h1 id="config.h-1">config.h</h1>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#include &quot;../../config.h&quot;</span>
 
 <span class="co">/* WS2812B RGB Underglow LED */</span>

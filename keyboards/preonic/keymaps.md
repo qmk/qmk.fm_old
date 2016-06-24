@@ -1,3 +1,0 @@
-### Keymaps
-
-* [default](keymaps/default/)
