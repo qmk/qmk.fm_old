@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pandoc https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/readme.md \
+pandoc qmk_readme.md \
 -f markdown_github --to html --standalone --output index.html \
 --template standalone.html --toc --toc-depth 3
 
