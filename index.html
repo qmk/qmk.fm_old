@@ -108,14 +108,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </ul></li>
         <li><a href="#verify-your-installation">Verify Your Installation</a></li>
         </ul></li>
-        <li><a href="#customizing-building-and-flashing-your-keymap">Customizing, building, and flashing your keymap</a><ul>
+        <li><a href="#customizing-your-keymap">Customizing your keymap</a><ul>
         <li><a href="#the-make-command">The <code>make</code> command</a></li>
         <li><a href="#the-makefile">The <code>Makefile</code></a><ul>
         <li><a href="#makefile-options">Makefile options</a></li>
         <li><a href="#customizing-makefile-options-on-a-per-keymap-basis">Customizing Makefile options on a per-keymap basis</a></li>
         </ul></li>
         <li><a href="#the-config.h-file">The <code>config.h</code> file</a></li>
-        <li><a href="#editing-your-keymap">Editing your keymap</a><ul>
+        <li><a href="#going-beyond-the-keycodes">Going beyond the keycodes</a><ul>
         <li><a href="#switching-and-toggling-layers">Switching and toggling layers</a></li>
         <li><a href="#fun-with-modifier-keys">Fun with modifier keys</a></li>
         <li><a href="#space-cadet-shift-the-future-built-in">Space Cadet Shift: The future, built in</a></li>
@@ -132,18 +132,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         <li><a href="#unicode-support">Unicode support</a></li>
         <li><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></li>
         </ul></li>
-        <li><a href="#custom-quantum-functions-for-keyboards-and-keymaps">Custom Quantum functions for keyboards and keymaps</a><ul>
+        <li><a href="#custom-quantum-functions">Custom Quantum functions</a><ul>
         <li><a href="#void-martix_init_void"><code>void martix_init_*(void)</code></a></li>
         <li><a href="#void-matrix_scan_void"><code>void matrix_scan_*(void)</code></a></li>
         <li><a href="#bool-process_record_uint16_t-keycode-keyrecord_t-record"><code>bool process_record_*(uint16_t keycode, keyrecord_t *record)</code></a></li>
         <li><a href="#void-led_set_uint8_t-usb_led"><code>void led_set_*(uint8_t usb_led)</code></a></li>
         </ul></li>
+        <li><a href="#modding-your-keyboard">Modding your keyboard</a><ul>
         <li><a href="#audio-output-from-a-speaker">Audio output from a speaker</a></li>
         <li><a href="#midi-functionalty">MIDI functionalty</a></li>
         <li><a href="#bluetooth-functionality">Bluetooth functionality</a></li>
         <li><a href="#international-characters-on-windows">International Characters on Windows</a></li>
         <li><a href="#rgb-under-glow-mod">RGB Under Glow Mod</a><ul>
         <li><a href="#ws2812-wiring">WS2812 Wiring</a></li>
+        </ul></li>
         <li><a href="#safety-considerations">Safety Considerations</a></li>
         </ul></li>
         <li><a href="#porting-your-keyboard-to-qmk">Porting your keyboard to QMK</a><ul>
@@ -233,7 +235,7 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 <li>To confirm that you're in the correct location, you can display the contents of your current folder using the <code>dir</code> command on Windows, or the <code>ls</code> command on Linux or Mac. You should see several files, including <code>readme.md</code> and a <code>quantum</code> folder. From here, you need to navigate to the appropriate folder under <code>keyboards/</code>. For example, if you're building for a Planck, run <code>cd keyboards/planck</code>.</li>
 <li>Once you're in the correct keyboard-specific folder, run the <code>make</code> command. This should output a lot of information about the build process. More information about the <code>make</code> command can be found below.</li>
 </ol>
-<h1 id="customizing-building-and-flashing-your-keymap">Customizing, building, and flashing your keymap</h1>
+<h1 id="customizing-your-keymap">Customizing your keymap</h1>
 <p>In every keymap folder, the following files are recommended:</p>
 <ul>
 <li><code>config.h</code> - the options to configure your keymap</li>
@@ -319,7 +321,7 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 <span class="ot">#define MY_SETTING 4</span></code></pre></div>
 <p>For a value of <code>4</code> for this imaginary setting. So we <code>undef</code> it first, then <code>define</code> it.</p>
 <p>You can then override any settings, rather than having to copy and paste the whole thing.</p>
-<h2 id="editing-your-keymap">Editing your keymap</h2>
+<h2 id="going-beyond-the-keycodes">Going beyond the keycodes</h2>
 <p>Aside from the <a href="doc/keycode.txt">basic keycodes</a>, your keymap can include shortcuts to common operations.</p>
 <h3 id="switching-and-toggling-layers">Switching and toggling layers</h3>
 <p><code>MO(layer)</code> - momentary switch to <em>layer</em>. As soon as you let go of the key, the layer is deactivated and you pop back out to the previous layer. When you apply this to a key, that same key must be set as <code>KC_TRNS</code> on the destination layer. Otherwise, you won't make it back to the original layer when you release the key (and you'll get a keycode sent). You can only switch to layers <em>above</em> your current layer. If you're on layer 0 and you use <code>MO(1)</code>, that will switch to layer 1 just fine. But if you include <code>MO(3)</code> on layer 5, that won't do anything for you -- because layer 3 is lower than layer 5 on the stack.</p>
@@ -586,7 +588,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 <li><code>BL_STEP</code> - steps through the backlight levels</li>
 </ul>
 <p>Enable the backlight from the Makefile.</p>
-<h1 id="custom-quantum-functions-for-keyboards-and-keymaps">Custom Quantum functions for keyboards and keymaps</h1>
+<h1 id="custom-quantum-functions">Custom Quantum functions</h1>
 <p>All of these functions are available in the <code>*_kb()</code> or <code>*_user()</code> variety. <code>kb</code> ones should only be used in the <code>&lt;keyboard&gt;/&lt;keyboard&gt;.c</code> file, and <code>user</code> ones should only be used in the <code>keymap.c</code>. The keyboard ones call the user ones - it's necessary to keep these calls to allow the keymap functions to work correctly.</p>
 <h2 id="void-martix_init_void"><code>void martix_init_*(void)</code></h2>
 <p>This function gets called when the matrix is initiated, and can contain start-up code for your keyboard/keymap.</p>
@@ -615,7 +617,8 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 #define USB_LED_COMPOSE                 3
 #define USB_LED_KANA                    4</code></pre>
 <p>and can be tested against the <code>usb_led</code> with a conditional like <code>if (usb_led &amp; (1&lt;&lt;USB_LED_CAPS_LOCK))</code> - if this is true, you can turn your LED one, otherwise turn it off.</p>
-<h1 id="audio-output-from-a-speaker">Audio output from a speaker</h1>
+<h1 id="modding-your-keyboard">Modding your keyboard</h1>
+<h2 id="audio-output-from-a-speaker">Audio output from a speaker</h2>
 <p>Your keyboard can make sounds! If you've got a Planck, Preonic, or basically any keyboard that allows access to the C6 port, you can hook up a simple speaker and make it beep. You can use those beeps to indicate layer transitions, modifiers, special keys, or just to play some funky 8bit tunes.</p>
 <p>The audio code lives in <a href="/quantum/audio/audio.h">quantum/audio/audio.h</a> and in the other files in the audio directory. It's enabled by default on the Planck <a href="/keyboards/planck/keymaps/default/keymap.c">stock keymap</a>. Here are the important bits:</p>
 <pre><code>#include &quot;audio.h&quot;</code></pre>
@@ -642,11 +645,11 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <pre><code>PLAY_NOTE_ARRAY(tone_plover, false, 0); // Signature is: Song name, repeat, rest style</code></pre>
 <p>This is inside one of the macros. So when that macro executes, your keyboard plays that particular chime.</p>
 <p>&quot;Rest style&quot; in the method signature above (the last parameter) specifies if there's a rest (a moment of silence) between the notes.</p>
-<h1 id="midi-functionalty">MIDI functionalty</h1>
+<h2 id="midi-functionalty">MIDI functionalty</h2>
 <p>This is still a WIP, but check out <code>quantum/keymap_midi.c</code> to see what's happening. Enable from the Makefile.</p>
-<h1 id="bluetooth-functionality">Bluetooth functionality</h1>
+<h2 id="bluetooth-functionality">Bluetooth functionality</h2>
 <p>This requires <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/3psx0q/the_planck_keyboard_with_bluetooth_guide_and/?ref=search_posts">some hardware changes</a>, but can be enabled via the Makefile. The firmware will still output characters via USB, so be aware of this when charging via a computer. It would make sense to have a switch on the Bluefruit to turn it off at will.</p>
-<h1 id="international-characters-on-windows">International Characters on Windows</h1>
+<h2 id="international-characters-on-windows">International Characters on Windows</h2>
 <p><a href="https://autohotkey.com">AutoHotkey</a> allows Windows users to create custom hotkeys among others.</p>
 <p>The method does not require Unicode support in the keyboard itself but depends instead of AutoHotkey running in the background.</p>
 <p>First you need to select a modifier combination that is not in use by any of your programs.<br />
@@ -659,7 +662,7 @@ This makes the key behave like a tab key if pressed and released immediately but
 &lt;^&lt;!&lt;#&lt;+a::Send, Ä</code></pre>
 <p>The hotkeys above are for the combination CtrlAltGui and CtrlAltGuiShift plus the letter a.<br />
 AutoHotkey inserts the Text right of <code>Send,</code> when this combination is pressed.</p>
-<h1 id="rgb-under-glow-mod">RGB Under Glow Mod</h1>
+<h2 id="rgb-under-glow-mod">RGB Under Glow Mod</h2>
 <p><img src="https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboards/planck/keymaps/yang/planck-with-rgb-underglow.jpg" alt="Planck with RGB Underglow" /></p>
 <p>Here is a quick demo on Youtube (with NPKC KC60) (<a href="https://www.youtube.com/watch?v=VKrpPAHlisY" class="uri">https://www.youtube.com/watch?v=VKrpPAHlisY</a>).</p>
 <p>For this mod, you need an unused pin wiring to DI of WS2812 strip. After wiring the VCC, GND, and DI, you can enable the underglow in your Makefile.</p>
@@ -678,7 +681,7 @@ AutoHotkey inserts the Text right of <code>Send,</code> when this combination is
 #define ws2812_DDRREG   DDRB
 #define ws2812_pin PB3</code></pre>
 <p>The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. For details, please check this keymap. <code>keyboards/planck/keymaps/yang/keymap.c</code></p>
-<h2 id="ws2812-wiring">WS2812 Wiring</h2>
+<h3 id="ws2812-wiring">WS2812 Wiring</h3>
 <p><img src="https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboards/planck/keymaps/yang/WS2812-wiring.jpg" alt="WS2812 Wiring" /></p>
 <p>Please note the USB port can only supply a limited amount of power to the keyboard (500mA by standard, however, modern computer and most usb hubs can provide 700+mA.). According to the data of NeoPixel from Adafruit, 30 WS2812 LEDs require a 5V 1A power supply, LEDs used in this mod should not more than 20.</p>
 <h2 id="safety-considerations">Safety Considerations</h2>
