@@ -59,6 +59,7 @@
 
         <ul>
         <li><a href="#beginners-keymap-for-ergodox-ez">Beginner's keymap for Ergodox-EZ</a></li>
+        <li><a href="#makefile">Makefile</a></li>
         </ul>
 
         </div>
@@ -92,6 +93,18 @@
 <li>[CapsLock] also acts as [Ctrl] key when you press and hold. It is convenient for GNU Emacs users.<br /></li>
 <li>Additional bracket keys are placed in the center of the keyboard for programmer's convenience.</li>
 </ul>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code># Having a file like this allows you to override Makefile definitions
+# for your own particular keymap
+
+SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
+COMMAND_ENABLE   = no  # Commands for debug and configuration
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+</code></pre>
             </div>
     </div>
   </div>
