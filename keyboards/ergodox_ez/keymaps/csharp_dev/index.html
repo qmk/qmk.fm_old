@@ -79,45 +79,39 @@
 
       </div>
             <div class="span8">
-            <h1 id="ergodox-ez-c-developer-configuration">ErgoDox EZ C# Developer configuration</h1>
-<h2 id="changelog">Changelog</h2>
+            <h1 id="ergodox-ez-c-developer-configuration"><a href="#ergodox-ez-c-developer-configuration">ErgoDox EZ C# Developer configuration</a></h1>
+<h2 id="changelog"><a href="#changelog">Changelog</a></h2>
 <ul>
-<li>Feb 12, 2016 (V1):</li>
-<li>First version commit</li>
-<li>Mar 20, 2016 (V2):</li>
+<li>Feb 12, 2016 (V1):<br /></li>
+<li>First version commit<br /></li>
+<li>Mar 20, 2016 (V2):<br /></li>
 <li>Removed &quot;Classic QWERTY&quot; layer, inverted GUI and SHIFT on Hold for Space and Enter</li>
 </ul>
-<h2 id="about">About</h2>
+<h2 id="about"><a href="#about">About</a></h2>
 <p>This layout was conceived in an attempt to optimise keyboard layout for developers (C# more specifically, but it can work with most of other languages), and limit the keys required to perform the most frequent actions.</p>
-<p>I came to the realization that my main tool as a developer, the qwerty keyboard was something that did not evolved at its core in almost 150 years.<br />
-There are a lot of reasons to this, and it would be a massive entreprise to change a standard so strongly anchored, but I wanted to give it a try and see how would look an input device dedicated to developers, more specifically a C# developer in my case.<br />
-The biggest flaw in standard QWERTY keyboards was that I always needed to perform key combination to access commonly used characters or actions. Think about it a minute, how many times a day do you press a modifier key such as Ctrl or Shift, it's insane and could be so easily optimized to require only one key press.</p>
+<p>I came to the realization that my main tool as a developer, the qwerty keyboard was something that did not evolved at its core in almost 150 years.<br />There are a lot of reasons to this, and it would be a massive entreprise to change a standard so strongly anchored, but I wanted to give it a try and see how would look an input device dedicated to developers, more specifically a C# developer in my case.<br />The biggest flaw in standard QWERTY keyboards was that I always needed to perform key combination to access commonly used characters or actions. Think about it a minute, how many times a day do you press a modifier key such as Ctrl or Shift, it's insane and could be so easily optimized to require only one key press.</p>
 <p>Then I came across the ErgoDox EZ project, that allowed a full customization of its firmware, and a unique 2 parts design.</p>
 <p><img src="csharp_dev_legend.png" alt="CSharpDev" /></p>
-<h2 id="layout-design-principles">Layout design principles</h2>
+<h2 id="layout-design-principles"><a href="#layout-design-principles">Layout design principles</a></h2>
 <ul>
-<li>No key combination required for the most common input characters ( (),[],{},&lt;&gt; ... )</li>
-<li>No key combination required for the most common actions (copy/paste/undo/save)</li>
-<li>Regroup characters by usage ( + - * = ...)</li>
-<li>Easy access to the most commonly used characters: ; / &quot; . ,</li>
+<li>No key combination required for the most common input characters ( (),[],{},&lt;&gt; ... )<br /></li>
+<li>No key combination required for the most common actions (copy/paste/undo/save)<br /></li>
+<li>Regroup characters by usage ( + - * = ...)<br /></li>
+<li>Easy access to the most commonly used characters: ; / &quot; . ,<br /></li>
 <li>Preregistered macro for the most common C# langage instructions: public / private / string / int / float ...</li>
 </ul>
-<h2 id="why-is-it-specific-to-c-sharp">Why is it specific to C Sharp</h2>
-<p>I defined the characters priority based on their usage in C# language, most of this characters are also used in other coding languages but it may require some tweaking.<br />
-For example there is no direct access to ~ or $ keys which can be very common in some languages.<br />
-Note it is also specific to Windows environement as the shortcut used in action keys would not work on Mac Os</p>
-<h2 id="in-usage">In usage</h2>
-<p>It was relatively easy to get used to the layout, but it's hard for me to define how easy it was as I was getting used to a blank Ergodox keyboard at the same time.<br />
-Still it's extremely satisfying to Save your file with just one easily accessible key or to have one big key to end your code line ( ; )</p>
-<h2 id="improvements">Improvements</h2>
-<p>This layout was shared after a bunch of iterations and only once I was happy with it.<br />
-Still there are many way to improve or iterate on this:</p>
+<h2 id="why-is-it-specific-to-c-sharp"><a href="#why-is-it-specific-to-c-sharp">Why is it specific to C Sharp</a></h2>
+<p>I defined the characters priority based on their usage in C# language, most of this characters are also used in other coding languages but it may require some tweaking.<br />For example there is no direct access to ~ or $ keys which can be very common in some languages.<br />Note it is also specific to Windows environement as the shortcut used in action keys would not work on Mac Os</p>
+<h2 id="in-usage"><a href="#in-usage">In usage</a></h2>
+<p>It was relatively easy to get used to the layout, but it's hard for me to define how easy it was as I was getting used to a blank Ergodox keyboard at the same time.<br />Still it's extremely satisfying to Save your file with just one easily accessible key or to have one big key to end your code line ( ; )</p>
+<h2 id="improvements"><a href="#improvements">Improvements</a></h2>
+<p>This layout was shared after a bunch of iterations and only once I was happy with it.<br />Still there are many way to improve or iterate on this:</p>
 <ul>
-<li>Make it language agnostic</li>
-<li>Check and compile language's keyboard's heatmaps to statistically define keys priority (e.g. <a href="https://dzone.com/articles/most-pressed-keys-various" class="uri">https://dzone.com/articles/most-pressed-keys-various</a> )</li>
+<li>Make it language agnostic<br /></li>
+<li>Check and compile language's keyboard's heatmaps to statistically define keys priority (e.g. <a href="https://dzone.com/articles/most-pressed-keys-various">https://dzone.com/articles/most-pressed-keys-various</a> )<br /></li>
 <li>QWERTY is still not the most efficient typing layout, I would like to create a Dvorak based similar layout in a near futur</li>
 </ul>
-<h2 id="issues">Issues</h2>
+<h2 id="issues"><a href="#issues">Issues</a></h2>
 <p>One of the issues encountered while creating this layout was that I did not find a way to have a key to send a modifier on hold, and a key combination while pressed (e.g. I can't set a Key to do Save (Ctrl + S) when pressed and Shift modifier when hold )</p>
             </div>
     </div>
