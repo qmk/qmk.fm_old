@@ -100,8 +100,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         <li><a href="#some-code-structure-ideas">2. Some code structure ideas</a></li>
         <li><a href="#things-i-did-not-like-about-the-default-mapping">3. Things I did not like about the default mapping</a></li>
         </ul></li>
-        <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -175,6 +176,23 @@ be on the first column.</li>
 <li>I needed to swap ' and ENTER</li>
 </ul>
 <hr />
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="co">/* cbbrowne user configuration */</span>
+
+<span class="ot">#define randadd 53</span>
+<span class="ot">#define randmul 181</span>
+<span class="ot">#define randmod 167</span>
+
+<span class="ot">#endif</span>
+
+
+</code></pre></div>
+<hr />
 <h1 id="makefile">Makefile</h1>
 <pre><code>
 
@@ -202,7 +220,7 @@ ifndef QUANTUM_DIR
     include ../../../../Makefile
 endif</code></pre>
 <hr />
-<h1 id="config.h">config.h</h1>
+<h1 id="config.h-1">config.h</h1>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
 <span class="ot">#define CONFIG_USER_H</span>
 

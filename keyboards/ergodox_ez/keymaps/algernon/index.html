@@ -116,8 +116,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         <li><a href="#v1.0---2016-05-26">v1.0 - 2016-05-26</a></li>
         </ul></li>
         <li><a href="#license">License</a></li>
-        <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -318,6 +319,35 @@ between Dvorak and Capewell-Dvorak. A work in progress.</li>
 GPL-2+, this layout is under the GPL as well, but GPL-3+, rather than the older<br />
 version.</p>
 <hr />
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_ALGERNON_H</span>
+<span class="ot">#define CONFIG_ALGERNON_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#undef MOUSEKEY_TIME_TO_MAX</span>
+<span class="ot">#undef MOUSEKEY_MAX_SPEED</span>
+
+<span class="ot">#define MOUSEKEY_TIME_TO_MAX 1</span>
+<span class="ot">#define MOUSEKEY_MAX_SPEED 2</span>
+
+<span class="ot">#undef MOUSEKEY_DELAY</span>
+<span class="ot">#define MOUSEKEY_DELAY 0</span>
+
+<span class="ot">#undef MOUSEKEY_WHEEL_DELAY</span>
+<span class="ot">#define MOUSEKEY_WHEEL_DELAY 0</span>
+
+<span class="ot">#define ONESHOT_TAP_TOGGLE 2</span>
+<span class="ot">#define ONESHOT_TIMEOUT 3000</span>
+
+<span class="ot">#undef LOCKING_SUPPORT_ENABLE</span>
+<span class="ot">#undef LOCKING_RESYNC_ENABLE</span>
+
+<span class="ot">#undef LEADER_TIMEOUT</span>
+<span class="ot">#define LEADER_TIMEOUT 1000</span>
+
+<span class="ot">#endif</span></code></pre></div>
+<hr />
 <h1 id="makefile">Makefile</h1>
 <pre><code>BOOTMAGIC_ENABLE=no
 COMMAND_ENABLE=no
@@ -347,7 +377,7 @@ ifndef QUANTUM_DIR
 endif
 </code></pre>
 <hr />
-<h1 id="config.h">config.h</h1>
+<h1 id="config.h-1">config.h</h1>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_ALGERNON_H</span>
 <span class="ot">#define CONFIG_ALGERNON_H</span>
 

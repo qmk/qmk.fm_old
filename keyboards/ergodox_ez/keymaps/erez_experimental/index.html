@@ -104,8 +104,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         <li><a href="#feb-5-2016">Feb 5, 2016:</a></li>
         <li><a href="#jan-19-2016">Jan 19, 2016:</a></li>
         </ul></li>
-        <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -166,6 +167,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Made ' into dual-action key (Win/Cmd when held down).</li>
 </ul>
 <hr />
+<h1 id="config.h">config.h</h1>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#define ONESHOT_TAP_TOGGLE 2</span>
+<span class="ot">#define ONESHOT_TIMEOUT 300</span>
+
+<span class="ot">#undef LEADER_TIMEOUT</span>
+<span class="ot">#define LEADER_TIMEOUT 300</span>
+
+<span class="ot">#endif</span></code></pre></div>
+<hr />
 <h1 id="makefile">Makefile</h1>
 <pre><code># Having a file like this allows you to override Makefile definitions
 # for your own particular keymap
@@ -178,7 +193,7 @@ ifndef QUANTUM_DIR
 endif
 </code></pre>
 <hr />
-<h1 id="config.h">config.h</h1>
+<h1 id="config.h-1">config.h</h1>
 <div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
 <span class="ot">#define CONFIG_USER_H</span>
 
