@@ -59,7 +59,7 @@ function doAccordion () {
 
 $(document).ready(function () {
     setStickyMenu();
-    // doAccordion();
+    doAccordion();
     // http://odyniec.net/articles/turning-lists-into-trees/
     $('.toc ul li:last-child').addClass('last');
 });
