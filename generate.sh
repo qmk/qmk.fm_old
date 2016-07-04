@@ -35,7 +35,7 @@ for i in $(find . -name "readme.md"); do
 		-f markdown_github --to html --standalone --output ${i%/*}/index.html \
 		--template standalone.html --toc --toc-depth 3 --variable keyboard=$(echo $i | sed -e 's/.*\/keyboards\/\([^\/]*\).*/\1/') \
 		--variable keymap_link=$KEYMAP_LINK --variable keymap=$(echo $i | sed -e 's/.*\/keymaps\/\([^\/]*\).*/\1/')
-	elif [[ $i == *"/keyboards/"*"/" ]]
+	elif [[ $i == *"/keyboards/"* ]]
 	then
 		KEYBOARD_URL=$(echo $i | sed -e 's/.*\/\(keyboards\/[^\/]*\)\/.*/\1/')
 		export KEYMAPS=( $(for i in $(ls -d ${KEYBOARD_URL}/keymaps/*/); do echo $i | sed -e 's/.*\/keymaps\/\([^\/]*\).*/\1/'; done) )
