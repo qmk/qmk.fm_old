@@ -1,5 +1,5 @@
 /*
-Copyright 2015 Jun Wako <wakojun@gmail.com>
+Copyright 2012 Jun Wako <wakojun@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,46 +18,53 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#include "config_common.h"
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6464
+#define PRODUCT_ID      0x3060
 #define DEVICE_VER      0x0001
-/* in python2: list(u"whatever".encode('utf-16-le')) */
-/*   at most 32 characters or the ugly hack in usb_main.c borks */
-#define MANUFACTURER "TMK"
-#define USBSTR_MANUFACTURER    'T', '\x00', 'M', '\x00', 'K', '\x00', ' ', '\x00'
-#define PRODUCT "Infinity keyboard/TMK"
-#define USBSTR_PRODUCT         'I', '\x00', 'n', '\x00', 'f', '\x00', 'i', '\x00', 'n', '\x00', 'i', '\x00', 't', '\x00', 'y', '\x00', ' ', '\x00', 'k', '\x00', 'e', '\x00', 'y', '\x00', 'b', '\x00', 'o', '\x00', 'a', '\x00', 'r', '\x00', 'd', '\x00', '/', '\x00', 'T', '\x00', 'M', '\x00', 'K', '\x00'
+#define MANUFACTURER    Wootpatoot
+#define PRODUCT         Lets Split
+#define DESCRIPTION     A split keyboard for the cheap makers
 
 /* key matrix size */
-#define MATRIX_ROWS 18
-#define MATRIX_COLS 5
-#define LOCAL_MATRIX_ROWS 9
+#define MATRIX_ROWS 4
+#define MATRIX_COLS 6
+
+#define MATRIX_ROW_PINS { B5, B4, E6, D7, }
+#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3 }
+
+/* COL2ROW or ROW2COL */
+#define DIODE_DIRECTION COL2ROW
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
+/* number of backlight levels */
+#define BACKLIGHT_LEVELS 3
+
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE    5
+#define DEBOUNCING_DELAY 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-//#define LOCKING_SUPPORT_ENABLE
+#define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
-//#define LOCKING_RESYNC_ENABLE
+#define LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
-/* Keymap for Infiity prototype */
-#define INFINITY_PROTOTYPE
-
-#define SERIAL_LINK_BAUD 562500
-#define SERIAL_LINK_THREAD_PRIORITY (NORMALPRIO - 1)
-// The visualizer needs gfx thread priorities
-#define VISUALIZER_THREAD_PRIORITY (NORMAL_PRIORITY - 2)
+/* ws2812 RGB LED */
+#define ws2812_PORTREG  PORTD
+#define ws2812_DDRREG   DDRD
+#define ws2812_pin PD1
+#define RGBLED_NUM 28     // Number of LEDs
+#define RGBLIGHT_HUE_STEP 10
+#define RGBLIGHT_SAT_STEP 17
+#define RGBLIGHT_VAL_STEP 17
 
 /*
  * Feature disable options
@@ -65,10 +72,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* disable debug print */
-//#define NO_DEBUG
+// #define NO_DEBUG
 
 /* disable print */
-//#define NO_PRINT
+// #define NO_PRINT
 
 /* disable action features */
 //#define NO_ACTION_LAYER
