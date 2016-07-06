@@ -1,0 +1,132 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/lets_split">lets_split</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#lets-split">Let's Split</a><ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#required-hardware">Required Hardware</a></li>
+        <li><a href="#optional-hardware">Optional Hardware</a></li>
+        <li><a href="#wiring">Wiring</a></li>
+        <li><a href="#notes-on-software-configuration">Notes on Software Configuration</a></li>
+        <li><a href="#flashing">Flashing</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+          <ul>
+          <li><a href="keymaps/default/">default</a></li>
+          </ul>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="lets-split"><a href="#lets-split">Let's Split</a></h1>
+<p>This readme and most of the code are from <a href="https://github.com/ahtn/tmk_keyboard/">https://github.com/ahtn/tmk_keyboard/</a></p>
+<p>Split keyboard firmware for Arduino Pro Micro or other ATmega32u4<br />based boards.</p>
+<h2 id="features"><a href="#features">Features</a></h2>
+<p>Some features supported by the firmware:</p>
+<ul>
+<li>Either half can connect to the computer via USB, or both halves can be used<br /> independently.<br /></li>
+<li>You only need 3 wires to connect the two halves. Two for VCC and GND and one<br /> for serial communication.<br /></li>
+<li>Optional support for I2C connection between the two halves if for some<br /> reason you require a faster connection between the two halves. Note this<br /> requires an extra wire between halves and pull-up resistors on the data lines.</li>
+</ul>
+<h2 id="required-hardware"><a href="#required-hardware">Required Hardware</a></h2>
+<p>Apart from diodes and key switches for the keyboard matrix in each half, you<br />will need:</p>
+<ul>
+<li>2 Arduino Pro Micro's. You can find theses on aliexpress for ≈3.50USD each.<br /></li>
+<li>2 TRS sockets<br /></li>
+<li>1 TRS cable.</li>
+</ul>
+<p>Alternatively, you can use any sort of cable and socket that has at least 3<br />wires. If you want to use I2C to communicate between halves, you will need a<br />cable with at least 4 wires and 2x 4.7kΩ pull-up resistors</p>
+<h2 id="optional-hardware"><a href="#optional-hardware">Optional Hardware</a></h2>
+<p>A speaker can be hooked-up to either side to the <code>5</code> (<code>C6</code>) pin and <code>GND</code>, and turned on via <code>AUDIO_ENABLE</code>.</p>
+<h2 id="wiring"><a href="#wiring">Wiring</a></h2>
+<p>The 3 wires of the TRS cable need to connect GND, VCC, and digital pin 3 (i.e.<br />PD0 on the ATmega32u4) between the two Pro Micros.</p>
+<p>Then wire your key matrix to any of the remaining 17 IO pins of the pro micro<br />and modify the <code>matrix.c</code> accordingly.</p>
+<p>The wiring for serial:</p>
+<p><img src="imgs/split-keyboard-serial-schematic.png" alt="serial wiring" /></p>
+<p>The wiring for i2c:</p>
+<p><img src="imgs/split-keyboard-i2c-schematic.png" alt="i2c wiring" /></p>
+<p>The pull-up resistors may be placed on either half. It is also possible<br />to use 4 resistors and have the pull-ups in both halves, but this is<br />unnecessary in simple use cases.</p>
+<h2 id="notes-on-software-configuration"><a href="#notes-on-software-configuration">Notes on Software Configuration</a></h2>
+<p>Configuring the firmware is similar to any other TMK project. One thing<br />to note is that <code>MATIX_ROWS</code> in <code>config.h</code> is the total number of rows between<br />the two halves, i.e. if your split keyboard has 4 rows in each half, then<br /><code>MATRIX_ROWS=8</code>.</p>
+<p>Also the current implementation assumes a maximum of 8 columns, but it would<br />not be very difficult to adapt it to support more if required.</p>
+<h2 id="flashing"><a href="#flashing">Flashing</a></h2>
+<p>If you define <code>EE_HANDS</code> in your <code>config.h</code>, you will need to set the<br />EEPROM for the left and right halves. The EEPROM is used to store whether the<br />half is left handed or right handed. This makes it so that the same firmware<br />file will run on both hands instead of having to flash left and right handed<br />versions of the firmware to each half. To flash the EEPROM file for the left<br />half run:</p>
+<pre><code>make eeprom-left</code></pre>
+<p>and similarly for right half</p>
+<pre><code>make eeprom-right</code></pre>
+<p>After you have flashed the EEPROM for the first time, you then need to program<br />the flash memory:</p>
+<pre><code>make program</code></pre>
+<p>Note that you need to program both halves, but you have the option of using<br />different keymaps for each half. You could program the left half with a QWERTY<br />layout and the right half with a Colemak layout. Then if you connect the left<br />half to a computer by USB the keyboard will use QWERTY and Colemak when the<br />right half is connected.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
