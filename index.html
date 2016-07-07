@@ -643,19 +643,15 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <p>Here is a quick demo on Youtube (with NPKC KC60) (<a href="https://www.youtube.com/watch?v=VKrpPAHlisY">https://www.youtube.com/watch?v=VKrpPAHlisY</a>).</p>
 <p>For this mod, you need an unused pin wiring to DI of WS2812 strip. After wiring the VCC, GND, and DI, you can enable the underglow in your Makefile.</p>
 <pre><code>RGBLIGHT_ENABLE = yes</code></pre>
-<p>Please note that the underglow is not compatible with audio output. So you cannot enable both of them at the same time.</p>
-<p>Please add the following options into your config.h, and set them up according your hardware configuration. These settings are for the F4 by default:</p>
-<pre><code>#define ws2812_PORTREG  PORTF
-#define ws2812_DDRREG   DDRF
-#define ws2812_pin PF4
+<p>In order to use the underglow timer functions, you need to have <code>#define RGBLIGHT_TIMER</code> in your <code>config.h</code>, and have audio disabled (<code>AUDIO_ENABLE = no</code> in your Makefile).</p>
+<p>Please add the following options into your config.h, and set them up according your hardware configuration. These settings are for the <code>F4</code> pin by default:</p>
+<pre><code>#define RGB_DI_PIN F4     // The pin your RGB strip is wired to
+#define RGBLIGHT_TIMER    // Require for fancier stuff (not compatible with audio)
 #define RGBLED_NUM 14     // Number of LEDs
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17</code></pre>
-<p>You'll need to edit <code>PORTF</code>, <code>DDRF</code>, and <code>PF4</code> on the first three lines to the port/pin you have your LED(s) wired to, eg for B3 change things to:</p>
-<pre><code>#define ws2812_PORTREG  PORTB
-#define ws2812_DDRREG   DDRB
-#define ws2812_pin PB3</code></pre>
+<p>You'll need to edit <code>RGB_DI_PIN</code> to the pin you have your <code>DI</code> on your RGB strip wired to.</p>
 <p>The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. For details, please check this keymap. <code>keyboards/planck/keymaps/yang/keymap.c</code></p>
 <h3 id="ws2812-wiring"><a href="#ws2812-wiring">WS2812 Wiring</a></h3>
 <p><img src="https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboards/planck/keymaps/yang/WS2812-wiring.jpg" alt="WS2812 Wiring" /></p>
