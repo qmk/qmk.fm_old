@@ -102,6 +102,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#fun-with-modifier-keys">Fun with modifier keys</a></li>
         <li><a href="#space-cadet-shift-the-future-built-in">Space Cadet Shift: The future, built in</a></li>
         <li><a href="#the-leader-key-a-new-kind-of-modifier">The Leader key: A new kind of modifier</a></li>
+        <li><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a></li>
         <li><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></li>
         <li><a href="#prevent-stuck-modifiers">Prevent stuck modifiers</a></li>
         <li><a href="#remember-these-are-just-aliases">Remember: These are just aliases</a></li>
@@ -409,6 +410,61 @@ KC_COLN  :</code></pre>
   }
 }</code></pre>
 <p>As you can see, you have three function. you can use - <code>SEQ_ONE_KEY</code> for single-key sequences (Leader followed by just one key), and <code>SEQ_TWO_KEYS</code> and <code>SEQ_THREE_KEYS</code> for longer sequences. Each of these accepts one or more keycodes as arguments. This is an important point: You can use keycodes from <strong>any layer on your keyboard</strong>. That layer would need to be active for the leader macro to fire, obviously.</p>
+<h3 id="tap-dance-a-single-key-can-do-3-5-or-100-different-things"><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a></h3>
+<p>Hit the semicolon key once, send a semicolon. Hit it twice, rapidly -- send a colon. Hit it three times, and your keyboard's LEDs do a wild dance. That's just one example of what Tap Dance can do. It's one of the nicest community-contributed features in the firmware, conceived and created by <a href="https://github.com/algernon">algernon</a> in <a href="https://github.com/jackhumbert/qmk_firmware/pull/451">#451</a>. Here's how Algernon describes the feature:</p>
+<p>With this feature one can specify keys that behave differently, based on the amount of times they have been tapped, and when interrupted, they get handled before the interrupter.</p>
+<p>To make it clear how this is different from <code>ACTION_FUNCTION_TAP</code>, lets explore a certain setup! We want one key to send <code>Space</code> on single tap, but <code>Enter</code> on double-tap.</p>
+<p>With <code>ACTION_FUNCTION_TAP</code>, it is quite a rain-dance to set this up, and has the problem that when the sequence is interrupted, the interrupting key will be send first. Thus, <code>SPC a</code> will result in <code>a SPC</code> being sent, if they are typed within <code>TAPPING_TERM</code>. With the tap dance feature, that'll come out as <code>SPC a</code>, correctly.</p>
+<p>The implementation hooks into two parts of the system, to achieve this: into <code>process_record_quantum()</code>, and the matrix scan. We need the latter to be able to time out a tap sequence even when a key is not being pressed, so <code>SPC</code> alone will time out and register after <code>TAPPING_TERM</code> time.</p>
+<p>But lets start with how to use it, first!</p>
+<p>First, you will need <code>TAP_DANCE_ENABLE=yes</code> in your <code>Makefile</code>, because the feature is disabled by default. This adds a little less than 1k to the firmware size. Next, you will want to define some tap-dance keys, which is easiest to do with the <code>TD()</code> macro, that - similar to <code>F()</code>, takes a number, which will later be used as an index into the <code>tap_dance_actions</code> array.</p>
+<p>This array specifies what actions shall be taken when a tap-dance key is in action. Currently, there are two possible options:</p>
+<ul>
+<li><code>ACTION_TAP_DANCE_DOUBLE(kc1, kc2)</code>: Sends the <code>kc1</code> keycode when tapped once, <code>kc2</code> otherwise.<br /></li>
+<li><code>ACTION_TAP_DANCE_FN(fn)</code>: Calls the specified function - defined in the user keymap - with the current state of the tap-dance action.</li>
+</ul>
+<p>The first option is enough for a lot of cases, that just want dual roles. For example, <code>ACTION_TAP_DANCE(KC_SPC, KC_ENT)</code> will result in <code>Space</code> being sent on single-tap, <code>Enter</code> otherwise.</p>
+<p>And that's the bulk of it!</p>
+<p>Do note, however, that this implementation does have some consequences: keys do not register until either they reach the tapping ceiling, or they time out. This means that if you hold the key, nothing happens, no repeat, no nothing. It is possible to detect held state, and register an action then too, but that's not implemented yet. Keys also unregister immediately after being registered, so you can't even hold the second tap. This is intentional, to be consistent.</p>
+<p>And now, on to the explanation of how it works!</p>
+<p>The main entry point is <code>process_tap_dance()</code>, called from <code>process_record_quantum()</code>, which is run for every keypress, and our handler gets to run early. This function checks whether the key pressed is a tap-dance key. If it is not, and a tap-dance was in action, we handle that first, and enqueue the newly pressed key. If it is a tap-dance key, then we check if it is the same as the already active one (if there's one active, that is). If it is not, we fire off the old one first, then register the new one. If it was the same, we increment the counter and the timer.</p>
+<p>This means that you have <code>TAPPING_TERM</code> time to tap the key again, you do not have to input all the taps within that timeframe. This allows for longer tap counts, with minimal impact on responsiveness.</p>
+<p>Our next stop is <code>matrix_scan_tap_dance()</code>. This handles the timeout of tap-dance keys.</p>
+<p>For the sake of flexibility, tap-dance actions can be either a pair of keycodes, or a user function. The latter allows one to handle higher tap counts, or do extra things, like blink the LEDs, fiddle with the backlighting, and so on. This is accomplished by using an union, and some clever macros.</p>
+<p>In the end, let's see a full example!</p>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="kw">enum</span> {
+ CT_SE = <span class="dv">0</span>,
+ CT_CLN,
+ CT_EGG
+};
+
+<span class="co">/* Have the above three on the keymap, TD(CT_SE), etc... */</span>
+
+<span class="dt">void</span> dance_cln (qk_tap_dance_state_t *state) {
+  <span class="kw">if</span> (state-&gt;count == <span class="dv">1</span>) {
+    register_code (KC_RSFT);
+    register_code (KC_SCLN);
+    unregister_code (KC_SCLN);
+    unregister_code (KC_RSFT);
+  } <span class="kw">else</span> {
+    register_code (KC_SCLN);
+    unregister_code (KC_SCLN);
+    reset_tap_dance (state);
+  }
+}
+
+<span class="dt">void</span> dance_egg (qk_tap_dance_state_t *state) {
+  <span class="kw">if</span> (state-&gt;count &gt;= <span class="dv">100</span>) {
+    SEND_STRING (<span class="st">&quot;Safety dance!&quot;</span>);
+    reset_tap_dance (state);
+  }
+}
+
+<span class="dt">const</span> qk_tap_dance_action_t tap_dance_actions[] = {
+  [CT_SE]  = ACTION_TAP_DANCE_DOUBLE (KC_SPC, KC_ENT)
+ ,[CT_CLN] = ACTION_TAP_DANCE_FN (dance_cln)
+ ,[CT_EGG] = ACTION_TAP_DANCE_FN (dance_egg)
+};</code></pre>
 <h3 id="temporarily-setting-the-default-layer"><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></h3>
 <p><code>DF(layer)</code> - sets default layer to <em>layer</em>. The default layer is the one at the &quot;bottom&quot; of the layer stack - the ultimate fallback layer. This currently does not persist over power loss. When you plug the keyboard back in, layer 0 will always be the default. It is theoretically possible to work around that, but that's not what <code>DF</code> does.</p>
 <h3 id="prevent-stuck-modifiers"><a href="#prevent-stuck-modifiers">Prevent stuck modifiers</a></h3>
