@@ -1,0 +1,619 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/gh60">gh60</a> / keymaps / <a href="/keyboards/gh60/keymaps/robotmaxtron/">robotmaxtron</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/gh60/keymaps/robotmaxtron/keymap.c" class="button view">View keymap.c</a>
+        <a href="gh60_robotmaxtron.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#robotmaxtrons-gh60-layout">robotmaxtron's GH60 Layout</a><ul>
+        <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
+        <li><a href="#reference-images">Reference Images</a><ul>
+        <li><a href="#additional-credits">Additional Credits</a></li>
+        </ul></li>
+        </ul></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="robotmaxtrons-gh60-layout"><a href="#robotmaxtrons-gh60-layout">robotmaxtron's GH60 Layout</a></h1>
+<h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
+<p>For the full Quantum feature list, see the parent readme.md.</p>
+<ul>
+<li>Standard ANSI layout with Pok3r styled function layers<br /></li>
+<li>ESC key led enables when on function layer<br /></li>
+<li>Lockable layer with arrow keys on WASD with backlighting to indicate locked on arrow layer<br /></li>
+<li>Neopixel/WS2812 RGB Underglow Support</li>
+</ul>
+<h2 id="reference-images"><a href="#reference-images">Reference Images</a></h2>
+<p>[Wiring Refererence] (WS2812-wiring.jpg)</p>
+<h3 id="additional-credits"><a href="#additional-credits">Additional Credits</a></h3>
+<p>Keymap has been based on various keymaps available from the QMK Repo for the GH60-SATAN and KC60 keyboards.</p>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Copyright 2012 Jun Wako &lt;wakojun@gmail.com&gt;</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef CONFIG_H</span>
+<span class="ot">#define CONFIG_H</span>
+
+<span class="ot">#include &quot;config_common.h&quot;</span>
+
+<span class="co">/* USB Device descriptor parameter */</span>
+<span class="ot">#define VENDOR_ID    0xFEED</span>
+<span class="ot">#define PRODUCT_ID   0x6060</span>
+<span class="ot">#define DEVICE_VER   0x0001</span>
+<span class="ot">#define MANUFACTURER    geekhack</span>
+<span class="ot">#define PRODUCT         GH60</span>
+<span class="ot">#define DESCRIPTION     t.m.k. keyboard firmware for GH60</span>
+
+<span class="co">/* key matrix size */</span>
+<span class="ot">#define MATRIX_ROWS 5</span>
+<span class="ot">#define MATRIX_COLS 14</span>
+
+<span class="co">/*</span>
+<span class="co"> * Keyboard Matrix Assignments</span>
+<span class="co"> *</span>
+<span class="co"> * Change this to how you wired your keyboard</span>
+<span class="co"> * COLS: AVR pins used for columns, left to right</span>
+<span class="co"> * ROWS: AVR pins used for rows, top to bottom</span>
+<span class="co"> * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)</span>
+<span class="co"> *         ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)</span>
+<span class="co"> *</span>
+<span class="co">*/</span>
+ <span class="ot">#define MATRIX_ROW_PINS { D0, D1, D2, D3, D5 }</span>
+<span class="co">// Rev A</span>
+<span class="co">// #define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B0, B5, B4, D7, D6, B3 }</span>
+<span class="co">// Rev B/C</span>
+   <span class="ot">#define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B7, B5, B4, D7, D6, B3 }</span>
+<span class="ot">#define UNUSED_PINS</span>
+
+<span class="co">/* COL2ROW or ROW2COL */</span>
+<span class="ot">#define DIODE_DIRECTION COL2ROW</span>
+
+<span class="co">/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */</span>
+<span class="ot">#define DEBOUNCING_DELAY 5</span>
+
+<span class="co">/* define if matrix has ghost (lacks anti-ghosting diodes) */</span>
+<span class="co">//#define MATRIX_HAS_GHOST</span>
+
+<span class="co">/* number of backlight levels */</span>
+<span class="ot">#define BACKLIGHT_LEVELS 3</span>
+
+<span class="co">/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */</span>
+<span class="ot">#define LOCKING_SUPPORT_ENABLE</span>
+<span class="co">/* Locking resynchronize hack */</span>
+<span class="ot">#define LOCKING_RESYNC_ENABLE</span>
+
+<span class="co">/*</span>
+<span class="co"> * Force NKRO</span>
+<span class="co"> *</span>
+<span class="co"> * Force NKRO (nKey Rollover) to be enabled by default, regardless of the saved</span>
+<span class="co"> * state in the bootmagic EEPROM settings. (Note that NKRO must be enabled in the</span>
+<span class="co"> * makefile for this to work.)</span>
+<span class="co"> *</span>
+<span class="co"> * If forced on, NKRO can be disabled via magic key (default = LShift+RShift+N)</span>
+<span class="co"> * until the next keyboard reset.</span>
+<span class="co"> *</span>
+<span class="co"> * NKRO may prevent your keystrokes from being detected in the BIOS, but it is</span>
+<span class="co"> * fully operational during normal computer usage.</span>
+<span class="co"> *</span>
+<span class="co"> * For a less heavy-handed approach, enable NKRO via magic key (LShift+RShift+N)</span>
+<span class="co"> * or via bootmagic (hold SPACE+N while plugging in the keyboard). Once set by</span>
+<span class="co"> * bootmagic, NKRO mode will always be enabled until it is toggled again during a</span>
+<span class="co"> * power-up.</span>
+<span class="co"> *</span>
+<span class="co"> */</span>
+<span class="co">//#define FORCE_NKRO</span>
+
+<span class="co">/*</span>
+<span class="co"> * Magic Key Options</span>
+<span class="co"> *</span>
+<span class="co"> * Magic keys are hotkey commands that allow control over firmware functions of</span>
+<span class="co"> * the keyboard. They are best used in combination with the HID Listen program,</span>
+<span class="co"> * found here: https://www.pjrc.com/teensy/hid_listen.html</span>
+<span class="co"> *</span>
+<span class="co"> * The options below allow the magic key functionality to be changed. This is</span>
+<span class="co"> * useful if your keyboard/keypad is missing keys and you want magic key support.</span>
+<span class="co"> *</span>
+<span class="co"> */</span>
+
+<span class="co">/* key combination for magic key command */</span>
+<span class="ot">#define IS_COMMAND() ( \</span>
+  keyboard_report-&gt;mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+<span class="co">/* control how magic key switches layers */</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS true</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_NKEYS true</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_CUSTOM false</span>
+
+<span class="co">/* override magic key keymap */</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_NKEYS</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_CUSTOM</span>
+<span class="co">//#define MAGIC_KEY_HELP1     H</span>
+<span class="co">//#define MAGIC_KEY_HELP2     SLASH</span>
+<span class="co">//#define MAGIC_KEY_DEBUG     D</span>
+<span class="co">//#define MAGIC_KEY_DEBUG_MATRIX  X</span>
+<span class="co">//#define MAGIC_KEY_DEBUG_KBD   K</span>
+<span class="co">//#define MAGIC_KEY_DEBUG_MOUSE  M</span>
+<span class="co">//#define MAGIC_KEY_VERSION    V</span>
+<span class="co">//#define MAGIC_KEY_STATUS     S</span>
+<span class="co">//#define MAGIC_KEY_CONSOLE    C</span>
+<span class="co">//#define MAGIC_KEY_LAYER0_ALT1  ESC</span>
+<span class="co">//#define MAGIC_KEY_LAYER0_ALT2  GRAVE</span>
+<span class="co">//#define MAGIC_KEY_LAYER0     0</span>
+<span class="co">//#define MAGIC_KEY_LAYER1     1</span>
+<span class="co">//#define MAGIC_KEY_LAYER2     2</span>
+<span class="co">//#define MAGIC_KEY_LAYER3     3</span>
+<span class="co">//#define MAGIC_KEY_LAYER4     4</span>
+<span class="co">//#define MAGIC_KEY_LAYER5     5</span>
+<span class="co">//#define MAGIC_KEY_LAYER6     6</span>
+<span class="co">//#define MAGIC_KEY_LAYER7     7</span>
+<span class="co">//#define MAGIC_KEY_LAYER8     8</span>
+<span class="co">//#define MAGIC_KEY_LAYER9     9</span>
+<span class="co">//#define MAGIC_KEY_BOOTLOADER   PAUSE</span>
+<span class="co">//#define MAGIC_KEY_LOCK      CAPS</span>
+<span class="co">//#define MAGIC_KEY_EEPROM     E</span>
+<span class="co">//#define MAGIC_KEY_NKRO      N</span>
+<span class="co">//#define MAGIC_KEY_SLEEP_LED   Z</span>
+
+<span class="co">/*</span>
+<span class="co"> * Feature disable options</span>
+<span class="co"> * These options are also useful to firmware size reduction.</span>
+<span class="co"> */</span>
+
+<span class="co">/* disable debug print */</span>
+<span class="co">//#define NO_DEBUG</span>
+
+<span class="co">/* disable print */</span>
+<span class="co">//#define NO_PRINT</span>
+
+<span class="co">/* disable action features */</span>
+<span class="co">//#define NO_ACTION_LAYER</span>
+<span class="co">//#define NO_ACTION_TAPPING</span>
+<span class="co">//#define NO_ACTION_ONESHOT</span>
+<span class="co">//#define NO_ACTION_MACRO</span>
+<span class="co">//#define NO_ACTION_FUNCTION</span>
+
+<span class="co">/*</span>
+<span class="co"> * RGB Underglow</span>
+<span class="co"> * These settings are for the F4 by default:</span>
+<span class="co"> * </span>
+<span class="co"> *</span>
+<span class="co"> * #define ws2812_PORTREG  PORTF</span>
+<span class="co"> * #define ws2812_DDRREG   DDRF</span>
+<span class="co"> * #define ws2812_pin PF4</span>
+<span class="co"> * #define RGBLED_NUM 14     // Number of LEDs</span>
+<span class="co"> * #define RGBLIGHT_HUE_STEP 10</span>
+<span class="co"> * #define RGBLIGHT_SAT_STEP 17</span>
+<span class="co"> * #define RGBLIGHT_VAL_STEP 17</span>
+<span class="co"> *</span>
+<span class="co"> * The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. </span>
+<span class="co"> * To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. </span>
+<span class="co"> * For details, please check this keymap. keyboard/planck/keymaps/yang/keymap.c</span>
+<span class="co">*/</span>
+
+<span class="co">/* Deprecated code below</span>
+<span class="co">#define ws2812_PORTREG  PORTF </span>
+<span class="co">#define ws2812_DDRREG   DDRF</span>
+<span class="co">#define ws2812_pin PF4</span>
+<span class="co">*/</span> 
+<span class="ot">#define RGB_DI_PIN F4</span>
+<span class="ot">#define RGBLIGHT_TIMER</span>
+<span class="ot">#define RGBLED_NUM 8         </span><span class="co">// Number of LEDs</span>
+<span class="ot">#define RGBLIGHT_HUE_STEP 8</span>
+<span class="ot">#define RGBLIGHT_SAT_STEP 8</span>
+<span class="ot">#define RGBLIGHT_VAL_STEP 8</span>
+<span class="ot">#endif</span></code></pre>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code>#----------------------------------------------------------------------------
+# On command line:
+#
+# make all = Make software.
+#
+# make clean = Clean out built project files.
+#
+# make coff = Convert ELF to AVR COFF.
+#
+# make extcoff = Convert ELF to AVR Extended COFF.
+#
+# make program = Download the hex file to the device.
+#                Please customize your programmer settings(PROGRAM_CMD)
+#
+# make teensy = Download the hex file to the device, using teensy_loader_cli.
+#               (must have teensy_loader_cli installed).
+#
+# make dfu = Download the hex file to the device, using dfu-programmer (must
+#            have dfu-programmer installed).
+#
+# make flip = Download the hex file to the device, using Atmel FLIP (must
+#             have Atmel FLIP installed).
+#
+# make dfu-ee = Download the eeprom file to the device, using dfu-programmer
+#               (must have dfu-programmer installed).
+#
+# make flip-ee = Download the eeprom file to the device, using Atmel FLIP
+#                (must have Atmel FLIP installed).
+#
+# make debug = Start either simulavr or avarice as specified for debugging, 
+#              with avr-gdb or avr-insight as the front end for debugging.
+#
+# make filename.s = Just compile filename.c into the assembler code only.
+#
+# make filename.i = Create a preprocessed source file for use in submitting
+#                   bug reports to the GCC project.
+#
+# To rebuild project do &quot;make clean&quot; then &quot;make all&quot;.
+#----------------------------------------------------------------------------
+
+# MCU name
+#MCU = at90usb1287
+MCU = atmega32u4
+
+# Processor frequency.
+#     This will define a symbol, F_CPU, in all source code files equal to the
+#     processor frequency in Hz. You can then use this symbol in your source code to
+#     calculate timings. Do NOT tack on a &#39;UL&#39; at the end, this will be done
+#     automatically to create a 32-bit value in your source code.
+#
+#     This will be an integer division of F_USB below, as it is sourced by
+#     F_USB after it has run through any CPU prescalers. Note that this value
+#     does not *change* the processor frequency - it should merely be updated to
+#     reflect the processor speed set externally so that the code can use accurate
+#     software delays.
+F_CPU = 16000000
+
+
+#
+# LUFA specific
+#
+# Target architecture (see library &quot;Board Types&quot; documentation).
+ARCH = AVR8
+
+# Input clock frequency.
+#     This will define a symbol, F_USB, in all source code files equal to the
+#     input clock frequency (before any prescaling is performed) in Hz. This value may
+#     differ from F_CPU if prescaling is used on the latter, and is required as the
+#     raw input clock is fed directly to the PLL sections of the AVR for high speed
+#     clock generation for the USB and other AVR subsections. Do NOT tack on a &#39;UL&#39;
+#     at the end, this will be done automatically to create a 32-bit value in your
+#     source code.
+#
+#     If no clock division is performed on the input clock inside the AVR (via the
+#     CPU clock adjust registers or the clock division fuses), this will be equal to F_CPU.
+F_USB = $(F_CPU)
+
+# Interrupt driven control endpoint task(+60)
+OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
+
+
+# Boot Section Size in *bytes*
+#   Teensy halfKay   512
+#   Teensy++ halfKay 1024
+#   Atmel DFU loader 4096
+#   LUFA bootloader  4096
+#   USBaspLoader     2048
+OPT_DEFS += -DBOOTLOADER_SIZE=4096
+
+
+# Build Options
+#   comment out to disable the options.
+#
+BOOTMAGIC_ENABLE ?= yes     # Virtual DIP switch configuration(+1000)
+MOUSEKEY_ENABLE ?= yes      # Mouse keys(+4700)
+EXTRAKEY_ENABLE ?= yes      # Audio control and System control(+450)
+# CONSOLE_ENABLE ?= yes     # Console for debug(+400)
+# COMMAND_ENABLE ?= yes     # Commands for debug and configuration
+KEYBOARD_LOCK_ENABLE ?= yes # Allow locking of keyboard via magic key
+# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
+# SLEEP_LED_ENABLE ?= yes   # Breathing sleep LED during USB suspend
+NKRO_ENABLE ?= yes      # USB Nkey Rollover - if this doesn&#39;t work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+# BACKLIGHT_ENABLE ?= yes   # Enable keyboard backlight functionality
+# MIDI_ENABLE ?= YES        # MIDI controls
+# UNICODE_ENABLE ?= YES     # Unicode
+# BLUETOOTH_ENABLE ?= yes   # Enable Bluetooth with the Adafruit EZ-Key HID
+RGBLIGHT_ENABLE ?= yes          # Enable RGB Underglow
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+
+</code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Copyright 2012 Jun Wako &lt;wakojun@gmail.com&gt;</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef CONFIG_H</span>
+<span class="ot">#define CONFIG_H</span>
+
+<span class="ot">#include &quot;config_common.h&quot;</span>
+
+<span class="co">/* USB Device descriptor parameter */</span>
+<span class="ot">#define VENDOR_ID    0xFEED</span>
+<span class="ot">#define PRODUCT_ID   0x6060</span>
+<span class="ot">#define DEVICE_VER   0x0001</span>
+<span class="ot">#define MANUFACTURER    geekhack</span>
+<span class="ot">#define PRODUCT         GH60</span>
+<span class="ot">#define DESCRIPTION     t.m.k. keyboard firmware for GH60</span>
+
+<span class="co">/* key matrix size */</span>
+<span class="ot">#define MATRIX_ROWS 5</span>
+<span class="ot">#define MATRIX_COLS 14</span>
+
+<span class="co">/*</span>
+<span class="co"> * Keyboard Matrix Assignments</span>
+<span class="co"> *</span>
+<span class="co"> * Change this to how you wired your keyboard</span>
+<span class="co"> * COLS: AVR pins used for columns, left to right</span>
+<span class="co"> * ROWS: AVR pins used for rows, top to bottom</span>
+<span class="co"> * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)</span>
+<span class="co"> *         ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)</span>
+<span class="co"> *</span>
+<span class="co">*/</span>
+ <span class="ot">#define MATRIX_ROW_PINS { D0, D1, D2, D3, D5 }</span>
+<span class="co">// Rev A</span>
+<span class="co">// #define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B0, B5, B4, D7, D6, B3 }</span>
+<span class="co">// Rev B/C</span>
+   <span class="ot">#define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B7, B5, B4, D7, D6, B3 }</span>
+<span class="ot">#define UNUSED_PINS</span>
+
+<span class="co">/* COL2ROW or ROW2COL */</span>
+<span class="ot">#define DIODE_DIRECTION COL2ROW</span>
+
+<span class="co">/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */</span>
+<span class="ot">#define DEBOUNCING_DELAY 5</span>
+
+<span class="co">/* define if matrix has ghost (lacks anti-ghosting diodes) */</span>
+<span class="co">//#define MATRIX_HAS_GHOST</span>
+
+<span class="co">/* number of backlight levels */</span>
+<span class="ot">#define BACKLIGHT_LEVELS 3</span>
+
+<span class="co">/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */</span>
+<span class="ot">#define LOCKING_SUPPORT_ENABLE</span>
+<span class="co">/* Locking resynchronize hack */</span>
+<span class="ot">#define LOCKING_RESYNC_ENABLE</span>
+
+<span class="co">/*</span>
+<span class="co"> * Force NKRO</span>
+<span class="co"> *</span>
+<span class="co"> * Force NKRO (nKey Rollover) to be enabled by default, regardless of the saved</span>
+<span class="co"> * state in the bootmagic EEPROM settings. (Note that NKRO must be enabled in the</span>
+<span class="co"> * makefile for this to work.)</span>
+<span class="co"> *</span>
+<span class="co"> * If forced on, NKRO can be disabled via magic key (default = LShift+RShift+N)</span>
+<span class="co"> * until the next keyboard reset.</span>
+<span class="co"> *</span>
+<span class="co"> * NKRO may prevent your keystrokes from being detected in the BIOS, but it is</span>
+<span class="co"> * fully operational during normal computer usage.</span>
+<span class="co"> *</span>
+<span class="co"> * For a less heavy-handed approach, enable NKRO via magic key (LShift+RShift+N)</span>
+<span class="co"> * or via bootmagic (hold SPACE+N while plugging in the keyboard). Once set by</span>
+<span class="co"> * bootmagic, NKRO mode will always be enabled until it is toggled again during a</span>
+<span class="co"> * power-up.</span>
+<span class="co"> *</span>
+<span class="co"> */</span>
+<span class="co">//#define FORCE_NKRO</span>
+
+<span class="co">/*</span>
+<span class="co"> * Magic Key Options</span>
+<span class="co"> *</span>
+<span class="co"> * Magic keys are hotkey commands that allow control over firmware functions of</span>
+<span class="co"> * the keyboard. They are best used in combination with the HID Listen program,</span>
+<span class="co"> * found here: https://www.pjrc.com/teensy/hid_listen.html</span>
+<span class="co"> *</span>
+<span class="co"> * The options below allow the magic key functionality to be changed. This is</span>
+<span class="co"> * useful if your keyboard/keypad is missing keys and you want magic key support.</span>
+<span class="co"> *</span>
+<span class="co"> */</span>
+
+<span class="co">/* key combination for magic key command */</span>
+<span class="ot">#define IS_COMMAND() ( \</span>
+  keyboard_report-&gt;mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+<span class="co">/* control how magic key switches layers */</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS true</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_NKEYS true</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_CUSTOM false</span>
+
+<span class="co">/* override magic key keymap */</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_NKEYS</span>
+<span class="co">//#define MAGIC_KEY_SWITCH_LAYER_WITH_CUSTOM</span>
+<span class="co">//#define MAGIC_KEY_HELP1     H</span>
+<span class="co">//#define MAGIC_KEY_HELP2     SLASH</span>
+<span class="co">//#define MAGIC_KEY_DEBUG     D</span>
+<span class="co">//#define MAGIC_KEY_DEBUG_MATRIX  X</span>
+<span class="co">//#define MAGIC_KEY_DEBUG_KBD   K</span>
+<span class="co">//#define MAGIC_KEY_DEBUG_MOUSE  M</span>
+<span class="co">//#define MAGIC_KEY_VERSION    V</span>
+<span class="co">//#define MAGIC_KEY_STATUS     S</span>
+<span class="co">//#define MAGIC_KEY_CONSOLE    C</span>
+<span class="co">//#define MAGIC_KEY_LAYER0_ALT1  ESC</span>
+<span class="co">//#define MAGIC_KEY_LAYER0_ALT2  GRAVE</span>
+<span class="co">//#define MAGIC_KEY_LAYER0     0</span>
+<span class="co">//#define MAGIC_KEY_LAYER1     1</span>
+<span class="co">//#define MAGIC_KEY_LAYER2     2</span>
+<span class="co">//#define MAGIC_KEY_LAYER3     3</span>
+<span class="co">//#define MAGIC_KEY_LAYER4     4</span>
+<span class="co">//#define MAGIC_KEY_LAYER5     5</span>
+<span class="co">//#define MAGIC_KEY_LAYER6     6</span>
+<span class="co">//#define MAGIC_KEY_LAYER7     7</span>
+<span class="co">//#define MAGIC_KEY_LAYER8     8</span>
+<span class="co">//#define MAGIC_KEY_LAYER9     9</span>
+<span class="co">//#define MAGIC_KEY_BOOTLOADER   PAUSE</span>
+<span class="co">//#define MAGIC_KEY_LOCK      CAPS</span>
+<span class="co">//#define MAGIC_KEY_EEPROM     E</span>
+<span class="co">//#define MAGIC_KEY_NKRO      N</span>
+<span class="co">//#define MAGIC_KEY_SLEEP_LED   Z</span>
+
+<span class="co">/*</span>
+<span class="co"> * Feature disable options</span>
+<span class="co"> * These options are also useful to firmware size reduction.</span>
+<span class="co"> */</span>
+
+<span class="co">/* disable debug print */</span>
+<span class="co">//#define NO_DEBUG</span>
+
+<span class="co">/* disable print */</span>
+<span class="co">//#define NO_PRINT</span>
+
+<span class="co">/* disable action features */</span>
+<span class="co">//#define NO_ACTION_LAYER</span>
+<span class="co">//#define NO_ACTION_TAPPING</span>
+<span class="co">//#define NO_ACTION_ONESHOT</span>
+<span class="co">//#define NO_ACTION_MACRO</span>
+<span class="co">//#define NO_ACTION_FUNCTION</span>
+
+<span class="co">/*</span>
+<span class="co"> * RGB Underglow</span>
+<span class="co"> * These settings are for the F4 by default:</span>
+<span class="co"> * </span>
+<span class="co"> *</span>
+<span class="co"> * #define ws2812_PORTREG  PORTF</span>
+<span class="co"> * #define ws2812_DDRREG   DDRF</span>
+<span class="co"> * #define ws2812_pin PF4</span>
+<span class="co"> * #define RGBLED_NUM 14     // Number of LEDs</span>
+<span class="co"> * #define RGBLIGHT_HUE_STEP 10</span>
+<span class="co"> * #define RGBLIGHT_SAT_STEP 17</span>
+<span class="co"> * #define RGBLIGHT_VAL_STEP 17</span>
+<span class="co"> *</span>
+<span class="co"> * The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. </span>
+<span class="co"> * To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. </span>
+<span class="co"> * For details, please check this keymap. keyboard/planck/keymaps/yang/keymap.c</span>
+<span class="co">*/</span>
+
+<span class="co">/* Deprecated code below</span>
+<span class="co">#define ws2812_PORTREG  PORTF </span>
+<span class="co">#define ws2812_DDRREG   DDRF</span>
+<span class="co">#define ws2812_pin PF4</span>
+<span class="co">*/</span> 
+<span class="ot">#define RGB_DI_PIN F4</span>
+<span class="ot">#define RGBLIGHT_TIMER</span>
+<span class="ot">#define RGBLED_NUM 8         </span><span class="co">// Number of LEDs</span>
+<span class="ot">#define RGBLIGHT_HUE_STEP 8</span>
+<span class="ot">#define RGBLIGHT_SAT_STEP 8</span>
+<span class="ot">#define RGBLIGHT_VAL_STEP 8</span>
+<span class="ot">#endif</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
