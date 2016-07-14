@@ -26,6 +26,7 @@
 * [jack](keymaps/jack/)
 * [jacobono](keymaps/jacobono/)
 * [jgarr](keymaps/jgarr/)
+* [josh](keymaps/josh/)
 * [kastyle](keymaps/kastyle/)
 * [kines-ish](keymaps/kines-ish/)
 * [mpiechotka](keymaps/mpiechotka/)
