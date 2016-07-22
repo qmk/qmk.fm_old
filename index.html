@@ -86,7 +86,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#windows-vista-and-later">Windows (Vista and later)</a></li>
         <li><a href="#mac">Mac</a></li>
         <li><a href="#linux">Linux</a></li>
-        <li><a href="#docker">Docker</a></li>
         <li><a href="#vagrant">Vagrant</a></li>
         </ul></li>
         <li><a href="#verify-your-installation">Verify Your Installation</a></li>
@@ -209,14 +208,6 @@ brew install dfu-programmer</code></pre>
 <p>Debian/Ubuntu example:</p>
 <pre><code>sudo apt-get update
 sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
-<h3 id="docker"><a href="#docker">Docker</a></h3>
-<p>If this is a bit complex for you, Docker might be the turn-key solution you need. After installing <a href="https://www.docker.com/products/docker">Docker</a>, run the following command at the root of the QMK folder to build a keyboard/keymap:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># You&#39;ll run this every time you want to build a keymap</span>
-<span class="co"># modify the keymap and keyboard assigment to compile what you want</span>
-<span class="co"># defaults are ergodox_ez/default</span>
-
-<span class="kw">docker</span> run -e keymap=gwen -e keyboard=ergodox_ez --rm -v <span class="ot">$(</span><span class="st">&#39;pwd&#39;</span><span class="ot">)</span>:/qmk:rw edasque/qmk_firmware</code></pre>
-<p>This will compile the targetted keyboard/keymap and leave it in your QMK directory for you to flash.</p>
 <h3 id="vagrant"><a href="#vagrant">Vagrant</a></h3>
 <p>If you have any problems building the firmware, you can try using a tool called Vagrant. It will set up a virtual computer with a known configuration that's ready-to-go for firmware building. OLKB does NOT host the files for this virtual computer. Details on how to set up Vagrant are in the <a href="VAGRANT_GUIDE.md">VAGRANT_GUIDE file</a>.</p>
 <h2 id="verify-your-installation"><a href="#verify-your-installation">Verify Your Installation</a></h2>
