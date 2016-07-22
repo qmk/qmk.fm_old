@@ -279,7 +279,7 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 <p><code>EXTRAKEY_ENABLE</code></p>
 <p>This allows you to use the system and audio control key codes.</p>
 <p><code>CONSOLE_ENABLE</code></p>
-<p>TODO</p>
+<p>This allows you to print messages that can be read using <a href="https://www.pjrc.com/teensy/hid_listen.html"><code>hid_listen</code></a>. Add this to your <code>Makefile</code>, and set it to <code>yes</code>. Then put <code>println</code>, <code>printf</code>, etc. in your keymap or anywhere in the <code>qmk</code> source. Finally, open <code>hid_listen</code> and enjoy looking at your printed messages.</p>
 <p><code>COMMAND_ENABLE</code></p>
 <p>TODO</p>
 <p><code>SLEEP_LED_ENABLE</code></p>
