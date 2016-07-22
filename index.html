@@ -177,7 +177,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>The list of possible keycodes you can use in your keymap is actually spread out in a few different places:<br /></li>
 <li><a href="doc/keycode.txt">doc/keycode.txt</a> - an explanation of those same keycodes.<br /></li>
 <li><a href="quantum/keymap.h">quantum/keymap.h</a> - this is where the QMK-specific aliases are all set up. Things like the Hyper and Meh key, the Leader key, and all of the other QMK innovations. These are also explained and documented below, but <code>keymap.h</code> is where they're actually defined.<br /></li>
-<li>The <a href="doc/TMK_readme.md">TMK documentation</a>. QMK is based on TMK, and this explains how it works internally.</li>
+<li>The <a href="doc/TMK_README.md">TMK documentation</a>. QMK is based on TMK, and this explains how it works internally.</li>
 </ul>
 <h1 id="getting-started"><a href="#getting-started">Getting started</a></h1>
 <p>Before you are able to compile, you'll need to install an environment for AVR development. You'll find the instructions for any OS below. If you find another/better way to set things up from scratch, please consider <a href="https://github.com/jackhumbert/qmk_firmware/pulls">making a pull request</a> with your changes!</p>
@@ -218,7 +218,7 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 <span class="kw">docker</span> run -e keymap=gwen -e keyboard=ergodox_ez --rm -v <span class="ot">$(</span><span class="st">&#39;pwd&#39;</span><span class="ot">)</span>:/qmk:rw edasque/qmk_firmware</code></pre>
 <p>This will compile the targetted keyboard/keymap and leave it in your QMK directory for you to flash.</p>
 <h3 id="vagrant"><a href="#vagrant">Vagrant</a></h3>
-<p>If you have any problems building the firmware, you can try using a tool called Vagrant. It will set up a virtual computer with a known configuration that's ready-to-go for firmware building. OLKB does NOT host the files for this virtual computer. Details on how to set up Vagrant are in the <a href="VAGRANT_GUIDE.md">VAGRANT_GUIDE file</a>.</p>
+<p>If you have any problems building the firmware, you can try using a tool called Vagrant. It will set up a virtual computer with a known configuration that's ready-to-go for firmware building. OLKB does NOT host the files for this virtual computer. Details on how to set up Vagrant are in the <a href="doc/VAGRANT_GUIDE.md">VAGRANT_GUIDE file</a>.</p>
 <h2 id="verify-your-installation"><a href="#verify-your-installation">Verify Your Installation</a></h2>
 <ol>
 <li>If you haven't already, obtain this repository (<a href="https://github.com/jackhumbert/qmk_firmware"><a href="https://github.com/jackhumbert/qmk_firmware">https://github.com/jackhumbert/qmk_firmware</a></a>). You can either download it as a zip file and extract it, or clone it using the command line tool git or the Github Desktop application.<br /></li>
@@ -236,7 +236,7 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 </ul>
 <h2 id="the-make-command"><a href="#the-make-command">The <code>make</code> command</a></h2>
 <p>The <code>make</code> command is how you compile the firmware into a .hex file, which can be loaded by a dfu programmer (like dfu-progammer via <code>make dfu</code>) or the <a href="https://www.pjrc.com/teensy/loader.html">Teensy loader</a> (only used with Teensys). You can run <code>make</code> from the root (<code>/</code>), your keyboard folder (<code>/keyboards/&lt;keyboard&gt;/</code>), or your keymap folder (<code>/keyboards/&lt;keyboard&gt;/keymaps/&lt;keymap&gt;/</code>) if you have a <code>Makefile</code> there (see the example <a href="/doc/keymap_makefile_example.mk">here</a>).</p>
-<p>By default, this will generate a <code>&lt;keyboard&gt;_&lt;keymap&gt;.hex</code> file in whichever folder you run <code>make</code> from. These files are ignored by git, so don't worry about deleting them when committing/creating pull requests. Your .hex file will also be available on qmk.fm/keyboards/<keyboard>/keymaps/<keymap>/.</p>
+<p>By default, this will generate a <code>&lt;keyboard&gt;_&lt;keymap&gt;.hex</code> file in whichever folder you run <code>make</code> from. These files are ignored by git, so don't worry about deleting them when committing/creating pull requests.</p>
 <p>Below are some definitions that will be useful:</p>
 <ul>
 <li>The &quot;root&quot; (<code>/</code>) folder is the qmk_firmware folder, in which are <code>doc</code>, <code>keyboard</code>, <code>quantum</code>, etc.<br /></li>
@@ -729,7 +729,7 @@ float tone_plover_gb[][2]  = SONG(PLOVER_GOODBYE_SOUND);
 
 float music_scale[][2] = SONG(MUSIC_SCALE_SOUND);
 float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
-<p>Wherein we bind predefined songs (from <a href="/audio/song_list.h">audio/song_list.h</a>) into named variables. This is one optimization that helps save on memory: These songs only take up memory when you reference them in your keymap, because they're essentially all preprocessor directives.</p>
+<p>Wherein we bind predefined songs (from <a href="/quantum/audio/song_list.h">quantum/audio/song_list.h</a>) into named variables. This is one optimization that helps save on memory: These songs only take up memory when you reference them in your keymap, because they're essentially all preprocessor directives.</p>
 <p>So now you have something called <code>tone_plover</code> for example. How do you make it play the Plover tune, then? If you look further down the keymap, you'll see this:</p>
 <pre><code>PLAY_NOTE_ARRAY(tone_plover, false, 0); // Signature is: Song name, repeat, rest style</code></pre>
 <p>This is inside one of the macros. So when that macro executes, your keyboard plays that particular chime.</p>
@@ -747,7 +747,7 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 &lt;^&lt;!&lt;#&lt;+a::Send, Ä</code></pre>
 <p>The hotkeys above are for the combination CtrlAltGui and CtrlAltGuiShift plus the letter a.<br />AutoHotkey inserts the Text right of <code>Send,</code> when this combination is pressed.</p>
 <h2 id="rgb-under-glow-mod"><a href="#rgb-under-glow-mod">RGB Under Glow Mod</a></h2>
-<p><img src="https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboards/planck/keymaps/yang/planck-with-rgb-underglow.jpg" alt="Planck with RGB Underglow" /></p>
+<p><img src="https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/keyboards/planck/keymaps/yang/planck-with-rgb-underglow.jpg" alt="Planck with RGB Underglow" /></p>
 <p>Here is a quick demo on Youtube (with NPKC KC60) (<a href="https://www.youtube.com/watch?v=VKrpPAHlisY">https://www.youtube.com/watch?v=VKrpPAHlisY</a>).</p>
 <p>For this mod, you need an unused pin wiring to DI of WS2812 strip. After wiring the VCC, GND, and DI, you can enable the underglow in your Makefile.</p>
 <pre><code>RGBLIGHT_ENABLE = yes</code></pre>
@@ -762,7 +762,7 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <p>You'll need to edit <code>RGB_DI_PIN</code> to the pin you have your <code>DI</code> on your RGB strip wired to.</p>
 <p>The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. For details, please check this keymap. <code>keyboards/planck/keymaps/yang/keymap.c</code></p>
 <h3 id="ws2812-wiring"><a href="#ws2812-wiring">WS2812 Wiring</a></h3>
-<p><img src="https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboards/planck/keymaps/yang/WS2812-wiring.jpg" alt="WS2812 Wiring" /></p>
+<p><img src="https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/keyboards/planck/keymaps/yang/WS2812-wiring.jpg" alt="WS2812 Wiring" /></p>
 <p>Please note the USB port can only supply a limited amount of power to the keyboard (500mA by standard, however, modern computer and most usb hubs can provide 700+mA.). According to the data of NeoPixel from Adafruit, 30 WS2812 LEDs require a 5V 1A power supply, LEDs used in this mod should not more than 20.</p>
 <h2 id="safety-considerations"><a href="#safety-considerations">Safety Considerations</a></h2>
 <p>You probably don't want to &quot;brick&quot; your keyboard, making it impossible<br />to rewrite firmware onto it. Here are some of the parameters to show<br />what things are (and likely aren't) too risky.</p>
