@@ -419,10 +419,11 @@ KC_COLN  :</code></pre>
 <p>The implementation hooks into two parts of the system, to achieve this: into <code>process_record_quantum()</code>, and the matrix scan. We need the latter to be able to time out a tap sequence even when a key is not being pressed, so <code>SPC</code> alone will time out and register after <code>TAPPING_TERM</code> time.</p>
 <p>But lets start with how to use it, first!</p>
 <p>First, you will need <code>TAP_DANCE_ENABLE=yes</code> in your <code>Makefile</code>, because the feature is disabled by default. This adds a little less than 1k to the firmware size. Next, you will want to define some tap-dance keys, which is easiest to do with the <code>TD()</code> macro, that - similar to <code>F()</code>, takes a number, which will later be used as an index into the <code>tap_dance_actions</code> array.</p>
-<p>This array specifies what actions shall be taken when a tap-dance key is in action. Currently, there are two possible options:</p>
+<p>This array specifies what actions shall be taken when a tap-dance key is in action. Currently, there are three possible options:</p>
 <ul>
 <li><code>ACTION_TAP_DANCE_DOUBLE(kc1, kc2)</code>: Sends the <code>kc1</code> keycode when tapped once, <code>kc2</code> otherwise.<br /></li>
-<li><code>ACTION_TAP_DANCE_FN(fn)</code>: Calls the specified function - defined in the user keymap - with the current state of the tap-dance action.</li>
+<li><code>ACTION_TAP_DANCE_FN(fn)</code>: Calls the specified function - defined in the user keymap - with the final tap count of the tap dance action.<br /></li>
+<li><code>ACTION_TAP_DANCE_FN_ADVANCED(on_each_tap_fn, on_dance_finished_fn, on_reset_fn)</code>: Calls the first specified function - defined in the user keymap - on every tap, the second function on when the dance action finishes (like the previous option), and the last function when the tap dance action resets.</li>
 </ul>
 <p>The first option is enough for a lot of cases, that just want dual roles. For example, <code>ACTION_TAP_DANCE(KC_SPC, KC_ENT)</code> will result in <code>Space</code> being sent on single-tap, <code>Enter</code> otherwise.</p>
 <p>And that's the bulk of it!</p>
@@ -436,7 +437,8 @@ KC_COLN  :</code></pre>
 <pre class="sourceCode c"><code class="sourceCode c"><span class="kw">enum</span> {
  CT_SE = <span class="dv">0</span>,
  CT_CLN,
- CT_EGG
+ CT_EGG,
+ CT_FLSH,
 };
 
 <span class="co">/* Have the above three on the keymap, TD(CT_SE), etc... */</span>
@@ -461,10 +463,50 @@ KC_COLN  :</code></pre>
   }
 }
 
+<span class="co">// on each tap, light up one led, from right to left</span>
+<span class="co">// on the forth tap, turn them off from right to left</span>
+<span class="dt">void</span> dance_flsh_each(qk_tap_dance_state_t *state) {
+  <span class="kw">switch</span> (state-&gt;count) {
+  <span class="kw">case</span> <span class="dv">1</span>:
+    ergodox_right_led_3_on();
+    <span class="kw">break</span>;
+  <span class="kw">case</span> <span class="dv">2</span>:
+    ergodox_right_led_2_on();
+    <span class="kw">break</span>;
+  <span class="kw">case</span> <span class="dv">3</span>:
+    ergodox_right_led_1_on();
+    <span class="kw">break</span>;
+  <span class="kw">case</span> <span class="dv">4</span>:
+    ergodox_right_led_3_off();
+    _delay_ms(<span class="dv">50</span>);
+    ergodox_right_led_2_off();
+    _delay_ms(<span class="dv">50</span>);
+    ergodox_right_led_1_off();
+  }
+}
+
+<span class="co">// on the fourth tap, set the keyboard on flash state</span>
+<span class="dt">void</span> dance_flsh_finished(qk_tap_dance_state_t *state) {
+  <span class="kw">if</span> (state-&gt;count &gt;= <span class="dv">4</span>) {
+    reset_keyboard();
+    reset_tap_dance(state);
+  }
+}
+
+<span class="co">// if the flash state didnt happen, then turn off leds, left to right</span>
+<span class="dt">void</span> dance_flsh_reset(qk_tap_dance_state_t *state) {
+  ergodox_right_led_1_off();
+  _delay_ms(<span class="dv">50</span>);
+  ergodox_right_led_2_off();
+  _delay_ms(<span class="dv">50</span>);
+  ergodox_right_led_3_off();
+}
+
 <span class="dt">const</span> qk_tap_dance_action_t tap_dance_actions[] = {
   [CT_SE]  = ACTION_TAP_DANCE_DOUBLE (KC_SPC, KC_ENT)
  ,[CT_CLN] = ACTION_TAP_DANCE_FN (dance_cln)
  ,[CT_EGG] = ACTION_TAP_DANCE_FN (dance_egg)
+ ,[CT_FLSH] = ACTION_TAP_DANCE_FN_ADVANCED (dance_flsh_each, dance_flsh_finished, dance_flsh_reset)
 };</code></pre>
 <h3 id="temporarily-setting-the-default-layer"><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></h3>
 <p><code>DF(layer)</code> - sets default layer to <em>layer</em>. The default layer is the one at the &quot;bottom&quot; of the layer stack - the ultimate fallback layer. This currently does not persist over power loss. When you plug the keyboard back in, layer 0 will always be the default. It is theoretically possible to work around that, but that's not what <code>DF</code> does.</p>
