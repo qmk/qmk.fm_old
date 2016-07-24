@@ -421,7 +421,7 @@ KC_COLN  :</code></pre>
 }</code></pre>
 <p>As you can see, you have three function. you can use - <code>SEQ_ONE_KEY</code> for single-key sequences (Leader followed by just one key), and <code>SEQ_TWO_KEYS</code> and <code>SEQ_THREE_KEYS</code> for longer sequences. Each of these accepts one or more keycodes as arguments. This is an important point: You can use keycodes from <strong>any layer on your keyboard</strong>. That layer would need to be active for the leader macro to fire, obviously.</p>
 <h3 id="tap-dance-a-single-key-can-do-3-5-or-100-different-things"><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a></h3>
-<p>Hit the semicolon key once, send a semicolon. Hit it twice, rapidly -- send a colon. Hit it three times, and your keyboard's LEDs do a wild dance. That's just one example of what Tap Dance can do. It's one of the nicest community-contributed features in the firmware, conceived and created by <a href="https://github.com/algernon">algernon</a> in <a href="https://github.com/jackhumbert/qmk_firmware/pull/451">#451</a>. Here's how Algernon describes the feature:</p>
+<p>Hit the semicolon key once, send a semicolon. Hit it twice, rapidly -- send a colon. Hit it three times, and your keyboard's LEDs do a wild dance. That's just one example of what Tap Dance can do. It's one of the nicest community-contributed features in the firmware, conceived and created by <a href="https://github.com/algernon">algernon</a> in <a href="https://github.com/jackhumbert/qmk_firmware/pull/451">#451</a>. Here's how algernon describes the feature:</p>
 <p>With this feature one can specify keys that behave differently, based on the amount of times they have been tapped, and when interrupted, they get handled before the interrupter.</p>
 <p>To make it clear how this is different from <code>ACTION_FUNCTION_TAP</code>, lets explore a certain setup! We want one key to send <code>Space</code> on single tap, but <code>Enter</code> on double-tap.</p>
 <p>With <code>ACTION_FUNCTION_TAP</code>, it is quite a rain-dance to set this up, and has the problem that when the sequence is interrupted, the interrupting key will be send first. Thus, <code>SPC a</code> will result in <code>a SPC</code> being sent, if they are typed within <code>TAPPING_TERM</code>. With the tap dance feature, that'll come out as <code>SPC a</code>, correctly.</p>
@@ -430,13 +430,12 @@ KC_COLN  :</code></pre>
 <p>First, you will need <code>TAP_DANCE_ENABLE=yes</code> in your <code>Makefile</code>, because the feature is disabled by default. This adds a little less than 1k to the firmware size. Next, you will want to define some tap-dance keys, which is easiest to do with the <code>TD()</code> macro, that - similar to <code>F()</code>, takes a number, which will later be used as an index into the <code>tap_dance_actions</code> array.</p>
 <p>This array specifies what actions shall be taken when a tap-dance key is in action. Currently, there are three possible options:</p>
 <ul>
-<li><code>ACTION_TAP_DANCE_DOUBLE(kc1, kc2)</code>: Sends the <code>kc1</code> keycode when tapped once, <code>kc2</code> otherwise.<br /></li>
+<li><code>ACTION_TAP_DANCE_DOUBLE(kc1, kc2)</code>: Sends the <code>kc1</code> keycode when tapped once, <code>kc2</code> otherwise. When the key is held, the appropriate keycode is registered: <code>kc1</code> when pressed and held, <code>kc2</code> when tapped once, then pressed and held.<br /></li>
 <li><code>ACTION_TAP_DANCE_FN(fn)</code>: Calls the specified function - defined in the user keymap - with the final tap count of the tap dance action.<br /></li>
 <li><code>ACTION_TAP_DANCE_FN_ADVANCED(on_each_tap_fn, on_dance_finished_fn, on_reset_fn)</code>: Calls the first specified function - defined in the user keymap - on every tap, the second function on when the dance action finishes (like the previous option), and the last function when the tap dance action resets.</li>
 </ul>
 <p>The first option is enough for a lot of cases, that just want dual roles. For example, <code>ACTION_TAP_DANCE(KC_SPC, KC_ENT)</code> will result in <code>Space</code> being sent on single-tap, <code>Enter</code> otherwise.</p>
 <p>And that's the bulk of it!</p>
-<p>Do note, however, that this implementation does have some consequences: keys do not register until either they reach the tapping ceiling, or they time out. This means that if you hold the key, nothing happens, no repeat, no nothing. It is possible to detect held state, and register an action then too, but that's not implemented yet. Keys also unregister immediately after being registered, so you can't even hold the second tap. This is intentional, to be consistent.</p>
 <p>And now, on to the explanation of how it works!</p>
 <p>The main entry point is <code>process_tap_dance()</code>, called from <code>process_record_quantum()</code>, which is run for every keypress, and our handler gets to run early. This function checks whether the key pressed is a tap-dance key. If it is not, and a tap-dance was in action, we handle that first, and enqueue the newly pressed key. If it is a tap-dance key, then we check if it is the same as the already active one (if there's one active, that is). If it is not, we fire off the old one first, then register the new one. If it was the same, we increment the counter and the timer.</p>
 <p>This means that you have <code>TAPPING_TERM</code> time to tap the key again, you do not have to input all the taps within that timeframe. This allows for longer tap counts, with minimal impact on responsiveness.</p>
@@ -452,20 +451,25 @@ KC_COLN  :</code></pre>
 
 <span class="co">/* Have the above three on the keymap, TD(CT_SE), etc... */</span>
 
-<span class="dt">void</span> dance_cln (qk_tap_dance_state_t *state) {
+<span class="dt">void</span> dance_cln_finished (qk_tap_dance_state_t *state, <span class="dt">void</span> *user_data) {
   <span class="kw">if</span> (state-&gt;count == <span class="dv">1</span>) {
     register_code (KC_RSFT);
     register_code (KC_SCLN);
-    unregister_code (KC_SCLN);
-    unregister_code (KC_RSFT);
   } <span class="kw">else</span> {
     register_code (KC_SCLN);
-    unregister_code (KC_SCLN);
-    reset_tap_dance (state);
   }
 }
 
-<span class="dt">void</span> dance_egg (qk_tap_dance_state_t *state) {
+<span class="dt">void</span> dance_cln_reset (qk_tap_dance_state_t *state, <span class="dt">void</span> *user_data) {
+  <span class="kw">if</span> (state-&gt;count == <span class="dv">1</span>) {
+    unregister_code (KC_RSFT);
+    unregister_code (KC_SCLN);
+  } <span class="kw">else</span> {
+    unregister_code (KC_SCLN);
+  }
+}
+
+<span class="dt">void</span> dance_egg (qk_tap_dance_state_t *state, <span class="dt">void</span> *user_data) {
   <span class="kw">if</span> (state-&gt;count &gt;= <span class="dv">100</span>) {
     SEND_STRING (<span class="st">&quot;Safety dance!&quot;</span>);
     reset_tap_dance (state);
@@ -474,7 +478,7 @@ KC_COLN  :</code></pre>
 
 <span class="co">// on each tap, light up one led, from right to left</span>
 <span class="co">// on the forth tap, turn them off from right to left</span>
-<span class="dt">void</span> dance_flsh_each(qk_tap_dance_state_t *state) {
+<span class="dt">void</span> dance_flsh_each(qk_tap_dance_state_t *state, <span class="dt">void</span> *user_data) {
   <span class="kw">switch</span> (state-&gt;count) {
   <span class="kw">case</span> <span class="dv">1</span>:
     ergodox_right_led_3_on();
@@ -495,7 +499,7 @@ KC_COLN  :</code></pre>
 }
 
 <span class="co">// on the fourth tap, set the keyboard on flash state</span>
-<span class="dt">void</span> dance_flsh_finished(qk_tap_dance_state_t *state) {
+<span class="dt">void</span> dance_flsh_finished(qk_tap_dance_state_t *state, <span class="dt">void</span> *user_data) {
   <span class="kw">if</span> (state-&gt;count &gt;= <span class="dv">4</span>) {
     reset_keyboard();
     reset_tap_dance(state);
@@ -503,7 +507,7 @@ KC_COLN  :</code></pre>
 }
 
 <span class="co">// if the flash state didnt happen, then turn off leds, left to right</span>
-<span class="dt">void</span> dance_flsh_reset(qk_tap_dance_state_t *state) {
+<span class="dt">void</span> dance_flsh_reset(qk_tap_dance_state_t *state, <span class="dt">void</span> *user_data) {
   ergodox_right_led_1_off();
   _delay_ms(<span class="dv">50</span>);
   ergodox_right_led_2_off();
@@ -513,7 +517,7 @@ KC_COLN  :</code></pre>
 
 <span class="dt">const</span> qk_tap_dance_action_t tap_dance_actions[] = {
   [CT_SE]  = ACTION_TAP_DANCE_DOUBLE (KC_SPC, KC_ENT)
- ,[CT_CLN] = ACTION_TAP_DANCE_FN (dance_cln)
+ ,[CT_CLN] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, dance_cln_finished, dance_cln_reset)
  ,[CT_EGG] = ACTION_TAP_DANCE_FN (dance_egg)
  ,[CT_FLSH] = ACTION_TAP_DANCE_FN_ADVANCED (dance_flsh_each, dance_flsh_finished, dance_flsh_reset)
 };</code></pre>
