@@ -48,6 +48,7 @@
 * [software_neo2](keymaps/software_neo2/)
 * [supercoder](keymaps/supercoder/)
 * [techtomas](keymaps/techtomas/)
+* [teckinesis](keymaps/teckinesis/)
 * [tkuichooseyou](keymaps/tkuichooseyou/)
 * [tm2030](keymaps/tm2030/)
 * [tonyabra_osx](keymaps/tonyabra_osx/)

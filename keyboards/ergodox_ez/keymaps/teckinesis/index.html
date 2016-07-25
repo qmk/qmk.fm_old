@@ -1,0 +1,118 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox_ez">ergodox_ez</a> / keymaps / <a href="/keyboards/ergodox_ez/keymaps/teckinesis/">teckinesis</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/teckinesis/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_ez_teckinesis.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#teckinesis-layout">teckinesis Layout</a><ul>
+        <li><a href="#the-base-layout">The Base Layout</a><ul>
+        <li><a href="#changes-from-the-ordinary-layout">Changes from The Ordinary Layout</a></li>
+        </ul></li>
+        <li><a href="#the-symbols-layer">The Symbols Layer</a><ul>
+        <li><a href="#changes-from-the-ordinary-layout-1">Changes from The Ordinary Layout</a></li>
+        </ul></li>
+        <li><a href="#the-media-layer">The Media Layer</a><ul>
+        <li><a href="#changes-from-the-ordinary-layout-2">Changes from The Ordinary Layout</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="teckinesis-layout"><a href="#teckinesis-layout">teckinesis Layout</a></h1>
+<p><em>A blend of TECK and Kinesis layouts, based on <a href="http://qmk.fm/keyboards/ergodox_ez/keymaps/ordinary/#the-ordinary-layout-a-familiar-and-powerful-layout">&quot;The Ordinary Layout&quot; by Nicholas Keene</a></em></p>
+<p>I love &quot;The Ordinary Layout&quot;, but I still use a <a href="https://www.trulyergonomic.com/store/index.php">TECK</a><br />at the office, and I found the transition back and forth to be a bit more difficult than I expected.</p>
+<p>This layout consists of only slight changes to &quot;The Ordinary Layout&quot; based on the layouts of the<br /><a href="https://www.trulyergonomic.com/store/layout-designer--configurator--reprogrammable--truly-ergonomic-mechanical-keyboard/#KTo7PD0+P0BBQkNERUw5394rNR4fICEi4yMkJSYnLS4xOBQaCBUXTBwYDBITLzDhBBYHCQorCw0ODzPl4B0bBhkFKhEQNjc05OPiSktOTSwoLFBSUU/mZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAX2BhAFZXAAAAAAAAAAAAXF1eVAAAAAAAAAAAAABZWltVAAAAAAAAAAAAYgBjAAAAAAAAAAAAWFcAAAAAAACTAQAMAiMBAAwBigEADAIhAQAMAZQBAAwBkgEADAGDAQAMALYBAAwAzQEADAC1AQAMAOIBAAwA6gEADADpAQAMALhJAEYAAAAAAEitR64AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACk6Ozw9Pj9AQUJDREVMOd/eKzUeHyAhIuMjJCUmJy0uMTgUGggVF0wcGAwSEy8w4QQWBwkKKwsNDg8z5eMdGwYZBSoREDY3NOfg4kpLTk0sKCxQUlFP5uQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF9gYQBWVwAAAAAAAAAAAFxdXlQAAAAAAAAAAAAAWVpbVQAAAAAAAAAAAGIAYwAAAAAAAAAAAFhXAAAAAAAAkwEADAIjAQAMAYoBAAwCIQEADAGUAQAMAZIBAAwBgwEADAC2AQAMAM0BAAwAtQEADADiAQAMAOoBAAwA6QEADAC4SQBGAAAAAABIrUeuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=">(original) TECK Model 209</a> and<br />the <a href="http://www.kinesis-ergo.com/wp-content/uploads/2013/06/advantage_layout_win.pdf">Kinesis Advantage</a></p>
+<h2 id="the-base-layout"><a href="#the-base-layout">The Base Layout</a></h2>
+<p><a href="http://www.keyboard-layout-editor.com/#/gists/befd4c5800d92114aa9e50d4f7c0dfb0">teckinesis (Base Layer)</a><br /><img src="teckinesis-base.png" alt="teckinesis base layout" /></p>
+<h3 id="changes-from-the-ordinary-layout"><a href="#changes-from-the-ordinary-layout">Changes from The Ordinary Layout</a></h3>
+<ul>
+<li>Moved KC_MINS from the key left of the 6 to the RSpec key.<br /></li>
+<li>Moved KC_EQL from RSpec to LSpec.<br /></li>
+<li>Moved KC_GRV from LSpec to the key left of the 6.<br /></li>
+<li>Mdded KC_BSLS to the left Meh key.<br /></li>
+<li>Added KC_SLSH to the left Hyper key.<br /></li>
+<li>Added KC_LBRC to the right Hyper key.<br /></li>
+<li>Added KC_RBRC to the right Meh key.</li>
+</ul>
+<h2 id="the-symbols-layer"><a href="#the-symbols-layer">The Symbols Layer</a></h2>
+<p><a href="http://www.keyboard-layout-editor.com/#/gists/e6ddc4e9e0d194b3e52ac0616238ab61">teckinesis (Symbols Layer)</a><br /><img src="teckinesis-symbol.png" alt="teckinesis symbols layout" /></p>
+<h3 id="changes-from-the-ordinary-layout-1"><a href="#changes-from-the-ordinary-layout-1">Changes from The Ordinary Layout</a></h3>
+<ul>
+<li>None.</li>
+</ul>
+<h2 id="the-media-layer"><a href="#the-media-layer">The Media Layer</a></h2>
+<p><a href="http://www.keyboard-layout-editor.com/#/gists/41ff65e6a7c490211fd6702fb34d9908">teckinesis (Media Layer)</a><br /><img src="teckinesis-media.png" alt="teckinesis media layout" /></p>
+<h3 id="changes-from-the-ordinary-layout-2"><a href="#changes-from-the-ordinary-layout-2">Changes from The Ordinary Layout</a></h3>
+<ul>
+<li>Removed Power, Sleep, Mail, My Computer keys.<br />(I kept hitting these while using the mouse/cursor. =P)</li>
+</ul>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
