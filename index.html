@@ -124,6 +124,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         </ul></li>
         <li><a href="#modding-your-keyboard">Modding your keyboard</a><ul>
         <li><a href="#audio-output-from-a-speaker">Audio output from a speaker</a></li>
+        <li><a href="#recording-and-playing-back-music">Recording And Playing back Music</a></li>
         <li><a href="#midi-functionalty">MIDI functionalty</a></li>
         <li><a href="#bluetooth-functionality">Bluetooth functionality</a></li>
         <li><a href="#international-characters-on-windows">International Characters on Windows</a></li>
@@ -740,6 +741,16 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <pre><code>PLAY_NOTE_ARRAY(tone_plover, false, 0); // Signature is: Song name, repeat, rest style</code></pre>
 <p>This is inside one of the macros. So when that macro executes, your keyboard plays that particular chime.</p>
 <p>&quot;Rest style&quot; in the method signature above (the last parameter) specifies if there's a rest (a moment of silence) between the notes.</p>
+<h2 id="recording-and-playing-back-music"><a href="#recording-and-playing-back-music">Recording And Playing back Music</a></h2>
+<ul>
+<li><code>Music On</code> - Turn music mode on. The default mapping is <code>Lower+Upper+C</code><br /></li>
+<li><code>LCTL</code> - start a recording<br /></li>
+<li>play some tones<br /></li>
+<li><code>LALT</code> - stop recording, stop playing<br /></li>
+<li><code>LGUI</code> - play recording<br /></li>
+<li><code>LALT</code> - stop playing<br /></li>
+<li><code>Music Off</code> - Turn music mode off. The default mapping is <code>Lower+Upper+V</code></li>
+</ul>
 <h2 id="midi-functionalty"><a href="#midi-functionalty">MIDI functionalty</a></h2>
 <p>This is still a WIP, but check out <code>quantum/keymap_midi.c</code> to see what's happening. Enable from the Makefile.</p>
 <h2 id="bluetooth-functionality"><a href="#bluetooth-functionality">Bluetooth functionality</a></h2>
