@@ -398,7 +398,9 @@ KC_COLN  :</code></pre>
 <li>Include the line <code>#define LEADER_TIMEOUT 300</code> somewhere in your keymap.c file, probably near the top. The 300 there is 300ms -- that's how long you have for the sequence of keys following the leader. You can tweak this value for comfort, of course.<br /></li>
 <li>Within your <code>matrix_scan_user</code> function, do something like this:</li>
 </ol>
-<pre><code>void matrix_scan_user(void) {
+<pre><code>LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
   LEADER_DICTIONARY() {
     leading = false;
     leader_end();
