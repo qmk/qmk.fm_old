@@ -444,7 +444,28 @@ void matrix_scan_user(void) {
 <p>This means that you have <code>TAPPING_TERM</code> time to tap the key again, you do not have to input all the taps within that timeframe. This allows for longer tap counts, with minimal impact on responsiveness.</p>
 <p>Our next stop is <code>matrix_scan_tap_dance()</code>. This handles the timeout of tap-dance keys.</p>
 <p>For the sake of flexibility, tap-dance actions can be either a pair of keycodes, or a user function. The latter allows one to handle higher tap counts, or do extra things, like blink the LEDs, fiddle with the backlighting, and so on. This is accomplished by using an union, and some clever macros.</p>
-<p>In the end, let's see a full example!</p>
+<h4 id="examples"><a href="#examples">Examples</a></h4>
+<p>Here's a simple example for a single definition:</p>
+<ol>
+<li>In your <code>makefile</code>, add <code>TAP_DANCE_ENABLE = yes</code><br /></li>
+<li>In your <code>config.h</code> (which you can copy from <code>qmk_firmware/keyboards/planck/config.h</code> to your keymap directory), add <code>#define TAPPING_TERM 200</code><br /></li>
+<li>In your <code>keymap.c</code> file, define the variables and definitions, then add to your keymap:</li>
+</ol>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">//Tap Dance Declarations</span>
+<span class="kw">enum</span> {
+  TD_ESC_CAPS = <span class="dv">0</span>
+};
+
+<span class="co">//Tap Dance Definitions</span>
+<span class="dt">const</span> qk_tap_dance_action_t tap_dance_actions[] = {
+  <span class="co">//Tap once for Esc, twice for Caps Lock</span>
+  [TD_ESC_CAPS]  = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS)
+<span class="co">// Other declarations would go here, separated by commas, if you have them</span>
+};
+
+<span class="co">//In Layer declaration, add tap dance item in place of a key code</span>
+TD(TD_ESC_CAPS) </code></pre>
+<p>Here's a more complex example involving custom actions:</p>
 <pre class="sourceCode c"><code class="sourceCode c"><span class="kw">enum</span> {
  CT_SE = <span class="dv">0</span>,
  CT_CLN,
