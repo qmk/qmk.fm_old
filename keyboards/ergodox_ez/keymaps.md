@@ -29,6 +29,7 @@
 * [josh](keymaps/josh/)
 * [kastyle](keymaps/kastyle/)
 * [kines-ish](keymaps/kines-ish/)
+* [maz](keymaps/maz/)
 * [mpiechotka](keymaps/mpiechotka/)
 * [msc](keymaps/msc/)
 * [naps62](keymaps/naps62/)
