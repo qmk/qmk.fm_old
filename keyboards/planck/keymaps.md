@@ -7,6 +7,7 @@
 * [basic](keymaps/basic/)
 * [bone2planck](keymaps/bone2planck/)
 * [brandon](keymaps/brandon/)
+* [callum](keymaps/callum/)
 * [cbbrowne](keymaps/cbbrowne/)
 * [charlie](keymaps/charlie/)
 * [daniel](keymaps/daniel/)
