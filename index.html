@@ -117,7 +117,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></li>
         </ul></li>
         <li><a href="#custom-quantum-functions">Custom Quantum functions</a><ul>
-        <li><a href="#void-martix_init_void"><code>void martix_init_*(void)</code></a></li>
+        <li><a href="#void-matrix_init_void"><code>void matrix_init_*(void)</code></a></li>
         <li><a href="#void-matrix_scan_void"><code>void matrix_scan_*(void)</code></a></li>
         <li><a href="#bool-process_record_uint16_t-keycode-keyrecord_t-record"><code>bool process_record_*(uint16_t keycode, keyrecord_t *record)</code></a></li>
         <li><a href="#void-led_set_uint8_t-usb_led"><code>void led_set_*(uint8_t usb_led)</code></a></li>
@@ -707,7 +707,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 <p>Enable the backlight from the Makefile.</p>
 <h1 id="custom-quantum-functions"><a href="#custom-quantum-functions">Custom Quantum functions</a></h1>
 <p>All of these functions are available in the <code>*_kb()</code> or <code>*_user()</code> variety. <code>kb</code> ones should only be used in the <code>&lt;keyboard&gt;/&lt;keyboard&gt;.c</code> file, and <code>user</code> ones should only be used in the <code>keymap.c</code>. The keyboard ones call the user ones - it's necessary to keep these calls to allow the keymap functions to work correctly.</p>
-<h2 id="void-martix_init_void"><a href="#void-martix_init_void"><code>void martix_init_*(void)</code></a></h2>
+<h2 id="void-matrix_init_void"><a href="#void-matrix_init_void"><code>void matrix_init_*(void)</code></a></h2>
 <p>This function gets called when the matrix is initiated, and can contain start-up code for your keyboard/keymap.</p>
 <h2 id="void-matrix_scan_void"><a href="#void-matrix_scan_void"><code>void matrix_scan_*(void)</code></a></h2>
 <p>This function gets called at every matrix scan, which is basically as often as the MCU can handle. Be careful what you put here, as it will get run a lot.</p>
