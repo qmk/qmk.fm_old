@@ -98,16 +98,19 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#customizing-makefile-options-on-a-per-keymap-basis">Customizing Makefile options on a per-keymap basis</a></li>
         </ul></li>
         <li><a href="#the-config.h-file">The <code>config.h</code> file</a></li>
+        </ul></li>
         <li><a href="#going-beyond-the-keycodes">Going beyond the keycodes</a><ul>
+        <li><a href="#quick-aliases-to-common-actions">Quick aliases to common actions</a><ul>
         <li><a href="#switching-and-toggling-layers">Switching and toggling layers</a></li>
         <li><a href="#fun-with-modifier-keys">Fun with modifier keys</a></li>
+        </ul></li>
         <li><a href="#space-cadet-shift-the-future-built-in">Space Cadet Shift: The future, built in</a></li>
         <li><a href="#the-leader-key-a-new-kind-of-modifier">The Leader key: A new kind of modifier</a></li>
-        <li><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a></li>
+        <li><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a><ul>
+        <li><a href="#examples">Examples</a></li>
+        </ul></li>
         <li><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></li>
         <li><a href="#prevent-stuck-modifiers">Prevent stuck modifiers</a></li>
-        <li><a href="#remember-these-are-just-aliases">Remember: These are just aliases</a></li>
-        </ul></li>
         <li><a href="#macro-shortcuts-send-a-whole-string-when-pressing-just-one-key">Macro shortcuts: Send a whole string when pressing just one key</a><ul>
         <li><a href="#advanced-macro-functions">Advanced macro functions</a></li>
         </ul></li>
@@ -313,8 +316,12 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 <span class="ot">#define MY_SETTING 4</span></code></pre>
 <p>For a value of <code>4</code> for this imaginary setting. So we <code>undef</code> it first, then <code>define</code> it.</p>
 <p>You can then override any settings, rather than having to copy and paste the whole thing.</p>
-<h2 id="going-beyond-the-keycodes"><a href="#going-beyond-the-keycodes">Going beyond the keycodes</a></h2>
+<h1 id="going-beyond-the-keycodes"><a href="#going-beyond-the-keycodes">Going beyond the keycodes</a></h1>
 <p>Aside from the <a href="doc/keycode.txt">basic keycodes</a>, your keymap can include shortcuts to common operations.</p>
+<h2 id="quick-aliases-to-common-actions"><a href="#quick-aliases-to-common-actions">Quick aliases to common actions</a></h2>
+<p>Your keymap can include shortcuts to common operations (called &quot;function actions&quot; in tmk).</p>
+<p>These functions work the same way that their <code>ACTION_*</code> functions do - they're just quick aliases. To dig into all of the tmk <code>ACTION_*</code> functions, please see the <a href="https://github.com/jackhumbert/qmk_firmware/blob/master/doc/keymap.md#2-action">TMK documentation</a>.</p>
+<p>Instead of using <code>FNx</code> when defining <code>ACTION_*</code> functions, you can use <code>F(x)</code> - the benefit here is being able to use more than 32 function actions (up to 4096), if you happen to need them.</p>
 <h3 id="switching-and-toggling-layers"><a href="#switching-and-toggling-layers">Switching and toggling layers</a></h3>
 <p><code>MO(layer)</code> - momentary switch to <em>layer</em>. As soon as you let go of the key, the layer is deactivated and you pop back out to the previous layer. When you apply this to a key, that same key must be set as <code>KC_TRNS</code> on the destination layer. Otherwise, you won't make it back to the original layer when you release the key (and you'll get a keycode sent). You can only switch to layers <em>above</em> your current layer. If you're on layer 0 and you use <code>MO(1)</code>, that will switch to layer 1 just fine. But if you include <code>MO(3)</code> on layer 5, that won't do anything for you -- because layer 3 is lower than layer 5 on the stack.</p>
 <p><code>OSL(layer)</code> - momentary switch to <em>layer</em>, as a one-shot operation. So if you have a key that's defined as <code>OSL(1)</code>, and you tap that key, then only the very next keystroke would come from layer 1. You would drop back to layer zero immediately after that one keystroke. That's handy if you have a layer full of custom shortcuts -- for example, a dedicated key for closing a window. So you tap your one-shot layer mod, then tap that magic 'close window' key, and keep typing like a boss. Layer 1 would remain active as long as you hold that key down, too (so you can use it like a momentary toggle-layer key with extra powers).</p>
@@ -379,7 +386,7 @@ KC_COLN  :</code></pre>
 <li><code>LCAG_T(kc)</code> - is CtrlAltGui when held and <em>kc</em> when tapped<br /></li>
 <li><code>MEH_T(kc)</code> - is like Hyper, but not as cool -- does not include the Cmd/Win key, so just sends Alt+Ctrl+Shift.</li>
 </ul>
-<h3 id="space-cadet-shift-the-future-built-in"><a href="#space-cadet-shift-the-future-built-in">Space Cadet Shift: The future, built in</a></h3>
+<h2 id="space-cadet-shift-the-future-built-in"><a href="#space-cadet-shift-the-future-built-in">Space Cadet Shift: The future, built in</a></h2>
 <p>Steve Losh <a href="http://stevelosh.com/blog/2012/10/a-modern-space-cadet/">described</a> the Space Cadet Shift quite well. Essentially, you hit the left Shift on its own, and you get an opening parenthesis; hit the right Shift on its own, and you get the closing one. When hit with other keys, the Shift key keeps working as it always does. Yes, it's as cool as it sounds.</p>
 <p>To use it, use <code>KC_LSPO</code> (Left Shift, Parens Open) for your left Shift on your keymap, and <code>KC_RSPC</code> (Right Shift, Parens Close) for your right Shift.</p>
 <p>It's defaulted to work on US keyboards, but if your layout uses different keys for parenthesis, you can define those in your <code>config.h</code> like this:</p>
@@ -391,7 +398,7 @@ KC_COLN  :</code></pre>
 <p>The only other thing you're going to want to do is create a <code>Makefile</code> in your keymap directory and set the following:</p>
 <pre><code>COMMAND_ENABLE   = no  # Commands for debug and configuration</code></pre>
 <p>This is just to keep the keyboard from going into command mode when you hold both Shift keys at the same time.</p>
-<h3 id="the-leader-key-a-new-kind-of-modifier"><a href="#the-leader-key-a-new-kind-of-modifier">The Leader key: A new kind of modifier</a></h3>
+<h2 id="the-leader-key-a-new-kind-of-modifier"><a href="#the-leader-key-a-new-kind-of-modifier">The Leader key: A new kind of modifier</a></h2>
 <p>If you've ever used Vim, you know what a Leader key is. If not, you're about to discover a wonderful concept. :) Instead of hitting Alt+Shift+W for example (holding down three keys at the same time), what if you could hit a <em>sequence</em> of keys instead? So you'd hit our special modifier (the Leader key), followed by W and then C (just a rapid succession of keys), and something would happen.</p>
 <p>That's what <code>KC_LEAD</code> does. Here's an example:</p>
 <ol>
@@ -423,7 +430,7 @@ void matrix_scan_user(void) {
   }
 }</code></pre>
 <p>As you can see, you have three function. you can use - <code>SEQ_ONE_KEY</code> for single-key sequences (Leader followed by just one key), and <code>SEQ_TWO_KEYS</code> and <code>SEQ_THREE_KEYS</code> for longer sequences. Each of these accepts one or more keycodes as arguments. This is an important point: You can use keycodes from <strong>any layer on your keyboard</strong>. That layer would need to be active for the leader macro to fire, obviously.</p>
-<h3 id="tap-dance-a-single-key-can-do-3-5-or-100-different-things"><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a></h3>
+<h2 id="tap-dance-a-single-key-can-do-3-5-or-100-different-things"><a href="#tap-dance-a-single-key-can-do-3-5-or-100-different-things">Tap Dance: A single key can do 3, 5, or 100 different things</a></h2>
 <p>Hit the semicolon key once, send a semicolon. Hit it twice, rapidly -- send a colon. Hit it three times, and your keyboard's LEDs do a wild dance. That's just one example of what Tap Dance can do. It's one of the nicest community-contributed features in the firmware, conceived and created by <a href="https://github.com/algernon">algernon</a> in <a href="https://github.com/jackhumbert/qmk_firmware/pull/451">#451</a>. Here's how algernon describes the feature:</p>
 <p>With this feature one can specify keys that behave differently, based on the amount of times they have been tapped, and when interrupted, they get handled before the interrupter.</p>
 <p>To make it clear how this is different from <code>ACTION_FUNCTION_TAP</code>, lets explore a certain setup! We want one key to send <code>Space</code> on single tap, but <code>Enter</code> on double-tap.</p>
@@ -444,7 +451,7 @@ void matrix_scan_user(void) {
 <p>This means that you have <code>TAPPING_TERM</code> time to tap the key again, you do not have to input all the taps within that timeframe. This allows for longer tap counts, with minimal impact on responsiveness.</p>
 <p>Our next stop is <code>matrix_scan_tap_dance()</code>. This handles the timeout of tap-dance keys.</p>
 <p>For the sake of flexibility, tap-dance actions can be either a pair of keycodes, or a user function. The latter allows one to handle higher tap counts, or do extra things, like blink the LEDs, fiddle with the backlighting, and so on. This is accomplished by using an union, and some clever macros.</p>
-<h4 id="examples"><a href="#examples">Examples</a></h4>
+<h3 id="examples"><a href="#examples">Examples</a></h3>
 <p>Here's a simple example for a single definition:</p>
 <ol>
 <li>In your <code>makefile</code>, add <code>TAP_DANCE_ENABLE = yes</code><br /></li>
@@ -545,9 +552,9 @@ TD(TD_ESC_CAPS) </code></pre>
  ,[CT_EGG] = ACTION_TAP_DANCE_FN (dance_egg)
  ,[CT_FLSH] = ACTION_TAP_DANCE_FN_ADVANCED (dance_flsh_each, dance_flsh_finished, dance_flsh_reset)
 };</code></pre>
-<h3 id="temporarily-setting-the-default-layer"><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></h3>
+<h2 id="temporarily-setting-the-default-layer"><a href="#temporarily-setting-the-default-layer">Temporarily setting the default layer</a></h2>
 <p><code>DF(layer)</code> - sets default layer to <em>layer</em>. The default layer is the one at the &quot;bottom&quot; of the layer stack - the ultimate fallback layer. This currently does not persist over power loss. When you plug the keyboard back in, layer 0 will always be the default. It is theoretically possible to work around that, but that's not what <code>DF</code> does.</p>
-<h3 id="prevent-stuck-modifiers"><a href="#prevent-stuck-modifiers">Prevent stuck modifiers</a></h3>
+<h2 id="prevent-stuck-modifiers"><a href="#prevent-stuck-modifiers">Prevent stuck modifiers</a></h2>
 <p>Consider the following scenario:</p>
 <ol>
 <li>Layer 0 has a key defined as Shift.<br /></li>
@@ -561,9 +568,6 @@ TD(TD_ESC_CAPS) </code></pre>
 <p>If such situation bothers you add this to your <code>config.h</code>:</p>
 <pre><code>#define PREVENT_STUCK_MODIFIERS</code></pre>
 <p>This option uses 5 bytes of memory per every 8 keys on the keyboard<br />rounded up (5 bits per key). For example on Planck (48 keys) it uses<br />(48/8)*5 = 30 bytes.</p>
-<h3 id="remember-these-are-just-aliases"><a href="#remember-these-are-just-aliases">Remember: These are just aliases</a></h3>
-<p>These functions work the same way that their <code>ACTION_*</code> functions do - they're just quick aliases. To dig into all of the tmk ACTION_* functions, please see the <a href="https://github.com/jackhumbert/qmk_firmware/blob/master/doc/keymap.md#2-action">TMK documentation</a>.</p>
-<p>Instead of using <code>FNx</code> when defining <code>ACTION_*</code> functions, you can use <code>F(x)</code> - the benefit here is being able to use more than 32 function actions (up to 4096), if you happen to need them.</p>
 <h2 id="macro-shortcuts-send-a-whole-string-when-pressing-just-one-key"><a href="#macro-shortcuts-send-a-whole-string-when-pressing-just-one-key">Macro shortcuts: Send a whole string when pressing just one key</a></h2>
 <p>Instead of using the <code>ACTION_MACRO</code> function, you can simply use <code>M(n)</code> to access macro <em>n</em> - <em>n</em> will get passed into the <code>action_get_macro</code> as the <code>id</code>, and you can use a switch statement to trigger it. This gets called on the keydown and keyup, so you'll need to use an if statement testing <code>record-&gt;event.pressed</code> (see keymap_default.c).</p>
 <pre class="sourceCode c"><code class="sourceCode c"><span class="dt">const</span> macro_t *action_get_macro(keyrecord_t *record, <span class="dt">uint8_t</span> id, <span class="dt">uint8_t</span> opt) <span class="co">// this is the function signature -- just copy/paste it into your keymap file as it is.</span>
