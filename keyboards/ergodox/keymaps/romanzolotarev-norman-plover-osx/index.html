@@ -1,0 +1,129 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/romanzolotarev-norman-plover-osx/">romanzolotarev-norman-plover-osx</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/romanzolotarev-norman-plover-osx/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_romanzolotarev-norman-plover-osx.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#romans-layout">Roman's Layout</a><ul>
+        <li><a href="#switching">Switching</a></li>
+        <li><a href="#leds">LEDs</a></li>
+        <li><a href="#functional-keys">Functional Keys</a></li>
+        <li><a href="#ctrlesc">CTRL/ESC</a></li>
+        <li><a href="#activate-n-rollover">Activate N-rollover</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="romans-layout"><a href="#romans-layout">Roman's Layout</a></h1>
+<p>There are four layers:</p>
+<ul>
+<li><strong>BASE</strong> is <a href="https://normanlayout.info/">Norman layout</a>.<br /></li>
+<li><strong>SYMB</strong> for numbers and symbols.<br /></li>
+<li><strong>PLVR</strong> is optimized for <a href="http://www.openstenoproject.org">Plover</a>.<br /></li>
+<li><strong>ARRW</strong> for navigation (same fingers for arrows as IJKL on QWERTY).</li>
+</ul>
+<p>Looking for HJKL arrows? <a href="../romanzolotarev-norman-plover-osx-hjkl/">Here we<br />go</a>.</p>
+<p><a href="http://www.keyboard-layout-editor.com/#/gists/8ebcb701ecb763944417"><img src="romanzolotarev-norman-plover-osx.png" alt="keyboard-layout" /></a></p>
+<h2 id="switching"><a href="#switching">Switching</a></h2>
+<ul>
+<li>Tap <code>SYMB</code> to toggle <strong>SYMB</strong>.<br /></li>
+<li>Tap <code>ARRW</code> to toggle <strong>ARRW</strong>.<br /></li>
+<li>Hold <code>SYMB</code> (or <code>ARRW</code>) to activate <strong>SYMB</strong> (or <strong>ARRW</strong>) while holding.<br /></li>
+<li>Tap <code>PLVR</code> to toggle <strong>PLVR</strong>.</li>
+</ul>
+<h2 id="leds"><a href="#leds">LEDs</a></h2>
+<ul>
+<li>Red: SYMB is on.<br /></li>
+<li>Green: PLVR is on.<br /></li>
+<li>Blue: ARRW is on.</li>
+</ul>
+<h2 id="functional-keys"><a href="#functional-keys">Functional Keys</a></h2>
+<ul>
+<li>Tap <code>F1</code> to mute microphone via <a href="http://mizage.com/shush/">Shush</a>.<br /></li>
+<li>Tap <code>F2</code> to copy screenshot to the clipboard.<br /></li>
+<li>Hold <code>SHIFT</code> and tap <code>F2</code> to save screenshot as a file.<br /></li>
+<li>Tap <code>F3</code>, <code>F4</code>, <code>F5</code>, <code>F6</code> to resize a window via <a href="http://mizage.com/divvy/">Divvy</a>.<br /></li>
+<li>Tap <code>F14</code>, <code>F15</code> to adjust display brightness.</li>
+</ul>
+<p><strong>IMPORTANT</strong>: If you have another keyboard connected via Bluetooth, then<br /><code>F14</code> and <code>F15</code> will not work. Turn off that Bluetooth keyboard. Re-plug<br />you ErgoDox. Enjoy!</p>
+<h2 id="ctrlesc"><a href="#ctrlesc">CTRL/ESC</a></h2>
+<p>Both of those keys are frequently used in Vim.</p>
+<ul>
+<li>Tap <code>CTRL/ESC</code> to send <code>ESC</code>.<br /></li>
+<li>Hold <code>CTRL/ESC</code> to use as <code>CTRL</code>.</li>
+</ul>
+<h2 id="activate-n-rollover"><a href="#activate-n-rollover">Activate N-rollover</a></h2>
+<ul>
+<li>While in <strong>BASE</strong> hold left <code>SHIFT</code> and right <code>SHIRT</code> and then tap <code>N</code>.<br /></li>
+<li>Then you can activate <strong>PLVR</strong> and use ErgoDox EZ for steno.</li>
+</ul>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

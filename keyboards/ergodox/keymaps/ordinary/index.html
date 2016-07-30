@@ -1,0 +1,166 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/ordinary/">ordinary</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/ordinary/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_ordinary.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#the-ordinary-layout-a-familiar-and-powerful-layout">The Ordinary Layout, a familiar and powerful layout</a><ul>
+        <li><a href="#the-base-layout">The Base Layout</a></li>
+        <li><a href="#the-symbols-layer">The Symbols Layer</a></li>
+        <li><a href="#the-media-layer">The Media Layer</a></li>
+        <li><a href="#switching-between-layers">Switching Between Layers</a></li>
+        <li><a href="#special-sequences">Special Sequences</a><ul>
+        <li><a href="#escape">Escape</a></li>
+        <li><a href="#backspace">Backspace</a></li>
+        <li><a href="#rshift">RShift</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="the-ordinary-layout-a-familiar-and-powerful-layout"><a href="#the-ordinary-layout-a-familiar-and-powerful-layout">The Ordinary Layout, a familiar and powerful layout</a></h1>
+<p>The Ordinary Layout is intended to be unremarkably mundane and remarkably useful. This layout maintains most key positions from common QWERTY keyboards, and it features enhanced Symbol and Media layers compared to the default Ergodox EZ layout.</p>
+<p>The Ordinary Layout is supposed to look mostly like a normal keyboard, except in the ways that the Ergodox key arrangement is unique. The thumbs are responsible for space, enter, plus both forward and backward delete; with only a couple exceptions, all other keys are in the same place they are found on traditional keyboards.</p>
+<p>Nicholas Keene<br /><script type="text/javascript">
+<!--
+h='&#110;&#x69;&#x63;&#104;&#x6f;&#108;&#x61;&#x73;&#x6b;&#x65;&#x65;&#110;&#x65;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x6f;&#114;&#100;&#x69;&#110;&#x61;&#114;&#x79;&#108;&#x61;&#x79;&#x6f;&#x75;&#116;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x6f;&#114;&#100;&#x69;&#110;&#x61;&#114;&#x79;&#108;&#x61;&#x79;&#x6f;&#x75;&#116;&#32;&#x61;&#116;&#32;&#110;&#x69;&#x63;&#104;&#x6f;&#108;&#x61;&#x73;&#x6b;&#x65;&#x65;&#110;&#x65;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript><br />no rights reserved, use for any purposes, credit me if you are a nice person</p>
+<h2 id="the-base-layout"><a href="#the-base-layout">The Base Layout</a></h2>
+<ul>
+<li>The light blue keys are modifiers: traditional Control, Option, and Command keys, plus Hyper and Meh<br /></li>
+<li>The dark blue keys are Shift keys: Capitals Shift (traditional shift), Symbol Shift, and Media Shift; plus a Shift Lock key<br /></li>
+<li>Several dark blue keys double for entry of characters which would typically be in those locations<br /></li>
+<li>The turquoise keys are text navigation and manipulation<br /></li>
+<li>The red keys is Escape and it is always found in that location no matter what</li>
+</ul>
+<p><img src="ordinary-base.png" alt="Ordinary base layout" /></p>
+<p>This layout puts the modifier keys along the bottom of the keyboard where they are on most keyboards. They are in the regular order, with the addition of Hyper and Meh keys. The modifier keys are all in the same place on all layers, although some layers also assign symbols on those buttons. On the outside edges are the Shift keys. The traditional shift key is called Capitals Shift and it is in the normal location. Above that are Symbols Shift and Media Shift. Each Shift key momentarily switches the layout to that layer, and if you use the Shift Lock button you can lock the layout to that layer.</p>
+<p>Touch typists will also find tilde, tab, equals/plus, slash/pipe, and quote/double-quote sharing space on those Shift keys where they would probably be on a common keyboard. Other than the turquoise keys the only buttons which move to new locations are the Brackets and Dash and Escape. Most touch typists dont touch-type brackets or dash anyway so only Escape really requires retraining of muscle memory, and see below for the Special Escape Sequence.</p>
+<p>The four big turquoise keys are arranged differently than in the default Ergodox EZ layout. The Ordinary Layout here copies the design of the old Fingerworks TouchStream keyboard, but also reflects the natural presumptions of the author -- me! I type the space character with my right hand, and to me it makes sense for the two delete keys to be next to one another.</p>
+<p>The Forward Tab and Backward Tab keys are in their locations mostly because I ended up with two extra buttons and needed something to do with them. My muscle memory from using the Truly Ergonomic Keyboard makes me look for the Tab key with my right index finger, so it is handy to have this redundant Tab, and the idea with the Backward Tab key is that it becomes easy to navigate text fields in forms, or to indent/unindent code.</p>
+<h2 id="the-symbols-layer"><a href="#the-symbols-layer">The Symbols Layer</a></h2>
+<ul>
+<li>The light green keys are the eponymous symbols<br /></li>
+<li>The bright green keys are F-Keys<br /></li>
+<li>The dark green keys constitute a number pad<br /></li>
+<li>The turquoise keys are the <em>reverse</em> of the turquoise keys on the base layer</li>
+</ul>
+<p><img src="ordinary-symbol.png" alt="Ordinary symbol layout" /></p>
+<p>The Ergodox EZ ships with the &quot;Coder Layer&quot; which I like to call the Symbols layer. There are some significant improvements in The Ordinary Layout over the default layout.</p>
+<p>The symbol keys are mostly the same as on the default layout, which did a good job in this regard, but with a few enhancements:</p>
+<ul>
+<li>Angle brackets on this layer mean that curly, square, and angle brackets are all available on different layers of the same two buttons. Also, they mean that all kinds of brackets, including parentheses, are available on both the Base and Symbols layers.<br /></li>
+<li>The slash, backslash, and pipe characters are grouped together as a memory aid.<br /></li>
+<li>The &amp; and | symbols are juxtaposed as a memory aid</li>
+</ul>
+<p>The number pad area here, in green, includes all four arithmetic operations in the same order found on most number pads and features an Enter key. The keycodes emitted here are normal numeric keycodes, not the number-pad specific keycodes emitted by most number pads, because this layout does not use a Num Lock key to switch the buttons between numeric keycodes and navigational keycodes. See the explanation in The Media Layout section about navigation using these same buttons.</p>
+<p>Finally, consider the turquoise text-nav keys. Here in the Symbols layer, these are <em>reversed</em> from the base layer, with the keys either mirrored or shifted. This is powerful! Often I find myself using the mouse with my right hand, and the left hand needs to press Enter. Instead of reaching the left hand over to the right side of the keyboard, now I simply tap Symbols to reverse the turquoise keys, and Enter is right where it should be.</p>
+<h2 id="the-media-layer"><a href="#the-media-layer">The Media Layer</a></h2>
+<ul>
+<li>The dark orange keys on the left move the mouse cursor<br /></li>
+<li>The dark orange keys on the right move the text cursor<br /></li>
+<li>The light orange keys are for scrolling and paging<br /></li>
+<li>The bright green keys are more F-keys<br /></li>
+<li>The dark yellow keys signal Web and Audio applications<br /></li>
+<li>The light yellow keys signal the operating system<br /></li>
+<li>The dark gray keys do nothing in case you bump them by accident</li>
+</ul>
+<p><img src="ordinary-media.png" alt="Ordinary media layout" /></p>
+<p>This layer was inspired by the Media layer on the Ergodox EZ but takes it farther. The Fingerworks TouchStream keyboard had a very useful feature for controlling the text cursor easily and this layer does something similar. The left hand can move the mouse, the right hand moves the text cursor, in all four directions, in small or large increments. This greatly enhances navigation in text documents.</p>
+<p>Moreover, the orange keys on the right overlay the numberpad from the Symbols Layer, such that in the Media Layer the same keys can be used as if they were a number pad in navigational mode (Num Lock off). For instance, in traditional number pads the '3' key became 'Page Down', and so it is here. This means a user can do text navigation without moving either hand.</p>
+<p>Alas, the yellow keys have at best spotty success with common software. Good luck with those but don't expect too much.</p>
+<h2 id="switching-between-layers"><a href="#switching-between-layers">Switching Between Layers</a></h2>
+<p>In addition to Symbols and Media there is the Capitals layer which is exactly the same as pressing the shift key. Each layer is accessed by a shift key on each edge of the keyboard and corresponds to one of the three LEDs on the keyboard: Capitals (red), Symbols (green), Media (blue). The color of a layer illuminates when the layer is active.</p>
+<p>Shift buttons work in the expected way: press them and all of the keys switch to that layer; release them and the keys switch back to the base layer. If you press both of a pair of shift keys, the layer will lock on until you press both shift keys again. For instance, the widely and rightly loathed Caps Lock is engaged by pressing both Capitals Shift buttons. All the Shift keys work this way.</p>
+<p>Multiple layers can be turned on at once. The Capitals layer will affect characters on other layers to capitalize. Other layers, however, don't 'mix': Symbols blankets the base layout; Media blankets Symbols.</p>
+<h2 id="special-sequences"><a href="#special-sequences">Special Sequences</a></h2>
+<p><img src="ordinary-special.png" alt="Ordinary special layout" /></p>
+<h3 id="escape"><a href="#escape">Escape</a></h3>
+<p>The One True Location for the Escape key is segregated way up on the top left of the keyboard. The Ergodox does not have a physical button in such a location and the nearest one is home to the tilde (er, grave) which is commonly found there. In the Ordinary layout the Escape key is found on all layers in the prominent location in the corner next to the 5, whnich is easy to remember, and yet it isn't natural for those of us with muscle memory flicking our wrists up and to the left looking for Escape.</p>
+<p>The Ordinary layout offers as a consolation prize a Special sequence for Escape: Special Shift + 1. This is natural so you can tap the top left button, then the button next to it and get Escape. This gesture works in all layers.</p>
+<h3 id="backspace"><a href="#backspace">Backspace</a></h3>
+<p>At the top right corner of the Ergodox EZ you can a gesture similar to the special Escape sequence, using the 0 key, to produce a Backspace. Users of this keyboard and this layout are well advised to learn to use their thumbs for deleting text, but sometimes you are doing other computery things and just want to flick your digits up to the right and press backspace a bunch times.</p>
+<h3 id="rshift"><a href="#rshift">RShift</a></h3>
+<p>The Ordinary Layout locks layers by pressing both of a pair of shift keys. This interferes with the QMK firmware magic sequence, which is LShift+RShift. To work around this, both of the Capitals Shift keys produce a <em>Left Shift</em> keystroke. If for some reason a person needs <em>Right Shift</em> they can find it by pressing a Special Shift key, then the Capitals Shift key on the right side of the keyboard.</p>
+<hr />
+<p>The Ordinary Layout for the Ergodox EZ keyboard, v4</p>
+<p>Modifications from default by Nicholas Keene <script type="text/javascript">
+<!--
+h='&#110;&#x69;&#x63;&#104;&#x6f;&#108;&#x61;&#x73;&#x6b;&#x65;&#x65;&#110;&#x65;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#114;&#x67;&#x6f;&#100;&#x6f;&#120;&#x65;&#122;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x65;&#114;&#x67;&#x6f;&#100;&#x6f;&#120;&#x65;&#122;&#32;&#x61;&#116;&#32;&#110;&#x69;&#x63;&#104;&#x6f;&#108;&#x61;&#x73;&#x6b;&#x65;&#x65;&#110;&#x65;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript></p>
+<p>No rights reserved. This software is in the public domain. Credit me if you are friendly but if you're a jerk don't bother.</p>
+<p>Details: readme.md<br /> <a href="https://github.com/nrrkeene/qmk_firmware/tree/master/keyboard/ergodox_ez/keymaps/ordinary">https://github.com/nrrkeene/qmk_firmware/tree/master/keyboard/ergodox_ez/keymaps/ordinary</a></p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

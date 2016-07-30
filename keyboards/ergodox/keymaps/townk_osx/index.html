@@ -1,0 +1,304 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/townk_osx/">townk_osx</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/townk_osx/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_townk_osx.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#townks-keymap">Townk's Keymap</a><ul>
+        <li><a href="#the-layout">The layout</a><ul>
+        <li><a href="#one-shot-keys">One shot keys</a></li>
+        </ul></li>
+        <li><a href="#glossary">Glossary</a></li>
+        </ul></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="townks-keymap"><a href="#townks-keymap">Townk's Keymap</a></h1>
+<p>Trying to take care of an enjury on my arm I borrow an ergonomic keyboard from<br />a frient (<a href="http://www.kinesis-ergo.com/shop/advantage-pro-for-pc-mac/">Kinesis Advantage</a>).</p>
+<p>I really enjoyed my time with it but there were some anoyancies:</p>
+<ul>
+<li>The curvature on the keys bothered me since I'm a Vim user and using the<br /> motion keys on my editor was awkard.<br /></li>
+<li>I had to spend too much time remapping the keyboard to make some symbol keys<br /> more accessible to me.<br /></li>
+<li>The fact that my hands had to stay close to each other was a bit stressfull<br /> to my sholders.</li>
+</ul>
+<p>After a long research I find out that Ergodox EZ would be perfect for my needs<br />and purchase one. Before the keyboard even got in my hands I started to think<br />on the layout I would use on it and soon enough I planed couple adjustments<br />from the Kinesis I was using so far.</p>
+<h2 id="the-layout"><a href="#the-layout">The layout</a></h2>
+<p>Here are the layout mapping in images so you can have a glimpse on it:</p>
+<p><img src="townk_osx_base.png" alt="Base Layout" /><br /><img src="townk_osx_fn.png" alt="fn Layout" /><br /><img src="townk_osx_keypad.png" alt="Keypad &amp; Mouse Layout" /></p>
+<p>Notice that, differently from the default behavior, my layer keys are not transparent<br />by default, which means that if you press any non-labeled white key, nothing will be<br />handled to the OS.</p>
+<h3 id="one-shot-keys"><a href="#one-shot-keys">One shot keys</a></h3>
+<p>It all started with the access to the function keys (F1, F2, F3...), since<br />those keys are located on a different layer I needed a way to press them with<br />minimal effort without disrupting my flow.</p>
+<p>For me, togglihg a layer to press a button and than toggle it back is a waste<br />of time (although I admit it's a single tap from what I have), so I decided to<br />do it as a one shot key. I could press it and the next pressed key would be<br />handled by the target layer which just after it delivers the key to the OS it<br />would get back to the previous layer.</p>
+<p>After setting up my layout to do just that I realized that occasionally I<br />would stop myseld on the middle of the process and the one shot layer would be<br />still triggered until I press any other key. So to prevent me from tapping<br />keys I don't want I added a timeout of 3 seconds for the one shot actions.</p>
+<p>Ultimately I tested the shift key as a one shot one and really like it, so<br />here you have it, all the one shot keys on my layout.</p>
+<h2 id="glossary"><a href="#glossary">Glossary</a></h2>
+<p>If you're not familiar with the Mac symbols used on some keys, here is a<br />reference to them:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Symbol</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">⌘</td>
+<td align="left">Command</td>
+</tr>
+<tr class="even">
+<td align="center">⇪</td>
+<td align="left">Caps Lock</td>
+</tr>
+<tr class="odd">
+<td align="center">⇧</td>
+<td align="left">Shift</td>
+</tr>
+<tr class="even">
+<td align="center">⌥</td>
+<td align="left">Option (alt)</td>
+</tr>
+<tr class="odd">
+<td align="center">⎋</td>
+<td align="left">Esc</td>
+</tr>
+<tr class="even">
+<td align="center">⇥</td>
+<td align="left">Tab forward</td>
+</tr>
+<tr class="odd">
+<td align="center">⇤</td>
+<td align="left">Tab backward</td>
+</tr>
+<tr class="even">
+<td align="center">⌃</td>
+<td align="left">Control</td>
+</tr>
+<tr class="odd">
+<td align="center">␣</td>
+<td align="left">Space</td>
+</tr>
+<tr class="even">
+<td align="center">⌫</td>
+<td align="left">Backspace</td>
+</tr>
+<tr class="odd">
+<td align="center">⌦</td>
+<td align="left">Delete</td>
+</tr>
+<tr class="even">
+<td align="center">⏎</td>
+<td align="left">Enter</td>
+</tr>
+<tr class="odd">
+<td align="center">⌤</td>
+<td align="left">Return</td>
+</tr>
+<tr class="even">
+<td align="center">⌽</td>
+<td align="left">Power on/off button</td>
+</tr>
+<tr class="odd">
+<td align="center">↖</td>
+<td align="left">Home</td>
+</tr>
+<tr class="even">
+<td align="center">↘</td>
+<td align="left">End</td>
+</tr>
+<tr class="odd">
+<td align="center">⇞</td>
+<td align="left">Page up</td>
+</tr>
+<tr class="even">
+<td align="center">⇟</td>
+<td align="left">Page down</td>
+</tr>
+<tr class="odd">
+<td align="center">⌧</td>
+<td align="left">Clear</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Copyright 2012 Jun Wako &lt;wakojun@gmail.com&gt;</span>
+<span class="co">Copyright 2013 Oleg Kostyuk &lt;cub.uanic@gmail.com&gt;</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef CONFIG_H</span>
+<span class="ot">#define CONFIG_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+<span class="co">/*</span>
+<span class="co"> * Feature disable options</span>
+<span class="co"> *  These options are also useful to firmware size reduction.</span>
+<span class="co"> */</span>
+
+<span class="co">/* disable debug print */</span>
+<span class="co">// #define NO_DEBUG</span>
+
+<span class="co">/* disable print */</span>
+<span class="co">// #define NO_PRINT</span>
+
+<span class="co">/* disable action features */</span>
+<span class="co">//#define NO_ACTION_LAYER</span>
+<span class="co">//#define NO_ACTION_TAPPING</span>
+<span class="co">//#define NO_ACTION_ONESHOT</span>
+<span class="co">//#define NO_ACTION_MACRO</span>
+<span class="co">//#define NO_ACTION_FUNCTION</span>
+<span class="co">//#define DEBUG_MATRIX_SCAN_RATE</span>
+<span class="ot">#define ONESHOT_TAP_TOGGLE 2</span>
+<span class="ot">#define ONESHOT_TIMEOUT 3000</span>
+
+<span class="ot">#endif</span></code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Copyright 2012 Jun Wako &lt;wakojun@gmail.com&gt;</span>
+<span class="co">Copyright 2013 Oleg Kostyuk &lt;cub.uanic@gmail.com&gt;</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef CONFIG_H</span>
+<span class="ot">#define CONFIG_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+<span class="co">/*</span>
+<span class="co"> * Feature disable options</span>
+<span class="co"> *  These options are also useful to firmware size reduction.</span>
+<span class="co"> */</span>
+
+<span class="co">/* disable debug print */</span>
+<span class="co">// #define NO_DEBUG</span>
+
+<span class="co">/* disable print */</span>
+<span class="co">// #define NO_PRINT</span>
+
+<span class="co">/* disable action features */</span>
+<span class="co">//#define NO_ACTION_LAYER</span>
+<span class="co">//#define NO_ACTION_TAPPING</span>
+<span class="co">//#define NO_ACTION_ONESHOT</span>
+<span class="co">//#define NO_ACTION_MACRO</span>
+<span class="co">//#define NO_ACTION_FUNCTION</span>
+<span class="co">//#define DEBUG_MATRIX_SCAN_RATE</span>
+<span class="ot">#define ONESHOT_TAP_TOGGLE 2</span>
+<span class="ot">#define ONESHOT_TIMEOUT 3000</span>
+
+<span class="ot">#endif</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

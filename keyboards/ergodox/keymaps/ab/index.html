@@ -1,0 +1,114 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/ab/">ab</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/ab/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_ab.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#beginners-keymap-for-ergodox-ez">Beginner's keymap for Ergodox-EZ</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="beginners-keymap-for-ergodox-ez"><a href="#beginners-keymap-for-ergodox-ez">Beginner's keymap for Ergodox-EZ</a></h1>
+<p>Beginner's keymap emulates standard QWERTY keyboard for beginners. Once you get comfortable with the Ergodox-EZ, you may fork this keymap and customize it for your own needs or find a suitable one from the community contributed keymaps.</p>
+<p><img src="keyboard-layout.png" alt="Beginner&#39;s Keymap" /></p>
+<h4 id="pros"><a href="#pros">Pros</a></h4>
+<ul>
+<li>Easier to switch between regular keyboards and Ergodox-EZ.<br /></li>
+<li>Easy on beginners. It has everything you need for your day to day usage.</li>
+</ul>
+<h4 id="cons"><a href="#cons">Cons</a></h4>
+<ul>
+<li>Keys are not ergonomically placed to take full advantage of Ergodox-EZ. Take a look at this <a href="https://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/default/readme.md">Default Keymap</a><br /></li>
+<li>While multiple layers are possible, beginner's keymap only uses one additional layer for mouse, function and volume keys.</li>
+</ul>
+<h4 id="notes"><a href="#notes">Notes</a></h4>
+<ul>
+<li>Ideally number key [6] should have started from the right-hand side of the keyboard. Doing so breaks the familiar QWERTY layout.<br /></li>
+<li>Quote key ['] should have been placed between [:] and [Enter]. Due to lack of key space, it is placed below [Enter].<br /></li>
+<li>Double [Alt] keys are placed adjacent to each other for convenience.<br /></li>
+<li>[CapsLock] also acts as [Ctrl] key when you press and hold. It is convenient for GNU Emacs users.<br /></li>
+<li>Additional bracket keys are placed in the center of the keyboard for programmer's convenience.</li>
+</ul>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code># Having a file like this allows you to override Makefile definitions
+# for your own particular keymap
+
+SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
+COMMAND_ENABLE   = no  # Commands for debug and configuration
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+</code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

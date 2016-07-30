@@ -1,0 +1,210 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/tm2030/">tm2030</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/tm2030/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_tm2030.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#typematrix-2030-inspired-layout">TypeMatrix™ 2030 inspired layout</a><ul>
+        <li><a href="#base-layer">Base Layer</a><ul>
+        <li><a href="#layer-switching">Layer Switching</a></li>
+        </ul></li>
+        <li><a href="#dvorak-layer">Dvorak Layer</a></li>
+        <li><a href="#numeric-layer">Numeric Layer</a></li>
+        <li><a href="#fn-layer">Fn Layer</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="typematrix-2030-inspired-layout"><a href="#typematrix-2030-inspired-layout">TypeMatrix™ 2030 inspired layout</a></h1>
+<p>This is a <a href="http://typematrix.com/2030/features.php">TypeMatrix™ 2030</a> inspired layout for the ErgoDox EZ. The <em>TypeMatrix</em> is a nice small ergonomic keyboard with a matrix layout, and it provides several nice features like <code>enter</code>, <code>backspace</code> and <code>delete</code> at the center, bigger <code>shift</code> keys and international <code>cut</code>, <code>copy</code> and <code>paste</code> keys.</p>
+<p>The idea in this ErgoDox layout is to make it is as close as possible to the TM2030, such that it would be easy to switch between the TM and the ErgoDox. No <em>fancy</em> features have been implemented, as this is intended to be a base for further customization if desired. Some keys have been duplicated in order to accomodate for most people.</p>
+<p>Most of the TM2030 features are supported except</p>
+<ul>
+<li>automatic window switching (alt-tab key, at the left of the space key)<br /></li>
+<li>show desktop key (at the right of the space key)<br /></li>
+<li>102/106 modes</li>
+</ul>
+<p>Dvorak mode is even supported by pressing <a href="/TMK_readme.md#magic-commands"><code>Magic</code></a>+<code>1</code> (<code>Magic</code> is by default <code>LShift</code>+<code>RShift</code>)</p>
+<p>Some keys had to be moved around to fit into the ErgoDox, especially the <code>F1</code>-<code>F12</code> keys and the arrow keys.</p>
+<h2 id="base-layer"><a href="#base-layer">Base Layer</a></h2>
+<p>This is the default layer, close to the TM with the following differences:</p>
+<ul>
+<li>Top row (with the <code>F</code>-keys) and rightmost column (with application shortcuts) are removed, the corresponding keys are displaced elsewhere.<br /></li>
+<li>Bottom-left keys are reorganized on a single row as: <code>Ctrl</code>, <code>fn</code>, <code>Gui</code>, <code>Play</code>, <code>App</code>/<code>Alt</code>.<br /></li>
+<li><code>shuffle</code> and <code>desktop</code> are not supported.<br /></li>
+<li><code>right-shift</code> is moved on <code>'</code>, <code>\</code> and on the right thumb (the latter is actually the only <em>true</em> <code>right-shift</code>, and must be used in the <code>Magic</code> key combination).<br /></li>
+<li><code>right-ctrl</code> is moved on <code>End</code>.<br /></li>
+<li><code>]</code> is moved in place of the dash (<code>-</code>).<br /></li>
+<li>Dash (<code>-</code>) and <code>=</code> are moved on bottom right row.<br /></li>
+<li>Arrows and <code>PgUp</code>/<code>PgDn</code> are moved on the thumbs.</li>
+</ul>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|   `    |   1  |   2  |   3  |   4  |   5  | Del  |           | Del  |   6  |   7  |   8  |   9  |   0  |   ]    |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+| Tab    |   Q  |   W  |   E  |   R  |   T  |Backsp|           |Backsp|   Y  |   U  |   I  |   O  |   P  |   [    |
+|--------+------+------+------+------+------|ace   |           |ace   |------+------+------+------+------+--------|
+| LShift |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | &#39;/Shift|
+|--------+------+------+------+------+------|Enter |           |Enter |------+------+------+------+------+--------|
+| LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | \/Shift|
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |LCtrl |  fn  | LGui | Play |App/Alt|                                      | RAlt |   -  | Home |   =  |End/Ctl|
+  `-----------------------------------&#39;                                      `-----------------------------------&#39;
+                                      ,--------------.       ,-------------.
+                                      |Esc/Alt| num  |       | Left |Right |
+                               ,------+-------+------|       |------+------+------.
+                               |      |       | PgUp |       |  Up  |      |      |
+                               |Space |LShift |------|       |------|RShift|Space |
+                               |      |       | PgDn |       | Down |      |      |
+                               `---------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="layer-switching"><a href="#layer-switching">Layer Switching</a></h3>
+<ul>
+<li>Use <code>num</code> to toggle the Numeric Layer.<br /></li>
+<li>Hold <code>fn</code> to temporarily activate the Numeric &amp; Fn Layers.</li>
+</ul>
+<p>As on the original TM 2030, when <code>num</code> layer is activated, holding <code>fn</code> disables it but enables the other <code>fn</code> keys.</p>
+<h2 id="dvorak-layer"><a href="#dvorak-layer">Dvorak Layer</a></h2>
+<p>Same as Layer 0 but with <em>Dvorak</em> layout, to use with QWERTY OS layout.</p>
+<p>Enable Dvorak layout with <a href="/TMK_readme.md#magic-commands"><code>Magic</code></a>+<code>1</code> (<code>LShift</code>+<code>RShift</code>+<code>1</code>), disable with <code>Magic</code>-<code>0</code>.</p>
+<p>The middle (green) led indicates when the Dvorak layer is activated.</p>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|   `    |   1  |   2  |   3  |   4  |   5  | Del  |           | Del  |   6  |   7  |   8  |   9  |   0  |   =    |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+| Tab    |   &#39;  |   ,  |   .  |   P  |   Y  |Backsp|           |Backsp|   F  |   G  |   C  |   R  |   L  |   /    |
+|--------+------+------+------+------+------|ace   |           |ace   |------+------+------+------+------+--------|
+| LShift |   A  |   O  |   E  |   U  |   I  |------|           |------|   D  |   H  |   T  |   N  |   S  | -/Shift|
+|--------+------+------+------+------+------|Enter |           |Enter |------+------+------+------+------+--------|
+| LShift |   ;  |   Q  |   J  |   K  |   X  |      |           |      |   B  |   M  |   W  |   V  |   Z  | \/Shift|
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |LCtrl |  fn  | LGui | Play |App/Alt|                                      | RAlt |   [  | Home |   ]  |End/Ctl|
+  `-----------------------------------&#39;                                      `-----------------------------------&#39;
+                                      ,--------------.       ,-------------.
+                                      |Esc/Alt| num  |       | Left |Right |
+                               ,------+-------+------|       |------+------+------.
+                               |      |       | PgUp |       |  Up  |      |      |
+                               |Space |LShift |------|       |------|RShift|Space |
+                               |      |       | PgDn |       | Down |      |      |
+                               `---------------------&#39;       `--------------------&#39;</code></pre>
+<h2 id="numeric-layer"><a href="#numeric-layer">Numeric Layer</a></h2>
+<p>Numeric layer close to the TM when toggling <code>num</code>, with the following differences:</p>
+<ul>
+<li>Numpad is displaced by 1 to the top left.<br /></li>
+<li>Arrows are displaced by 1 to the left.<br /></li>
+<li>Provides access to <code>F1</code>-<code>F12</code>, <code>caps-lock</code> and <code>num-lock</code>.</li>
+</ul>
+<p>The numeric layer is indicated with the left (red) led. Caps-lock is indicated with the right (blue) led.</p>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|        |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |      |      |  Tab |   /  |   *  |   -    |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|        |  F6  |  F7  |  F8  |  F9  |  F10 |      |           |      |      | Home |   7  |   8  |   9  |   +    |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |  F11 |  F12 |      |      |      |------|           |------|  Up  | End  |   4  |   5  |   6  |   +    |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |      |      |      |      |      |      |           | Left | Down | Right|   1  |   2  |   3  |KpEnter |
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |      |      |      |      |      |                                       |      |   0  |  00  |   .  |Etr/Ctl|
+  `----------------------------------&#39;                                       `-----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |n.lock|c.lock|
+                                ,------|------|------|       |------+------+------.
+                                |      |      |      |       |      |      |      |
+                                |      |      |------|       |------|      |      |
+                                |      |      |      |       |      |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h2 id="fn-layer"><a href="#fn-layer">Fn Layer</a></h2>
+<p>Activated simultaneously with the Numeric layer when holding the <code>fn</code> key. As on the TM, it provides access to the following features:</p>
+<ul>
+<li><code>cut</code>, <code>copy</code> and <code>paste</code><br /></li>
+<li><code>volume up</code>, <code>volume down</code> and <code>mute</code> — as opposed to the TM, these are only on left hand<br /></li>
+<li><code>previous track</code> and <code>next track</code><br /></li>
+<li><code>calculator</code>, <code>mail</code> and <code>browser home</code><br /></li>
+<li><code>insert</code>, <code>power</code>, <code>sleep</code>, <code>wake</code>, <code>print screen</code>, <code>scroll-lock</code> and <code>pause</code></li>
+</ul>
+<p>Note: the <code>eject</code> key does not work due to jackhumbert/qmk_firmware#82</p>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|        |      |      |      |      |      |Insert|           |Insert|Eject |Power |Sleep | Wake |PrtScr|ScrollLk|
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|        |      |      |      |      |      |VolUp |           |      |      |      |      |      |      | Pause  |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |      |      | Calc | Mail |Browsr|------|           |------|      |      |      |      |      |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |      | cut  | copy |paste | Mute |VolDn |           |      |      |      |      |      |      |        |
+`--------+------+------+------+------+-------------&#39;           `-------------+------+------+------+------+--------&#39;
+  |      |      |      |      |      |                                       |      |      |      |      |      |
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |      |      |
+                                ,------|------|------|       |------+------+------.
+                                |      |      |      |       | Next |      |      |
+                                | Mute |      |------|       |------|      |      |
+                                |      |      |      |       | Prev |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/msc/">msc</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/msc/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_msc.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#msc-configuration">MSC Configuration</a><ul>
+        <li><a href="#based-mostly-on-the-ergodox-ez-default-layout-with-optimizations-for-coding-on-osx.">Based mostly on the ErgoDox EZ default layout with optimizations for coding on osx.</a></li>
+        <li><a href="#main-layer">Main Layer</a></li>
+        <li><a href="#code-layer">Code Layer</a></li>
+        <li><a href="#media-layer">Media Layer</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="msc-configuration"><a href="#msc-configuration">MSC Configuration</a></h1>
+<h3 id="based-mostly-on-the-ergodox-ez-default-layout-with-optimizations-for-coding-on-osx."><a href="#based-mostly-on-the-ergodox-ez-default-layout-with-optimizations-for-coding-on-osx.">Based mostly on the ErgoDox EZ default layout with optimizations for coding on osx.</a></h3>
+<h4 id="expecting-the-user-to-rely-on-coder-layer-this-keymap-removes-some-of-the-duplicate-symbol-keys-in-the-lower-portions-of-the-board-and-replaces-them-with-arrow-keys-and-modifiers.-the-media-layer-is-also-updated-to-match-the-change-in-the-arrow-keys-and-the-left-and-right-click-buttons-are-moved-under-the-thumb-position.-the-media-layer-is-now-reached-with-toggle-button-in-the-lower-right."><a href="#expecting-the-user-to-rely-on-coder-layer-this-keymap-removes-some-of-the-duplicate-symbol-keys-in-the-lower-portions-of-the-board-and-replaces-them-with-arrow-keys-and-modifiers.-the-media-layer-is-also-updated-to-match-the-change-in-the-arrow-keys-and-the-left-and-right-click-buttons-are-moved-under-the-thumb-position.-the-media-layer-is-now-reached-with-toggle-button-in-the-lower-right.">Expecting the user to rely on Coder Layer this keymap removes some of the duplicate symbol keys in the lower portions of the board and replaces them with arrow keys and modifiers. The Media Layer is also updated to match the change in the arrow keys and the left and right click buttons are moved under the thumb position. The Media layer is now reached with toggle button in the lower right.</a></h4>
+<h3 id="main-layer"><a href="#main-layer">Main Layer</a></h3>
+<p><img src="img/main_layer.png" alt="Main Layer" /></p>
+<h3 id="code-layer"><a href="#code-layer">Code Layer</a></h3>
+<p><img src="img/code_layer.png" alt="Code Layer" /></p>
+<h3 id="media-layer"><a href="#media-layer">Media Layer</a></h3>
+<p><img src="img/media_layer.png" alt="Media Layer" /></p>
+<h2 id="changelog"><a href="#changelog">Changelog</a></h2>
+<p>Version 1.0</p>
+<ul>
+<li>Changed the temp code layer key in the bottom right to toggle media layer<br /></li>
+<li>Changed the temp media key to only be &quot;;&quot;<br /></li>
+<li>Changed right hand bottom row to match vim home row nav directions<br /></li>
+<li>Changed media keys to match arrow key changes<br /></li>
+<li>Changed media left and right click to spacebar and backspace locations<br /></li>
+<li>Changed bottom left to Cmd<br /></li>
+<li>Changed single quote on left bottom row to alt</li>
+</ul>
+<h4 id="coming-soon"><a href="#coming-soon">Coming Soon:</a></h4>
+<ul>
+<li>A new layer for Blender editing with a focus on left hand shortcut and a righthand num pad to control the view in Blender.</li>
+</ul>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

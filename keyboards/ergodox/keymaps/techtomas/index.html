@@ -1,0 +1,133 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/techtomas/">techtomas</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/techtomas/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_techtomas.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#techtomas-configuration">Techtomas Configuration</a><ul>
+        <li><a href="#base-layer">Base Layer</a></li>
+        <li><a href="#symbol-layer">Symbol Layer</a></li>
+        <li><a href="#app-layer">App Layer</a><ul>
+        <li><a href="#current-app-shortcuts-defined">Current App shortcuts defined</a></li>
+        </ul></li>
+        <li><a href="#control-layer">Control Layer</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="techtomas-configuration"><a href="#techtomas-configuration">Techtomas Configuration</a></h1>
+<h2 id="base-layer"><a href="#base-layer">Base Layer</a></h2>
+<p>The base layer is a merge of what I liked with the default layout and the ordinary layout. The thumb cluster is more like the Kinesis advantage and the top row of the cluster is convient for use on the mac.</p>
+<ul>
+<li>The Caps Lock postion handles <a href="http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/">Hyper/Esc</a><br /></li>
+<li>The Tab key toggles MEH.<br /></li>
+<li>The top vertical mods on the left and right are [ and ].<br /></li>
+<li>The bottom vertical mods on the left and right are tab and shift+tab<br /></li>
+<li>The HYPER and MEH key are made in the same location on the right side of the board as well. Using Keyboard Maestro for OS X makes one-handed shortcuts very easy.<br /></li>
+<li>Layer switching is focused around the thumb clusters plus some additional locations for convience.</li>
+</ul>
+<h2 id="symbol-layer"><a href="#symbol-layer">Symbol Layer</a></h2>
+<p>The symbol layer can be tap/toggled with the bottom right key and also toggled on the thumb clusters.</p>
+<p>The bottom two vertical mods are set to F14 and F15 which is the default for changing screen brightness on the mac</p>
+<h2 id="app-layer"><a href="#app-layer">App Layer</a></h2>
+<p>The app layer is used to control media playback and also some application shortcuts (OS X Focused).<br />It can be toggled on the left board in the top left corner (tilde/grave) or using your pinky on the right side of the board using either ; or /.<br />There is one additional toggle on the right thumb cluster for quick access to play and mute key combos.</p>
+<h3 id="current-app-shortcuts-defined"><a href="#current-app-shortcuts-defined">Current App shortcuts defined</a></h3>
+<ul>
+<li>Q = CMD+Q<br /></li>
+<li>W = CMD+W<br /></li>
+<li>Z = CMD+Z<br /></li>
+<li>X = CMD+X<br /></li>
+<li>C = CMD+C<br /></li>
+<li>V = CMD+V<br /></li>
+<li>B = CTRL+C<br /></li>
+<li>P = Print Screen</li>
+</ul>
+<h2 id="control-layer"><a href="#control-layer">Control Layer</a></h2>
+<p>The control layer is meant to help easily navigate and select text. It can also be stacked ontop of the Symbol layer when needed.</p>
+<p>The right arrow key and End key toggle the control layer on the left board. There is also a tap toggle for the layer in the same position on the right side of the board.</p>
+<p>On the left board you have mouse control with left &amp; right click in the location of the G and B keys.<br />On the right board you have vim-style arrow keys using hjkl</p>
+<p>The left thumb cluster moves shift and alt within easy reach while holding the toggle (end). So far I've found this convient to navigate and skip around text when using the hjkl arrow keys. I found that it was easy to get the alt key stuck on depending on what key you released first so I added the PREVENT_STUCK_MODIFIERS to the config.h to help with that.</p>
+<h2 id="changelog"><a href="#changelog">Changelog</a></h2>
+<ul>
+<li>May 4th, 2016 (v1.2):<br /></li>
+<li>Moved layer toggles around to match my habbits of typing<br /></li>
+<li>Enabled Prevent Stuck Modifers in my config.h (L3 + Alt on cluster would get stuck)<br /></li>
+<li>Changed media layer to be more like an app layer with some quick shortcuts (mac centric)<br /></li>
+<li><p>Moved around the base layer arrow keys so mod keys were more accesible</p></li>
+<li>Apr 29, 2016 (V1.1):<br /></li>
+<li>Added F14 and F15 to symbol layer<br /></li>
+<li><p>Added control layer toggle to A key.</p></li>
+<li>Apr 28, 2016 (V1.0):<br /></li>
+<li><p>Modified config based on the default layout plus inspiration from the ordinary layout</p></li>
+</ul>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
