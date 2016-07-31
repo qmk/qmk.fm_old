@@ -17,6 +17,7 @@
 * [experimental](keymaps/experimental/)
 * [gabriel](keymaps/gabriel/)
 * [jacob](keymaps/jacob/)
+* [jeebak](keymaps/jeebak/)
 * [joe](keymaps/joe/)
 * [kyle](keymaps/kyle/)
 * [leo](keymaps/leo/)
