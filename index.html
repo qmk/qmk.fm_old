@@ -249,22 +249,19 @@ sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
 </ul>
 <p>Below is a list of the useful <code>make</code> commands in QMK:</p>
 <ul>
-<li><code>make</code> - cleans automatically and builds your keyboard and keymap depending on which folder you're in. This defaults to the &quot;default&quot; layout (unless in a keymap folder), and Planck keyboard in the root folder<br /></li>
+<li><code>make</code> - builds your keyboard and keymap depending on which folder you're in. This defaults to the &quot;default&quot; layout (unless in a keymap folder), and Planck keyboard in the root folder<br /></li>
 <li><code>make keyboard=&lt;keyboard&gt;</code> - specifies the keyboard (only to be used in root)<br /></li>
 <li><code>make keymap=&lt;keymap&gt;</code> - specifies the keymap (only to be used in root and keyboard folder - not needed when in keymap folder)<br /></li>
-<li><code>make quick</code> - skips the clean step (cannot be used immediately after modifying config.h or Makefiles)<br /></li>
+<li><code>make clean</code> - cleans the <code>.build</code> folder, ensuring that everything is re-built<br /></li>
 <li><code>make dfu</code> - (requires dfu-programmer) builds and flashes the keymap to your keyboard once placed in reset/dfu mode (button or press <code>KC_RESET</code>). This does not work for Teensy-based keyboards like the ErgoDox EZ.<br /></li>
 <li><code>keyboard=</code> and <code>keymap=</code> are compatible with this<br /></li>
 <li><code>make all-keyboards</code> - builds all keymaps for all keyboards and outputs status of each (use in root)<br /></li>
 <li><code>make all-keyboards-default</code> - builds all default keymaps for all keyboards and outputs status of each (use in root)<br /></li>
 <li><code>make all-keymaps [keyboard=&lt;keyboard&gt;]</code> - builds all of the keymaps for whatever keyboard folder you're in, or specified by <code>&lt;keyboard&gt;</code><br /></li>
-<li><code>make all-keyboards-quick</code>, <code>make all-keyboards-default-quick</code> and <code>make all-keymaps-quick [keyboard=&lt;keyboard&gt;]</code> - like the normal &quot;make-all-*&quot; commands, but they skip the clean steps</li>
-</ul>
-<p>Other, less useful functionality:</p>
-<ul>
+<li><p><code>make all-keyboards-*</code>, <code>make all-keyboards-default-*</code> and <code>make all-keymaps-* [keyboard=&lt;keyboard&gt;]</code> - like the normal &quot;make-all-*&quot; commands, but the last string aftter the <code>-</code> (for example clean) is passed to the keyboard make command.<br />Other, less useful functionality:</p></li>
 <li><code>make COLOR=false</code> - turns off color output<br /></li>
 <li><code>make SILENT=true</code> - turns off output besides errors/warnings<br /></li>
-<li><code>make VERBOSE=true</code> - outputs all of the avr-gcc stuff (not interesting)</li>
+<li><p><code>make VERBOSE=true</code> - outputs all of the avr-gcc stuff (not interesting)</p></li>
 </ul>
 <h2 id="the-makefile"><a href="#the-makefile">The <code>Makefile</code></a></h2>
 <p>There are 3 different <code>make</code> and <code>Makefile</code> locations:</p>
