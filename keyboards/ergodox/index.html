@@ -57,7 +57,7 @@
 
         <ul>
         <li><a href="#getting-started">Getting started</a><ul>
-        <li><a href="#the-easy-way-use-an-existing-firmware-file-and-just-flash-it">The Easy Way: Use an existing firmware file and just flash it</a></li>
+        <li><a href="#the-easy-way-use-an-existing-firmware-file-and-just-flash-it-ergodox-ez-only">The Easy Way: Use an existing firmware file and just flash it (ErgoDox EZ only)</a></li>
         <li><a href="#more-technical-compile-an-existing-keymap-or-create-your-own-totally-custom-firmware-by-editing-the-source-files.">More technical: compile an existing keymap, or create your own totally custom firmware by editing the source files.</a></li>
         <li><a href="#contributing-your-keymap">Contributing your keymap</a></li>
         <li><a href="#finding-the-keycodes-you-need">Finding the keycodes you need</a></li>
@@ -140,11 +140,10 @@
             <div class="span8">
             <h1 id="getting-started"><a href="#getting-started">Getting started</a></h1>
 <p>There are two main ways you could customize the ErgoDox (EZ and Infinity)</p>
-<h2 id="the-easy-way-use-an-existing-firmware-file-and-just-flash-it"><a href="#the-easy-way-use-an-existing-firmware-file-and-just-flash-it">The Easy Way: Use an existing firmware file and just flash it</a></h2>
-<p>This does not work for Infinity ErgoDox yet, you need to compile the firmware according to the instructions below</p>
+<h2 id="the-easy-way-use-an-existing-firmware-file-and-just-flash-it-ergodox-ez-only"><a href="#the-easy-way-use-an-existing-firmware-file-and-just-flash-it-ergodox-ez-only">The Easy Way: Use an existing firmware file and just flash it (ErgoDox EZ only)</a></h2>
 <ol>
 <li>Download and install the <a href="https://www.pjrc.com/teensy/loader.html">Teensy Loader</a>. Some Linux distributions already provide a binary (may be called <code>teensy-loader-cli</code>), so you may prefer to use this.<br /></li>
-<li>Find a firmware file you like. You can find a few of these in the keymaps subdirectory right here. The file you need ends with .hex, and you can look at its .c counterpart (or its PNG image) to see what you'll be getting. You can also use the <a href="https://keyboard-configurator.massdrop.com/ext/ergodox">Massdrop configurator</a> to create a firmware Hex file you like.<br /></li>
+<li>Find a firmware file you like. There are <a href="http://qmk.fm/keyboards/ergodox/">dozens of community-contributed keymaps</a> you can browse and download. You can also use the <a href="https://keyboard-configurator.massdrop.com/ext/ergodox">Massdrop configurator</a> to create a firmware Hex file you like.<br /></li>
 <li>Download the firmware file<br /></li>
 <li>Connect the keyboard, press its Reset button (gently insert a paperclip into the hole in the top-right corner) and flash it using the Teensy loader you installed on step 1 and the firmware you downloaded.</li>
 </ol>
@@ -153,14 +152,11 @@
 <ol>
 <li>Go to <a href="https://github.com/jackhumbert/qmk_firmware">https://github.com/jackhumbert/qmk_firmware</a> and read the readme at the base of this repository, top to bottom. Then come back here :)<br /></li>
 <li>Clone the repository (download it)<br /></li>
-<li><p>Set up a build environment as per <a href="/doc/BUILD_GUIDE.md">the build guide</a></p>
-<ul>
-<li>Using a Mac and have homebrew? just run <code>brew tap osx-cross/avr &amp;&amp; brew install avr-libc</code><br /></li>
-</ul></li>
+<li>Set up a build environment as per the readme.<br /></li>
 <li>Copy <code>keyboards/ergodox/keymaps/default/keymap.c</code> into <code>keymaps/your_name/keymap.c</code> (for example, <code>keymaps/german/keymap.c</code>)<br /></li>
 <li>Edit this file, changing keycodes to your liking (see &quot;Finding the keycodes you need&quot; below). Try to edit the comments as well, so the &quot;text graphics&quot; represent your layout correctly. See below for more tips on sharing your work.<br /></li>
 <li>Compile your firmware by running <code>make keymap=keymap_name</code>. For example, <code>make keymap=german</code>. This will result in a hex file, which will be called <code>ergodox_ez_keymap_name.hex</code>, e.g. <code>ergodox_ez_german.hex</code>. For <strong>Infinity ErgoDox</strong> you need to add <code>subproject=infinity</code> to the make command.<br /></li>
-<li><p><strong>ErgoDox EZ</strong> - Flash this hex file using the <a href="https://www.pjrc.com/teensy/loader.html">Teensy loader</a> as described in step 4 in the &quot;Easy Way&quot; above. If you prefer you can automatically flash the hex file after successful build by running <code>make teensy keymap=keymap_name</code>.</p></li>
+<li><strong>ErgoDox EZ</strong> - Flash this hex file using the <a href="https://www.pjrc.com/teensy/loader.html">Teensy loader</a> as described in step 4 in the &quot;Easy Way&quot; above. If you prefer you can automatically flash the hex file after successful build by running <code>make teensy keymap=keymap_name</code>.</li>
 </ol>
 <p><strong>Infinity ErgoDox</strong> - Flash the firmware by running <code>make dfu-util keymap=keymap_name subproject=infinity</code></p>
 <ol>
@@ -168,7 +164,7 @@
 </ol>
 <p>Good luck! :)</p>
 <h2 id="contributing-your-keymap"><a href="#contributing-your-keymap">Contributing your keymap</a></h2>
-<p>The ErgoDox firmware is open-source, so it would be wonderful to have your contribution! Within a very short time after launching we already amassed almost 20 user-contributed keymaps, with all sorts of creative improvements and tweaks. This is very valuable for people who aren't comfortable coding, but do want to customize their ErgoDox. To make it easy for these people to use your layout, I recommend submitting your PR in the following format.</p>
+<p>The QMK firmware is open-source, so it would be wonderful to have your contribution! Within a very short time after launching we already amassed dozens of user-contributed keymaps, with all sorts of creative improvements and tweaks. This is very valuable for people who aren't comfortable coding, but do want to customize their ErgoDox. To make it easy for these people to use your layout, I recommend submitting your PR in the following format.</p>
 <ol>
 <li>All work goes inside your keymap subdirectory (<code>keymaps/german</code> in this example).<br /></li>
 <li><code>keymap.c</code> - this is your actual keymap file; please update the ASCII comments in the file so they correspond with what you did.<br /></li>
