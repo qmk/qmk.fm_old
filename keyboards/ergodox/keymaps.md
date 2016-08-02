@@ -45,6 +45,7 @@
 * [romanzolotarev-norman-plover-osx](keymaps/romanzolotarev-norman-plover-osx/)
 * [romanzolotarev-norman-plover-osx-hjkl](keymaps/romanzolotarev-norman-plover-osx-hjkl/)
 * [romanzolotarev-norman-qwerty-osx](keymaps/romanzolotarev-norman-qwerty-osx/)
+* [sethbc](keymaps/sethbc/)
 * [sneako](keymaps/sneako/)
 * [software_neo2](keymaps/software_neo2/)
 * [supercoder](keymaps/supercoder/)
