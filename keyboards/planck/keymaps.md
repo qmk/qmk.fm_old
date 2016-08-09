@@ -30,4 +30,5 @@
 * [pvc](keymaps/pvc/)
 * [tak3over](keymaps/tak3over/)
 * [unicode](keymaps/unicode/)
+* [xyverz](keymaps/xyverz/)
 * [yang](keymaps/yang/)
