@@ -23,6 +23,8 @@ enum {
   APPSEL,
   HUN,
   NMDIA,
+  OHLFT,
+  OHRGT,
   PLVR,
 };
 
@@ -72,6 +74,13 @@ enum {
   HU_UE, // Ü
   HU_OEE, // Ő
   HU_UEE, // Ű
+
+  // One-handed layout specials
+  OH_BSSPC,
+  OH_ENTSFT,
+  OH_BASE,
+  OH_LEFT,
+  OH_RIGHT,
 };
 
 /* Fn keys */
@@ -91,8 +100,6 @@ enum {
   CT_CLN = 0,
   CT_MNS,
   CT_TA,
-  CT_LBP,
-  CT_RBP
 };
 
 /* States & timers */
@@ -100,6 +107,17 @@ enum {
 uint16_t gui_timer = 0;
 
 uint16_t kf_timers[12];
+
+uint16_t oh_base_timer = 0;
+uint16_t oh_bsspc_timer = 0;
+uint16_t oh_entsft_timer = 0;
+
+#define OH_BLINK_INTERVAL 500
+
+uint8_t oh_left_blink = 0;
+uint16_t oh_left_blink_timer = 0;
+uint8_t oh_right_blink = 0;
+uint16_t oh_right_blink_timer = 0;
 
 #if KEYLOGGER_ENABLE
 bool log_enable = false;
@@ -114,9 +132,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Base Layer
  *
  * ,-----------------------------------------------------.           ,-----------------------------------------------------.
- * | Next/Prev | 1 F1 | 2 F2 | 3 F3 | 4 F4 | 5 F5 | Plvr |           | Apps | 6 F6 | 7 F7 | 8 F8 | 9 F9 | 0 F10|       F11 |
+ * |        `~ | 1 F1 | 2 F2 | 3 F3 | 4 F4 | 5 F5 | Plvr |           | Apps | 6 F6 | 7 F7 | 8 F8 | 9 F9 | 0 F10|       F11 |
  * |-----------+------+------+------+------+-------------|           |------+------+------+------+------+------+-----------|
- * |         ~ |   '  |   ,  |   .  |   P  |   Y  |   [  |           |  ]   |   F  |   G  |   C  |   R  |  L   | \         |
+ * | Next/Prev |   '  |   ,  |   .  |   P  |   Y  |   [  |           |  ]   |   F  |   G  |   C  |   R  |  L   | \         |
  * |-----------+------+------+------+------+------|      |           |      |------+------+------+------+------+-----------|
  * | Tab/ARROW |   A  |   O  |   E  |   U  |   I  |------|           |------|   D  |   H  |   T  |   N  |  S   | = / Arrow |
  * |-----------+------+------+------+------+------|   (  |           |  )   |------+------+------+------+------+-----------|
@@ -125,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *     |       |      |      |      |   :  |                                       |   -  |      |      |      |       |
  *     `-----------------------------------'                                       `-----------------------------------'
  *                                         ,-------------.           ,-------------.
- *                                         | LAlt | GUI  |           | MDIA | Del  |
+ *                                         | LAlt | GUI  |           | MDIA | 1HND |
  *                                  ,------|------|------|           |------+------+------.
  *                                  |      |      | Ctrl |           | LEAD |      |      |
  *                                  |Backsp|LShift|------|           |------| Enter| Space|
@@ -134,8 +152,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = KEYMAP(
 // left hand
- M(A_MPN)           ,M(KF_1)     ,M(KF_2)     ,M(KF_3),M(KF_4),M(KF_5),M(A_PLVR)
-,KC_GRV             ,KC_QUOT     ,KC_COMM     ,KC_DOT ,KC_P   ,KC_Y   ,KC_LBRC
+ KC_GRV             ,M(KF_1)     ,M(KF_2)     ,M(KF_3),M(KF_4),M(KF_5),M(A_PLVR)
+,M(A_MPN)           ,KC_QUOT     ,KC_COMM     ,KC_DOT ,KC_P   ,KC_Y   ,KC_LBRC
 ,TD(CT_TA)          ,KC_A        ,KC_O        ,KC_E   ,KC_U   ,KC_I
 ,KC_MPLY            ,KC_SLSH     ,KC_Q        ,KC_J   ,KC_K   ,KC_X   ,KC_LPRN
 ,KC_NO              ,KC_NO       ,KC_NO       ,KC_NO  ,TD(CT_CLN)
@@ -151,7 +169,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                ,KC_RPRN   ,KC_B   ,KC_M      ,KC_W   ,KC_V    ,KC_Z     ,KC_MSTP
                                                                                   ,TD(CT_MNS),KC_NO  ,KC_NO   ,KC_NO    ,KC_NO
 
-                                                               ,OSL(NMDIA),KC_DEL
+                                                               ,OSL(NMDIA),M(OH_LEFT)
                                                                ,KC_LEAD
                                                                ,F(F_HUN)  ,KC_ENT ,KC_SPC
     ),
@@ -159,46 +177,46 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 1: Adore layer
  *
  * ,-----------------------------------------------------.           ,-----------------------------------------------------.
- * | Play/Pause| 1 F1 | 2 F2 | 3 F3 | 4 F4 | 5 F5 | Plvr |           | Apps | 6 F6 | 7 F7 | 8 F8 | 9 F9 | 0 F10|       F11 |
+ * |        `~ | 1 F1 | 2 F2 | 3 F3 | 4 F4 | 5 F5 | Plvr |           | Apps | 6 F6 | 7 F7 | 8 F8 | 9 F9 | 0 F10|       F11 |
  * |-----------+------+------+------+------+-------------|           |------+------+------+------+------+------+-----------|
- * |        `~ |   X  |   W  |   K  |   L  |   M  |   (  |           |  )   |   F  |   H  |   C  |   P  |  Y   | \         |
- * |-----------+------+------+------+------+------|   [  |           |  ]   |------+------+------+------+------+-----------|
- * | Tab/Arrow |   A  |   O  |   E  |   I  |   U  |------|           |------|   D  |   R  |   T  |   N  |  S   | =         |
+ * | Next/Prev |   ,  |   .  |   L  |   W  |   M  |   [  |           |  ]   |   F  |   H  |   C  |   P  |  Y   | \         |
  * |-----------+------+------+------+------+------|      |           |      |------+------+------+------+------+-----------|
- * |           |   Z  |   Q  |   '  |   ,  |   .  |   :  |           |  -   |   B  |   G  |   V  |   J  |  /   |           |
+ * | Tab/Arrow |   A  |   O  |   E  |   I  |   U  |------|           |------|   D  |   R  |   T  |   N  |  S   | = / Arrow |
+ * |-----------+------+------+------+------+------|   (  |           |  )   |------+------+------+------+------+-----------|
+ * | Play/Pause|   /  |   Z  |   '  |   K  |   X  |      |           |      |   B  |   G  |   V  |   J  |  Q   |      Stop |
  * `-----------+------+------+------+------+-------------'           `-------------+------+------+------+------+-----------'
- *     |       |      |      |      |      |                                       |      |      |      |      |       |
+ *     |       |      |      |      |   :  |                                       |   -  |      |      |      |       |
  *     `-----------------------------------'                                       `-----------------------------------'
  *                                         ,-------------.           ,-------------.
- *                                         | LAlt | GUI  |           | MDIA | Del  |
+ *                                         | LAlt | GUI  |           | MDIA | 1HND |
  *                                  ,------|------|------|           |------+------+------.
- *                                  |      |      | Ctrl |           | HUN  |      |      |
+ *                                  |      |      | Ctrl |           | LEAD |      |      |
  *                                  |Backsp|LShift|------|           |------| Enter| Space|
- *                                  |      |      | ESC  |           | LEAD |      |      |
+ *                                  |      |      | ESC  |           | HUN  |      |      |
  *                                  `--------------------'           `--------------------'
  */
 [ADORE] = KEYMAP(
 // left hand
- KC_MPLY            ,M(KF_1)     ,M(KF_2)     ,M(KF_3),M(KF_4),M(KF_5),M(A_PLVR)
-,KC_GRV             ,KC_X        ,KC_W        ,KC_K   ,KC_L   ,KC_M   ,TD(CT_LBP)
+ KC_GRV             ,M(KF_1)     ,M(KF_2)     ,M(KF_3),M(KF_4),M(KF_5),M(A_PLVR)
+,M(A_MPN)           ,KC_COMM     ,KC_DOT      ,KC_L   ,KC_W   ,KC_M   ,KC_LBRC
 ,TD(CT_TA)          ,KC_A        ,KC_O        ,KC_E   ,KC_I   ,KC_U
-,KC_NO              ,KC_Z        ,KC_Q        ,KC_QUOT,KC_COMM,KC_DOT ,TD(CT_CLN)
-,KC_NO              ,KC_NO       ,KC_NO       ,KC_NO  ,KC_NO
+,KC_MPLY            ,KC_SLSH     ,KC_Z        ,KC_QUOT,KC_K   ,KC_X   ,KC_LPRN
+,KC_NO              ,KC_NO       ,KC_NO       ,KC_NO  ,TD(CT_CLN)
 
                                                             ,F(F_ALT),F(F_GUI)
                                                                      ,F(F_CTRL)
                                                     ,KC_BSPC,F(F_SFT),M(A_ESC)
 
                                                                 // right hand
-                                                               ,KC_APP    ,M(KF_6),M(KF_7),M(KF_8),M(KF_9) ,M(KF_10) ,KC_F11
-                                                               ,TD(CT_RBP),KC_F   ,KC_H   ,KC_C   ,KC_P    ,KC_Y     ,KC_BSLS
-                                                                          ,KC_D   ,KC_R   ,KC_T   ,KC_N    ,KC_S     ,KC_EQL
-                                                               ,TD(CT_MNS),KC_B   ,KC_G   ,KC_V   ,KC_J    ,KC_SLSH  ,KC_NO
-                                                                                  ,KC_NO  ,KC_NO  ,KC_NO   ,KC_NO    ,KC_NO
+                                                               ,KC_APP    ,M(KF_6),M(KF_7)   ,M(KF_8),M(KF_9) ,M(KF_10) ,KC_F11
+                                                               ,KC_RBRC   ,KC_F   ,KC_H      ,KC_C   ,KC_P    ,KC_Y     ,KC_BSLS
+                                                                          ,KC_D   ,KC_R      ,KC_T   ,KC_N    ,KC_S     ,KC_EQL
+                                                               ,KC_RPRN   ,KC_B   ,KC_G      ,KC_V   ,KC_J    ,KC_Q     ,KC_MSTP
+                                                                                  ,TD(CT_MNS),KC_NO  ,KC_NO   ,KC_NO    ,KC_NO
 
-                                                               ,OSL(NMDIA),KC_DEL
-                                                               ,F(F_HUN)
-                                                               ,KC_LEAD   ,KC_ENT ,KC_SPC
+                                                               ,OSL(NMDIA),M(OH_LEFT)
+                                                               ,KC_LEAD
+                                                               ,F(F_HUN)  ,KC_ENT ,KC_SPC
     ),
 
 /* Keymap 2: Arrow layer
@@ -218,7 +236,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                         |      |      |           |      |      |
  *                                  ,------|------|------|           |------+------+------.
  *                                  |      |      |      |           |      |      |      |
- *                                  | Enter|      |------|           |------| PgUp | PgDn |
+ *                                  |      |      |------|           |------| PgUp | PgDn |
  *                                  |      |      |      |           |      |      |      |
  *                                  `--------------------'           `--------------------'
  */
@@ -233,7 +251,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                              ,KC_TRNS ,KC_TRNS
                                                       ,KC_TRNS
-                                    ,KC_ENT  ,KC_TRNS ,KC_TRNS
+                                    ,KC_TRNS ,KC_TRNS ,KC_TRNS
 
                                                                 // right hand
                                                                ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS
@@ -384,7 +402,97 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                      ,KC_MNXT   ,KC_BTN1 ,KC_BTN2
     ),
 
-/* Keymap 6: Steno for Plover
+/* Keymap 6: One-handed, left side
+ *
+ * ,-----------------------------------------------------.
+ * |        `~ | 1 F1 | 2 F2 | 3 F3 | 4 F4 | 5 F5 |A  BSE|
+ * |-----------+------+------+------+------+-------------|
+ * |       Tab |   '  |   ,  |   .  |   P  |   Y  |   [  |
+ * |-----------+------+------+------+------+------|      |
+ * |         - |   A  |   O  |   E  |   U  |   I  |------|
+ * |-----------+------+------+------+------+------|   (  |
+ * | Play/Pause|   ;  |   Q  |   J  |   K  |   X  |      |
+ * `-----------+------+------+------+------+-------------'
+ *     |  Home | End  | Down |  Up  | ESC  |
+ *     `-----------------------------------'
+ *                                         ,-------------.
+ *                                         | LAlt | GUI  |
+ *                                  ,------|------|------|
+ *                                  |BackSp|LShift| Ctrl |
+ *                                  |      |      |------|
+ *                                  |Space |Enter |OTHER |
+ *                                  `--------------------'
+ */
+[OHLFT] = KEYMAP(
+// left hand
+ KC_GRV     ,M(KF_1)     ,M(KF_2)     ,M(KF_3)   ,M(KF_4)    ,M(KF_5) ,M(OH_BASE)
+,KC_TAB     ,KC_QUOT     ,KC_COMM     ,KC_DOT    ,KC_P       ,KC_Y    ,KC_LBRC
+,KC_MINS    ,KC_A        ,KC_O        ,KC_E      ,KC_U       ,KC_I
+,KC_MPLY    ,KC_SCLN     ,KC_Q        ,KC_J      ,KC_K       ,KC_X    ,KC_LPRN
+,KC_HOME    ,KC_END      ,KC_DOWN     ,KC_UP     ,M(A_ESC)
+
+                                                                ,KC_TRNS     ,KC_TRNS
+                                                                             ,KC_TRNS
+                                                    ,M(OH_BSSPC),M(OH_ENTSFT),M(OH_RIGHT)
+
+                                                                // right hand
+                                                               ,KC_NO   ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                               ,KC_NO   ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                                        ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                               ,KC_NO   ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                                                ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+
+                                                               ,KC_NO   ,KC_NO
+                                                               ,KC_NO
+                                                               ,KC_NO   ,KC_NO  ,KC_NO
+    ),
+
+/* Keymap 7: One-handed, right side
+ *
+ * ,-----------------------------------------------------.
+ * | =     F11 | 0 F10| 9 F9 | 8 F8 | 7 F7 | 6 F6 |A  BSE|
+ * |-----------+------+------+------+------+-------------|
+ * |         / |   L  |   R  |   C  |   G  |   F  |   ]  |
+ * |-----------+------+------+------+------+------|      |
+ * |         \ |   S  |   N  |   T  |   H  |   D  |------|
+ * |-----------+------+------+------+------+------|   )  |
+ * |      Stop |   Z  |   V  |   W  |   M  |   B  |      |
+ * `-----------+------+------+------+------+-------------'
+ *     |  PgDn | PgUp | Right| Left | ESC  |
+ *     `-----------------------------------'
+ *                                         ,-------------.
+ *                                         | LAlt | GUI  |
+ *                                  ,------|------|------|
+ *                                  |BackSp|LShift| Ctrl |
+ *                                  |      |      |------|
+ *                                  |Space |Enter |OTHER |
+ *                                  `--------------------'
+ */
+[OHRGT] = KEYMAP(
+// left hand
+ M(KF_11)   ,M(KF_10)    ,M(KF_9)     ,M(KF_8)   ,M(KF_7)    ,M(KF_6) ,M(OH_BASE)
+,KC_SLSH    ,KC_L        ,KC_R        ,KC_C      ,KC_G       ,KC_F    ,KC_RBRC
+,KC_BSLS    ,KC_S        ,KC_N        ,KC_T      ,KC_H       ,KC_D
+,KC_MSTP    ,KC_Z        ,KC_V        ,KC_W      ,KC_M       ,KC_B    ,KC_RPRN
+,KC_PGDN    ,KC_PGUP     ,KC_RGHT     ,KC_LEFT   ,M(A_ESC)
+
+                                                                ,KC_TRNS     ,KC_TRNS
+                                                                             ,KC_TRNS
+                                                    ,M(OH_BSSPC),M(OH_ENTSFT),M(OH_LEFT)
+
+                                                                // right hand
+                                                               ,KC_NO   ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                               ,KC_NO   ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                                        ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                               ,KC_NO   ,KC_NO  ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+                                                                                ,KC_NO  ,KC_NO  ,KC_NO       ,KC_NO       ,KC_NO
+
+                                                               ,KC_NO   ,KC_NO
+                                                               ,KC_NO
+                                                               ,KC_NO   ,KC_NO  ,KC_NO
+    ),
+
+/* Keymap 8: Steno for Plover
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      | BASE |           |      |      |      |      |      |      |        |
@@ -666,7 +774,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
         return MACRODOWN(T(S), T(L), T(A), T(C), T(K), T(ENT), END);
 
       case APP_EMCS:
-        return MACRODOWN(T(G), T(N), T(U), T(SPC), T(E), T(M), T(A), T(C), T(S), T(SPC), T(2), T(4), T(ENT), END);
+        return MACRODOWN(T(E), T(M), T(A), T(C), T(S), T(ENT), END);
 
       case APP_TERM:
         return MACRODOWN(T(T), T(E), T(R), T(M), T(ENT), END);
@@ -681,8 +789,65 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
       case KF_1 ... KF_11:
         ang_handle_kf (record, id);
         break;
-      }
 
+        /* 1HAND layout */
+      case OH_BASE:
+        if (record->event.pressed) {
+          oh_base_timer = timer_read ();
+        } else {
+          if (timer_elapsed (oh_base_timer) > TAPPING_TERM) {
+            layer_clear ();
+          } else {
+            return MACRO (T(APP), END);
+          }
+        }
+        break;
+
+      case OH_BSSPC:
+        if (record->event.pressed) {
+          oh_bsspc_timer = timer_read ();
+        } else {
+          if (timer_elapsed (oh_bsspc_timer) > TAPPING_TERM) {
+            return MACRO (T(BSPC), END);
+          } else {
+            return MACRO (T(SPC), END);
+          }
+        }
+        break;
+
+      case OH_ENTSFT:
+        if (record->event.pressed) {
+          oh_entsft_timer = timer_read ();
+        } else {
+          if (timer_elapsed (oh_entsft_timer) > TAPPING_TERM) {
+            if (keyboard_report->mods & MOD_BIT(KC_LSFT))
+              unregister_code (KC_LSFT);
+            else
+              register_code (KC_LSFT);
+          } else {
+            return MACRO (T(ENT), END);
+          }
+        }
+        break;
+
+      case OH_LEFT:
+        if (record->event.pressed) {
+          layer_move (OHLFT);
+          oh_left_blink = 1;
+          oh_left_blink_timer = timer_read ();
+          ergodox_right_led_1_on ();
+        }
+        break;
+
+      case OH_RIGHT:
+        if (record->event.pressed) {
+          layer_move (OHRGT);
+          oh_right_blink = 1;
+          oh_right_blink_timer = timer_read ();
+          ergodox_right_led_3_on ();
+        }
+        break;
+      }
       return MACRO_NONE;
 };
 
@@ -707,12 +872,8 @@ void matrix_init_user(void) {
   if (!eeconfig_is_enabled())
     eeconfig_init();
   dl = eeconfig_read_default_layer ();
-  if (dl == (1UL << ADORE)) {
+  if (dl == (1UL << ADORE))
     is_adore = 1;
-#if ADORE_AUTOLOG
-    log_enable = true;
-#endif
-  }
 };
 
 LEADER_EXTERNS();
@@ -735,44 +896,9 @@ void ang_tap (uint16_t codes[]) {
   }
 }
 
-#define TAP_ONCE(code)  \
+#define TAP_ONCE(code) \
   register_code (code); \
   unregister_code (code)
-
-void ang_tap_dance_bp_finished (qk_tap_dance_state_t *state, void *user_data) {
-  bool left, parens;
-
-  if (state->count > 2) {
-    state->count = 0;
-    return;
-  }
-
-  if (state->keycode == TD(CT_LBP))
-    left = true;
-  else
-    left = false;
-
-  if (state->count == 1)
-    parens = false;
-  else
-    parens = true;
-
-  if (parens) {
-    register_code (KC_RSFT);
-    if (left) {
-      TAP_ONCE(KC_9);
-    } else {
-      TAP_ONCE(KC_0);
-    }
-    unregister_code (KC_RSFT);
-  } else {
-    if (left) {
-      TAP_ONCE (KC_LBRC);
-    } else {
-      TAP_ONCE (KC_RBRC);
-    }
-  }
-}
 
 void ang_tap_dance_cln_finished (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
@@ -860,13 +986,7 @@ const qk_tap_dance_action_t tap_dance_actions[] = {
      .fn = { NULL, ang_tap_dance_ta_finished, ang_tap_dance_ta_reset },
      .user_data = (void *)&((td_ta_state_t) { false, false, false })
    }
-  ,[CT_LBP] = ACTION_TAP_DANCE_FN (ang_tap_dance_bp_finished)
-  ,[CT_RBP] = ACTION_TAP_DANCE_FN (ang_tap_dance_bp_finished)
 };
-
-static uint16_t uni[32];
-static uint8_t unicnt;
-static bool unimagic = false;
 
 // Runs constantly in the background, in a loop.
 void matrix_scan_user(void) {
@@ -874,6 +994,11 @@ void matrix_scan_user(void) {
 
   if (gui_timer && timer_elapsed (gui_timer) > TAPPING_TERM)
     unregister_code (KC_LGUI);
+
+  if (layer != OHLFT)
+    oh_left_blink = 0;
+  if (layer != OHRGT)
+    oh_right_blink = 0;
 
   if (layer == HUN) {
     ergodox_right_led_2_on();
@@ -893,13 +1018,39 @@ void matrix_scan_user(void) {
     ergodox_right_led_2_set (LED_BRIGHTNESS_HI);
   }
 
+  if (layer == OHLFT || layer == OHRGT) {
+    ergodox_right_led_2_on();
+
+    if (oh_left_blink) {
+      if (timer_elapsed (oh_left_blink_timer) > OH_BLINK_INTERVAL) {
+        if ((keyboard_report->mods & MOD_BIT(KC_LSFT)) == 0)
+          ergodox_right_led_1_off ();
+      }
+      if (timer_elapsed (oh_left_blink_timer) > OH_BLINK_INTERVAL * 2) {
+        ergodox_right_led_1_on ();
+        oh_left_blink_timer = timer_read ();
+      }
+    }
+
+    if (oh_right_blink) {
+      if (timer_elapsed (oh_right_blink_timer) > OH_BLINK_INTERVAL) {
+        if ((keyboard_report->mods & MOD_BIT(KC_LCTRL)) == 0)
+          ergodox_right_led_3_off ();
+      }
+      if (timer_elapsed (oh_right_blink_timer) > OH_BLINK_INTERVAL * 2) {
+        ergodox_right_led_3_on ();
+        oh_right_blink_timer = timer_read ();
+      }
+    }
+  }
+
   if (keyboard_report->mods & MOD_BIT(KC_LSFT) ||
       ((get_oneshot_mods() & MOD_BIT(KC_LSFT)) && !has_oneshot_mods_timed_out())) {
     ergodox_right_led_1_set (LED_BRIGHTNESS_HI);
     ergodox_right_led_1_on ();
   } else {
     ergodox_right_led_1_set (LED_BRIGHTNESS_LO);
-    if (layer != NMDIA && layer != PLVR && layer != ADORE)
+    if (layer != OHLFT && layer != NMDIA && layer != PLVR && layer != ADORE)
       ergodox_right_led_1_off ();
   }
 
@@ -909,7 +1060,7 @@ void matrix_scan_user(void) {
     ergodox_right_led_2_on ();
   } else {
     ergodox_right_led_2_set (LED_BRIGHTNESS_LO);
-    if (layer != HUN && layer != NMDIA && layer != PLVR && layer != ADORE)
+    if (layer != OHRGT && layer != HUN && layer != OHLFT && layer != NMDIA && layer != PLVR && layer != ADORE)
       ergodox_right_led_2_off ();
   }
 
@@ -919,7 +1070,7 @@ void matrix_scan_user(void) {
     ergodox_right_led_3_on ();
   } else {
     ergodox_right_led_3_set (LED_BRIGHTNESS_LO);
-    if (layer != HUN && layer != PLVR && layer != ADORE)
+    if (layer != OHRGT && layer != HUN && layer != PLVR && layer != ADORE)
       ergodox_right_led_3_off ();
   }
 
@@ -942,14 +1093,6 @@ void matrix_scan_user(void) {
 
     SEQ_ONE_KEY (KC_U) {
       ang_do_unicode ();
-    }
-
-    SEQ_TWO_KEYS (KC_LEAD, KC_U) {
-      unicnt = 0;
-      unimagic = true;
-      register_code(KC_RSFT);
-      TAP_ONCE(KC_U);
-      unregister_code(KC_RSFT);
     }
 
     SEQ_ONE_KEY (KC_V) {
@@ -1013,13 +1156,7 @@ void matrix_scan_user(void) {
         ergodox_right_led_2_off ();
         wait_ms (100);
         ergodox_right_led_1_off ();
-#if ADORE_AUTOLOG
-        log_enable = true;
-#endif
       } else {
-#if ADORE_AUTOLOG
-        log_enable = false;
-#endif
         is_adore = 0;
         default_layer_and (0);
         default_layer_or (1UL << BASE);
@@ -1043,140 +1180,15 @@ void matrix_scan_user(void) {
 
 static uint16_t last4[4];
 
-bool is_uni_seq(char *seq) {
-  uint8_t i;
-
-  for (i = 0; seq[i]; i++) {
-    uint16_t code;
-    if (('1' <= seq[i]) && (seq[i] <= '9'))
-      code = seq[i] - '1' + KC_1;
-    else if (seq[i] == '0')
-      code = KC_0;
-    else
-      code = seq[i] - 'a' + KC_A;
-
-    if (i > unicnt)
-      return false;
-    if (uni[i] != code)
-      return false;
-  }
-
-  if (uni[i] == KC_ENT || uni[i] == KC_SPC)
-    return true;
-
-  return false;
-}
-
-uint16_t hex_to_keycode(uint8_t hex)
-{
-  if (hex == 0x0) {
-    return KC_0;
-  } else if (hex < 0xA) {
-    return KC_1 + (hex - 0x1);
-  } else {
-    return KC_A + (hex - 0xA);
-  }
-}
-
-void register_hex(uint16_t hex) {
-  bool leading_zeros = true;
-
-  for(int i = 3; i >= 0; i--) {
-    uint8_t digit = ((hex >> (i*4)) & 0xF);
-    if (digit != 0)
-      leading_zeros = false;
-    else if (leading_zeros)
-      continue;
-    register_code(hex_to_keycode(digit));
-    unregister_code(hex_to_keycode(digit));
-    wait_ms(10);
-  }
-}
-
-typedef struct {
-  char *symbol;
-  uint16_t codes[4];
-} qk_ucis_symbol_t;
-
-static qk_ucis_symbol_t ucis_symbol_table[] = {
-  {"poop", {0x1, 0xf4a9, 0}},
-  {"rofl", {0x1, 0xf923, 0}},
-  {"kiss", {0x1, 0xf619, 0}},
-  {"snowman", {0x2603, 0}},
-  {NULL, {}}
-};
-
-bool process_record_ucis (uint16_t keycode, keyrecord_t *record) {
-  uint8_t i;
-
-  if (!unimagic)
-    return true;
-
-  if (!record->event.pressed)
-    return true;
-
-  uni[unicnt] = keycode;
-  unicnt++;
-
-  if (keycode == KC_BSPC) {
-    if (unicnt >= 2) {
-      unicnt-= 2;
-      return true;
-    } else {
-      unicnt--;
-      return false;
-    }
-  }
-
-  if (keycode == KC_ENT || keycode == KC_SPC) {
-    bool symbol_found = false;
-
-    for (i = unicnt; i > 0; i--) {
-      register_code (KC_BSPC);
-      unregister_code (KC_BSPC);
-      wait_ms(10);
-    }
-
-    ang_do_unicode();
-    wait_ms(10);
-    for (i = 0; ucis_symbol_table[i].symbol; i++) {
-      if (is_uni_seq (ucis_symbol_table[i].symbol)) {
-        symbol_found = true;
-        for (uint8_t j = 0; ucis_symbol_table[i].codes[j]; j++) {
-          register_hex(ucis_symbol_table[i].codes[j]);
-        }
-        break;
-      }
-    }
-    if (!symbol_found) {
-      for (i = 0; i < unicnt - 1; i++) {
-        uint8_t code;
-
-        if (uni[i] > KF_1)
-          code = uni[i] - KF_1 + KC_1;
-        else
-          code = uni[i];
-        TAP_ONCE(code);
-        wait_ms (10);
-      }
-    }
-
-    unimagic = false;
-    return true;
-  }
-  return true;
-}
-
 bool process_record_user (uint16_t keycode, keyrecord_t *record) {
 #if KEYLOGGER_ENABLE
-  if (log_enable) {
+  uint8_t layer = biton32(layer_state);
+
+  if (log_enable && layer == BASE) {
     xprintf ("KL: col=%d, row=%d\n", record->event.key.col,
              record->event.key.row);
   }
 #endif
-
-  if (!process_record_ucis (keycode, record))
-    return false;
 
   if (time_travel && !record->event.pressed) {
     uint8_t p;
