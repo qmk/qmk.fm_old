@@ -57,4 +57,5 @@
 * [townk_osx](keymaps/townk_osx/)
 * [twey](keymaps/twey/)
 * [workman_osx_mdw](keymaps/workman_osx_mdw/)
+* [xyverz](keymaps/xyverz/)
 * [zweihander-osx](keymaps/zweihander-osx/)
