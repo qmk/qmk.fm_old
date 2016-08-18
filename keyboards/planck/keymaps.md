@@ -10,6 +10,7 @@
 * [callum](keymaps/callum/)
 * [cbbrowne](keymaps/cbbrowne/)
 * [charlie](keymaps/charlie/)
+* [circuit](keymaps/circuit/)
 * [daniel](keymaps/daniel/)
 * [david](keymaps/david/)
 * [default](keymaps/default/)
