@@ -114,6 +114,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#macro-shortcuts-send-a-whole-string-when-pressing-just-one-key">Macro shortcuts: Send a whole string when pressing just one key</a><ul>
         <li><a href="#advanced-macro-functions">Advanced macro functions</a></li>
         </ul></li>
+        <li><a href="#dynamic-macros-record-and-replay-macros-in-runtime">Dynamic macros: record and replay macros in runtime</a></li>
         <li><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></li>
         <li><a href="#additional-language-support">Additional language support</a></li>
         <li><a href="#unicode-support">Unicode support</a></li>
@@ -461,7 +462,7 @@ void matrix_scan_user(void) {
 };
 
 <span class="co">//Tap Dance Definitions</span>
-<span class="dt">const</span> qk_tap_dance_action_t tap_dance_actions[] = {
+qk_tap_dance_action_t tap_dance_actions[] = {
   <span class="co">//Tap once for Esc, twice for Caps Lock</span>
   [TD_ESC_CAPS]  = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS)
 <span class="co">// Other declarations would go here, separated by commas, if you have them</span>
@@ -543,7 +544,7 @@ TD(TD_ESC_CAPS) </code></pre>
   ergodox_right_led_3_off();
 }
 
-<span class="dt">const</span> qk_tap_dance_action_t tap_dance_actions[] = {
+qk_tap_dance_action_t tap_dance_actions[] = {
   [CT_SE]  = ACTION_TAP_DANCE_DOUBLE (KC_SPC, KC_ENT)
  ,[CT_CLN] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, dance_cln_finished, dance_cln_reset)
  ,[CT_EGG] = ACTION_TAP_DANCE_FN (dance_egg)
@@ -679,6 +680,36 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
     return MACRO_NONE;
 };</code></pre>
 <p>And then, to assign this macro to a key on your keyboard layout, you just use <code>M(0)</code> on the key you want to press for copy/paste.</p>
+<h2 id="dynamic-macros-record-and-replay-macros-in-runtime"><a href="#dynamic-macros-record-and-replay-macros-in-runtime">Dynamic macros: record and replay macros in runtime</a></h2>
+<p>In addition to the static macros described above, you may enable the dynamic macros which you may record while writing. They are forgotten as soon as the keyboard is unplugged. Only two such macros may be stored at the same time, with the total length of 128 keypresses.</p>
+<p>To enable them, first add a new element to the <code>planck_keycodes</code> enum -- <code>DYNAMIC_MACRO_RANGE</code>:</p>
+<pre><code>enum planck_keycodes {
+  QWERTY = SAFE_RANGE,
+  COLEMAK,
+  DVORAK,
+  PLOVER,
+  LOWER,
+  RAISE,
+  BACKLIT,
+  EXT_PLV,
+  DYNAMIC_MACRO_RANGE,
+};</code></pre>
+<p>Afterwards create a new layer called <code>_DYN</code>:</p>
+<pre><code>#define _DYN 6    /* almost any other free number should be ok */</code></pre>
+<p>Below these two modifications include the <code>dynamic_macro.h</code> header:</p>
+<pre><code>#include &quot;dynamic_macro.h&quot;`</code></pre>
+<p>Then define the <code>_DYN</code> layer with the following keys: <code>DYN_REC_START1</code>, <code>DYN_REC_PLAY1</code>,<code>DYN_REC_START2</code> and <code>DYN_REC_PLAY2</code>. It may also contain other keys, it doesn't matter apart from the fact that you won't be able to record these keys in the dynamic macros.</p>
+<pre><code>[_DYN]= {
+    {_______,  DYN_REC_START1, DYN_MACRO_PLAY1, _______, _______, _______, _______, _______, _______, _______, _______, _______},
+    {_______,  DYN_REC_START2, DYN_MACRO_PLAY2, _______, _______, _______, _______, _______, _______, _______, _______, _______},
+    {_______,  _______,        _______,         _______, _______, _______, _______, _______, _______, _______, _______, _______},
+    {_______,  _______,        _______,         _______, _______, _______, _______, _______, _______, _______, _______, _______}
+},</code></pre>
+<p>Add the following code to the very beginning of your <code>process_record_user()</code> function:</p>
+<pre><code>if (!process_record_dynamic_macro(keycode, record)) {
+    return false;
+}</code></pre>
+<p>The usage should be pretty self-explanatory. For the details, please read the comments in the <code>dynamic_macro.h</code> header.</p>
 <h2 id="additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc"><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></h2>
 <p>Everything is assuming you're in Qwerty (in software) by default, but there is built-in support for using a Colemak or Dvorak layout by including this at the top of your keymap:</p>
 <p>#include <keymap_colemak.h></p>
