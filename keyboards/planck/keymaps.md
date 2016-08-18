@@ -28,6 +28,7 @@
 * [mollat](keymaps/mollat/)
 * [nico](keymaps/nico/)
 * [pete](keymaps/pete/)
+* [premek](keymaps/premek/)
 * [pvc](keymaps/pvc/)
 * [tak3over](keymaps/tak3over/)
 * [unicode](keymaps/unicode/)
