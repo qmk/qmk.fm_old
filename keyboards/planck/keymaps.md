@@ -13,6 +13,7 @@
 * [circuit](keymaps/circuit/)
 * [daniel](keymaps/daniel/)
 * [david](keymaps/david/)
+* [dbroqua](keymaps/dbroqua/)
 * [default](keymaps/default/)
 * [dzobert](keymaps/dzobert/)
 * [experimental](keymaps/experimental/)
