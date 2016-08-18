@@ -1,0 +1,193 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/xyverz/">xyverz</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/xyverz/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_xyverz.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#xyverzs-ergodox-ez-keymap">Xyverz's ErgoDox EZ Keymap</a><ul>
+        <li><a href="#please-note">Please Note:</a></li>
+        <li><a href="#about-this-keymap">About this keymap:</a><ul>
+        <li><a href="#layer-0-dvorak-layer">Layer 0: Dvorak layer</a></li>
+        <li><a href="#layer-1-qwerty-layer">Layer 1: QWERTY layer</a></li>
+        <li><a href="#keymap-2-colemak-layer">Keymap 2: Colemak layer</a></li>
+        <li><a href="#layer-3-media-layer">layer 3 : Media layer</a></li>
+        <li><a href="#keymap-4-keypad-layer">Keymap 4: Keypad layer</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="xyverzs-ergodox-ez-keymap"><a href="#xyverzs-ergodox-ez-keymap">Xyverz's ErgoDox EZ Keymap</a></h1>
+<h2 id="please-note"><a href="#please-note">Please Note:</a></h2>
+<p>This keymap will probably <strong>not</strong> work with the Infinity ErgoDox. It will need <strong>substantial</strong> modification in order to work on the Infinity. This is due to the fact that the mappings are based on the matrix positions in the keymap definition in the ez.h file. If you want to use this for the infinity, you'll need to figure out where the keys are in the matrix and redo the layout arrays below.</p>
+<h2 id="about-this-keymap"><a href="#about-this-keymap">About this keymap:</a></h2>
+<p>The Dvorak layout shown herestems from my early Kinesis years, using the Contour PS/2 with a Dvorak software layout. Because of this, the RBRC and LBRC were on opposite sides of the board in the corner keys. I've decided to continue using this layout with my ErgoDox.</p>
+<p>The QWERTY layout shown here is based entirely on the Kinesis Advantage layout, with the additional keys as shown in the diagrams. The Colemak layout is merely an adaptation of that.</p>
+<p>I've enabled persistent keymaps for Qwerty, Dvorak and Colemak layers, similar to the default Planck layouts.</p>
+<p>For a better explanation of the layout matrices shown below, take a look at ../../ez/ez.h where the keymap is defined, beginning on line 81.</p>
+<h3 id="layer-0-dvorak-layer"><a href="#layer-0-dvorak-layer">Layer 0: Dvorak layer</a></h3>
+<pre><code>,--------------------------------------------------.,--------------------------------------------------.
+|   ]    |   1  |   2  |   3  |   4  |   5  | ESC  || ESC  |   6  |   7  |   8  |   9  |   0  |   [    |
+|--------+------+------+------+------+-------------||------+------+------+------+------+------+--------|
+| Tab    |   &#39;  |   ,  |   .  |   Y  |   Y  |      ||      |   F  |   G  |   C  |   R  |   L  |   \    |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+| CapsLk |   A  |   O  |   E  |   U  |   I  |------||------|   D  |   H  |   T  |   N  |   S  |   -    |
+|--------+------+------+------+------+------| _MD  || _KP  |------+------+------+------+------+--------|
+| LShift |   Z  |   X  |   C  |   V  |   X  |      ||      |   B  |   M  |   W  |   V  |   Z  | RShift |
+`--------+------+------+------+------+-------------&#39;`-------------+------+------+------+------+--------&#39;
+  | LGUI |   `  |  INS | Left | Rght |                            |  Up  |  Dn  |   /  |   =  | RGUI |
+  `----------------------------------&#39;                            `----------------------------------&#39;
+                                     ,-------------.,-------------.
+                                     | LCtr | LAlt || Ralt | RCtr |
+                              ,------|------|------||------+------+------.
+                              |      |      | Home || PgUp |      |      |
+                              | BkSp | Del  |------||------| Enter| Space|
+                              |      |      | End  || PgDn |      |      |
+                              `--------------------&#39;`--------------------&#39;</code></pre>
+<h3 id="layer-1-qwerty-layer"><a href="#layer-1-qwerty-layer">Layer 1: QWERTY layer</a></h3>
+<pre><code>,--------------------------------------------------.,--------------------------------------------------.
+|   =    |   1  |   2  |   3  |   4  |   5  | ESC  || ESC  |   6  |   7  |   8  |   9  |   0  |   -    |
+|--------+------+------+------+------+-------------||------+------+------+------+------+------+--------|
+| Tab    |   Q  |   W  |   E  |   R  |   T  |      ||      |   Y  |   U  |   I  |   O  |   P  |   \    |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+| CapsLk |   A  |   S  |   D  |   F  |   G  |------||------|   H  |   J  |   K  |   L  |   ;  |   &#39;    |
+|--------+------+------+------+------+------| _MD  || _KP  |------+------+------+------+------+--------|
+| LShift |   Z  |   X  |   C  |   V  |   B  |      ||      |   N  |   M  |   ,  |   .  |   /  | RShift |
+`--------+------+------+------+------+-------------&#39;`-------------+------+------+------+------+--------&#39;
+  | LGUI |   `  |  INS | Left | Rght |                            |  Up  |  Dn  |   [  |   ]  | RGUI |
+  `----------------------------------&#39;                            `----------------------------------&#39;
+                                     ,-------------.,-------------.
+                                     | LCtr | LAlt || Ralt | RCtr |
+                              ,------|------|------||------+------+------.
+                              |      |      | Home || PgUp |      |      |
+                              | BkSp | Del  |------||------| Enter| Space|
+                              |      |      | End  || PgDn |      |      |
+                              `--------------------&#39;`--------------------&#39;
+ </code></pre>
+<h3 id="keymap-2-colemak-layer"><a href="#keymap-2-colemak-layer">Keymap 2: Colemak layer</a></h3>
+<pre><code>,--------------------------------------------------.,--------------------------------------------------.
+|   =    |   1  |   2  |   3  |   4  |   5  | ESC  || ESC  |   6  |   7  |   8  |   9  |   0  |   -    |
+|--------+------+------+------+------+-------------||------+------+------+------+------+------+--------|
+| Tab    |   Q  |   W  |   F  |   P  |   G  |      ||      |   J  |   L  |   U  |   Y  |   ;  |   \    |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+| BkSpc  |   A  |   R  |   S  |   T  |   D  |------||------|   H  |   N  |   E  |   I  |   O  |   &#39;    |
+|--------+------+------+------+------+------| _MD  || _KP  |------+------+------+------+------+--------|
+| LShift |   Z  |   X  |   C  |   V  |   B  |      ||      |   K  |   M  |   ,  |   .  |   /  | RShift |
+`--------+------+------+------+------+-------------&#39;`-------------+------+------+------+------+--------&#39;
+  | LGUI |   `  |  INS | Left | Rght |                            |  Up  |  Dn  |   [  |   ]  | RGUI |
+  `----------------------------------&#39;                            `----------------------------------&#39;
+                                     ,-------------.,-------------.
+                                     | LCtr | LAlt || Ralt | RCtr |
+                              ,------|------|------||------+------+------.
+                              |      |      | Home || PgUp |      |      |
+                              | BkSp | Del  |------||------| Enter| Space|
+                              |      |      | End  || PgDn |      |      |
+                              `--------------------&#39;`--------------------&#39;</code></pre>
+<h3 id="layer-3-media-layer"><a href="#layer-3-media-layer">layer 3 : Media layer</a></h3>
+<pre><code>,--------------------------------------------------.,--------------------------------------------------.
+| TEENSY |  F1  |  F2  |  F3  |  F4  |  F5  | F11  ||  F12 |  F6  |  F7  |  F8  |  F9  |  F10 |        |
+|--------+------+------+------+------+-------------||------+------+------+------+------+------+--------|
+|        |      | PrSc | ScLk | Paus |      |      ||      |      | Mute | Vol- | Vol+ |      |        |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+|        |      |      |      |      |      |------||------| Stop | Prev | Play | Next | Sel  |        |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+|        |      |Dvorak|Qwerty|Colemk|      |      ||      |      |      |      |      |      |        |
+`--------+------+------+------+------+-------------&#39;`-------------+------+------+------+------+--------&#39;
+  |      |      |      |      |      |                            |      |      |      |      |      |
+  `----------------------------------&#39;                            `----------------------------------&#39;
+                                     ,-------------.,-------------.
+                                     |      |      ||      |      |
+                              ,------|------|------||------+------+------.
+                              |      |      |      ||      |      |      |
+                              |      |      |------||------|      |      |
+                              |      |      |      ||      |      |      |
+                              `--------------------&#39;`--------------------&#39;</code></pre>
+<h3 id="keymap-4-keypad-layer"><a href="#keymap-4-keypad-layer">Keymap 4: Keypad layer</a></h3>
+<pre><code>,--------------------------------------------------.,--------------------------------------------------.
+| Power  |      |      |      |      |      |      ||      |      | NmLk | KP / | KP * | KP - |        |
+|--------+------+------+------+------+-------------||------+------+------+------+------+------+--------|
+| Sleep  |      |      |      |      |      |      ||      |      | KP 7 | KP 8 | KP 9 | KP + |        |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+| Wake   |      |      |      |      |      |------||------|      | KP 4 | KP 5 | KP 6 | KP + |        |
+|--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
+|        |      |      |      |      |      |      ||      |      | KP 1 | KP 2 | KP 3 |KP Ent|        |
+`--------+------+------+------+------+-------------&#39;`-------------+------+------+------+------+--------&#39;
+  |      |      |      |      |      |                            | KP 0 |      | KP . |KP Ent|      |
+  `----------------------------------&#39;                            `----------------------------------&#39;
+                                     ,-------------.,-------------.
+                                     |      |      ||      |      |
+                              ,------|------|------||------+------+------.
+                              |      |      |      ||      |      |      |
+                              |      |      |------||------|      |      |
+                              |      |      |      ||      |      |      |
+                              `--------------------&#39;`--------------------&#39;</code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
