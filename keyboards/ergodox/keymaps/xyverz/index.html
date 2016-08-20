@@ -59,8 +59,8 @@
 
         <ul>
         <li><a href="#xyverzs-ergodox-ez-keymap">Xyverz's ErgoDox EZ Keymap</a><ul>
-        <li><a href="#please-note">Please Note:</a></li>
-        <li><a href="#about-this-keymap">About this keymap:</a><ul>
+        <li><a href="#about-this-keymap">About this keymap:</a></li>
+        <li><a href="#still-to-do">Still to do:</a><ul>
         <li><a href="#layer-0-dvorak-layer">Layer 0: Dvorak layer</a></li>
         <li><a href="#layer-1-qwerty-layer">Layer 1: QWERTY layer</a></li>
         <li><a href="#keymap-2-colemak-layer">Keymap 2: Colemak layer</a></li>
@@ -81,13 +81,16 @@
       </div>
             <div class="span8">
             <h1 id="xyverzs-ergodox-ez-keymap"><a href="#xyverzs-ergodox-ez-keymap">Xyverz's ErgoDox EZ Keymap</a></h1>
-<h2 id="please-note"><a href="#please-note">Please Note:</a></h2>
-<p>This keymap will probably <strong>not</strong> work with the Infinity ErgoDox. It will need <strong>substantial</strong> modification in order to work on the Infinity. This is due to the fact that the mappings are based on the matrix positions in the keymap definition in the ez.h file. If you want to use this for the infinity, you'll need to figure out where the keys are in the matrix and redo the layout arrays below.</p>
 <h2 id="about-this-keymap"><a href="#about-this-keymap">About this keymap:</a></h2>
 <p>The Dvorak layout shown herestems from my early Kinesis years, using the Contour PS/2 with a Dvorak software layout. Because of this, the RBRC and LBRC were on opposite sides of the board in the corner keys. I've decided to continue using this layout with my ErgoDox.</p>
 <p>The QWERTY layout shown here is based entirely on the Kinesis Advantage layout, with the additional keys as shown in the diagrams. The Colemak layout is merely an adaptation of that.</p>
 <p>I've enabled persistent keymaps for Qwerty, Dvorak and Colemak layers, similar to the default Planck layouts.</p>
-<p>For a better explanation of the layout matrices shown below, take a look at ../../ez/ez.h where the keymap is defined, beginning on line 81.</p>
+<h2 id="still-to-do"><a href="#still-to-do">Still to do:</a></h2>
+<ul>
+<li>Need to figure out a better position for the ESC key.<br /></li>
+<li>Come up with a function for the empty keys shown in the alpha layers below.<br /></li>
+<li>Fix the CapsLock, NumLock, and ScrLck LEDs.</li>
+</ul>
 <h3 id="layer-0-dvorak-layer"><a href="#layer-0-dvorak-layer">Layer 0: Dvorak layer</a></h3>
 <pre><code>,--------------------------------------------------.,--------------------------------------------------.
 |   ]    |   1  |   2  |   3  |   4  |   5  | ESC  || ESC  |   6  |   7  |   8  |   9  |   0  |   [    |
@@ -167,9 +170,9 @@
                               `--------------------&#39;`--------------------&#39;</code></pre>
 <h3 id="keymap-4-keypad-layer"><a href="#keymap-4-keypad-layer">Keymap 4: Keypad layer</a></h3>
 <pre><code>,--------------------------------------------------.,--------------------------------------------------.
-| Power  |      |      |      |      |      |      ||      |      | NmLk | KP / | KP * | KP - |        |
+| Power  |      |      |      |      |      |      ||      |      | NmLk | KP = | KP / | KP * |        |
 |--------+------+------+------+------+-------------||------+------+------+------+------+------+--------|
-| Sleep  |      |      |      |      |      |      ||      |      | KP 7 | KP 8 | KP 9 | KP + |        |
+| Sleep  |      |      |      |      |      |      ||      |      | KP 7 | KP 8 | KP 9 | KP - |        |
 |--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
 | Wake   |      |      |      |      |      |------||------|      | KP 4 | KP 5 | KP 6 | KP + |        |
 |--------+------+------+------+------+------|      ||      |------+------+------+------+------+--------|
