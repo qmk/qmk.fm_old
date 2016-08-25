@@ -1,0 +1,248 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/vision_division">vision_division</a> / keymaps / <a href="/keyboards/vision_division/keymaps/default/">default</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/vision_division/keymaps/default/keymap.c" class="button view">View keymap.c</a>
+        <a href="vision_division_default.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#the-default-keymap-for-vision_division">The default keymap for vision_division</a></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="the-default-keymap-for-vision_division"><a href="#the-default-keymap-for-vision_division">The default keymap for vision_division</a></h1>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+<span class="ot">#include &quot;matrix_types.h&quot;</span>
+
+
+<span class="co">/* USB Device descriptor parameter */</span>
+<span class="ot">#define VENDOR_ID       0xFEED</span>
+<span class="ot">#define PRODUCT_ID      GET_PID(NUMERIC_NORMAL, HOMING_MAX_TEENSY)</span>
+<span class="ot">#define DEVICE_VER      0x0001</span>
+<span class="ot">#define MANUFACTURER    IBNobody</span>
+<span class="ot">#define PRODUCT         Vision Division</span>
+<span class="ot">#define DESCRIPTION     Full / Split Keyboard</span>
+
+
+<span class="ot">#define MATRIX_ROWS 6</span>
+<span class="ot">#define MATRIX_ROW_PINS { C2, C3, F4, F5, F6, F7 }</span>
+
+<span class="ot">#define MATRIX_COLS GET_MATRIX_COLS(NUMERIC_NORMAL, HOMING_MAX_TEENSY)</span>
+<span class="ot">#define MATRIX_COL_PINS GET_MATRIX_COL_PINS(NUMERIC_NORMAL, HOMING_MAX_TEENSY)</span>
+
+<span class="ot">#define UNUSED_PINS</span>
+
+<span class="co">/*#define KEYMAP( \</span>
+<span class="co">      k101, k102, k103, k104,       k105, k106, k107, k108, k109, k10A, k10B, k10C, k111, k112, k113, k114, k115, k116, k117, k118,       k119, k11A, k11B, k11C, \</span>
+<span class="co">      k201, k202, k203, k204,       k205, k206, k207, k208, k209, k20A, k20B, k20C, k211, k212, k213, k214, k215, k216, k217, k218,       k219, k21A, k21B, k21C, \</span>
+<span class="co">      k301, k302, k303, k304,       k305, k306, k307, k308, k309, k30A, k30B, k30C, k311, k312, k313, k314, k315, k316, k317, k318,       k319, k31A, k31B, k31C, \</span>
+<span class="co">      k401, k402, k403, k404,       k405, k406, k407, k408, k409, k40A, k40B, k40C, k411, k412, k413, k414, k415, k416, k417, k418,       k419, k41A, k41B, k41C, \</span>
+<span class="co">      k501, k502, k503, k504,       k505, k506, k507, k508, k509, k50A, k50B, k50C, k511, k512, k513, k514, k515, k516, k517, k518,       k519, k51A, k51B, k51C, \</span>
+<span class="co">      k601, k602, k603, k604,       k605, k606, k607, k608, k609, k60A, k60B, k60C, k611, k612, k613, k614, k615, k616, k617, k618,       k619, k61A, k61B, k61C  \</span>
+<span class="co">) \</span>
+<span class="co">KEYMAP_MASTER(NUMERIC_MAX_TEENSY, NUMERIC_MAX, \</span>
+<span class="co">      k101, k102, k103, k104, k105, k106, k107, k108, k109, k10A, k10B, k10C, k111, k112, k113, k114, k115, k116, k117, k118, k119, k11A, k11B, k11C, \</span>
+<span class="co">      k201, k202, k203, k204, k205, k206, k207, k208, k209, k20A, k20B, k20C, k211, k212, k213, k214, k215, k216, k217, k218, k219, k21A, k21B, k21C, \</span>
+<span class="co">      k301, k302, k303, k304, k305, k306, k307, k308, k309, k30A, k30B, k30C, k311, k312, k313, k314, k315, k316, k317, k318, k319, k31A, k31B, k31C, \</span>
+<span class="co">      k401, k402, k403, k404, k405, k406, k407, k408, k409, k40A, k40B, k40C, k411, k412, k413, k414, k415, k416, k417, k418, k419, k41A, k41B, k41C, \</span>
+<span class="co">      k501, k502, k503, k504, k505, k506, k507, k508, k509, k50A, k50B, k50C, k511, k512, k513, k514, k515, k516, k517, k518, k519, k51A, k51B, k51C, \</span>
+<span class="co">      k601, k602, k603, k604, k605, k606, k607, k608, k609, k60A, k60B, k60C, k611, k612, k613, k614, k615, k616, k617, k618, k619, k61A, k61B, k61C  \</span>
+<span class="co">)*/</span>
+
+<span class="ot">#define KEYMAP( \</span>
+      k101, k102, k103, k104,       k105, k106, k107, k108, k109, k10A, k111, k112, k113, k114, k115, k116, k117, k118,       k119, k11A, k11B, \
+      k201, k202, k203, k204,       k205, k206, k207, k208, k209, k20A, k211, k212, k213, k214, k215, k216, k217, k218,       k219, k21A, k21B, \
+      k301, k302, k303, k304,       k305, k306, k307, k308, k309, k30A, k311, k312, k313, k314, k315, k316, k317, k318,       k319, k31A, k31B, \
+      k401, k402, k403, k404,       k405, k406, k407, k408, k409, k40A, k411, k412, k413, k414, k415, k416, k417, k418,       k419, k41A, k41B, \
+      k501, k502, k503, k504,       k505, k506, k507, k508, k509, k50A, k511, k512, k513, k514, k515, k516, k517, k518,       k519, k51A, k51B, \
+      k601, k602, k603, k604,       k605, k606, k607, k608, k609, k60A, k611, k612, k613, k614, k615, k616, k617, k618,       k619, k61A, k61B  \
+) \
+KEYMAP_MASTER(NUMERIC_NORMAL, HOMING_MAX_TEENSY, \
+      k101, k102, k103, k104, k105, k106, k107, k108, k109, k10A, KC_NO, KC_NO, k111, k112, k113, k114, k115, k116, k117, k118, k119, k11A, k11B, KC_NO, \
+      k201, k202, k203, k204, k205, k206, k207, k208, k209, k20A, KC_NO, KC_NO, k211, k212, k213, k214, k215, k216, k217, k218, k219, k21A, k21B, KC_NO, \
+      k301, k302, k303, k304, k305, k306, k307, k308, k309, k30A, KC_NO, KC_NO, k311, k312, k313, k314, k315, k316, k317, k318, k319, k31A, k31B, KC_NO, \
+      k401, k402, k403, k404, k405, k406, k407, k408, k409, k40A, KC_NO, KC_NO, k411, k412, k413, k414, k415, k416, k417, k418, k419, k41A, k41B, KC_NO, \
+      k501, k502, k503, k504, k505, k506, k507, k508, k509, k50A, KC_NO, KC_NO, k511, k512, k513, k514, k515, k516, k517, k518, k519, k51A, k51B, KC_NO, \
+      k601, k602, k603, k604, k605, k606, k607, k608, k609, k60A, KC_NO, KC_NO, k611, k612, k613, k614, k615, k616, k617, k618, k619, k61A, k61B, KC_NO  \
+)
+
+<span class="ot">#endif</span></code></pre>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code># Build Options
+#   change to &quot;no&quot; to disable the options, or define them in the Makefile in
+#   the appropriate keymap folder that will get included automatically
+#
+BOOTMAGIC_ENABLE = yes      # Virtual DIP switch configuration(+1000)
+MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
+EXTRAKEY_ENABLE = yes       # Audio control and System control(+450)
+CONSOLE_ENABLE = yes        # Console for debug(+400)
+COMMAND_ENABLE = yes        # Commands for debug and configuration
+NKRO_ENABLE = yes           # Nkey Rollover - if this doesn&#39;t work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+MIDI_ENABLE = no            # MIDI controls
+AUDIO_ENABLE = yes          # Audio output on port C6
+UNICODE_ENABLE = no         # Unicode
+BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
+RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.  Do not enable this with audio at the same time.
+SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif</code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+<span class="ot">#include &quot;matrix_types.h&quot;</span>
+
+
+<span class="co">/* USB Device descriptor parameter */</span>
+<span class="ot">#define VENDOR_ID       0xFEED</span>
+<span class="ot">#define PRODUCT_ID      GET_PID(NUMERIC_NORMAL, HOMING_MAX_TEENSY)</span>
+<span class="ot">#define DEVICE_VER      0x0001</span>
+<span class="ot">#define MANUFACTURER    IBNobody</span>
+<span class="ot">#define PRODUCT         Vision Division</span>
+<span class="ot">#define DESCRIPTION     Full / Split Keyboard</span>
+
+
+<span class="ot">#define MATRIX_ROWS 6</span>
+<span class="ot">#define MATRIX_ROW_PINS { C2, C3, F4, F5, F6, F7 }</span>
+
+<span class="ot">#define MATRIX_COLS GET_MATRIX_COLS(NUMERIC_NORMAL, HOMING_MAX_TEENSY)</span>
+<span class="ot">#define MATRIX_COL_PINS GET_MATRIX_COL_PINS(NUMERIC_NORMAL, HOMING_MAX_TEENSY)</span>
+
+<span class="ot">#define UNUSED_PINS</span>
+
+<span class="co">/*#define KEYMAP( \</span>
+<span class="co">      k101, k102, k103, k104,       k105, k106, k107, k108, k109, k10A, k10B, k10C, k111, k112, k113, k114, k115, k116, k117, k118,       k119, k11A, k11B, k11C, \</span>
+<span class="co">      k201, k202, k203, k204,       k205, k206, k207, k208, k209, k20A, k20B, k20C, k211, k212, k213, k214, k215, k216, k217, k218,       k219, k21A, k21B, k21C, \</span>
+<span class="co">      k301, k302, k303, k304,       k305, k306, k307, k308, k309, k30A, k30B, k30C, k311, k312, k313, k314, k315, k316, k317, k318,       k319, k31A, k31B, k31C, \</span>
+<span class="co">      k401, k402, k403, k404,       k405, k406, k407, k408, k409, k40A, k40B, k40C, k411, k412, k413, k414, k415, k416, k417, k418,       k419, k41A, k41B, k41C, \</span>
+<span class="co">      k501, k502, k503, k504,       k505, k506, k507, k508, k509, k50A, k50B, k50C, k511, k512, k513, k514, k515, k516, k517, k518,       k519, k51A, k51B, k51C, \</span>
+<span class="co">      k601, k602, k603, k604,       k605, k606, k607, k608, k609, k60A, k60B, k60C, k611, k612, k613, k614, k615, k616, k617, k618,       k619, k61A, k61B, k61C  \</span>
+<span class="co">) \</span>
+<span class="co">KEYMAP_MASTER(NUMERIC_MAX_TEENSY, NUMERIC_MAX, \</span>
+<span class="co">      k101, k102, k103, k104, k105, k106, k107, k108, k109, k10A, k10B, k10C, k111, k112, k113, k114, k115, k116, k117, k118, k119, k11A, k11B, k11C, \</span>
+<span class="co">      k201, k202, k203, k204, k205, k206, k207, k208, k209, k20A, k20B, k20C, k211, k212, k213, k214, k215, k216, k217, k218, k219, k21A, k21B, k21C, \</span>
+<span class="co">      k301, k302, k303, k304, k305, k306, k307, k308, k309, k30A, k30B, k30C, k311, k312, k313, k314, k315, k316, k317, k318, k319, k31A, k31B, k31C, \</span>
+<span class="co">      k401, k402, k403, k404, k405, k406, k407, k408, k409, k40A, k40B, k40C, k411, k412, k413, k414, k415, k416, k417, k418, k419, k41A, k41B, k41C, \</span>
+<span class="co">      k501, k502, k503, k504, k505, k506, k507, k508, k509, k50A, k50B, k50C, k511, k512, k513, k514, k515, k516, k517, k518, k519, k51A, k51B, k51C, \</span>
+<span class="co">      k601, k602, k603, k604, k605, k606, k607, k608, k609, k60A, k60B, k60C, k611, k612, k613, k614, k615, k616, k617, k618, k619, k61A, k61B, k61C  \</span>
+<span class="co">)*/</span>
+
+<span class="ot">#define KEYMAP( \</span>
+      k101, k102, k103, k104,       k105, k106, k107, k108, k109, k10A, k111, k112, k113, k114, k115, k116, k117, k118,       k119, k11A, k11B, \
+      k201, k202, k203, k204,       k205, k206, k207, k208, k209, k20A, k211, k212, k213, k214, k215, k216, k217, k218,       k219, k21A, k21B, \
+      k301, k302, k303, k304,       k305, k306, k307, k308, k309, k30A, k311, k312, k313, k314, k315, k316, k317, k318,       k319, k31A, k31B, \
+      k401, k402, k403, k404,       k405, k406, k407, k408, k409, k40A, k411, k412, k413, k414, k415, k416, k417, k418,       k419, k41A, k41B, \
+      k501, k502, k503, k504,       k505, k506, k507, k508, k509, k50A, k511, k512, k513, k514, k515, k516, k517, k518,       k519, k51A, k51B, \
+      k601, k602, k603, k604,       k605, k606, k607, k608, k609, k60A, k611, k612, k613, k614, k615, k616, k617, k618,       k619, k61A, k61B  \
+) \
+KEYMAP_MASTER(NUMERIC_NORMAL, HOMING_MAX_TEENSY, \
+      k101, k102, k103, k104, k105, k106, k107, k108, k109, k10A, KC_NO, KC_NO, k111, k112, k113, k114, k115, k116, k117, k118, k119, k11A, k11B, KC_NO, \
+      k201, k202, k203, k204, k205, k206, k207, k208, k209, k20A, KC_NO, KC_NO, k211, k212, k213, k214, k215, k216, k217, k218, k219, k21A, k21B, KC_NO, \
+      k301, k302, k303, k304, k305, k306, k307, k308, k309, k30A, KC_NO, KC_NO, k311, k312, k313, k314, k315, k316, k317, k318, k319, k31A, k31B, KC_NO, \
+      k401, k402, k403, k404, k405, k406, k407, k408, k409, k40A, KC_NO, KC_NO, k411, k412, k413, k414, k415, k416, k417, k418, k419, k41A, k41B, KC_NO, \
+      k501, k502, k503, k504, k505, k506, k507, k508, k509, k50A, KC_NO, KC_NO, k511, k512, k513, k514, k515, k516, k517, k518, k519, k51A, k51B, KC_NO, \
+      k601, k602, k603, k604, k605, k606, k607, k608, k609, k60A, KC_NO, KC_NO, k611, k612, k613, k614, k615, k616, k617, k618, k619, k61A, k61B, KC_NO  \
+)
+
+<span class="ot">#endif</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
