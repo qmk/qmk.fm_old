@@ -63,6 +63,7 @@
         <li><a href="#other-keymaps">Other Keymaps</a></li>
         </ul></li>
         <li><a href="#ws2812-support">WS2812 Support</a></li>
+        <li><a href="#warning">Warning</a></li>
         </ul></li>
         </ul>
 
@@ -73,6 +74,7 @@
 
           <h3 id="keymaps">Keymaps</h3>
           <ul>
+          <li><a href="keymaps/dbroqua/">dbroqua</a></li>
           <li><a href="keymaps/default/">default</a></li>
           <li><a href="keymaps/sgoodwin/">sgoodwin</a></li>
           <li><a href="keymaps/stanleylai/">stanleylai</a></li>
@@ -105,6 +107,13 @@
 <h2 id="ws2812-support"><a href="#ws2812-support">WS2812 Support</a></h2>
 <p><img src="keymaps/ws2812/ws2812_example.jpg" alt="Image of KC60 with RGB Underglow" /></p>
 <p>Build with WS2812 Support by running <code>make KEYMAP=ws2812</code>.</p>
+<h2 id="warning"><a href="#warning">Warning</a></h2>
+<p>For those who want to use 2x1U instead of classic backspace you need to use K0D and K49 like this:</p>
+<ul>
+<li>K0D represents the key at the right of =.<br /></li>
+<li>K49 represents the last key of the row (is wired at the right of the space key on the PCB)</li>
+</ul>
+<p>In kc60.h I've put several definitions' examples of possible layouts proposed by online editor (<a href="http://123.57.250.164:9128/">http://123.57.250.164:9128/</a>).</p>
             </div>
     </div>
   </div>
