@@ -1,0 +1,328 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/atreus">atreus</a> / keymaps / <a href="/keyboards/atreus/keymaps/replicaJunction/">replicaJunction</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/atreus/keymaps/replicaJunction/keymap.c" class="button view">View keymap.c</a>
+        <a href="atreus_replicaJunction.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#replicajunction---atreus-layout">replicaJunction - Atreus Layout</a><ul>
+        <li><a href="#base-layer">Base Layer</a></li>
+        <li><a href="#extend-layer">Extend Layer</a></li>
+        <li><a href="#number-and-symbol-layer">Number and Symbol Layer</a></li>
+        <li><a href="#function-layer">Function Layer</a></li>
+        <li><a href="#gaming-layer">Gaming Layer</a></li>
+        </ul></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="replicajunction---atreus-layout"><a href="#replicajunction---atreus-layout">replicaJunction - Atreus Layout</a></h1>
+<p>This layout is designed to make the absolute most out of the Atreus 40% keyboard.</p>
+<p>I was enchanted with the idea of the Atreus keyboard after using my Ergodox for several months. I wanted something of a similar form factor that was easily portable, so I could bring and transport a keyboard to my workplace without much hassle. After building the Atreus keyboard, though, I realized very quickly that the 40% form factor requires a lot more creativity than a full-size keyboard (even one as strangely-shaped as the Ergodox).</p>
+<p>The default Atreus keyboard layout provides all the necessary keys in order to function with the keyboard, but as a programmer, I needed quicker access to just about everything. I noticed that the default layer didn't include any dual-role keys, and so I started on my journey to build my perfect layout for the Atreus.</p>
+<p>I won't claim that this layout is perfect for everyone. It does make several significant changes from the &quot;normal&quot; Atreus layout. In my own use, though, I've found this keyboard turbocharges my Atreus, and gives it the power of a full-size keyboard without the size.</p>
+<h2 id="base-layer"><a href="#base-layer">Base Layer</a></h2>
+<p><img src="atreus-replica-base-colemakdh.png" alt="Atreus base layout" /></p>
+<p>The letters on this layout are arranged in the <a href="https://colemakmods.github.io/mod-dh/">Colemak Mod-DH layout</a>.</p>
+<p>Note that there are four dual-purpose keys: Shift (Backspace), Ctrl (Delete), Alt (Enter), and Space (Number layer). In QMK, these dual-role keys can be made to hold their primary key by double-tapping the key and holding on the second tap. For example, if I wanted to insert a long string of Spaces, I would tap the Space key, then tap it again and hold. A single press and hold would trigger the secondary function of the key instead.</p>
+<p>The secondary Alt on the left bottom row exists to provide a single-hand Alt+Tab shortcut, which would take two rows otherwise.</p>
+<h2 id="extend-layer"><a href="#extend-layer">Extend Layer</a></h2>
+<p><img src="atreus-replica-extend.png" alt="Atreus extend layer" /></p>
+<p>This layout is designed primarily for keyboard navigation. Arrow keys are easily accessible under the right hand (a welcome change from the original Atreus layout, which places them under the left hand), along with Home/End and PgUp/PgDn.</p>
+<p>Modifiers are also placed under the home row of the left hand. One of the single keyboard actions I use most is Shift+Ctrl+Left/Right to select a whole word; this layer makes those keypresses simple by adding the Ctrl key in an easy-to-reach location.</p>
+<p>For the common Ctrl shortcuts, I also added some hotkeys to this layer over the letter keys they are associated with. This gives the Extend key some extra utility by letting it &quot;feel&quot; like a Ctrl key in some cases.</p>
+<p>The Space key exists to prevent going from this layer directly into the Number layer. Similarly, the Shift key on the left pinky helps make sure that the normal letter (Z) doesn't fire.</p>
+<h2 id="number-and-symbol-layer"><a href="#number-and-symbol-layer">Number and Symbol Layer</a></h2>
+<p><img src="atreus-replica-num.png" alt="Atreus number and symbol layer" /></p>
+<p>This layer provides the only way of accessing number keys on this keyboard, since it's too small for its own number row. Note that even though they are laid out in the number pad fashion, they send the &quot;regular&quot; number keystrokes. Games and programs that specifically use NumPad keys are not supported in this layout at the moment.</p>
+<p>This layer also provides plenty of symbol shortcuts. Most of these can be accessed through other means (like Shift+8 for the asterisk), but having shortcut keys to them makes for one less keypress, which adds up quickly when using these symbols on a regular basis. I've been through many revisions of this concept on my Ergodox as well as the Atreus, and I've finally arrived at this layout as the one that provides the symbols I need most frequently in places I can think to expect them. The Ordinary layout from the Ergodox-EZ keyboard in this repository was a large influence in this design.</p>
+<h2 id="function-layer"><a href="#function-layer">Function Layer</a></h2>
+<p><img src="atreus-replica-function.png" alt="Atreus function layer" /></p>
+<p>Function keys (F1-F12) are on this layer, as well as some more generic &quot;functions&quot; such as media keys. I've also set up a mirror image of the arrows from the Extend layer in case I need to use these with my left hand, but I don't do this very often.</p>
+<p>The reset key is on this layer, as well as a toggle from Colemak to QWERTY and back. The QWERTY layer is not currently documented, but it is functionally identical to the base layer except for letter positions.</p>
+<h2 id="gaming-layer"><a href="#gaming-layer">Gaming Layer</a></h2>
+<p><img src="atreus-replica-game.png" alt="Atreus gaming layer" /></p>
+<p>This is a small layer developed to allow some simple gameplay without a mouse. This layer is a toggle (from the Number layer), so it is designed to stay on while in use.</p>
+<p>The keys on the left hand bring Space into the left thumb's reach, as well as overriding the dual-role Shift with its standard function (Z in both QWERTY and in Colemak). This allows easy Shift presses without blocking the Z key, commonly used in games.</p>
+<p>I would probably not consider this a hard-core gaming keyboard, and this layout does have the huge problem of blocking access to the number keys, but for more casual games, it plays quite well. I've used it quite a bit on Minecraft, for example, and I'm quite pleased with it.</p>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Config file - Atreus QMK with replicaJunction layout</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef CONFIG_H</span>
+<span class="ot">#define CONFIG_H</span>
+
+<span class="ot">#include &quot;config_common.h&quot;</span>
+
+<span class="co">/* USB Device descriptor parameter */</span>
+
+<span class="ot">#define VENDOR_ID       0xFEED</span>
+<span class="ot">#define PRODUCT_ID      0x6060</span>
+<span class="ot">#define DEVICE_VER      0x0001</span>
+<span class="ot">#define MANUFACTURER    Technomancy</span>
+<span class="ot">#define PRODUCT         Atreus</span>
+<span class="ot">#define DESCRIPTION     q.m.k. keyboard firmware for Atreus</span>
+
+<span class="co">/* key matrix size */</span>
+<span class="ot">#define MATRIX_ROWS 4</span>
+<span class="ot">#define MATRIX_COLS 11</span>
+
+<span class="co">// Change this to how you wired your keyboard</span>
+<span class="co">// COLS: Left to right, ROWS: Top to bottom</span>
+<span class="ot">#if defined(ATREUS_ASTAR)</span>
+<span class="ot">#   define MATRIX_ROW_PINS { D0, D1, D3, D2 }</span>
+<span class="ot">#   define MATRIX_COL_PINS { D7, C6, B5, B4, E6, D4, B6, F6, F7, D6, B7 }</span>
+<span class="ot">#   define UNUSED_PINS</span>
+<span class="ot">#elif defined(ATREUS_TEENSY2)</span>
+<span class="ot">#   define MATRIX_ROW_PINS { D0, D1, D2, D3 }</span>
+<span class="ot">#   define MATRIX_COL_PINS { F6, F5, F4, B7, B6, B5, B4, B3, B2, B1, B0 }</span>
+<span class="ot">#   define UNUSED_PINS</span>
+<span class="ot">#endif</span>
+
+<span class="co">/* COL2ROW or ROW2COL */</span>
+<span class="ot">#define DIODE_DIRECTION COL2ROW</span>
+
+<span class="co">/* define if matrix has ghost */</span>
+<span class="co">//#define MATRIX_HAS_GHOST</span>
+
+<span class="co">/* number of backlight levels */</span>
+<span class="co">//#define BACKLIGHT_LEVELS 3</span>
+
+<span class="co">/* Set 0 if debouncing isn&#39;t needed */</span>
+<span class="co">// Default: 5</span>
+<span class="ot">#define DEBOUNCING_DELAY 6</span>
+
+<span class="co">// I don&#39;t have any locking keys, so I don&#39;t need these features</span>
+
+<span class="co">/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */</span>
+<span class="co">//#define LOCKING_SUPPORT_ENABLE</span>
+<span class="co">/* Locking resynchronize hack */</span>
+<span class="co">//#define LOCKING_RESYNC_ENABLE</span>
+
+<span class="co">/* key combination for command */</span>
+<span class="ot">#define IS_COMMAND() ( \</span>
+    keyboard_report-&gt;mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+<span class="co">/* Prevent modifiers from sticking when switching layers */</span>
+<span class="ot">#define PREVENT_STUCK_MODIFIERS</span>
+
+<span class="co">/*</span>
+<span class="co"> * Feature disable options</span>
+<span class="co"> *  These options are also useful to firmware size reduction.</span>
+<span class="co"> */</span>
+
+<span class="co">/* disable debug print */</span>
+<span class="co">//#define NO_DEBUG</span>
+
+<span class="co">/* disable print */</span>
+<span class="co">//#define NO_PRINT</span>
+
+<span class="co">/* disable action features */</span>
+<span class="co">//#define NO_ACTION_LAYER</span>
+<span class="co">//#define NO_ACTION_TAPPING</span>
+<span class="co">//#define NO_ACTION_ONESHOT</span>
+<span class="co">//#define NO_ACTION_MACRO</span>
+<span class="co">//#define NO_ACTION_FUNCTION</span>
+
+<span class="ot">#endif</span></code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Config file - Atreus QMK with replicaJunction layout</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef CONFIG_H</span>
+<span class="ot">#define CONFIG_H</span>
+
+<span class="ot">#include &quot;config_common.h&quot;</span>
+
+<span class="co">/* USB Device descriptor parameter */</span>
+
+<span class="ot">#define VENDOR_ID       0xFEED</span>
+<span class="ot">#define PRODUCT_ID      0x6060</span>
+<span class="ot">#define DEVICE_VER      0x0001</span>
+<span class="ot">#define MANUFACTURER    Technomancy</span>
+<span class="ot">#define PRODUCT         Atreus</span>
+<span class="ot">#define DESCRIPTION     q.m.k. keyboard firmware for Atreus</span>
+
+<span class="co">/* key matrix size */</span>
+<span class="ot">#define MATRIX_ROWS 4</span>
+<span class="ot">#define MATRIX_COLS 11</span>
+
+<span class="co">// Change this to how you wired your keyboard</span>
+<span class="co">// COLS: Left to right, ROWS: Top to bottom</span>
+<span class="ot">#if defined(ATREUS_ASTAR)</span>
+<span class="ot">#   define MATRIX_ROW_PINS { D0, D1, D3, D2 }</span>
+<span class="ot">#   define MATRIX_COL_PINS { D7, C6, B5, B4, E6, D4, B6, F6, F7, D6, B7 }</span>
+<span class="ot">#   define UNUSED_PINS</span>
+<span class="ot">#elif defined(ATREUS_TEENSY2)</span>
+<span class="ot">#   define MATRIX_ROW_PINS { D0, D1, D2, D3 }</span>
+<span class="ot">#   define MATRIX_COL_PINS { F6, F5, F4, B7, B6, B5, B4, B3, B2, B1, B0 }</span>
+<span class="ot">#   define UNUSED_PINS</span>
+<span class="ot">#endif</span>
+
+<span class="co">/* COL2ROW or ROW2COL */</span>
+<span class="ot">#define DIODE_DIRECTION COL2ROW</span>
+
+<span class="co">/* define if matrix has ghost */</span>
+<span class="co">//#define MATRIX_HAS_GHOST</span>
+
+<span class="co">/* number of backlight levels */</span>
+<span class="co">//#define BACKLIGHT_LEVELS 3</span>
+
+<span class="co">/* Set 0 if debouncing isn&#39;t needed */</span>
+<span class="co">// Default: 5</span>
+<span class="ot">#define DEBOUNCING_DELAY 6</span>
+
+<span class="co">// I don&#39;t have any locking keys, so I don&#39;t need these features</span>
+
+<span class="co">/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */</span>
+<span class="co">//#define LOCKING_SUPPORT_ENABLE</span>
+<span class="co">/* Locking resynchronize hack */</span>
+<span class="co">//#define LOCKING_RESYNC_ENABLE</span>
+
+<span class="co">/* key combination for command */</span>
+<span class="ot">#define IS_COMMAND() ( \</span>
+    keyboard_report-&gt;mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+<span class="co">/* Prevent modifiers from sticking when switching layers */</span>
+<span class="ot">#define PREVENT_STUCK_MODIFIERS</span>
+
+<span class="co">/*</span>
+<span class="co"> * Feature disable options</span>
+<span class="co"> *  These options are also useful to firmware size reduction.</span>
+<span class="co"> */</span>
+
+<span class="co">/* disable debug print */</span>
+<span class="co">//#define NO_DEBUG</span>
+
+<span class="co">/* disable print */</span>
+<span class="co">//#define NO_PRINT</span>
+
+<span class="co">/* disable action features */</span>
+<span class="co">//#define NO_ACTION_LAYER</span>
+<span class="co">//#define NO_ACTION_TAPPING</span>
+<span class="co">//#define NO_ACTION_ONESHOT</span>
+<span class="co">//#define NO_ACTION_MACRO</span>
+<span class="co">//#define NO_ACTION_FUNCTION</span>
+
+<span class="ot">#endif</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
