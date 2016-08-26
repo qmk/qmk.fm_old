@@ -83,6 +83,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         </ul></li>
         <li><a href="#getting-started">Getting started</a><ul>
         <li><a href="#build-environment-setup">Build Environment Setup</a><ul>
+        <li><a href="#windows-10">Windows 10</a></li>
         <li><a href="#windows-vista-and-later">Windows (Vista and later)</a></li>
         <li><a href="#mac">Mac</a></li>
         <li><a href="#linux">Linux</a></li>
@@ -166,7 +167,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="/keyboards/planck/">Planck</a><br /></li>
 <li><a href="/keyboards/preonic/">Preonic</a><br /></li>
 <li><a href="/keyboards/atomic/">Atomic</a><br /></li>
-<li><a href="/keyboards/ergodox/ez/">ErgoDox EZ</a><br /></li>
+<li><a href="/keyboards/ergodox/">ErgoDox EZ</a><br /></li>
 <li><a href="/keyboards/clueboard/">Clueboard</a><br /></li>
 <li><a href="/keyboards/cluepad/">Cluepad</a></li>
 </ul>
@@ -187,6 +188,23 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h1 id="getting-started"><a href="#getting-started">Getting started</a></h1>
 <p>Before you are able to compile, you'll need to install an environment for AVR development. You'll find the instructions for any OS below. If you find another/better way to set things up from scratch, please consider <a href="https://github.com/jackhumbert/qmk_firmware/pulls">making a pull request</a> with your changes!</p>
 <h2 id="build-environment-setup"><a href="#build-environment-setup">Build Environment Setup</a></h2>
+<h3 id="windows-10"><a href="#windows-10">Windows 10</a></h3>
+<p>It's still recommended to use the method for Vista and later below. The reason for this is that the Windows 10 Subsystem for Linux lacks <a href="https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13355724-unable-to-access-usb-devices-from-bash">USB support</a>, so it's not possible to flash the firmware to the keyboard. Please add your vote to the link!</p>
+<p>That said, it's still possible to use it for compilation. And recommended, if you need to compile much, since it's much faster than at least Cygwin (which is also supported, but currently lacking documentation). I haven't tried the method below, so I'm unable to tell.</p>
+<p>Here are the steps</p>
+<ol>
+<li>Install the Windows 10 subsystem for Linux, following <a href="http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">these instructions</a>.<br /></li>
+<li>If you have previously cloned the repository using the normal Git bash, you will need to clean up the line endings. If you have cloned it after 20th of August 2016, you are likely fine. To clean up the line endings do the following<br /></li>
+<li>Make sure that you have no changes you haven't committed by running <code>git status</code>, if you do commit them first<br /></li>
+<li>From within the Git bash run <code>git rm --cached -r .</code><br /></li>
+<li>Followed by <code>git reset --hard</code><br /></li>
+<li>Start the &quot;Bash On Ubuntu On Windows&quot; from the start menu<br /></li>
+<li>With the bash open, navigate to your Git checkout. The harddisk can be accessed from <code>/mnt</code> for example <code>/mnt/c</code> for the <code>c:\</code> drive.<br /></li>
+<li>Run <code>sudo util/install_dependencies.sh</code>.<br /></li>
+<li>After a while the installation will finish, and you are good to go</li>
+</ol>
+<p><strong>Note</strong> From time to time, the dependencies might change, so just run <code>install_dependencies.sh</code> again if things are not working.</p>
+<p><strong>Warning:</strong> If you edit Makefiles or shell scripts, make sure you are using an editor that saves the files with Unix line endings. Otherwise the compilation might not work.</p>
 <h3 id="windows-vista-and-later"><a href="#windows-vista-and-later">Windows (Vista and later)</a></h3>
 <ol>
 <li>If you have ever installed WinAVR, uninstall it.<br /></li>
@@ -210,10 +228,27 @@ brew install dfu-programmer</code></pre>
 <li>Install [DFU-Programmer][dfu-prog].</li>
 </ol>
 <h3 id="linux"><a href="#linux">Linux</a></h3>
-<p>Install AVR GCC, AVR libc, and dfu-progammer with your favorite package manager.</p>
+<p>To ensure you are always up to date, you can just run <code>sudo utils/install_dependencies.sh</code>. That should always install all the dependencies needed.</p>
+<p>You can also install things manually, but this documentation might not be always up to date with all requirements.</p>
+<p>The current requirements are the following, but not all might be needed depending on what you do. Also note that some systems might not have all the dependencies available as packages, or they might be named differently.</p>
+<pre><code>build-essential
+gcc
+unzip
+wget
+zip
+gcc-avr
+binutils-avr
+avr-libc
+dfu-programmer
+dfu-util
+gcc-arm-none-eabi
+binutils-arm-none-eabi
+libnewlib-arm-none-eabi
+git</code></pre>
+<p>Install the dependencies with your favorite package manager.</p>
 <p>Debian/Ubuntu example:</p>
 <pre><code>sudo apt-get update
-sudo apt-get install gcc-avr avr-libc dfu-programmer</code></pre>
+sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-programmer dfu-util gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi</code></pre>
 <h3 id="docker"><a href="#docker">Docker</a></h3>
 <p>If this is a bit complex for you, Docker might be the turn-key solution you need. After installing <a href="https://www.docker.com/products/docker">Docker</a>, run the following command at the root of the QMK folder to build a keyboard/keymap:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># You&#39;ll run this every time you want to build a keymap</span>
