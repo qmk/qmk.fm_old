@@ -140,8 +140,8 @@
 <li>The keyboard should start working. If it doesn't, reconnect the cable.</li>
 </ol>
 <h2 id="building-the-firmware"><a href="#building-the-firmware">Building the firmware</a></h2>
-<p>To build firmware binary hex file with a certain keymap just run <code>make</code> with the <code>keymap</code> option like:</p>
-<pre><code>$ make keymap=[custom|poker|poker_set|poker_bit|plain|hasu|spacefn|hhkb|&lt;name&gt;]</code></pre>
+<p>To build the firmware binary hex file with a keymap just do <code>make</code> with a keymap like this:</p>
+<pre><code>$ make [custom|poker|poker_set|poker_bit|plain|hasu|spacefn|hhkb|&lt;name&gt;]</code></pre>
 <p>For a more detailed explanation of the build process and the environment setup, see the <a href="/readme.md#getting-started">&quot;Getting Started&quot; section</a>.</p>
 <h2 id="list-of-included-keymaps"><a href="#list-of-included-keymaps">List of included Keymaps</a></h2>
 <p>Several versions of keymaps are available in advance but you are recommended to define your favorite layout yourself.<br />To define your own keymap, copy the <a href="/quantum/template/keymaps/default">default keymap template</a> directory into the <code>keymaps</code> directory and start modifying the <code>keymap.c</code> file. Some options might require you to change the <code>config.h</code> or <code>Makefile</code> as well, refer to the main documentation for more information on those.<br />If you want to later merge your finalised keymap into this repository to make it available for everyone, make sure to also modify the <code>readme.md</code> in your keymap directory to show a visual version of your keymap.</p>

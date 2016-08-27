@@ -184,7 +184,7 @@
 <p>Linux users need to modify udev rules as described on the Teensy Linux page.<br />Some distributions provide a binary, maybe called <code>teensy-loader-cli</code>).</p>
 <p>To flash the firmware:</p>
 <ul>
-<li><p>Build the firmware with <code>make keymap=keymapname</code>, for example <code>make     keymap=default</code></p></li>
+<li>Build the firmware with <code>make keymapname</code>, for example <code>make default</code><br /></li>
 <li><p>This will result in a hex file called <code>ergodox_ez_keymapname.hex</code>, e.g.<br /> <code>ergodox_ez_default.hex</code></p></li>
 <li><p>Start the teensy loader.</p></li>
 <li><p>Load the .hex file into it.</p></li>
@@ -194,14 +194,14 @@
 <h2 id="ergodox-infinity"><a href="#ergodox-infinity">ErgoDox Infinity</a></h2>
 <p>The Infinity is two completely independent keyboards, and needs to be flashed<br />for the left and right halves seperately. To flash them:</p>
 <ul>
-<li><p>Build the firmware with <code>make keymap=keymapname subproject=infinity</code></p></li>
+<li><p>Build the firmware with <code>make infinity-keymapname</code></p></li>
 <li><p>Plug in the left hand keyboard only.</p></li>
 <li><p>Press the program button (back of keyboard, above thumb pad).</p></li>
-<li><p>Install the firmware with <code>sudo make dfu-util keymap=keymapname subproject=infinity</code></p></li>
-<li><p>Build left hand firmware with <code>make keymap=keymapname subproject=infinity MASTER=right</code></p></li>
+<li><p>Install the firmware with <code>sudo make infinity-keymapname-dfu-util</code></p></li>
+<li><p>Build left hand firmware with <code>make infinity-keymapname MASTER=right</code></p></li>
 <li><p>Plug in the right hand keyboard only.</p></li>
 <li><p>Press the program button (back of keyboard, above thumb pad).</p></li>
-<li><p>Install the firmware with <code>sudo make dfu-util keymap=keymapname subproject=infinity MASTER=right</code></p></li>
+<li><p>Install the firmware with <code>sudo make infinity-keymapname-dfu-util MASTER=right</code></p></li>
 </ul>
 <p>More information on the Infinity firmware is available in the <a href="https://github.com/fredizzimo/infinity_ergodox/blob/master/README.md">TMK/chibios for<br />Input Club Infinity Ergodox</a></p>
 <h3 id="infinity-mastertwo-halves"><a href="#infinity-mastertwo-halves">Infinity Master/Two Halves</a></h3>
