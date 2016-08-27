@@ -1,0 +1,109 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/infinity60">infinity60</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#infinity-60-keyboard-firmware">Infinity 60% keyboard firmware</a><ul>
+        <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
+        <li><a href="#keymaps">Keymaps</a></li>
+        <li><a href="#compiling">Compiling</a></li>
+        <li><a href="#flashing">Flashing</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+          <ul>
+          <li><a href="keymaps/default/">default</a></li>
+          <li><a href="keymaps/depariel/">depariel</a></li>
+          <li><a href="keymaps/hasu/">hasu</a></li>
+          </ul>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="infinity-60-keyboard-firmware"><a href="#infinity-60-keyboard-firmware">Infinity 60% keyboard firmware</a></h1>
+<h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
+<p>For the full Quantum feature list, see <a href="/">the parent readme</a>.</p>
+<h2 id="keymaps"><a href="#keymaps">Keymaps</a></h2>
+<p>Several versions of keymaps are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create a folder with the name of your keymap in the keymaps folder, and see keymap documentation (you can find in top readme.md) and existant keymap files.</p>
+<p>Keymaps follow the format <strong><strong>keymap.c</strong></strong> and are stored in folders in the <code>keymaps</code> folder, eg <code>keymaps/my_keymap/</code></p>
+<h2 id="compiling"><a href="#compiling">Compiling</a></h2>
+<p>Download or clone the whole firmware and navigate to the keyboards/infinity60 folder. Once your dev env is setup, you'll be able to use the <code>make</code> command to both compile your keymap and flash it to your keyboard.</p>
+<p>To just compile, which generates the output files in the <code>.build</code> folder at the root of the repository, run <code>make keymap</code>, where keymap is the name of the keymap that you want to compile.</p>
+<h2 id="flashing"><a href="#flashing">Flashing</a></h2>
+<p>To flash the firmware to the keyboard</p>
+<ol>
+<li>First press the flash button on the bottom of the keyboard. If you already have a flah button mapped in a keyboard layout running on the keyboard, you can also use that.<br /></li>
+<li>Then run <code>make keymap-dfu-util</code>, where keymap is the name of the keymap you want to flash. On Linux based operating systems you might need to run the comamnd as root, for example <code>sudo make keymap-dfu-util</code> on Ubuntu.</li>
+</ol>
+<p><strong>Tip</strong> <code>make keymap-dfu-util</code> will also compile the keymap if needed, so you can skip the compilation step if you want to.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

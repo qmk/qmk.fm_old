@@ -148,6 +148,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#keyboardskeyboardkeyboard.c"><code>/keyboards/&lt;keyboard&gt;/&lt;keyboard&gt;.c</code></a></li>
         <li><a href="#keyboardskeyboardkeyboard.h"><code>/keyboards/&lt;keyboard&gt;/&lt;keyboard&gt;.h</code></a></li>
         </ul></li>
+        <li><a href="#unit-testing">Unit Testing</a><ul>
+        <li><a href="#google-test-and-google-mock">Google Test and Google Mock</a></li>
+        <li><a href="#use-of-c">Use of C++</a></li>
+        <li><a href="#adding-tests-for-new-or-existing-features">Adding tests for new or existing features</a></li>
+        <li><a href="#running-the-tests">Running the tests</a></li>
+        <li><a href="#debugging-the-tests">Debugging the tests</a></li>
+        <li><a href="#full-integration-tests">Full Integration tests</a></li>
+        </ul></li>
         </ul>
 
         </div>
@@ -212,6 +220,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <ol>
 <li>If you have ever installed WinAVR, uninstall it.<br /></li>
 <li>Install <a href="https://infernoembedded.com/sites/default/files/project/MHV_AVR_Tools_20131101.exe">MHV AVR Tools</a>. Disable smatch, but <strong>be sure to leave the option to add the tools to the PATH checked</strong>.<br /></li>
+<li>If you are going to flash Infinity based keyboards you will need to install dfu-util, refer to the instructions by <a href="https://github.com/kiibohd/controller/wiki/Loading-DFU-Firmware">Input Club</a>.<br /></li>
 <li>Install <a href="https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download">MinGW</a>. During installation, uncheck the option to install a graphical user interface. <strong>DO NOT change the default installation folder.</strong> The scripts depend on the default location.<br /></li>
 <li>Clone this repository. <a href="https://github.com/jackhumbert/qmk_firmware/archive/master.zip">This link will download it as a zip file, which you'll need to extract.</a> Open the extracted folder in Windows Explorer.<br /></li>
 <li>Double-click on the 1-setup-path-win batch script to run it. You'll need to accept a User Account Control prompt. Press the spacebar to dismiss the success message in the command prompt that pops up.<br /></li>
@@ -230,6 +239,8 @@ brew install dfu-programmer</code></pre>
 <li>Install the Command Line Tools from <code>Xcode-&gt;Preferences-&gt;Downloads</code>.<br /></li>
 <li>Install [DFU-Programmer][dfu-prog].</li>
 </ol>
+<p>If you are going to flash Infinity based keyboards you will also need dfu-util</p>
+<pre><code>brew install dfu-util</code></pre>
 <h3 id="linux"><a href="#linux">Linux</a></h3>
 <p>To ensure you are always up to date, you can just run <code>sudo utils/install_dependencies.sh</code>. That should always install all the dependencies needed.</p>
 <p>You can also install things manually, but this documentation might not be always up to date with all requirements.</p>
@@ -972,6 +983,44 @@ OPT_DEFS += -DBOOTLOADER_SIZE=512</code></pre>
     { k10, KC_NO, k11 }, \
 }</code></pre>
 <p>Each of the <code>kxx</code> variables needs to be unique, and usually follows the format <code>k&lt;row&gt;&lt;col&gt;</code>. You can place <code>KC_NO</code> where your dead keys are in your matrix.</p>
+<h1 id="unit-testing"><a href="#unit-testing">Unit Testing</a></h1>
+<p>If you are new to unit testing, then you can find many good resources on internet. However most of it is scattered around in small pieces here and there, and there's also many different opinions, so I won't give any recommendations.</p>
+<p>Instead I recommend these two books, explaining two different styles of Unit Testing in detail.</p>
+<ul>
+<li>&quot;Test Driven Development: By Example: Kent Beck&quot;<br /></li>
+<li>&quot;Growing Object-Oriented Software, Guided By Tests: Steve Freeman, Nat Pryce&quot;</li>
+</ul>
+<p>If you prefer videos there are Uncle Bob's <a href="https://cleancoders.com/">Clean Coders Videos</a>, which unfortunately cost quite a bit, especially if you want to watch many of them. But James Shore has a free <a href="http://www.jamesshore.com/Blog/Lets-Play">Let's Play</a> video series.</p>
+<h2 id="google-test-and-google-mock"><a href="#google-test-and-google-mock">Google Test and Google Mock</a></h2>
+<p>It's possible to Unit Test your code using <a href="https://github.com/google/googletest">Google Test</a>. The Google Test framework also includes another component for writing testing mocks and stubs, called &quot;Google Mock&quot;. For information how to write the actual tests, please refer to the documentation on that site.</p>
+<h2 id="use-of-c"><a href="#use-of-c">Use of C++</a></h2>
+<p>Note that Google Test and therefore any test has to be written in C++, even if the rest of the QMK codebases is written in C. This should hopefully not be a problem even if you don't know any C++, since there's quite clear documentation and examples of the required C++ features, and you can write the rest of the test code almost as you would write normal C. Note that some compiler errors which you might get can look quite scary, but just read carefully what it says, and you should be ok.</p>
+<p>One thing to remember, is that you have to append <code>extern &quot;C&quot;</code> around all of your C file includes.</p>
+<h2 id="adding-tests-for-new-or-existing-features"><a href="#adding-tests-for-new-or-existing-features">Adding tests for new or existing features</a></h2>
+<p>If you want to unit test some feature, then take a look at the existing serial_link tests, in the <code>quantum/serial_link/tests folder</code>, and follow the steps below to create a similar structure.</p>
+<ol>
+<li>If it doesn't already exist, add a test subfolder to the folder containing the feature.<br /></li>
+<li>Create a <code>testlist.mk</code> and a <code>rules.mk</code> file in that folder.<br /></li>
+<li>Include those files from the root folder <code>testlist.mk</code>and <code>build_test.mk</code> respectively.<br /></li>
+<li>Add a new name for your testgroup to the <code>testlist.mk</code> file. Each group defined there will be a separate executable. And that's how you can support mocking out different parts. Note that it's worth adding some common prefix, just like it's done for the serial_link tests. The reason for that is that the make command allows substring filtering, so this way you can easily run a subset of the tests.<br /></li>
+<li>Define the source files and required options in the <code>rules.mk</code> file.<br /></li>
+</ol>
+<ul>
+<li><code>_SRC</code> for source files<br /></li>
+<li><code>_DEFS</code> for additional defines<br /></li>
+<li><code>_INC</code> for additional include folders<br /></li>
+</ul>
+<ol>
+<li>Write the tests in a new cpp file inside the test folder you created. That file has to be one of the files included from the <code>rules.mk</code> file.</li>
+</ol>
+<p>Note how there's several different tests, each mocking out a separate part. Also note that each of them only compiles the very minimum that's needed for the tests. It's recommend that you try to do the same. For a relevant video check out <a href="https://www.youtube.com/watch?v=Wmy6g-aVgZI">Matt Hargett &quot;Advanced Unit Testing in C &amp; C++</a></p>
+<h2 id="running-the-tests"><a href="#running-the-tests">Running the tests</a></h2>
+<p>To run all the tests in the codebase, type <code>make test</code>. You can also run test matching a substring by typing <code>make test-matchingsubstring</code> Note that the tests are always compiled with the native compiler of your platform, so they are also run like any other program on your computer.</p>
+<h2 id="debugging-the-tests"><a href="#debugging-the-tests">Debugging the tests</a></h2>
+<p>If there are problems with the tests, you can find the executable in the <code>./build/test</code> folder. You should be able to run those with GDB or a similar debugger.</p>
+<h2 id="full-integration-tests"><a href="#full-integration-tests">Full Integration tests</a></h2>
+<p>It's not yet possible to do a full integration test, where you would compile the whole firmware and define a keymap that you are going to test. However there are plans for doing that, because writing tests that way would probably be easier, at least for people that are not used to unit testing.</p>
+<p>In that model you would emulate the input, and expect a certain output from the emulated keyboard.</p>
             </div>
     </div>
   </div>
