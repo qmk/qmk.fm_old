@@ -20,7 +20,6 @@
 * [gabriel](keymaps/gabriel/)
 * [jacob](keymaps/jacob/)
 * [jeebak](keymaps/jeebak/)
-* [jhenahan](keymaps/jhenahan/)
 * [joe](keymaps/joe/)
 * [kyle](keymaps/kyle/)
 * [leo](keymaps/leo/)
