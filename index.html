@@ -122,6 +122,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></li>
         <li><a href="#additional-language-support">Additional language support</a></li>
         <li><a href="#unicode-support">Unicode support</a></li>
+        <li><a href="#backlight-breathing">Backlight Breathing</a></li>
         <li><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></li>
         </ul></li>
         <li><a href="#custom-quantum-functions">Custom Quantum functions</a><ul>
@@ -572,7 +573,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 <span class="co">//In Layer declaration, add tap dance item in place of a key code</span>
-TD(TD_ESC_CAPS) </code></pre>
+TD(TD_ESC_CAPS)</code></pre>
 <p>Here's a more complex example involving custom actions:</p>
 <pre class="sourceCode c"><code class="sourceCode c"><span class="kw">enum</span> {
  CT_SE = <span class="dv">0</span>,
@@ -829,6 +830,59 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 <p>In <code>quantum/keymap_extras/</code>, you'll see various language files - these work the same way as the alternative layout ones do. Most are defined by their two letter country/language code followed by an underscore and a 4-letter abbreviation of its name. <code>FR_UGRV</code> which will result in a <code>ù</code> when using a software-implemented AZERTY layout. It's currently difficult to send such characters in just the firmware (but it's being worked on - see Unicode support).</p>
 <h2 id="unicode-support"><a href="#unicode-support">Unicode support</a></h2>
 <p>You can currently send 4 hex digits with your OS-specific modifier key (RALT for OSX with the &quot;Unicode Hex Input&quot; layout) - this is currently limited to supporting one OS at a time, and requires a recompile for switching. 8 digit hex codes are being worked on. The keycode function is <code>UC(n)</code>, where <em>n</em> is a 4 digit hexidecimal. Enable from the Makefile.</p>
+<h2 id="backlight-breathing"><a href="#backlight-breathing">Backlight Breathing</a></h2>
+<p>In order to enable backlight breathing, the following line must be added to your config.h file.</p>
+<pre><code>#define BACKLIGHT_BREATHING</code></pre>
+<p>The following function calls are used to control the breathing effect.</p>
+<ul>
+<li><code>breathing_enable()</code> - Enable the free-running breathing effect.<br /></li>
+<li><code>breathing_disable()</code> - Disable the free-running breathing effect immediately.<br /></li>
+<li><code>breathing_self_disable()</code> - Disable the free-running breathing effect after the current effect ends.<br /></li>
+<li><code>breathing_toggle()</code> - Toggle the free-running breathing effect.<br /></li>
+<li><code>breathing_defaults()</code> - Reset the speed and brightness settings of the breathing effect.</li>
+</ul>
+<p>The following function calls are used to control the maximum brightness of the breathing effect.</p>
+<ul>
+<li><code>breathing_intensity_set(value)</code> - Set the brightness of the breathing effect when it is at its max value.<br /></li>
+<li><code>breathing_intensity_default()</code> - Reset the brightness of the breathing effect to the default value based on the current backlight intensity.</li>
+</ul>
+<p>The following function calls are used to control the cycling speed of the breathing effect.</p>
+<ul>
+<li><code>breathing_speed_set(value)</code> - Set the speed of the breathing effect - how fast it cycles.<br /></li>
+<li><code>breathing_speed_inc(value)</code> - Increase the speed of the breathing effect by a fixed value.<br /></li>
+<li><code>breathing_speed_dec(value)</code> - Decrease the speed of the breathing effect by a fixed value.<br /></li>
+<li><code>breathing_speed_default()</code> - Reset the speed of the breathing effect to the default value.</li>
+</ul>
+<p>The following example shows how to enable the backlight breathing effect when the FUNCTION layer macro button is pressed:</p>
+<pre><code>case MACRO_FUNCTION:
+    if (record-&gt;event.pressed)
+    {
+        breathing_speed_set(3);
+        breathing_enable();
+        layer_on(LAYER_FUNCTION);
+    }
+    else
+    {
+        breathing_speed_set(1);
+        breathing_self_disable();
+        layer_off(LAYER_FUNCTION);
+    }
+    break;</code></pre>
+<p>The following example shows how to pulse the backlight on-off-on when the RAISED layer macro button is pressed:</p>
+<pre><code>case MACRO_RAISED:
+  if (record-&gt;event.pressed)
+  {
+    layer_on(LAYER_RAISED);
+    breathing_speed_set(2);
+    breathing_pulse();
+    update_tri_layer(LAYER_LOWER, LAYER_RAISED, LAYER_ADJUST);
+  }
+  else
+  {
+    layer_off(LAYER_RAISED);
+    update_tri_layer(LAYER_LOWER, LAYER_RAISED, LAYER_ADJUST);
+  }
+  break;</code></pre>
 <h2 id="other-firmware-shortcut-keycodes"><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></h2>
 <ul>
 <li><code>RESET</code> - puts the MCU in DFU mode for flashing new firmware (with <code>make dfu</code>)<br /></li>
@@ -956,7 +1010,7 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <p>The <code>MATRIX_ROW_PINS</code> and <code>MATRIX_COL_PINS</code> are the pins your MCU uses on each row/column. Your schematic (if you have one) will have this information on it, and the values will vary depending on your setup. This is one of the most important things to double-check in getting your keyboard setup correctly.</p>
 <p>For the <code>DIODE_DIRECTION</code>, most hand-wiring guides will instruct you to wire the diodes in the <code>COL2ROW</code> position, but it's possible that they are in the other - people coming from EasyAVR often use <code>ROW2COL</code>. Nothing will function if this is incorrect.</p>
 <p><code>BACKLIGHT_PIN</code> is the pin that your PWM-controlled backlight (if one exists) is hooked-up to. Currently only B5, B6, and B7 are supported.</p>
-<p><code>BACKLIGHT_BREATHING</code> is a fancier backlight feature, and uses one of the timers.</p>
+<p><code>BACKLIGHT_BREATHING</code> is a fancier backlight feature that adds breathing/pulsing/fading effects to the backlight. It uses the same timer as the normal backlight. These breathing effects must be called by code in your keymap.</p>
 <p><code>BACKLIGHT_LEVELS</code> is how many levels exist for your backlight - max is 15, and they are computed automatically from this number.</p>
 <h2 id="keyboardskeyboardmakefile"><a href="#keyboardskeyboardmakefile"><code>/keyboards/&lt;keyboard&gt;/Makefile</code></a></h2>
 <p>The values at the top likely won't need to be changed, since most boards use the <code>atmega32u4</code> chip. The <code>BOOTLOADER_SIZE</code> will need to be adjusted based on your MCU type. It's defaulted to the Teensy, since that's the most common controller. Below is quoted from the <code>Makefile</code>.</p>
