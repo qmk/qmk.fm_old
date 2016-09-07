@@ -1,0 +1,111 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/norwegian_programmer_osx_pc/">norwegian_programmer_osx_pc</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/norwegian_programmer_osx_pc/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_norwegian_programmer_osx_pc.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#norwegian-setup-with-osxpc-toggle">Norwegian setup with osx/pc toggle</a><ul>
+        <li><a href="#motivation">Motivation</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#pcmac-toggle">PC/Mac toggle</a></li>
+        <li><a href="#layers">Layers</a></li>
+        <li><a href="#tap-shift">Tap-shift</a></li>
+        <li><a href="#comma-dot-and-escape">Comma dot and escape</a></li>
+        <li><a href="#numpad-symbols">Numpad symbols</a></li>
+        <li><a href="#layout">Layout</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="norwegian-setup-with-osxpc-toggle"><a href="#norwegian-setup-with-osxpc-toggle">Norwegian setup with osx/pc toggle</a></h1>
+<h2 id="motivation"><a href="#motivation">Motivation</a></h2>
+<p>I wanted a Norwegian setup that worked in a similar way on both my Mac and PC. I also wanted the keyboard to translate from a standard Norwegian keyboard OS setup.</p>
+<h2 id="overview"><a href="#overview">Overview</a></h2>
+<p>The setup is created to be programmer friendly.</p>
+<ul>
+<li>Most of the symbols used in code can be activated without using layers or shift key.<br /></li>
+<li>You can reach the IDE/OS shortcut activators(Ctrl, Win/Cmd, Alt, Shift) with the thumb or the wrist.<br /></li>
+<li>Navigation is prioritized, arrows below the home row.</li>
+</ul>
+<h2 id="pcmac-toggle"><a href="#pcmac-toggle">PC/Mac toggle</a></h2>
+<p>The default setup is for Norwegian keyboard setting(on a PC(Windows or Linux) or Mac. Use the Mac/PC toggle button to switch between OSX and PC setup. The settings will be reverted to PC setup each time you restart/connect the keyboard.</p>
+<h2 id="layers"><a href="#layers">Layers</a></h2>
+<p>Since symbols are prioritized in this setup, numbers and function keys are on a new layer. The easiest way to use the layer switch(and also the alt key), is to push your hand right below the little finger, on the key. You will then have all your fingers free to type numbers or press function keys.</p>
+<h2 id="tap-shift"><a href="#tap-shift">Tap-shift</a></h2>
+<p>Tap for the next character to be shifted, hold down for regular shift.</p>
+<h2 id="comma-dot-and-escape"><a href="#comma-dot-and-escape">Comma dot and escape</a></h2>
+<p>Comma, dot and escape share buttons with modifier keys. Tap to access these keys, hold down to use the keys as modifier keys.</p>
+<h2 id="numpad-symbols"><a href="#numpad-symbols">Numpad symbols</a></h2>
+<p>+-/* are implemented with the numpad keycodes. The benefit is that they will work better with shortcuts in certain programs. For some reason, the default setting in the osx terminal is to not accept numpad characters for '/' and '-'. For a solution, see <a href="https://discussions.apple.com/thread/6613968?start=0&amp;tstart=0">https://discussions.apple.com/thread/6613968?start=0&amp;tstart=0</a>.<br />If you really need the norwegian symbols in a program, you can access them using the number toggle button.</p>
+<h2 id="layout"><a href="#layout">Layout</a></h2>
+<p><img src="keyboard-layout.png" alt="keyboard-layout" /></p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

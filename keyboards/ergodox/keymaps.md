@@ -34,6 +34,8 @@
 * [mpiechotka](keymaps/mpiechotka/)
 * [msc](keymaps/msc/)
 * [naps62](keymaps/naps62/)
+* [norwegian_programmer_osx_pc](keymaps/norwegian_programmer_osx_pc/)
+* [norwegian_programmer_osx_pc_colemak](keymaps/norwegian_programmer_osx_pc_colemak/)
 * [ordinary](keymaps/ordinary/)
 * [osx_de](keymaps/osx_de/)
 * [osx_de_adnw_koy](keymaps/osx_de_adnw_koy/)
