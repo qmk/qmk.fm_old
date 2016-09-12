@@ -1,6 +1,7 @@
 ### Keymaps
 
 * [ab](keymaps/ab/)
+* [absenth](keymaps/absenth/)
 * [adnw_k_o_y](keymaps/adnw_k_o_y/)
 * [alexjj](keymaps/alexjj/)
 * [algernon](keymaps/algernon/)
