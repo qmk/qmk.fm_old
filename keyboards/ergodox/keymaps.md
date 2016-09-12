@@ -6,6 +6,7 @@
 * [algernon](keymaps/algernon/)
 * [andrew_osx](keymaps/andrew_osx/)
 * [bepo](keymaps/bepo/)
+* [bepo_csa](keymaps/bepo_csa/)
 * [coderkun_neo2](keymaps/coderkun_neo2/)
 * [colemak](keymaps/colemak/)
 * [colemak_osx_pc_no](keymaps/colemak_osx_pc_no/)
