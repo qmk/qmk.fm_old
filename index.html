@@ -224,11 +224,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>If you are going to flash Infinity based keyboards you will need to install dfu-util, refer to the instructions by <a href="https://github.com/kiibohd/controller/wiki/Loading-DFU-Firmware">Input Club</a>.<br /></li>
 <li>Install <a href="https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download">MinGW</a>. During installation, uncheck the option to install a graphical user interface. <strong>DO NOT change the default installation folder.</strong> The scripts depend on the default location.<br /></li>
 <li>Clone this repository. <a href="https://github.com/jackhumbert/qmk_firmware/archive/master.zip">This link will download it as a zip file, which you'll need to extract.</a> Open the extracted folder in Windows Explorer.<br /></li>
-<li>Open the <code>\util</code> folder.<br /></li>
-<li>Double-click on the <code>1-setup-path-win</code> batch script to run it. You'll need to accept a User Account Control prompt. Press the spacebar to dismiss the success message in the command prompt that pops up.<br /></li>
-<li>Right-click on the <code>2-setup-environment-win</code> batch script, select &quot;Run as administrator&quot;, and accept the User Account Control prompt. This part may take a couple of minutes, and you'll need to approve a driver installation, but once it finishes, your environment is complete!</li>
+<li>Double-click on the 1-setup-path-win batch script to run it. You'll need to accept a User Account Control prompt. Press the spacebar to dismiss the success message in the command prompt that pops up.<br /></li>
+<li>Right-click on the 2-setup-environment-win batch script, select &quot;Run as administrator&quot;, and accept the User Account Control prompt. This part may take a couple of minutes, and you'll need to approve a driver installation, but once it finishes, your environment is complete!<br /></li>
+<li>Future build commands should be run from the MHV AVR Shell, which sets up an environment compatible with colorful build output. The standard Command Prompt will also work, but add <code>COLOR=false</code> to the end of all make commands when using it.</li>
 </ol>
-<p>If you have trouble and want to ask for help, it is useful to generate a <em>Win_Check_Output.txt</em> file by running <code>Win_Check.bat</code> in the <code>\util</code> folder.</p>
 <h3 id="mac"><a href="#mac">Mac</a></h3>
 <p>If you're using <a href="http://brew.sh/">homebrew,</a> you can use the following commands:</p>
 <pre><code>brew tap osx-cross/avr
@@ -386,19 +385,13 @@ sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-progra
 <p><code>EXTRAKEY_ENABLE</code></p>
 <p>This allows you to use the system and audio control key codes.</p>
 <p><code>CONSOLE_ENABLE</code></p>
-<p>This allows you to print messages that can be read using <a href="https://www.pjrc.com/teensy/hid_listen.html"><code>hid_listen</code></a>.</p>
-<p>By default, all debug (<em>dprint</em>) print (<em>print</em>, <em>xprintf</em>), and user print (<em>uprint</em>) messages will be enabled. This will eat up a significant portion of the flash and may make the keyboard .hex file too big to program.</p>
-<p>To disable debug messages (<em>dprint</em>) and reduce the .hex file size, include <code>#define NO_DEBUG</code> in your <code>config.h</code> file.</p>
-<p>To disable print messages (<em>print</em>, <em>xprintf</em>) and user print messages (<em>uprint</em>) and reduce the .hex file size, include <code>#define NO_PRINT</code> in your <code>config.h</code> file.</p>
-<p>To disable print messages (<em>print</em>, <em>xprintf</em>) and <strong>KEEP</strong> user print messages (<em>uprint</em>), include <code>#define USER_PRINT</code> in your <code>config.h</code> file.</p>
-<p>To see the text, open <code>hid_listen</code> and enjoy looking at your printed messages.</p>
-<p><strong>NOTE:</strong> Do not include <em>uprint</em> messages in anything other than your keymap code. It must not be used within the QMK system framework. Otherwise, you will bloat other people's .hex files.</p>
+<p>This allows you to print messages that can be read using <a href="https://www.pjrc.com/teensy/hid_listen.html"><code>hid_listen</code></a>. Add this to your <code>Makefile</code>, and set it to <code>yes</code>. Then put <code>println</code>, <code>printf</code>, etc. in your keymap or anywhere in the <code>qmk</code> source. Finally, open <code>hid_listen</code> and enjoy looking at your printed messages.</p>
 <p><code>COMMAND_ENABLE</code></p>
-<p>This enables magic commands, typically fired with the default magic key combo <code>LSHIFT+RSHIFT+KEY</code>. Magic commands include turning on debugging messages (<code>MAGIC+D</code>) or temporarily toggling NKRO (<code>MAGIC+N</code>).</p>
+<p>TODO</p>
 <p><code>SLEEP_LED_ENABLE</code></p>
 <p>Enables your LED to breath while your computer is sleeping. Timer1 is being used here. This feature is largely unused and untested, and needs updating/abstracting.</p>
 <p><code>NKRO_ENABLE</code></p>
-<p>This allows the keyboard to tell the host OS that up to 248 keys are held down at once (default without NKRO is 6). NKRO is off by default, even if <code>NKRO_ENABLE</code> is set. NKRO can be forced by adding <code>#define FORCE_NKRO</code> to your config.h or by binding <code>MAGIC_TOGGLE_NKRO</code> to a key and then hitting the key.</p>
+<p>This allows for n-key rollover (default is 6) to be enabled. It is off by default, but can be forced by adding <code>#define FORCE_NKRO</code> to your config.h.</p>
 <p><code>BACKLIGHT_ENABLE</code></p>
 <p>This enables your backlight on Timer1 and ports B5, B6, or B7 (for now). You can specify your port by putting this in your <code>config.h</code>:</p>
 <pre><code>#define BACKLIGHT_PIN B7</code></pre>

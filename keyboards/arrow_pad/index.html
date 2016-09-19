@@ -57,7 +57,6 @@
 
         <ul>
         <li><a href="#arrow_pad-keyboard-firmware">arrow_pad keyboard firmware</a><ul>
-        <li><a href="#keyboard-info">Keyboard Info</a></li>
         <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
         <li><a href="#building">Building</a><ul>
         <li><a href="#default">Default</a></li>
@@ -87,101 +86,6 @@
       </div>
             <div class="span8">
             <h1 id="arrow_pad-keyboard-firmware"><a href="#arrow_pad-keyboard-firmware">arrow_pad keyboard firmware</a></h1>
-<h2 id="keyboard-info"><a href="#keyboard-info">Keyboard Info</a></h2>
-<p>The ArrowPad is a wired conversion that can be made to any stand-alone keypad. It uses two main layers - a standard numpad, and a more advanced arrow cluster navigator.</p>
-<p>The first 24-key ArrowPad was handwired, but the PCB was wired as listed below.</p>
-<pre><code>&lt;Chip Ref Des&gt; pin &lt;Pin #&gt;
-&lt;Keycap Name&gt; (Silkscreen Name if different) - &lt;Switch Pin #&gt;
-
-
-Note:
-U2 pin 2 is the Num Lock LED and is  active low.
-
-U2 pin 1
-Clear (Num Lock) - 1
-Enter - 2
-Esc (ESC) - 2
-
-
-U2 pin 3
-- - 1
-
-U2 pin 4
-7 - 2
-8 - 2
-9 - 2
-
-U2 pin 5
-* - 2
-Delete (BACK SPACE) -  2
-
-U2 pin 6
-1 - 2
-0 - 2
-. - 2
-, - 2
-
-U2 pin 7
-4 - 2
-5 - 2
-6 - 2
-
-U2 pin 8
-Tab - 2
-= (/) - 2
-
-U2 pin 13
-Delete (BACK SPACE) -  1
-9 - 1
-6 - 1
-3 - 1
-. - 1
-
-U2 pin 14
-Tab - 1
-8 - 1
-5 - 1
-2 - 1
-0 - 1
-
-U2 pin 15
-Esc (ESC) - 1
-= (/) - 1
-/ (*) - 1
-7 - 1
-4 - 1
-1 - 1
-+ - 1
-
-U2 pin 16
-Enter - 1
-* (&lt;--) - 1
-, - 1
-
-U2 pin 17
-Fn (#NAME?) - 1
-- - 2
-Clear (Num Lock) - 2
-
-U2 pin 18
-Fn (#NAME?) - 2
-* (&lt;--) - 2
-+ - 2
-3 - 2
-2 - 2</code></pre>
-<p>More info can be found on <a href="https://geekhack.org/index.php?topic=73632.msg1802497#msg1802497">GeekHack</a></p>
-<p>The second ArrowPad was a conversion from a 21-key Genovation keypad. It used a 2 row x 11 column matrix.</p>
-<pre><code>#define KEYMAP( \
-    KM_ESC, KM_TAB, KM_BSL, KM_ARR, \
-    KM_NUM, KM_FSL, KM_AST, KM_MIN, \
-    KM___7, KM___8, KM___9, ___PLS, \
-    KM___4, KM___5, KM___6, KM_PLS, \
-    KM___1, KM___2, KM___3, ___ENT, \
-    KM___0, _____0, KM_DOT, KM_ENT  \
-) { \
-    { KM_ESC, KM_TAB, KM_BSL, KM_ARR, KM___7, KM___8, KM___9, KM_PLS, KM___1, KM___2, KM___3, }, \
-    { KM_NUM, KM_FSL, KM_AST, KM_MIN, KM___4, KM___5, KM___6, KM_ENT, KC_NO,  KM___0, KM_DOT, }, \
-}</code></pre>
 <h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
 <p>For the full Quantum feature list, see <a href="/readme.md">the parent readme.md</a>.</p>
 <h2 id="building"><a href="#building">Building</a></h2>
@@ -192,7 +96,7 @@ Fn (#NAME?) - 2
 <h3 id="other-keymaps"><a href="#other-keymaps">Other Keymaps</a></h3>
 <p>Several version of keymap are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create file named <code>&lt;name&gt;.c</code> in the keymaps folder, and see keymap document (you can find in top readme.md) and existent keymap files.</p>
 <p>To build the firmware binary hex file with a keymap just do <code>make</code> with a keymap like this:</p>
-<pre><code>$ make [default|pad_21|pad_24|&lt;name&gt;]</code></pre>
+<pre><code>$ make [default|jack|&lt;name&gt;]</code></pre>
 <p>Keymaps follow the format <strong><strong>\<name\>.c</strong></strong> and are stored in the <code>keymaps</code> folder.</p>
             </div>
     </div>
