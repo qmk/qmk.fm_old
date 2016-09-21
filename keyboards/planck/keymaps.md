@@ -18,6 +18,7 @@
 * [dzobert](keymaps/dzobert/)
 * [experimental](keymaps/experimental/)
 * [gabriel](keymaps/gabriel/)
+* [impossible](keymaps/impossible/)
 * [jacob](keymaps/jacob/)
 * [jeebak](keymaps/jeebak/)
 * [jhenahan](keymaps/jhenahan/)
