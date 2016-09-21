@@ -551,7 +551,7 @@ void matrix_scan_user(void) {
 <ul>
 <li><code>ACTION_TAP_DANCE_DOUBLE(kc1, kc2)</code>: Sends the <code>kc1</code> keycode when tapped once, <code>kc2</code> otherwise. When the key is held, the appropriate keycode is registered: <code>kc1</code> when pressed and held, <code>kc2</code> when tapped once, then pressed and held.<br /></li>
 <li><code>ACTION_TAP_DANCE_FN(fn)</code>: Calls the specified function - defined in the user keymap - with the final tap count of the tap dance action.<br /></li>
-<li><code>ACTION_TAP_DANCE_FN_ADVANCED(on_each_tap_fn, on_dance_finished_fn, on_reset_fn)</code>: Calls the first specified function - defined in the user keymap - on every tap, the second function on when the dance action finishes (like the previous option), and the last function when the tap dance action resets.</li>
+<li><code>ACTION_TAP_DANCE_FN_ADVANCED(on_each_tap_fn, on_dance_finished_fn, on_dance_reset_fn)</code>: Calls the first specified function - defined in the user keymap - on every tap, the second function on when the dance action finishes (like the previous option), and the last function when the tap dance action resets.</li>
 </ul>
 <p>The first option is enough for a lot of cases, that just want dual roles. For example, <code>ACTION_TAP_DANCE(KC_SPC, KC_ENT)</code> will result in <code>Space</code> being sent on single-tap, <code>Enter</code> otherwise.</p>
 <p>And that's the bulk of it!</p>
