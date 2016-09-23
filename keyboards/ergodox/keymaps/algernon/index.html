@@ -83,8 +83,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#layouts">Layouts</a><ul>
         <li><a href="#base-layer">Base layer</a></li>
         <li><a href="#adore-layer">ADORE layer</a></li>
-        <li><a href="#hungarian-layer">Hungarian layer</a></li>
-        <li><a href="#navigation-and-media-layer">Navigation and media layer</a></li>
         <li><a href="#steno-layer">Steno layer</a></li>
         <li><a href="#led-states">LED states</a></li>
         </ul></li>
@@ -93,16 +91,24 @@ code > span.er { color: #ff0000; font-weight: bold; }
         </ul></li>
         <li><a href="#tools">Tools</a><ul>
         <li><a href="#heatmap">Heatmap</a></li>
+        <li><a href="#layer-notification">Layer notification</a></li>
         </ul></li>
         <li><a href="#building">Building</a><ul>
         <li><a href="#using-on-windows">Using on Windows</a></li>
         </ul></li>
         <li><a href="#changelog">Changelog</a><ul>
+        <li><a href="#v1.7">v1.7</a><ul>
+        <li><a href="#overall-changes">Overall changes</a></li>
+        <li><a href="#adore">ADORE</a></li>
+        <li><a href="#medianavigation-layer">Media/Navigation layer</a></li>
+        <li><a href="#heatmap-1">Heatmap</a></li>
+        <li><a href="#tools-1">Tools</a></li>
+        </ul></li>
         <li><a href="#v1.6">v1.6</a><ul>
         <li><a href="#base-layer-changes">Base layer changes</a></li>
         <li><a href="#adore-layer-changes">ADORE layer changes</a></li>
         <li><a href="#miscellaneous-changes">Miscellaneous changes</a></li>
-        <li><a href="#heatmap-1">Heatmap</a></li>
+        <li><a href="#heatmap-2">Heatmap</a></li>
         </ul></li>
         <li><a href="#v1.5">v1.5</a></li>
         <li><a href="#v1.4">v1.4</a></li>
@@ -139,14 +145,13 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <ul>
 <li><a href="#base-layer">Base layer</a><br /></li>
 <li><a href="#adore-layer">ADORE layer</a><br /></li>
-<li><a href="#hungarian-layer">Hungarian layer</a><br /></li>
-<li><a href="#navigation-and-media-layer">Navigation and media layer</a><br /></li>
 <li><a href="#steno-layer">Steno layer</a><br /></li>
 <li><a href="#led-states">LED states</a><br /></li>
 </ul></li>
 <li><p><a href="#tools">Tools</a></p>
 <ul>
 <li><a href="#heatmap">Heatmap</a><br /></li>
+<li><a href="#layer-notification">Layer notification</a><br /></li>
 </ul></li>
 <li><p><a href="#special-features">Special features</a></p>
 <ul>
@@ -164,7 +169,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/28f7eb305fdbff943613e1dc7aa9e82b"><img src="images/base-layer.png" alt="Base layer" /></a></p>
 <p>At its core, this is a Dvorak layout, with some minor changes. The more interesting parts are how certain keys behave:</p>
 <ul>
-<li>The keys on the number row double as function keys, when held for a bit longer than an usual tap. This allows me to use the function keys without having to switch layers.<br /></li>
+<li>The number row is the same as in the <a href="#adore-layer">ADORE</a> layer. The function keys are on the <strong>Media</strong> layer.<br /></li>
 <li>The <code>Shift</code>, <code>Alt</code>, and <code>Control</code> modifiers are one-shot. When tapped, they are considered active for the next key press only. When double tapped, they toggle on, until a third, single tap sometime later. When held, they act as expected. My usual pattern is that I use these for the next keypress only, so this behaviour is perfect. If I need them held, I'll just double-tap.<br /></li>
 <li>The <code>GUI</code> key is special, because when I double-tap it, it sends <code>GUI + w</code>, which pops up an application selector. It also switches to a one-shot layer, where the number row on the left half turns into app selector macros, for the most common things I usually want to switch to. Otherwise it behaves as on a normal layout.<br /></li>
 <li>The <code>ESC</code> key also doubles as a one-shot cancel key: if tapped while any of the one-shot modifiers are in-flight (as in, single-tapped, and not expired yet), it cancels all one-shot modifiers. It also cancels the <strong>Hun</strong> layer, if active. Otherwise it sends the usual keycode.<br /></li>
@@ -185,16 +190,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><code>LEAD u</code> enters the <a href="#unicode-symbol-input">Unicode symbol input</a> mode.</li>
 </ul></li>
 </ul>
+<p>The symbols on the front in the image above have the same color as the key that activates them, with the exception of the <strong>Arrow</strong> layer, which is just black on the front.</p>
 <h2 id="adore-layer"><a href="#adore-layer">ADORE layer</a></h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/45681a17453d235925b6028dd83bf12a"><img src="images/adore-layer.png" alt="ADORE layer" /></a></p>
-<p>While using the standard Dvorak layout, I encountered a number of inconveniences, and on this layer, I am playing with ideas to make the layout feel better. Initially, it was based on <a href="http://www.michaelcapewell.com/projects/keyboard/layout_capewell-dvorak.htm">Capewell-Dvorak</a>, but that too, had shortcomings I was not happy with. So now this is something inbetween, with own observations thrown in. How it works out in the long run remains to be seen.</p>
-<p>Based on a week and a half of typing, the keys were rearranged, and the home row neatly spelled out <strong>ADORE</strong>, that gave the layout its name.</p>
-<h2 id="hungarian-layer"><a href="#hungarian-layer">Hungarian layer</a></h2>
-<p><a href="http://www.keyboard-layout-editor.com/#/gists/b160f6ec90d58c127c114c89f66e9dc9"><img src="images/hun-layer.png" alt="Hungarian layer" /></a></p>
-<p>On this layer, the accented characters are at the same position as their base variant. For some, which can have other diatribes, the long one is on top, short's on bottom. Tapping any of the accented characters takes us back to the base layer.</p>
-<h2 id="navigation-and-media-layer"><a href="#navigation-and-media-layer">Navigation and media layer</a></h2>
-<p><a href="http://www.keyboard-layout-editor.com/#/gists/c59c453f9fe1a3238ba1494e7e5c6892"><img src="images/nav-n-media-layer.png" alt="Navigation and media layer" /></a></p>
-<p>This layer is primarily for navigating with the cursor or the mouse, and some media things.</p>
+<p>My experimental layout, that I keep tweaking. No full description here, because things are very much in flux.</p>
+<p>Note that the <strong>HUN</strong> layer does not work well with ADORE: it still has the same layout as on the <a href="#base-layer">Base</a> layer. This will remain until ADORE becomes the default.</p>
 <h2 id="steno-layer"><a href="#steno-layer">Steno layer</a></h2>
 <p><a href="http://www.keyboard-layout-editor.com/#/gists/401ef9a84369e47c57f9aedcf0a0d667"><img src="images/steno-layer.png" alt="Steno layer for Plover" /></a></p>
 <p>This is to be used with <a href="http://www.openstenoproject.org/plover/">Plover</a>, nothing really fancy here. The <strong>STENO</strong> key toggles the layer on and off, and sends the toggle command to Plover too.</p>
@@ -203,8 +203,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>For the layers, the following rules apply:</p>
 <ul>
 <li>When the <a href="#adore-layer">ADORE layer</a> is toggled on, LEDs will light up from left to right in a sequence, then turn off. When the layer is toggled off, the LEDs light up and turn off in the other direction. No LEDs are on while the layer is active.<br /></li>
-<li>When the <a href="#hungarian-layer">Hungarian layer</a> is active, the <em>green</em> and <em>blue</em> LEDs are on.<br /></li>
-<li>When the <a href="#navigation-and-media-layer">Navigation and media layer</a> is active, the <em>red</em> and <em>green</em> ones are on.<br /></li>
+<li>When the <strong>Hungarian</strong> layer is active, the <em>green</em> and <em>blue</em> LEDs are on.<br /></li>
+<li>When the <strong>Media</strong> layer is active, the <em>red</em> and <em>green</em> ones are on.<br /></li>
 <li>When the <strong>ARROW</strong> layer is active, the <em>red</em> and <em>blue</em> ones are on.<br /></li>
 <li>For the <a href="#steno-layer">Steno layer</a>, all LEDs will be turned on.</li>
 </ul>
@@ -226,6 +226,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Included with the firmware is a small tool that can parse these logs, and create a heatmap that one can import into <a href="http://www.keyboard-layout-editor.com/">KLE</a>. To use it, either pipe the output of <code>hid_listen</code> into it, or pipe it an already saved log, and it will save the results into files in an output directory (given on the command-line). See the output of <code>tools/log-to-heatmap.py --help</code> for more information.</p>
 <p>The generated heatmap looks somewhat like this:</p>
 <p><img src="images/heatmap.png" alt="Heatmap" /></p>
+<h2 id="layer-notification"><a href="#layer-notification">Layer notification</a></h2>
+<p>There is a very small tool in <code>tools/layer-notify</code>, that listens to the HID console, looking for layer change events, and pops up a notification for every detected change. It is a very simple tool, mainly serving as an example.</p>
 <h1 id="building"><a href="#building">Building</a></h1>
 <p>To make my workflow easier, this layout is maintained in <a href="https://github.com/algernon/ergodox-layout">its own repository</a>. To build it, you will need the <a href="https://github.com/jackhumbert/qmk_firmware">QMK</a> firmware checked out, and this repo either checked out to something like <code>keyboards/ergodox_ez/algernon-master</code>. One way to achieve that is this:</p>
 <pre><code>$ git clone https://github.com/jackhumbert/qmk_firmware.git
@@ -238,6 +240,41 @@ $ make keyboard=ergodox keymap=algernon-master</code></pre>
 <h2 id="using-on-windows"><a href="#using-on-windows">Using on Windows</a></h2>
 <p>The keymap default to forcing NKRO, which seems to upset Windows, and except the modifiers, none of them work. If you experience this problem, recompile the firmware with <code>FORCE_NKRO=no</code> added to the <code>make</code> command line.</p>
 <h1 id="changelog"><a href="#changelog">Changelog</a></h1>
+<h2 id="v1.7"><a href="#v1.7">v1.7</a></h2>
+<p><em>2016-09-18</em></p>
+<h3 id="overall-changes"><a href="#overall-changes">Overall changes</a></h3>
+<ul>
+<li>The number row has been completely rearranged on both the <a href="#base-layer">Base</a> and the <a href="#adore-layer">ADORE</a> layers.<br /></li>
+<li>The number/function key behavior was changed: function keys are now on the <strong>Media</strong>.<br /></li>
+<li>The <code>:</code>/<code>;</code> and <code>-</code>/<code>_</code> keys were put back to their thumb position on the bottom row, on both the <a href="#base-layer">Base</a> and <a href="#adore-layer">ADORE</a> layers.<br /></li>
+<li>The bottom large keys on the inner side of each half now function as <a href="http://tmux.github.io/">tmux</a> keys: the left to send the prefix, the right to send the <code>display-panes</code> key. The left also doubles as a GNU screen prefix key, and sends <code>C-a</code> when double tapped.<br /></li>
+<li>A number of functions, such as the <strong>AppSel</strong> layer, now require the <code>hid-commands</code> tool to be running, with the output of <code>hid_listen</code> being piped to it.</li>
+</ul>
+<h3 id="adore"><a href="#adore">ADORE</a></h3>
+<ul>
+<li><code>Y</code> and <code>X</code> have been swapped again.</li>
+</ul>
+<h3 id="medianavigation-layer"><a href="#medianavigation-layer">Media/Navigation layer</a></h3>
+<ul>
+<li>The function keys are now on this layer.<br /></li>
+<li>Mouse keys have been removed.<br /></li>
+<li>Media start/stop/prev/next have been removed.<br /></li>
+<li><code>Print screen</code> has been removed.<br /></li>
+<li>There is only one screen lock key now.</li>
+</ul>
+<h3 id="heatmap-1"><a href="#heatmap-1">Heatmap</a></h3>
+<ul>
+<li>Fixed a few issues in the finger-stats calculation.<br /></li>
+<li>The tool now also timestamps and saves all input lines to a logfile, which it loads on start, allowing one to continue the collection after upgrading the tool.<br /></li>
+<li>The heatmap tool will now colorize the stats by default.<br /></li>
+<li>The periodic stats are now printed in a more compact format.</li>
+</ul>
+<h3 id="tools-1"><a href="#tools-1">Tools</a></h3>
+<ul>
+<li>Added a new tool, <code>tools/layer-notify</code> that listens to layer change events on the HID console, and pops up a notification on layer changes.<br /></li>
+<li>Another new tool, <code>tools/text-to-log.py</code> has been added that converts arbitrary text to a keylogger output, which can be fed to the heatmap generator.<br /></li>
+<li>A number of features have been moved to the <code>tools/hid-commands</code> utility. These generally are OS dependent, and are easier to implement on the software side.</li>
+</ul>
 <h2 id="v1.6"><a href="#v1.6">v1.6</a></h2>
 <p><em>2016-08-24</em></p>
 <h3 id="base-layer-changes"><a href="#base-layer-changes">Base layer changes</a></h3>
@@ -254,10 +291,10 @@ $ make keyboard=ergodox keymap=algernon-master</code></pre>
 <h3 id="miscellaneous-changes"><a href="#miscellaneous-changes">Miscellaneous changes</a></h3>
 <ul>
 <li><code>LEAD u</code> now starts the symbolic unicode input system, instead of the OS-one.<br /></li>
-<li>The mouse acceleration keys on the <a href="#navigation-and-media-layer">Navigation and Media</a> layer have been turned into toggles: tap them once to turn them on, until tapped again. Tapping an accelerator button will turn all the others off.<br /></li>
+<li>The mouse acceleration keys on the <strong>Navigation/Media</strong> layer have been turned into toggles: tap them once to turn them on, until tapped again. Tapping an accelerator button will turn all the others off.<br /></li>
 <li>When the <strong>ARROW</strong> layer is on, the <em>red</em> and <em>blue</em> LEDs light up now.</li>
 </ul>
-<h3 id="heatmap-1"><a href="#heatmap-1">Heatmap</a></h3>
+<h3 id="heatmap-2"><a href="#heatmap-2">Heatmap</a></h3>
 <ul>
 <li>The built-in keylogger has been greatly enhanced, it now outputs the pressed state, and the layer (Dvorak or ADORE). As such, the <code>ADORE_AUTOLOG</code> option has been removed, instead there is <code>AUTOLOG_ENABLE</code> now, which when enabled, makes the keylogger start when the keyboard boots. It defaults to off.<br /></li>
 <li>The heatmap generator received a lot of updates.</li>
@@ -297,7 +334,7 @@ $ make keyboard=ergodox keymap=algernon-master</code></pre>
 <li>The <code>:;</code> key has changed behaviour: to access the <code>;</code> symbol, the key needs to be double-tapped, instead of shifted.<br /></li>
 <li>The <code>=</code> and <code>\</code> keys were swapped, <code>=</code> moved to the home row, on both the <a href="#base-layer">base</a> and the <strong>experimental</strong> layers.<br /></li>
 <li>The arrow and navigation keys were redone, they are now more accessible, but the navigation keys require an extra tap to access.<br /></li>
-<li>The <strong>Emacs</strong> layer is gone, replaced by a simplified <a href="#navigation-and-media-layer">navigation and media</a> layer.<br /></li>
+<li>The <strong>Emacs</strong> layer is gone, replaced by a simplified <strong>navigation and media</strong> layer.<br /></li>
 <li><code>LEAD v</code> types the firmware version, and the keymap version.<br /></li>
 <li>On the <strong>experimental</strong> layer, the <code>L</code> and <code>Q</code>, and the <code>K</code> and <code>G</code> keys were swapped.<br /></li>
 <li>The <a href="#steno-layer">Steno</a> layer gained a few more <code>#</code> and <code>*</code> keys, to make it easier on my fingers.</li>
@@ -317,7 +354,7 @@ $ make keyboard=ergodox keymap=algernon-master</code></pre>
 <li><code>Tab</code>'s original position is taken by a <code>Media Next</code>/<code>Media Prev</code> key.<br /></li>
 <li><code>:</code> now inputs <code>;</code> when shifted.<br /></li>
 </ul></li>
-<li><p><code>ESC</code> cancels the <a href="#hungarian-layer">Hungarian</a> layer too, not just modifiers.</p></li>
+<li><p><code>ESC</code> cancels the <strong>Hungarian</strong> layer too, not just modifiers.</p></li>
 </ul>
 <h2 id="v1.0"><a href="#v1.0">v1.0</a></h2>
 <p><em>2016-05-26</em></p>
@@ -364,7 +401,7 @@ CONSOLE_ENABLE = no
 TAP_DANCE_ENABLE = yes
 KEYLOGGER_ENABLE ?= yes
 UCIS_ENABLE = yes
-MOUSEKEY_ENABLE ?= yes
+MOUSEKEY_ENABLE = no
 
 AUTOLOG_ENABLE ?= no
 
@@ -381,6 +418,8 @@ ifeq (${KEYLOGGER_ENABLE},yes)
 OPT_DEFS += -DKEYLOGGER_ENABLE
 CONSOLE_ENABLE = yes
 endif
+
+OPT_DEFS += -DUSER_PRINT
 
 KEYMAP_VERSION = $(shell \
  if [ -d &quot;${KEYMAP_PATH}/.git&quot; ]; then \
