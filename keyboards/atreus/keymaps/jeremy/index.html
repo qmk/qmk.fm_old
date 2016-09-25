@@ -1,0 +1,127 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/atreus">atreus</a> / keymaps / <a href="/keyboards/atreus/keymaps/jeremy/">jeremy</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/atreus/keymaps/jeremy/keymap.c" class="button view">View keymap.c</a>
+        <a href="atreus_jeremy.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#jeremys-atreus-key-mapping">Jeremy's Atreus Key Mapping</a><ul>
+        <li><a href="#main-layers">Main Layers</a></li>
+        <li><a href="#notes">Notes</a><ul>
+        <li><a href="#general">General</a></li>
+        <li><a href="#symbol-layer">Symbol Layer</a></li>
+        <li><a href="#number-layer">Number Layer</a></li>
+        <li><a href="#cursor-layer">Cursor Layer</a></li>
+        <li><a href="#function-layer">Function Layer</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="jeremys-atreus-key-mapping"><a href="#jeremys-atreus-key-mapping">Jeremy's Atreus Key Mapping</a></h1>
+<p>I am a programmer by trade that suffers from the beginning stages of RSI. As a programmer I use letters, symbols and cursor navigation most often. To prevent strange finger gymnastics, I wrote a script to rank which non-letter characters occurred in my primary source projects most often and then placed these characters in the easiest to reach locations, for me. I made heavy use of momentary layer toggling.</p>
+<p>My layout is also geared toward a software based Colemak mapping. I would like it to be hardware, but I use my Laptop on the go frequently and thus my laptop keyboard. I have moved the keycaps to reflect the Colemak layout. My laptop is a MacBook Pro (2015).</p>
+<h2 id="main-layers"><a href="#main-layers">Main Layers</a></h2>
+<ol>
+<li><a href="http://www.keyboard-layout-editor.com/#/gists/6861cb9df09ce78efaddf8aa7471e3ac">Letters</a><br /></li>
+<li><a href="http://www.keyboard-layout-editor.com/#/gists/8956a18b508a78e93b9c38ec3fcccaa5">Symbols</a><br /></li>
+<li><a href="http://www.keyboard-layout-editor.com/#/gists/6ed492b714a7f54eb1c5de09b87fd8c4">Navigation</a><br /></li>
+<li><a href="http://www.keyboard-layout-editor.com/#/gists/399ceb5624e8388e48a3a5eacac8e973">Numbers</a><br /></li>
+<li><a href="http://www.keyboard-layout-editor.com/#/gists/7fd7dc24c7048316f3724b1893c64e89">Function Keys</a></li>
+</ol>
+<h2 id="notes"><a href="#notes">Notes</a></h2>
+<h3 id="general"><a href="#general">General</a></h3>
+<p>Some characters can be accessed multiple ways. This was done because you may be in a given layer, such as numbers, where when doing math, you may need quick access to the parentheses characters for grouping. This prevents some layer switching.</p>
+<p>I own an ErgoDox and plan on porting this as a base layer, then using the extra keys the ErgoDox provides accordingly. My goal, though, is to be fully functional on this base setup and build everything into muscle memory.</p>
+<h3 id="symbol-layer"><a href="#symbol-layer">Symbol Layer</a></h3>
+<ol>
+<li>I placed characters that deal with an if statement close together, such as !, &amp; and |.<br /></li>
+<li>All matching brace/bracket characters are together as well.</li>
+</ol>
+<h3 id="number-layer"><a href="#number-layer">Number Layer</a></h3>
+<ol>
+<li>Everything I did was a compromise when trying to mimic a ten-key. I did the best I could.<br /></li>
+<li>Operators are duplicated on the right and left. I do not find it comfortable to use my pinky much, so I tend to use my left hand for +, -, * and / but those were also placed on the right hand to mimic the ten-key.<br /></li>
+<li>Parentheses were added for typing on the calculator.</li>
+</ol>
+<h3 id="cursor-layer"><a href="#cursor-layer">Cursor Layer</a></h3>
+<ol>
+<li>It includes basic audio controls because they didn't really fit anywhere else<br /></li>
+<li>It contains basic file manipulation. I'm not sure that was a good idea. I do save all the time, but Cmd+S isn't exactly hard.<br /></li>
+<li>It contains the backspace and delete keys right on top of the left and right arrows.<br /></li>
+<li>Cmd and Opt keys are duplicated. This makes for very easy navigation, for example on a Mac, Opt+Left/Right moves word by word. It also backspaces or deletes word by word.</li>
+</ol>
+<h3 id="function-layer"><a href="#function-layer">Function Layer</a></h3>
+<ol>
+<li>Almost all other layers I saw grouped the F keys into a bunch of three. This only gives nine function keys in order if you attempt to stay as close to the home row as possible. I went with a group of four, which gives all twelve function keys to the right hand, one row below and above the home row.<br /></li>
+<li>I duplicated the Command and Option keys the same as on the cursor layer. This makes it dead easy to hit modified function keys such as Cmd+Opt+F5. It's also easy to toss in a Shift modifier in there with the right thumb since the bottom row is preserved.</li>
+</ol>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
