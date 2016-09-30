@@ -58,13 +58,7 @@
         <div class="well toc">
 
         <ul>
-        <li><a href="#callums-planck-layout">callum’s planck layout</a><ul>
-        <li><a href="#the-base-layer">The <code>BASE</code> layer</a></li>
-        <li><a href="#the-move-layer">The <code>MOVE</code> layer</a></li>
-        <li><a href="#the-symb-layer">The <code>SYMB</code> layer</a></li>
-        <li><a href="#the-func-layer">The <code>FUNC</code> layer</a></li>
-        <li><a href="#other-changes-from-the-default">Other changes from the default</a></li>
-        </ul></li>
+        <li><a href="#callums-planck-layout">callum’s planck layout</a></li>
         <li><a href="#makefile">Makefile</a></li>
         </ul>
 
@@ -81,31 +75,70 @@
             <h1 id="callums-planck-layout"><a href="#callums-planck-layout">callum’s planck layout</a></h1>
 <p>This is a layout for the grid planck, built with a few ideals in mind:</p>
 <ul>
-<li>Minimal response times should be maintained. i.e. keys that react differently depending on whether they are tapped or held, keys that react differently if they are double tapped, etc. should be avoided — they inevitably send their keycode later than a normal key, interrupting the immediate feedback from the screen. Therefore we restrict ourselves to chording.<br /></li>
+<li>Minimal response times should be maintained. Keys that react differently depending on whether they are tapped or held, keys that react differently if they are double tapped, etc. should be avoided – they inevitably send their keycode later than a normal key – interrupting the immediate feedback from the screen. Therefore we restrict ourselves to chording as our only means of getting more than one symbol out of a single physical key.<br /></li>
 <li>The hands should never need to leave the home position. The usual culprit for this is the arrow cluster, so the arrow cluster should be as close to home as possible.<br /></li>
-<li>There should be two of every modifier (one on each side), otherwise certain long key combinations become hard to make.<br /></li>
-<li>Backspace should be in the “capslock position” in the colemak tradition.</li>
+<li>There should be two of every modifier (one on each side), otherwise certain long key combinations become hard to make.</li>
 </ul>
-<p>We have four layers. A <code>BASE</code> layer, in colemak; a <code>MOVE</code> layer, with an arrow cluster etc, a <code>SYMB</code> layer, with numbers and symbols; and a <code>FUNC</code> layer, with function keys and media keys.</p>
-<h2 id="the-base-layer"><a href="#the-base-layer">The <code>BASE</code> layer</a></h2>
-<p><img src="http://i.imgur.com/tVNI3SE.png" /></p>
-<p>This is the default layer; in <a href="https://colemak.com">colemak</a>. <code>esc</code> and <code>del</code> are conspicuously absent but are especially easy to reach from either of the other main layers (see below). The <code>backspace</code> location is standard colemak. The <code>caps</code> key is still on the <code>BASE</code> layer but only because I don’t really use the bottom corners so there’s nothing else I would rather put there. Having <code>enter</code> on a thumb means I can still have <code>quote</code> immediately to the right of <code>O</code>, something that would have annoyed me endlessly otherwise. <code>minus</code> is in the upper right because I had an extra space and it’s probably my next most used key that didn’t yet have a home.</p>
-<p>The <code>MOVE</code> and <code>SYMB</code> layers are reached by holding down the <code>move</code> and <code>symb</code> keys respectively. The <code>FUNC</code> layer is reached by holding down both the <code>move</code> and <code>symb</code> keys simultaneously, <em>or</em> by holding down the <code>fn</code> key. The intended use is that whenever both hands are on the keyboard, the former method is used, and the latter is only used when, for example, reaching over to the keyboard with one hand to access the media controls.</p>
-<h2 id="the-move-layer"><a href="#the-move-layer">The <code>MOVE</code> layer</a></h2>
-<p><img src="http://i.imgur.com/KXRSuHT.png" /></p>
-<p>This is fairly self explanatory. I almost exclusively use the right hand cluster so that movement is a one handed affair, but the left hand cluster is there if it’s needed.</p>
-<p>On <em>macOS</em> I recommend using <a href="https://pqrs.org/osx/karabiner/">Karabiner</a> and ticking <em>Use PC Style Home/End #2</em> and <em>Use PC Style PageUp/PageDown</em> so that <code>home</code> and <code>end</code> jump you to the beginning and end of the line respectively and so that <code>pg up</code> and <code>pg dn</code> move the cursor instead of just scrolling.</p>
-<p>None of the modifiers are overwritten so that <code>shift-alt-arrows</code> etc work as expected.</p>
-<h2 id="the-symb-layer"><a href="#the-symb-layer">The <code>SYMB</code> layer</a></h2>
-<p><img src="http://i.imgur.com/thh1ne2.png" /></p>
-<p>The symbol layer has all the numbers and their usual corresponding symbols in the first two rows, with the symbols on the home row since I use them more frequently than the numbers. The third row contains all the remaining symbols, arranged roughly so that the most used symbols are accessible with the strongest fingers.</p>
-<p><code>esc</code> and <code>del</code> are repeated here since I wanted to be able to reach either, one handed, with either hand.</p>
-<p>Again none of the modifiers are overwritten so that shortcuts involving numbers or symbols work as expected.</p>
-<h2 id="the-func-layer"><a href="#the-func-layer">The <code>FUNC</code> layer</a></h2>
-<p><img src="http://i.imgur.com/1VKFBBU.png" /></p>
-<p>The only things of note here are that <code>bl+</code> and <code>bl-</code> are short for <em>backlight up</em> and <em>backlight down</em>, and in firmware are actually <code>KC_PAUS</code> and <code>KC_SLCK</code> respectively, since <em>macOS</em> interprets these as the backlight keys. And that <code>lock</code> is currently a macro hard coded to turn off the screen on <em>macOS</em>. (By activating the shortcut <code>shift-ctrl-power</code>.)</p>
-<h2 id="other-changes-from-the-default"><a href="#other-changes-from-the-default">Other changes from the default</a></h2>
-<p>I have LEDs and sound disabled, simply because I have no need of them.</p>
+<p>We have five layers. A <code>BASE</code> layer, in colemak; a <code>MOVE</code> layer, with an arrow cluster and other movement keys; a <code>SYMB</code> layer, with numbers and symbols; a <code>FUNC</code> layer, with function keys and media keys; and a <code>MOUSE</code> layer, with mouse emulation.</p>
+<pre><code>/* BASE
+ * ,-----------------------------------------------------------------------------------.
+ * | Tab  |   Q  |   W  |   F  |   P  |   G  |   J  |   L  |   U  |   Y  |   ;  |  -   |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Bksp |   A  |   R  |   S  |   T  |   D  |   H  |   N  |   E  |   I  |   O  |  &quot;   |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |   K  |   M  |   ,  |   .  |   /  | Shift|
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * | Func | Ctrl |  Alt |  Cmd | Symb | Enter| Space| Move |  Cmd |  Alt | Ctrl | Func |
+ * `-----------------------------------------------------------------------------------&#39;
+ */
+
+/* MOVE
+ * ,-----------------------------------------------------------------------------------.
+ * |  Esc |      | Cmd-L|  Up  | Cmd-R|      |      | Cmd-L|  Up  | Cmd-R|      |  Esc |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |  Del |      | Left | Down | Right|      |      | Left | Down | Right|      |  Del |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      | Pg Up| Pg Dn| Above|      | Pg Dn| Pg Up|      | Caps |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      | Below|      |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------&#39;
+ */
+
+/* SYMB
+ * ,-----------------------------------------------------------------------------------.
+ * |  Esc |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  |   –  |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |  Del |   !  |   @  |   #  |   $  |   %  |   ^  |   &amp;  |   *  |   (  |   )  |   £  |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |   ~  |   `  |   +  |   =  |   |  |   \  |   [  |   ]  |   {  |   }  |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------&#39;
+ */
+
+/* MOUSE
+ * ,-----------------------------------------------------------------------------------.
+ * |      |      | ACC-2| ACC-1| ACC-0|      |      | SW-L |  M-U | SW-R |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      | MB-3 | MB-2 | MB-1 |      |      |  M-L |  M-D |  M-R |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      | SW-D | SW-U |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------&#39;
+ */
+
+/* FUNC
+ * ,-----------------------------------------------------------------------------------.
+ * | Reset|  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 | Vol+ |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |  F11 |  F12 |  F13 |  F14 |  F15 |  F16 |  F17 |  F18 |  F19 |  F20 | Vol- |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |  F21 |  F22 |  F23 |  F24 |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      | Prev | Mute | Play | Next |      |      |      |      |
+ * `-----------------------------------------------------------------------------------&#39;
+ */</code></pre>
 <hr />
 <h1 id="makefile"><a href="#makefile">Makefile</a></h1>
 <pre><code>
