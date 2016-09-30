@@ -33,6 +33,7 @@
 * [kastyle](keymaps/kastyle/)
 * [kines-ish](keymaps/kines-ish/)
 * [maz](keymaps/maz/)
+* [mclennon_osx](keymaps/mclennon_osx/)
 * [mpiechotka](keymaps/mpiechotka/)
 * [msc](keymaps/msc/)
 * [naps62](keymaps/naps62/)
