@@ -96,27 +96,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#building">Building</a><ul>
         <li><a href="#using-on-windows">Using on Windows</a></li>
         </ul></li>
-        <li><a href="#changelog">Changelog</a><ul>
-        <li><a href="#v1.7">v1.7</a><ul>
-        <li><a href="#overall-changes">Overall changes</a></li>
-        <li><a href="#adore">ADORE</a></li>
-        <li><a href="#medianavigation-layer">Media/Navigation layer</a></li>
-        <li><a href="#heatmap-1">Heatmap</a></li>
-        <li><a href="#tools-1">Tools</a></li>
-        </ul></li>
-        <li><a href="#v1.6">v1.6</a><ul>
-        <li><a href="#base-layer-changes">Base layer changes</a></li>
-        <li><a href="#adore-layer-changes">ADORE layer changes</a></li>
-        <li><a href="#miscellaneous-changes">Miscellaneous changes</a></li>
-        <li><a href="#heatmap-2">Heatmap</a></li>
-        </ul></li>
-        <li><a href="#v1.5">v1.5</a></li>
-        <li><a href="#v1.4">v1.4</a></li>
-        <li><a href="#v1.3">v1.3</a></li>
-        <li><a href="#v1.2">v1.2</a></li>
-        <li><a href="#v1.1">v1.1</a></li>
-        <li><a href="#v1.0">v1.0</a></li>
-        </ul></li>
         <li><a href="#license">License</a></li>
         <li><a href="#config.h">config.h</a></li>
         <li><a href="#makefile">Makefile</a></li>
@@ -161,7 +140,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <ul>
 <li><a href="#using-on-windows">Using on Windows</a><br /></li>
 </ul></li>
-<li><a href="#changelog">Changelog</a><br /></li>
+<li><a href="https://github.com/algernon/ergodox-layout/blob/master/NEWS.md#readme">Changelog</a><br /></li>
 <li><p><a href="#license">License</a></p></li>
 </ul>
 <h1 id="layouts"><a href="#layouts">Layouts</a></h1>
@@ -239,126 +218,6 @@ $ make keyboard=ergodox keymap=algernon-master</code></pre>
 <pre><code>$ make keyboard=ergodox keymap=algernon</code></pre>
 <h2 id="using-on-windows"><a href="#using-on-windows">Using on Windows</a></h2>
 <p>The keymap default to forcing NKRO, which seems to upset Windows, and except the modifiers, none of them work. If you experience this problem, recompile the firmware with <code>FORCE_NKRO=no</code> added to the <code>make</code> command line.</p>
-<h1 id="changelog"><a href="#changelog">Changelog</a></h1>
-<h2 id="v1.7"><a href="#v1.7">v1.7</a></h2>
-<p><em>2016-09-18</em></p>
-<h3 id="overall-changes"><a href="#overall-changes">Overall changes</a></h3>
-<ul>
-<li>The number row has been completely rearranged on both the <a href="#base-layer">Base</a> and the <a href="#adore-layer">ADORE</a> layers.<br /></li>
-<li>The number/function key behavior was changed: function keys are now on the <strong>Media</strong>.<br /></li>
-<li>The <code>:</code>/<code>;</code> and <code>-</code>/<code>_</code> keys were put back to their thumb position on the bottom row, on both the <a href="#base-layer">Base</a> and <a href="#adore-layer">ADORE</a> layers.<br /></li>
-<li>The bottom large keys on the inner side of each half now function as <a href="http://tmux.github.io/">tmux</a> keys: the left to send the prefix, the right to send the <code>display-panes</code> key. The left also doubles as a GNU screen prefix key, and sends <code>C-a</code> when double tapped.<br /></li>
-<li>A number of functions, such as the <strong>AppSel</strong> layer, now require the <code>hid-commands</code> tool to be running, with the output of <code>hid_listen</code> being piped to it.</li>
-</ul>
-<h3 id="adore"><a href="#adore">ADORE</a></h3>
-<ul>
-<li><code>Y</code> and <code>X</code> have been swapped again.</li>
-</ul>
-<h3 id="medianavigation-layer"><a href="#medianavigation-layer">Media/Navigation layer</a></h3>
-<ul>
-<li>The function keys are now on this layer.<br /></li>
-<li>Mouse keys have been removed.<br /></li>
-<li>Media start/stop/prev/next have been removed.<br /></li>
-<li><code>Print screen</code> has been removed.<br /></li>
-<li>There is only one screen lock key now.</li>
-</ul>
-<h3 id="heatmap-1"><a href="#heatmap-1">Heatmap</a></h3>
-<ul>
-<li>Fixed a few issues in the finger-stats calculation.<br /></li>
-<li>The tool now also timestamps and saves all input lines to a logfile, which it loads on start, allowing one to continue the collection after upgrading the tool.<br /></li>
-<li>The heatmap tool will now colorize the stats by default.<br /></li>
-<li>The periodic stats are now printed in a more compact format.</li>
-</ul>
-<h3 id="tools-1"><a href="#tools-1">Tools</a></h3>
-<ul>
-<li>Added a new tool, <code>tools/layer-notify</code> that listens to layer change events on the HID console, and pops up a notification on layer changes.<br /></li>
-<li>Another new tool, <code>tools/text-to-log.py</code> has been added that converts arbitrary text to a keylogger output, which can be fed to the heatmap generator.<br /></li>
-<li>A number of features have been moved to the <code>tools/hid-commands</code> utility. These generally are OS dependent, and are easier to implement on the software side.</li>
-</ul>
-<h2 id="v1.6"><a href="#v1.6">v1.6</a></h2>
-<p><em>2016-08-24</em></p>
-<h3 id="base-layer-changes"><a href="#base-layer-changes">Base layer changes</a></h3>
-<ul>
-<li>The parentheses &amp; bracket keys have been merged: tapping them results in <code>[</code> or <code>{</code> (if it was shifted), double tapping leads to <code>(</code>.<br /></li>
-<li>The <code>:;</code> and <code>-_</code> keys are now available on the base layer, on their <a href="#adore-layer">ADORE</a> location, too, just below <code>[{(</code>/<code>]})</code>.<br /></li>
-<li>The <code>Apps</code> key has been replaced by <code>F12</code>.<br /></li>
-<li>The <code>-</code>/<code>_</code> is no longer a tap-dance key.</li>
-</ul>
-<h3 id="adore-layer-changes"><a href="#adore-layer-changes">ADORE layer changes</a></h3>
-<ul>
-<li>Adjustments were made to the <a href="#adore-layer">ADORE</a> layer, to separate some inconvenient combinations.</li>
-</ul>
-<h3 id="miscellaneous-changes"><a href="#miscellaneous-changes">Miscellaneous changes</a></h3>
-<ul>
-<li><code>LEAD u</code> now starts the symbolic unicode input system, instead of the OS-one.<br /></li>
-<li>The mouse acceleration keys on the <strong>Navigation/Media</strong> layer have been turned into toggles: tap them once to turn them on, until tapped again. Tapping an accelerator button will turn all the others off.<br /></li>
-<li>When the <strong>ARROW</strong> layer is on, the <em>red</em> and <em>blue</em> LEDs light up now.</li>
-</ul>
-<h3 id="heatmap-2"><a href="#heatmap-2">Heatmap</a></h3>
-<ul>
-<li>The built-in keylogger has been greatly enhanced, it now outputs the pressed state, and the layer (Dvorak or ADORE). As such, the <code>ADORE_AUTOLOG</code> option has been removed, instead there is <code>AUTOLOG_ENABLE</code> now, which when enabled, makes the keylogger start when the keyboard boots. It defaults to off.<br /></li>
-<li>The heatmap generator received a lot of updates.</li>
-</ul>
-<h2 id="v1.5"><a href="#v1.5">v1.5</a></h2>
-<p><em>2016-08-12</em></p>
-<ul>
-<li>The <strong>1HAND</strong> layer has been removed.<br /></li>
-<li>A <code>Delete</code> key is now available on the right thumb cluster.<br /></li>
-<li>The <a href="#adore-layer">ADORE</a> layer received a major update, see the layout image above.<br /></li>
-<li>It is now possible to enable automatic logging for the <a href="#adore-layer">ADORE</a> layer, by setting the <code>ADORE_AUTOLOG</code> makefile variable to <code>yes</code> when compiling the keymap. It is off by default.<br /></li>
-<li>The <code>~</code> key and the <code>Media Next/Prev</code> key have been swapped on the <a href="#base-layer">base layer</a>.<br /></li>
-<li>On the <strong>ARROW</strong> layer, <code>Backspace</code> has been replaced by <code>Enter</code>.<br /></li>
-<li>There is some experimental support for entering Unicode symbols.</li>
-</ul>
-<h2 id="v1.4"><a href="#v1.4">v1.4</a></h2>
-<p><em>2016-07-29</em></p>
-<ul>
-<li>When toggling the key logging on or off, the LEDs will do a little dance.<br /></li>
-<li>The keylogger is now optional, but enabled by default. Use <code>KEYLOGGER_ENABLE=no</code> on the <code>make</code> command line to disable it.<br /></li>
-<li>The <code>TAB</code>/<code>ARRW</code> key was turned into a tap-dance key, allowing one to toggle the <strong>ARROW</strong> layer on by double-tapping, and as such, avoid the need to hold the key.<br /></li>
-<li>The <code>-</code>/<code>_</code> key was turned into a tap-dance key too.<br /></li>
-<li>There is now a way to travel time with the keyboard, toggle the feature on by hitting <code>LEAD t</code>.</li>
-</ul>
-<h2 id="v1.3"><a href="#v1.3">v1.3</a></h2>
-<p><em>2016-07-06</em></p>
-<ul>
-<li>Added support for logging keys, by pressing <code>LEAD d</code>. Also included is a tool to generate a <a href="#heatmap">heatmap</a> out of the logs.<br /></li>
-<li>The arrow and navigation keys were rearranged again, and now require an additional key being held to activate. See the <a href="#base-layer">base layer</a> for an image that shows where arrows are.<br /></li>
-<li>The <strong>experimental</strong> layer has been redone, and is now called <a href="#adore-layer">ADORE</a>, and as such, can be enabled by <code>LEAD a</code> now.<br /></li>
-<li>Switching between Dvorak and ADORE is now persisted into EEPROM, and survives a reboot.</li>
-</ul>
-<h2 id="v1.2"><a href="#v1.2">v1.2</a></h2>
-<p><em>2016-06-22</em></p>
-<ul>
-<li>The forced NKRO mode can be easily toggled off at compile-time, to make the firmware compatible with <a href="#using-on-windows">certain operating systems</a>.<br /></li>
-<li>The <code>:;</code> key has changed behaviour: to access the <code>;</code> symbol, the key needs to be double-tapped, instead of shifted.<br /></li>
-<li>The <code>=</code> and <code>\</code> keys were swapped, <code>=</code> moved to the home row, on both the <a href="#base-layer">base</a> and the <strong>experimental</strong> layers.<br /></li>
-<li>The arrow and navigation keys were redone, they are now more accessible, but the navigation keys require an extra tap to access.<br /></li>
-<li>The <strong>Emacs</strong> layer is gone, replaced by a simplified <strong>navigation and media</strong> layer.<br /></li>
-<li><code>LEAD v</code> types the firmware version, and the keymap version.<br /></li>
-<li>On the <strong>experimental</strong> layer, the <code>L</code> and <code>Q</code>, and the <code>K</code> and <code>G</code> keys were swapped.<br /></li>
-<li>The <a href="#steno-layer">Steno</a> layer gained a few more <code>#</code> and <code>*</code> keys, to make it easier on my fingers.</li>
-</ul>
-<h2 id="v1.1"><a href="#v1.1">v1.1</a></h2>
-<p><em>2016-06-14</em></p>
-<ul>
-<li>The keyboard starts in NKRO mode, bootmagic and other things are disabled.<br /></li>
-<li>A <a href="#steno-layer">Steno</a> layer was added, to be used with Plover.<br /></li>
-<li>An <strong>experimental</strong> layer was added, something halfway between Dvorak and Capewell-Dvorak. A work in progress.<br /></li>
-<li><code>LEAD y</code> types <code>\o/</code>.<br /></li>
-<li><p>Some keys on the <a href="#base-layer">Base</a> layer have been moved around:</p>
-<ul>
-<li><code>?</code> moved to the left pinky, left of <code>Q</code>.<br /></li>
-<li><code>=</code> shifted one row down, but <code>F11</code> stayed where it was.<br /></li>
-<li><code>-</code> on the left half was replaced by <code>Tab</code>.<br /></li>
-<li><code>Tab</code>'s original position is taken by a <code>Media Next</code>/<code>Media Prev</code> key.<br /></li>
-<li><code>:</code> now inputs <code>;</code> when shifted.<br /></li>
-</ul></li>
-<li><p><code>ESC</code> cancels the <strong>Hungarian</strong> layer too, not just modifiers.</p></li>
-</ul>
-<h2 id="v1.0"><a href="#v1.0">v1.0</a></h2>
-<p><em>2016-05-26</em></p>
-<p>Initial version.</p>
 <h1 id="license"><a href="#license">License</a></h1>
 <p>The layout, being a derivative of the original TMK firmware which is under the GPL-2+, this layout is under the GPL as well, but GPL-3+, rather than the older version.</p>
 <hr />
