@@ -37,5 +37,6 @@
 * [tak3over](keymaps/tak3over/)
 * [tong92](keymaps/tong92/)
 * [unicode](keymaps/unicode/)
+* [vifon](keymaps/vifon/)
 * [xyverz](keymaps/xyverz/)
 * [yang](keymaps/yang/)
