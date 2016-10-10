@@ -271,7 +271,10 @@ sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-progra
 <span class="co"># modify the keymap and keyboard assigment to compile what you want</span>
 <span class="co"># defaults are ergodox/default</span>
 
-<span class="kw">docker</span> run -e keymap=gwen -e keyboard=ergodox --rm -v <span class="ot">$(</span><span class="st">&#39;pwd&#39;</span><span class="ot">)</span>:/qmk:rw edasque/qmk_firmware</code></pre>
+<span class="kw">docker</span> run -e keymap=gwen -e keyboard=ergodox --rm -v <span class="ot">$(</span><span class="st">&#39;pwd&#39;</span><span class="ot">)</span>:/qmk:rw edasque/qmk_firmware
+
+<span class="co"># On windows docker seems to have issue with VOLUME tag in Dockerfile, and $(&#39;pwd&#39;) won&#39;t print a windows compliant path, use full path instead like this</span>
+<span class="kw">docker</span> run -e keymap=default -e keyboard=ergobop --rm -v D:/Users/Sacapuces/Documents/Repositories/qmk:/qmk:rw edasque/qmk_firmware</code></pre>
 <p>This will compile the targetted keyboard/keymap and leave it in your QMK directory for you to flash.</p>
 <h3 id="vagrant"><a href="#vagrant">Vagrant</a></h3>
 <p>If you have any problems building the firmware, you can try using a tool called Vagrant. It will set up a virtual computer with a known configuration that's ready-to-go for firmware building. OLKB does NOT host the files for this virtual computer. Details on how to set up Vagrant are in the <a href="doc/VAGRANT_GUIDE.md">VAGRANT_GUIDE file</a>.</p>
