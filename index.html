@@ -792,7 +792,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 };</code></pre>
 <p>And then, to assign this macro to a key on your keyboard layout, you just use <code>M(0)</code> on the key you want to press for copy/paste.</p>
 <h2 id="dynamic-macros-record-and-replay-macros-in-runtime"><a href="#dynamic-macros-record-and-replay-macros-in-runtime">Dynamic macros: record and replay macros in runtime</a></h2>
-<p>In addition to the static macros described above, you may enable the dynamic macros which you may record while writing. They are forgotten as soon as the keyboard is unplugged. Only two such macros may be stored at the same time, with the total length of 128 keypresses.</p>
+<p>In addition to the static macros described above, you may enable the dynamic macros which you may record while writing. They are forgotten as soon as the keyboard is unplugged. Only two such macros may be stored at the same time, with the total length of 64 keypresses (by default).</p>
 <p>To enable them, first add a new element to the <code>planck_keycodes</code> enum -- <code>DYNAMIC_MACRO_RANGE</code>:</p>
 <pre><code>enum planck_keycodes {
   QWERTY = SAFE_RANGE,
@@ -821,7 +821,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
     return false;
 }</code></pre>
 <p>To start recording the macro, press either <code>DYN_REC_START1</code> or <code>DYN_REC_START2</code>. To finish the recording, press the <code>_DYN</code> layer button. The handler awaits specifically for the <code>MO(_DYN)</code> keycode as the &quot;stop signal&quot; so please don't use any fancy ways to access this layer, use the regular <code>MO()</code> modifier. To replay the macro, press either <code>DYN_MACRO_PLAY1</code> or <code>DYN_MACRO_PLAY2</code>.</p>
-<p>If the LED-s start blinking during the recording with each keypress, it means there is no more space for the macro in the macro buffer. To fit the macro in, either make the other macro shorter (they share the same buffer) or increase the buffer size by setting the <code>DYNAMIC_MACRO_SIZE</code> preprocessor macro (default value: 256; please read the comments for it in the header).</p>
+<p>If the LED-s start blinking during the recording with each keypress, it means there is no more space for the macro in the macro buffer. To fit the macro in, either make the other macro shorter (they share the same buffer) or increase the buffer size by setting the <code>DYNAMIC_MACRO_SIZE</code> preprocessor macro (default value: 128; please read the comments for it in the header).</p>
 <p>For the details about the internals of the dynamic macros, please read the comments in the <code>dynamic_macro.h</code> header.</p>
 <h2 id="additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc"><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></h2>
 <p>Everything is assuming you're in Qwerty (in software) by default, but there is built-in support for using a Colemak or Dvorak layout by including this at the top of your keymap:</p>
