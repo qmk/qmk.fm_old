@@ -45,6 +45,7 @@
 * [osx_de_experimental](keymaps/osx_de_experimental/)
 * [osx_fr](keymaps/osx_fr/)
 * [osx_kinesis_pnut](keymaps/osx_kinesis_pnut/)
+* [osx_whiskey_tango_foxtrot_capslock](keymaps/osx_whiskey_tango_foxtrot_capslock/)
 * [plover](keymaps/plover/)
 * [plums](keymaps/plums/)
 * [romanzolotarev-norman-osx](keymaps/romanzolotarev-norman-osx/)

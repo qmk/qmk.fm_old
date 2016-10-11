@@ -1,0 +1,103 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/osx_whiskey_tango_foxtrot_capslock/">osx_whiskey_tango_foxtrot_capslock</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/osx_whiskey_tango_foxtrot_capslock/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_osx_whiskey_tango_foxtrot_capslock.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#the-extra-special-ergodox-build-for-macos-sierra-caps-lock-users">The extra special ergodox build for MacOS Sierra caps lock users</a><ul>
+        <li><a href="#do-you">Do you</a></li>
+        <li><a href="#then-this-might-just-be-for-you">Then this might just be for you!</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="the-extra-special-ergodox-build-for-macos-sierra-caps-lock-users"><a href="#the-extra-special-ergodox-build-for-macos-sierra-caps-lock-users">The extra special ergodox build for MacOS Sierra caps lock users</a></h1>
+<h3 id="do-you"><a href="#do-you">Do you</a></h3>
+<ul>
+<li>Hate the OSX / MacOS caps lock delay?<br /></li>
+<li>Have an ergodox?</li>
+</ul>
+<h3 id="then-this-might-just-be-for-you"><a href="#then-this-might-just-be-for-you">Then this might just be for you!</a></h3>
+<p><a href="http://apple.stackexchange.com/questions/81234/how-to-remove-caps-lock-delay-on-apple-macbook-pro-aluminum-keyboard">This</a><br />and <a href="http://sleepycow.org/2014/07/removing-the-caps-lock-delay-on-a-macbook/">this</a><br />are good workarounds for the caps lock delay, however none of these<br />work on Sierra. This abomination of a keymap simulates capslock to the best<br />of its abilities.<br />This means that it keeps track of caps lock state internally rather than<br />sending a caps lock keypress to the OS. It is smart enough to check for<br />modifiers, such as Control being held down, and stop it with the hanky panky<br />and just send on the key event unmolested even if FakeCaps is enabled. And<br />since the macro isn't even registered on the non-alphas, it will not affect<br />them regardless. Only in the event that FakeCaps is enabled and an alpha key<br />is pressed will it sneak in a shift keydown before the alpha keydown and<br />immediately afterward sneaks in a shift keyup. Generally this works well,<br />however there is one known issue:</p>
+<ul>
+<li>Holding down a key will only have the first character in caps. For instance,<br /> with caps lock on, if you hold down the 'a' key, you get:</li>
+</ul>
+<p><code>Aaaaaaaaaaaaaaaaaa</code></p>
+<p>I have only tested this on an original Ergodox with a Teensy 2.0.</p>
+<h4 id="some-other-small-tweaks"><a href="#some-other-small-tweaks">Some other small tweaks</a></h4>
+<ul>
+<li>Layer 0 board light is off<br /></li>
+<li>Layer 1 board light is on solid<br /></li>
+<li>Layer 2 board light blinks at speed controlled by BLINK_BASE</li>
+</ul>
+<p><img src="osx_whiskey_tango_foxtrot_capslock.png" alt="osx whiskey tango foxtrot" /></p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
