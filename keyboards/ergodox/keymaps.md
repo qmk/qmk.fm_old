@@ -48,6 +48,7 @@
 * [osx_whiskey_tango_foxtrot_capslock](keymaps/osx_whiskey_tango_foxtrot_capslock/)
 * [plover](keymaps/plover/)
 * [plums](keymaps/plums/)
+* [pvinis](keymaps/pvinis/)
 * [romanzolotarev-norman-osx](keymaps/romanzolotarev-norman-osx/)
 * [romanzolotarev-norman-plover-osx](keymaps/romanzolotarev-norman-plover-osx/)
 * [romanzolotarev-norman-plover-osx-hjkl](keymaps/romanzolotarev-norman-plover-osx-hjkl/)
