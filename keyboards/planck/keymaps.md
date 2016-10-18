@@ -32,6 +32,7 @@
 * [nico](keymaps/nico/)
 * [pete](keymaps/pete/)
 * [premek](keymaps/premek/)
+* [priyadi](keymaps/priyadi/)
 * [pvc](keymaps/pvc/)
 * [sgoodwin](keymaps/sgoodwin/)
 * [tak3over](keymaps/tak3over/)

@@ -153,6 +153,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>The <code>GUI</code> key is special, because when I double-tap it, it sends <code>GUI + w</code>, which pops up an application selector. It also switches to a one-shot layer, where the number row on the left half turns into app selector macros, for the most common things I usually want to switch to. Otherwise it behaves as on a normal layout.<br /></li>
 <li>The <code>ESC</code> key also doubles as a one-shot cancel key: if tapped while any of the one-shot modifiers are in-flight (as in, single-tapped, and not expired yet), it cancels all one-shot modifiers. It also cancels the <strong>Hun</strong> layer, if active. Otherwise it sends the usual keycode.<br /></li>
 <li>The <strong>Media</strong> and <strong>Hun</strong> layer keys are one-shot, the <strong>STENO</strong> key is a toggle.<br /></li>
+<li>The <strong>Fx</strong> key is one-shot, and activates the <strong>Media</strong> layer, along with a one-shot <code>Alt</code>.<br /></li>
 <li>When holding the <code>Tab</code>/<strong>Arrow</strong> key, the arrow layer activates while the key is held. Tapping the key produces the normal, <code>Tab</code> key. Double-tapping it toggles the <strong>Arrow</strong> layer on until a third tap.<br /></li>
 <li>Tapping the <code>:</code> key once yields <code>:</code>, tapping it twice yields <code>;</code>.<br /></li>
 <li>Tapping the <code>[{(</code>/<code>)}]</code> keys once yields <code>[</code> (or <code>{</code> when shifted), tapping them twice yields <code>(</code>.<br /></li>
@@ -191,13 +192,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h1 id="special-features"><a href="#special-features">Special features</a></h1>
 <h2 id="unicode-symbol-input"><a href="#unicode-symbol-input">Unicode Symbol Input</a></h2>
 <p>Once in the Unicode Symbol Input mode, one is able to type in symbol names, press <code>Enter</code> or <code>Space</code>, and get the Unicode symbol itself back. When in the mode, a capital <code>U</code> is printed first. Once the sequence is finished, all of it is erased by sending enough <code>Backspace</code> taps, and the firmware starts the OS-specific unicode input sequence. Then, it looks up the symbol name, and enters the associated code. If it is not found, it will just replay the pressed keycodes.</p>
-<p>The currently supported symbols are:</p>
-<ul>
-<li><code>snowman</code>: ☃<br /></li>
-<li><code>kiss</code>: 😙<br /></li>
-<li><code>rofl</code>: 🤣<br /></li>
-<li><code>poop</code>: 💩</li>
-</ul>
+<p>For the list of supported symbols, please see the source.</p>
 <p>This is an experimental feature, and may or may not work reliably.</p>
 <h1 id="tools"><a href="#tools">Tools</a></h1>
 <h2 id="heatmap"><a href="#heatmap">Heatmap</a></h2>

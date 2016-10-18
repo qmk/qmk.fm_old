@@ -409,6 +409,8 @@ sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-progra
 <p>This enables MIDI sending and receiving with your keyboard. To enter MIDI send mode, you can use the keycode <code>MI_ON</code>, and <code>MI_OFF</code> to turn it off. This is a largely untested feature, but more information can be found in the <code>quantum/quantum.c</code> file.</p>
 <p><code>UNICODE_ENABLE</code></p>
 <p>This allows you to send unicode symbols via <code>UC(&lt;unicode&gt;)</code> in your keymap. Only codes up to 0x7FFF are currently supported.</p>
+<p><code>UNICODEMAP_ENABLE</code></p>
+<p>This allows sending unicode symbols using <code>X(&lt;unicode&gt;)</code> in your keymap. Codes<br />up to 0xFFFFF are supported, including emojis. But you need to maintain a<br />separate mapping table in your keymap file.</p>
 <p><code>BLUETOOTH_ENABLE</code></p>
 <p>This allows you to interface with a Bluefruit EZ-key to send keycodes wirelessly. It uses the D2 and D3 pins.</p>
 <p><code>AUDIO_ENABLE</code></p>
