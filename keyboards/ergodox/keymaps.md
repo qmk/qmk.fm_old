@@ -65,6 +65,7 @@
 * [tonyabra_osx](keymaps/tonyabra_osx/)
 * [townk_osx](keymaps/townk_osx/)
 * [twey](keymaps/twey/)
+* [win10_writers-block](keymaps/win10_writers-block/)
 * [workman_osx_mdw](keymaps/workman_osx_mdw/)
 * [xyverz](keymaps/xyverz/)
 * [yoruian](keymaps/yoruian/)
