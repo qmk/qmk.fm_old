@@ -1,5 +1,6 @@
 ### Keymaps
 
+* [alphadox](keymaps/alphadox/)
 * [classic](keymaps/classic/)
 * [default](keymaps/default/)
 * [erlandsona](keymaps/erlandsona/)

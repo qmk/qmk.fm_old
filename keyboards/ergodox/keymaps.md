@@ -5,6 +5,7 @@
 * [adnw_k_o_y](keymaps/adnw_k_o_y/)
 * [alexjj](keymaps/alexjj/)
 * [algernon](keymaps/algernon/)
+* [alphadox](keymaps/alphadox/)
 * [andrew_osx](keymaps/andrew_osx/)
 * [bepo](keymaps/bepo/)
 * [bepo_csa](keymaps/bepo_csa/)
