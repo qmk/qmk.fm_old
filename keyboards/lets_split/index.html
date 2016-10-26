@@ -63,6 +63,7 @@
         <li><a href="#wiring">Wiring</a></li>
         <li><a href="#notes-on-software-configuration">Notes on Software Configuration</a></li>
         <li><a href="#flashing">Flashing</a></li>
+        <li><a href="#notes-on-using-pro-micro-3.3v">Notes on Using Pro Micro 3.3V</a></li>
         </ul></li>
         </ul>
 
@@ -125,6 +126,11 @@
 <p>After you have flashed the EEPROM for the first time, you then need to program<br />the flash memory:</p>
 <pre><code>make program</code></pre>
 <p>Note that you need to program both halves, but you have the option of using<br />different keymaps for each half. You could program the left half with a QWERTY<br />layout and the right half with a Colemak layout. Then if you connect the left<br />half to a computer by USB the keyboard will use QWERTY and Colemak when the<br />right half is connected.</p>
+<h2 id="notes-on-using-pro-micro-3.3v"><a href="#notes-on-using-pro-micro-3.3v">Notes on Using Pro Micro 3.3V</a></h2>
+<p>Do update the <code>F_CPU</code> parameter in <code>rules.mk</code> to <code>8000000</code> which reflects<br />the frequency on the 3.3V board.</p>
+<p>Also, if the slave board is producing weird characters in certain columns,<br />update the following line in <code>matrix.c</code> to the following:</p>
+<pre><code>// _delay_us(30);  // without this wait read unstable value.
+_delay_us(300);  // without this wait read unstable value.</code></pre>
             </div>
     </div>
   </div>
