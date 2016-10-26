@@ -1,6 +1,7 @@
 ### Keymaps
 
 * [dbroqua](keymaps/dbroqua/)
+* [dbroqua_hhkb](keymaps/dbroqua_hhkb/)
 * [default](keymaps/default/)
 * [sgoodwin](keymaps/sgoodwin/)
 * [stanleylai](keymaps/stanleylai/)
