@@ -410,7 +410,13 @@ sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-progra
 <p><code>UNICODE_ENABLE</code></p>
 <p>This allows you to send unicode symbols via <code>UC(&lt;unicode&gt;)</code> in your keymap. Only codes up to 0x7FFF are currently supported.</p>
 <p><code>UNICODEMAP_ENABLE</code></p>
-<p>This allows sending unicode symbols using <code>X(&lt;unicode&gt;)</code> in your keymap. Codes<br />up to 0xFFFFF are supported, including emojis. But you need to maintain a<br />separate mapping table in your keymap file.</p>
+<p>This allows sending unicode symbols using <code>X(&lt;unicode&gt;)</code> in your keymap. Codes<br />up to 0xFFFFFFFF are supported, including emojis. You will need to maintain<br />a separate mapping table in your keymap file.</p>
+<p>Known limitations:</p>
+<ul>
+<li>Under Mac OS, only codes up to 0xFFFF are supported.<br /></li>
+<li>Under Linux ibus, only codes up to 0xFFFFF are supported (but anything important is still under this limit for now).</li>
+</ul>
+<p>Characters out of range supported by the OS will be ignored.</p>
 <p><code>BLUETOOTH_ENABLE</code></p>
 <p>This allows you to interface with a Bluefruit EZ-key to send keycodes wirelessly. It uses the D2 and D3 pins.</p>
 <p><code>AUDIO_ENABLE</code></p>
