@@ -157,6 +157,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#debugging-the-tests">Debugging the tests</a></li>
         <li><a href="#full-integration-tests">Full Integration tests</a></li>
         </ul></li>
+        <li><a href="#tracing-variables">Tracing variables</a></li>
         </ul>
 
         </div>
@@ -421,6 +422,8 @@ sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-progra
 <p>This allows you to interface with a Bluefruit EZ-key to send keycodes wirelessly. It uses the D2 and D3 pins.</p>
 <p><code>AUDIO_ENABLE</code></p>
 <p>This allows you output audio on the C6 pin (needs abstracting). See the <a href="#driving-a-speaker---audio-support">audio section</a> for more information.</p>
+<p><code>VARIABLE_TRACE</code></p>
+<p>Use this to debug changes to variable values, see the <a href="#tracing-variables">tracing variables</a> section for more information.</p>
 <h3 id="customizing-makefile-options-on-a-per-keymap-basis"><a href="#customizing-makefile-options-on-a-per-keymap-basis">Customizing Makefile options on a per-keymap basis</a></h3>
 <p>If your keymap directory has a file called <code>Makefile</code> (note the filename), any Makefile options you set in that file will take precedence over other Makefile options for your particular keyboard.</p>
 <p>So let's say your keyboard's makefile has <code>BACKLIGHT_ENABLE = yes</code> (or maybe doesn't even list the <code>BACKLIGHT_ENABLE</code> option, which would cause it to be off). You want your particular keymap to not have the debug console, so you make a file called <code>Makefile</code> and specify <code>BACKLIGHT_ENABLE = no</code>.</p>
@@ -1094,6 +1097,16 @@ OPT_DEFS += -DBOOTLOADER_SIZE=512</code></pre>
 <h2 id="full-integration-tests"><a href="#full-integration-tests">Full Integration tests</a></h2>
 <p>It's not yet possible to do a full integration test, where you would compile the whole firmware and define a keymap that you are going to test. However there are plans for doing that, because writing tests that way would probably be easier, at least for people that are not used to unit testing.</p>
 <p>In that model you would emulate the input, and expect a certain output from the emulated keyboard.</p>
+<h1 id="tracing-variables"><a href="#tracing-variables">Tracing variables</a></h1>
+<p>Sometimes you might wonder why a variable gets changed and where, and this can be quite tricky to track down without having a debugger. It's of course possible to manually add print statements to track it, but you can also enable the variable trace feature. This works for both for variables that are changed by the code, and when the variable is changed by some memory corruption.</p>
+<p>To take the feature into use add <code>VARIABLE_TRACE=x</code> to the end of you make command. <code>x</code> represents the number of variables you want to trace, which is usually 1.</p>
+<p>Then at a suitable place in the code, call <code>ADD_TRACED_VARIABLE</code>, to begin the tracing. For example to trace all the layer changes, you can do this</p>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="dt">void</span> matrix_init_user(<span class="dt">void</span>) {
+  ADD_TRACED_VARIABLE(<span class="st">&quot;layer&quot;</span>, &amp;layer_state, <span class="kw">sizeof</span>(layer_state));
+}</code></pre>
+<p>This will add a traced variable named &quot;layer&quot; (the name is just for your information), which tracks the memory location of <code>layer_state</code>. It tracks 4 bytes (the size of <code>layer_state</code>), so any modification to the variable will be reported. By default you can not specify a size bigger than 4, but you can change it by adding <code>MAX_VARIABLE_TRACE_SIZE=x</code> to the end of the make command line.</p>
+<p>In order to actually detect changes to the variables you should call <code>VERIFY_TRACED_VARIABLES</code> around the code that you think that modifies the variable. If a variable is modified it will tell you between which two <code>VERIFY_TRACED_VARIABLES</code> calls the modification happened. You can then add more calls to track it down further. I don't recommend spamming the codebase with calls. It's better to start with a few, and then keep adding them in a binary search fashion. You can also delete the ones you don't need, as each call need to store the file name and line number in the ROM, so you can run out of memory if you add too many calls.</p>
+<p>Also remember to delete all the tracing code ones you have found the bug, as you wouldn't want to create a pull request with tracing code.</p>
             </div>
     </div>
   </div>
