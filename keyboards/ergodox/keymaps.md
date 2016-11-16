@@ -68,6 +68,7 @@
 * [townk_osx](keymaps/townk_osx/)
 * [twentylives_dvorak_with_hebrew](keymaps/twentylives_dvorak_with_hebrew/)
 * [twey](keymaps/twey/)
+* [videck](keymaps/videck/)
 * [win10_writers-block](keymaps/win10_writers-block/)
 * [workman_osx_mdw](keymaps/workman_osx_mdw/)
 * [xyverz](keymaps/xyverz/)

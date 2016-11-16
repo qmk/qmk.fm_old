@@ -1,0 +1,180 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/videck/">videck</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/videck/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_videck.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#videck-keymap-for-ergodox">ViDeck keymap for ErgoDox</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#missing-keys">Missing keys</a></li>
+        <li><a href="#leds">LEDs</a></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="videck-keymap-for-ergodox"><a href="#videck-keymap-for-ergodox">ViDeck keymap for ErgoDox</a></h1>
+<p>This is a QWERTY layout based on the US layout, where Vi functionality has been<br />especially considered.</p>
+<h1 id="features"><a href="#features">Features</a></h1>
+<ul>
+<li>Mouse movements using the Vi movement keys.<br /></li>
+<li>Vi movement keys doubling as arrow keys.<br /></li>
+<li>Shift lock using double tap.<br /></li>
+<li>A coder's modifier key for easy input of parenthesis.<br /></li>
+<li>Acess to the escape key using either thumb.<br /></li>
+<li>Reasonably accessible Scroll Lock key (useful if you, like me, want to switch<br /> to a non-US layout once in a while in X).</li>
+</ul>
+<h1 id="missing-keys"><a href="#missing-keys">Missing keys</a></h1>
+<ul>
+<li>Caps Lock (shift lock is used instead).<br /></li>
+<li>Pause/Break.<br /></li>
+<li>Print Screen.</li>
+</ul>
+<h1 id="leds"><a href="#leds">LEDs</a></h1>
+<ul>
+<li>Shift lock is indicated using first LED.<br /></li>
+<li>Arrow keys layer is indicated using second LED.<br /></li>
+<li>Mouse keys layer is indicated using third LED.</li>
+</ul>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#ifndef NO_DEBUG</span>
+  <span class="ot">#define NO_DEBUG</span>
+<span class="ot">#endif</span>
+<span class="ot">#ifndef NO_PRINT</span>
+  <span class="ot">#define NO_PRINT</span>
+<span class="ot">#endif</span>
+
+<span class="ot">#endif</span></code></pre>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code>AUDIO_ENABLE:=no
+BACKLIGHT_ENABLE:=no
+BLUETOOTH_ENABLE:=no
+BOOTMAGIC_ENABLE:=no
+COMMAND_ENABLE:=no
+CONSOLE_ENABLE:=no
+EXTRAKEY_ENABLE:=yes
+MIDI_ENABLE:=no
+MOUSEKEY_ENABLE:=yes
+NKRO_ENABLE:=no
+RGBLIGHT_ENABLE:=no
+SLEEP_LED_ENABLE:=no
+TAP_DANCE_ENABLE:=yes
+UNICODEMAP_ENABLE:=no
+UNICODE_ENABLE:=no
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+</code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#ifndef NO_DEBUG</span>
+  <span class="ot">#define NO_DEBUG</span>
+<span class="ot">#endif</span>
+<span class="ot">#ifndef NO_PRINT</span>
+  <span class="ot">#define NO_PRINT</span>
+<span class="ot">#endif</span>
+
+<span class="ot">#endif</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
