@@ -360,7 +360,8 @@ sudo apt-get install gcc unzip wget zip gcc-avr binutils-avr avr-libc dfu-progra
 <ul>
 <li><code>make COLOR=false</code> - turns off color output<br /></li>
 <li><code>make SILENT=true</code> - turns off output besides errors/warnings<br /></li>
-<li><code>make VERBOSE=true</code> - outputs all of the gcc stuff (not interesting, unless you need to debug)</li>
+<li><code>make VERBOSE=true</code> - outputs all of the gcc stuff (not interesting, unless you need to debug)<br /></li>
+<li><code>make EXTRAFLAGS=-E</code> - Preprocess the code without doing any compiling (useful if you are trying to debug #define commands)</li>
 </ul>
 <p>The make command itself also has some additional options, type <code>make --help</code> for more information. The most useful is probably <code>-jx</code>, which specifies that you want to compile using more than one CPU, the <code>x</code> represents the number of CPUs that you want to use. Setting that can greatly reduce the compile times, especially if you are compiling many keyboards/keymaps. I usually set it to one less than the number of CPUs that I have, so that I have some left for doing other things while it's compiling. Note that not all operating systems and make versions supports that option.</p>
 <p>Here are some examples commands</p>
