@@ -18,6 +18,7 @@
 * [default_osx](keymaps/default_osx/)
 * [dragon788](keymaps/dragon788/)
 * [dvorak](keymaps/dvorak/)
+* [dvorak_emacs](keymaps/dvorak_emacs/)
 * [dvorak_intl_squisher](keymaps/dvorak_intl_squisher/)
 * [dvorak_plover](keymaps/dvorak_plover/)
 * [dvorak_programmer](keymaps/dvorak_programmer/)

@@ -1,0 +1,157 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/dvorak_emacs/">dvorak_emacs</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/dvorak_emacs/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_dvorak_emacs.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#ergodox-dvorak-layout-with-emacs-binding-in-mind">Ergodox Dvorak Layout with emacs binding in mind</a><ul>
+        <li><a href="#keymap-layers">Keymap Layers</a><ul>
+        <li><a href="#keymap-0-base-layer">Keymap 0: Base layer</a></li>
+        <li><a href="#keymap-1-aux-layer">Keymap 1: Aux layer</a></li>
+        </ul></li>
+        <li><a href="#generation-of-.hex-file">Generation of .hex file</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="ergodox-dvorak-layout-with-emacs-binding-in-mind"><a href="#ergodox-dvorak-layout-with-emacs-binding-in-mind">Ergodox Dvorak Layout with emacs binding in mind</a></h1>
+<ul>
+<li>Control &amp; Alt key on the thumbs (activated if pressed with another key).<br /></li>
+<li>In the same way, &quot;U&quot; and &quot;R&quot; are the shift modifier if pressed with another key.<br /></li>
+<li>&quot;I&quot; and &quot;D&quot; set the layer 1 for the auxiliary keys if pressed with another key.<br /></li>
+<li>Software layout set to english.</li>
+</ul>
+<h2 id="keymap-layers"><a href="#keymap-layers">Keymap Layers</a></h2>
+<ul>
+<li>L0: dvorak with some customizations (see layout below)<br /></li>
+<li>L1: auxiliary keys (includes function keys, numpad...)</li>
+</ul>
+<h3 id="keymap-0-base-layer"><a href="#keymap-0-base-layer">Keymap 0: Base layer</a></h3>
+<p>Keys with double values (like U/LSft) correspond to the 'tapped' key and the 'held' key, respectively</p>
+<pre><code>
+
+,--------------------------------------------------.           ,--------------------------------------------------.
+|        |   1  |   2  |   3  |   4  |   5  |  Esc |           |  Esc |   6  |   7  |   8  |   9  |   0  |   =    |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|   ~    |  '   |   ,  |   .  |   P  |   Y  |   [  |           |   ]  |   F  |   G  |   C  |   H  |   L  |   /    |
+|--------+------+------+------+------+------|   {  |           |   }  |------+------+------+------+------+--------|
+|  Tab   |   A  |   O  |   E  |U/LSft| I/L1 |------|           |------|  D/L1|R/RSft|   T  |   N  |   S  |   -    |
+|--------+------+------+------+------+------| LGUI |           | LGUI |------+------+------+------+------+--------|
+| {/LSft |   ;  |   Q  |   J  |   K  |   X  |      |           |      |   B  |   M  |   W  |   V  |   Z  | }/RSft |
+`--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+  |      |      |      |      | ~L1  |                                       | ~L1  |      |      |   \  |      |
+  `----------------------------------'                                       `----------------------------------'
+                                       ,-------------.       ,-------------.
+                                       | HOME |  END |       | LEFT | RIGHT|
+                                ,------|------|------|       |------+--------+------.
+                                | BSPC |  DEL | PGUP |       |  UP  | SPACE  |RETURN|
+                                |  /   |  /   |------|       |------|   /    |  /   |
+                                | LCTL | LALT |PGDWN |       | DOWN | LALT   | LCTL |
+                                `--------------------'       `----------------------'
+
+</pre>
+<p></code></p>
+<h3 id="keymap-1-aux-layer"><a href="#keymap-1-aux-layer">Keymap 1: Aux layer</a></h3>
+<pre><code>
+
+,--------------------------------------------------.           ,--------------------------------------------------.
+|  VolUp |      |      |      |      |      | SLEEP            | PWR  |      |      |      |      |      |        |
+|--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+|  VolDn |  F1  |  F2  |  F3  |  F4  |      |      |           |      |      |   7  |   8  |   9  |   *  |        |
+|--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+|        |  F5  |  F6  |  F7  |  F8  | TRANS|------|           |------|TRANS |   4  |   5  |   6  |   +  |        |
+|--------+------+------+------+------+------|      |           |PSCR  |------+------+------+------+------+--------|
+|  TRANS |  F9  |  F10 |  F11 |  F12 |      |      |           |      |      |   1  |   2  |   3  |   /  |  TRANS |
+`--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+  |CTRL-S|CTRL-Z|CTRL-X|CTRL-C| TRANS|                                       | TRANS|    . |   0  |   =  |      |
+  `----------------------------------'                                       `----------------------------------'
+                                       ,-------------.       ,-------------.
+                                       | TRANS| TRANS|       | TRANS| TRANS|
+                                ,------|------|------|       |------+------+------.
+                                |      |      | TRANS|       | TRANS|      |      |
+                                |TRANS |TRANS |------|       |------| TRANS| TRANS|
+                                |      |      | TRANS|       | TRANS|      |      |
+                                `--------------------'       `--------------------'
+
+</pre>
+<p></code></p>
+<h2 id="generation-of-.hex-file"><a href="#generation-of-.hex-file">Generation of .hex file</a></h2>
+<blockquote>
+<p>In the &quot;qmk_firmware/keyboards/ergodox&quot; directory.</p>
+</blockquote>
+<blockquote>
+<p>Execute &quot;make dvorak_emacs&quot;. Then the hex file &quot;ergodox_ez_dvorak_emacs.hex&quot; is in the root directory : &quot;qmk_firmware&quot;.</p>
+</blockquote>
+<blockquote>
+<p>Flash with <code>teensy_loader</code> binary</p>
+</blockquote>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
