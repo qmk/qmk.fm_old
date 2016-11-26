@@ -165,6 +165,17 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 <span class="ot">#undef LEADER_TIMEOUT</span>
 <span class="ot">#define LEADER_TIMEOUT 300</span>
+ 
+<span class="co">/* ws2812 RGB LED */</span>
+<span class="ot">#define RGB_DI_PIN D7</span>
+<span class="ot">#define RGBLIGHT_ANIMATIONS</span>
+<span class="ot">#define RGBLED_NUM 15     </span><span class="co">// Number of LEDs</span>
+<span class="ot">#define RGBLIGHT_HUE_STEP 12</span>
+<span class="ot">#define RGBLIGHT_SAT_STEP 255</span>
+<span class="ot">#define RGBLIGHT_VAL_STEP 12</span>
+
+<span class="ot">#define RGB_MIDI</span>
+<span class="ot">#define RGBW_BB_TWI</span>
 
 <span class="ot">#endif</span></code></pre>
 <hr />
@@ -174,6 +185,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
 COMMAND_ENABLE   = no  # Commands for debug and configuration
+RGBLIGHT_ENABLE ?= yes
+MIDI_ENABLE ?= yes
 
 ifndef QUANTUM_DIR
     include ../../../../Makefile
@@ -191,6 +204,17 @@ endif
 
 <span class="ot">#undef LEADER_TIMEOUT</span>
 <span class="ot">#define LEADER_TIMEOUT 300</span>
+ 
+<span class="co">/* ws2812 RGB LED */</span>
+<span class="ot">#define RGB_DI_PIN D7</span>
+<span class="ot">#define RGBLIGHT_ANIMATIONS</span>
+<span class="ot">#define RGBLED_NUM 15     </span><span class="co">// Number of LEDs</span>
+<span class="ot">#define RGBLIGHT_HUE_STEP 12</span>
+<span class="ot">#define RGBLIGHT_SAT_STEP 255</span>
+<span class="ot">#define RGBLIGHT_VAL_STEP 12</span>
+
+<span class="ot">#define RGB_MIDI</span>
+<span class="ot">#define RGBW_BB_TWI</span>
 
 <span class="ot">#endif</span></code></pre>
             </div>
