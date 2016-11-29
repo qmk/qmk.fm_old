@@ -121,7 +121,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#dynamic-macros-record-and-replay-macros-in-runtime">Dynamic macros: record and replay macros in runtime</a></li>
         <li><a href="#additional-keycode-aliases-for-software-implemented-layouts-colemak-dvorak-etc">Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)</a></li>
         <li><a href="#additional-language-support">Additional language support</a></li>
-        <li><a href="#unicode-support">Unicode support</a></li>
+        <li><a href="#unicode-support">Unicode support</a><ul>
+        <li><a href="#unicode_enable">UNICODE_ENABLE</a></li>
+        <li><a href="#unicodemap_enable">UNICODEMAP_ENABLE</a></li>
+        <li><a href="#ucis_enable">UCIS_ENABLE</a></li>
+        </ul></li>
         <li><a href="#backlight-breathing">Backlight Breathing</a></li>
         <li><a href="#other-firmware-shortcut-keycodes">Other firmware shortcut keycodes</a></li>
         </ul></li>
@@ -139,6 +143,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#international-characters-on-windows">International Characters on Windows</a></li>
         <li><a href="#rgb-under-glow-mod">RGB Under Glow Mod</a><ul>
         <li><a href="#ws2812-wiring">WS2812 Wiring</a></li>
+        </ul></li>
+        <li><a href="#ps2-mouse-support">PS/2 Mouse Support</a><ul>
+        <li><a href="#busywait-version">Busywait version</a></li>
+        <li><a href="#interrupt-version">Interrupt version</a></li>
+        <li><a href="#usart-version">USART version</a></li>
         </ul></li>
         <li><a href="#safety-considerations">Safety Considerations</a></li>
         </ul></li>
@@ -852,7 +861,21 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 <h2 id="additional-language-support"><a href="#additional-language-support">Additional language support</a></h2>
 <p>In <code>quantum/keymap_extras/</code>, you'll see various language files - these work the same way as the alternative layout ones do. Most are defined by their two letter country/language code followed by an underscore and a 4-letter abbreviation of its name. <code>FR_UGRV</code> which will result in a <code>ù</code> when using a software-implemented AZERTY layout. It's currently difficult to send such characters in just the firmware (but it's being worked on - see Unicode support).</p>
 <h2 id="unicode-support"><a href="#unicode-support">Unicode support</a></h2>
-<p>You can currently send 4 hex digits with your OS-specific modifier key (RALT for OSX with the &quot;Unicode Hex Input&quot; layout, see <a href="http://www.poynton.com/notes/misc/mac-unicode-hex-input.html">this article</a> to learn more) - this is currently limited to supporting one OS at a time, and requires a recompile for switching. 8 digit hex codes are being worked on. The keycode function is <code>UC(n)</code>, where <em>n</em> is a 4 digit hexidecimal. Enable from the Makefile.</p>
+<p>There are three Unicode keymap definition method available in QMK:</p>
+<h3 id="unicode_enable"><a href="#unicode_enable">UNICODE_ENABLE</a></h3>
+<p>Supports Unicode input up to 0xFFFF. The keycode function is <code>UC(n)</code> in<br />keymap file, where <em>n</em> is a 4 digit hexadecimal.</p>
+<h3 id="unicodemap_enable"><a href="#unicodemap_enable">UNICODEMAP_ENABLE</a></h3>
+<p>Supports Unicode up to 0xFFFFFFFF. You need to maintain a separate mapping<br />table <code>const uint32_t PROGMEM unicode_map[] = {...}</code> in your keymap file.<br />The keycode function is <code>X(n)</code> where <em>n</em> is the array index of the mapping<br />table.</p>
+<h3 id="ucis_enable"><a href="#ucis_enable">UCIS_ENABLE</a></h3>
+<p>TBD</p>
+<p>Unicode input in QMK works by inputing a sequence of characters to the OS,<br />sort of like macro. Unfortunately, each OS has different ideas on how Unicode is inputted.</p>
+<p>This is the current list of Unicode input method in QMK:</p>
+<ul>
+<li>UC_OSX: MacOS Unicode Hex Input support. Works only up to 0xFFFF. Disabled by default. To enable: go to System Preferences -&gt; Keyboard -&gt; Input Sources, and enable Unicode Hex.<br /></li>
+<li>UC_LNX: Unicode input method under Linux. Works up to 0xFFFFF. Should work almost anywhere on ibus enabled distros. Without ibus, this works under GTK apps, but rarely anywhere else.<br /></li>
+<li>UC_WIN: (not recommended) Windows built-in Unicode input. To enable: create registry key under <code>HKEY_CURRENT_USER\Control Panel\Input Method\EnableHexNumpad</code> of type <code>REG_SZ</code> called <code>EnableHexNumpad</code>, set its value to 1, and reboot. This method is not recommended because of reliability and compatibility issue, use WinCompose method below instead.<br /></li>
+<li>UC_WINC: Windows Unicode input using WinCompose. Requires <a href="https://github.com/samhocevar/wincompose">WinCompose</a>. Works reliably under many (all?) variations of Windows.</li>
+</ul>
 <h2 id="backlight-breathing"><a href="#backlight-breathing">Backlight Breathing</a></h2>
 <p>In order to enable backlight breathing, the following line must be added to your config.h file.</p>
 <pre><code>#define BACKLIGHT_BREATHING</code></pre>
@@ -1016,6 +1039,102 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <h3 id="ws2812-wiring"><a href="#ws2812-wiring">WS2812 Wiring</a></h3>
 <p><img src="https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/keyboards/planck/keymaps/yang/WS2812-wiring.jpg" alt="WS2812 Wiring" /></p>
 <p>Please note the USB port can only supply a limited amount of power to the keyboard (500mA by standard, however, modern computer and most usb hubs can provide 700+mA.). According to the data of NeoPixel from Adafruit, 30 WS2812 LEDs require a 5V 1A power supply, LEDs used in this mod should not more than 20.</p>
+<h2 id="ps2-mouse-support"><a href="#ps2-mouse-support">PS/2 Mouse Support</a></h2>
+<p>Its possible to hook up a PS/2 mouse (for example touchpads or trackpoints) to your keyboard as a composite device.</p>
+<p>Then, decide whether to use USART (best), interrupts (better) or busywait (not recommended), and enable the relevant option.</p>
+<h3 id="busywait-version"><a href="#busywait-version">Busywait version</a></h3>
+<p>Note: This is not recommended, you may encounter jerky movement or unsent inputs. Please use interrupt or USART version if possible.</p>
+<p>In rules.mk:</p>
+<pre><code>PS2_MOUSE_ENABLE = yes
+PS2_USE_BUSYWAIT = yes</code></pre>
+<p>In your keyboard config.h:</p>
+<pre><code>#ifdef PS2_USE_BUSYWAIT
+#   define PS2_CLOCK_PORT  PORTD
+#   define PS2_CLOCK_PIN   PIND
+#   define PS2_CLOCK_DDR   DDRD
+#   define PS2_CLOCK_BIT   1
+#   define PS2_DATA_PORT   PORTD
+#   define PS2_DATA_PIN    PIND
+#   define PS2_DATA_DDR    DDRD
+#   define PS2_DATA_BIT    2
+#endif</code></pre>
+<h3 id="interrupt-version"><a href="#interrupt-version">Interrupt version</a></h3>
+<p>The following example uses D2 for clock and D5 for data. You can use any INT or PCINT pin for clock, and any pin for data.</p>
+<p>In rules.mk:</p>
+<pre><code>PS2_MOUSE_ENABLE = yes
+PS2_USE_INT = yes</code></pre>
+<p>In your keyboard config.h:</p>
+<pre><code>#ifdef PS2_USE_INT
+#define PS2_CLOCK_PORT  PORTD
+#define PS2_CLOCK_PIN   PIND
+#define PS2_CLOCK_DDR   DDRD
+#define PS2_CLOCK_BIT   2
+#define PS2_DATA_PORT   PORTD
+#define PS2_DATA_PIN    PIND
+#define PS2_DATA_DDR    DDRD
+#define PS2_DATA_BIT    5
+
+#define PS2_INT_INIT()  do {    \
+    EICRA |= ((1&lt;&lt;ISC21) |      \
+              (0&lt;&lt;ISC20));      \
+} while (0)
+#define PS2_INT_ON()  do {      \
+    EIMSK |= (1&lt;&lt;INT2);         \
+} while (0)
+#define PS2_INT_OFF() do {      \
+    EIMSK &amp;= ~(1&lt;&lt;INT2);        \
+} while (0)
+#define PS2_INT_VECT   INT2_vect
+#endif</code></pre>
+<h3 id="usart-version"><a href="#usart-version">USART version</a></h3>
+<p>To use USART on the ATMega32u4, you have to use PD5 for clock and PD2 for data. If one of those are unavailable, you need to use interrupt version.</p>
+<p>In rules.mk:</p>
+<pre><code>PS2_MOUSE_ENABLE = yes
+PS2_USE_USART = yes</code></pre>
+<p>In your keyboard config.h:</p>
+<pre><code>#ifdef PS2_USE_USART
+#define PS2_CLOCK_PORT  PORTD
+#define PS2_CLOCK_PIN   PIND
+#define PS2_CLOCK_DDR   DDRD
+#define PS2_CLOCK_BIT   5
+#define PS2_DATA_PORT   PORTD
+#define PS2_DATA_PIN    PIND
+#define PS2_DATA_DDR    DDRD
+#define PS2_DATA_BIT    2
+
+/* synchronous, odd parity, 1-bit stop, 8-bit data, sample at falling edge */
+/* set DDR of CLOCK as input to be slave */
+#define PS2_USART_INIT() do {   \
+    PS2_CLOCK_DDR &amp;= ~(1&lt;&lt;PS2_CLOCK_BIT);   \
+    PS2_DATA_DDR &amp;= ~(1&lt;&lt;PS2_DATA_BIT);     \
+    UCSR1C = ((1 &lt;&lt; UMSEL10) |  \
+              (3 &lt;&lt; UPM10)   |  \
+              (0 &lt;&lt; USBS1)   |  \
+              (3 &lt;&lt; UCSZ10)  |  \
+              (0 &lt;&lt; UCPOL1));   \
+    UCSR1A = 0;                 \
+    UBRR1H = 0;                 \
+    UBRR1L = 0;                 \
+} while (0)
+#define PS2_USART_RX_INT_ON() do {  \
+    UCSR1B = ((1 &lt;&lt; RXCIE1) |       \
+              (1 &lt;&lt; RXEN1));        \
+} while (0)
+#define PS2_USART_RX_POLL_ON() do { \
+    UCSR1B = (1 &lt;&lt; RXEN1);          \
+} while (0)
+#define PS2_USART_OFF() do {    \
+    UCSR1C = 0;                 \
+    UCSR1B &amp;= ~((1 &lt;&lt; RXEN1) |  \
+                (1 &lt;&lt; TXEN1));  \
+} while (0)
+#define PS2_USART_RX_READY      (UCSR1A &amp; (1&lt;&lt;RXC1))
+#define PS2_USART_RX_DATA       UDR1
+#define PS2_USART_ERROR         (UCSR1A &amp; ((1&lt;&lt;FE1) | (1&lt;&lt;DOR1) | (1&lt;&lt;UPE1)))
+#define PS2_USART_RX_VECT       USART1_RX_vect
+#endif
+#endif
+#endif</code></pre>
 <h2 id="safety-considerations"><a href="#safety-considerations">Safety Considerations</a></h2>
 <p>You probably don't want to &quot;brick&quot; your keyboard, making it impossible<br />to rewrite firmware onto it. Here are some of the parameters to show<br />what things are (and likely aren't) too risky.</p>
 <ul>

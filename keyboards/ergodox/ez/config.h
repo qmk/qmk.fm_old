@@ -41,10 +41,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LED_BRIGHTNESS_LO       15
 #define LED_BRIGHTNESS_HI       255
 
-
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE    5
-
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D7
 #define RGBLIGHT_ANIMATIONS
@@ -55,6 +51,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGB_MIDI
 #define RGBW_BB_TWI
+
+
+/* Set 0 if debouncing isn't needed */
+#define DEBOUNCE    5
 
 /*
  * Feature disable options
