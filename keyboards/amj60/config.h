@@ -67,7 +67,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 #define RGB_DI_PIN E2
-#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_TIMER
 #define RGBLED_NUM 8     // Number of LEDs
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17

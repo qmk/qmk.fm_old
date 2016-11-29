@@ -62,6 +62,7 @@
         <li><a href="#disposition-bepo-pour-lergodox">Disposition BÉPO pour l'ErgoDox</a><ul>
         <li><a href="#particularites">Particularités</a></li>
         </ul></li>
+        <li><a href="#makefile">Makefile</a></li>
         </ul>
 
         </div>
@@ -86,10 +87,10 @@
 <p>Les touches &quot;Backspace&quot; et &quot;Delete&quot; sont placées comme sur la TypeMatrix 2030, du côté gauche uniquement (pour laisser celles de la main droite servir de {caps,num,scroll}lock puisqu'elles ont des LED).</p>
 <p>La touche &quot;Tab&quot; est placée comme sur la TypeMatrix 2020.</p>
 <p>Meilleure symétrie et accessibilité que la TypeMatrix 2030 : les touches &quot;W&quot; et &quot;%&quot; ont dû être déplacées du côté gauche en raison du nombre de touches de l'ErgoDox, mais l'auriculaire droit ne gère maintenant que deux colonnes de touches au lieu de trois. La touche &quot;Ê&quot; redevient accessible sur la même rangée que les autres lettres, comme sur un clavier classique en disposition bépo. Les lettres, chiffres et symboles sont tous regroupés sur 4 lignes et 6 colonnes pour chaque main, et la première rangée de lettres à la main gauche conserve une identité visuelle &quot;BÉPO&quot;.</p>
-<p>Touche de fonction permettant de saisir les touches F1 à F12, les touches F1 à F10 sont placées de façon logique par rapport aux chiffres 1 à 0. Cette même touche permet l'accès aux touches directionnelles sans déplacer la main droite. Les touches &quot;Home&quot; et &quot;End&quot; sont placées de la même façon que sur une TypeMatrix 2030 par rapport aux touches directionnelles. Les touches &quot;Page Up&quot; et &quot;Page Down&quot; sont également accessibles facilement sans déplacer la main droite. Les fonctions &quot;VolUp&quot; et &quot;VolDown&quot; sont placées comme sur la TypeMatrix 2030, avec la fonction &quot;Mute&quot; juste au dessus. Les fonctions &quot;Undo&quot;, &quot;Cut&quot;, &quot;Copy&quot; et &quot;Paste&quot; sont placées côte à côte comme elles le seraient sur un clavier QWERTY en combinaison avec la touche &quot;Ctrl&quot; (à l'emplacement des lettres &quot;Z&quot;, &quot;X&quot;, &quot;C&quot; et &quot;V&quot;). Par rapport au layout &quot;SpaceFN&quot;, l'utilisation d'une touche de fonction dédiée au pouce permet de ne pas ajouter de latence, et la touche espace reste compatible avec les jeux (action au moment de l'appui et possibilité d'appui long).</p>
+<p>Touche de fonction permettant de saisir les touches F1 à F12, les touches F1 à F10 sont placées de façon logique par rapport aux chiffres 1 à 0. Cette même touche permet l'accès aux touches directionnelles sans déplacer la main droite et d'effectuer des actions souris avec uniquement la main gauche. Les touches &quot;Home&quot; et &quot;End&quot; sont placées de la même façon que sur une TypeMatrix 2030 par rapport aux touches directionnelles. Les touches &quot;Page Up&quot; et &quot;Page Down&quot; sont également accessibles facilement sans déplacer la main droite. Les fonctions &quot;VolUp&quot; et &quot;VolDown&quot; sont placées comme sur la TypeMatrix 2030, avec la fonction &quot;Mute&quot; juste au dessus. Les fonctions &quot;Undo&quot;, &quot;Cut&quot;, &quot;Copy&quot; et &quot;Paste&quot; sont placées côte à côte comme elles le seraient sur un clavier QWERTY en combinaison avec la touche &quot;Ctrl&quot; (à l'emplacement des lettres &quot;Z&quot;, &quot;X&quot;, &quot;C&quot; et &quot;V&quot;). Par rapport au layout &quot;SpaceFN&quot;, l'utilisation d'une touche de fonction dédiée au pouce permet de ne pas ajouter de latence, et la touche espace reste compatible avec les jeux (action au moment de l'appui et possibilité d'appui long).</p>
 <p>Touche de fonction permettant l'accès au pavé numérique comme sur la TypeMatrix 2030, mais sans avoir à déplacer la main droite : avec les doigts sur la rangée de repos, possibilité de saisir les chiffres &quot;4&quot;, &quot;5&quot; et &quot;6&quot; comme sur un pavé numérique classique. Le double &quot;0&quot; de la TypeMatrix a été conservé, et gagne une possibilité de répétition en simples &quot;0&quot;.</p>
-<p>L'appui sur une touche permet de basculer en mode BEPO sur un système configuré pour un clavier QWERTY. Cette compatibilité n'est pas parfaite (pas encore de gestion des accents mais ça devrait être faisable avec une disposition en qwerty international, et les combinaisons de touches ne sont pas toutes supportées puisque le clavier traduit déjà certaines touches en combinaisons) mais reste pratique pour une saisie de texte occasionnelle.</p>
-<p>TODO : couche de compatibilité pour utiliser la disposition BÉPO sur un système configuré pour un clavier AZERTY.</p>
+<p>Touche permettant de basculer en mode BEPO sur un système configuré pour un clavier QWERTY. Cette compatibilité n'est pas parfaite (pas encore de gestion des accents mais ça devrait être faisable avec une disposition en qwerty international, et les combinaisons de touches ne sont pas toutes supportées puisque le clavier traduit déjà certaines touches en combinaisons) mais reste pratique pour une saisie de texte occasionnelle et pour des accès BIOS ou console en QWERTY.</p>
+<p>Touche permettant de basculer en mode BEPO sur un système configuré pour un clavier AZERTY. Cette compatibilité n'est pas parfaite (pas de gestion des caractères non présents sur le clavier AZERTY, et les combinaisons de touches ne sont pas toutes supportées puisque le clavier traduit déjà certaines touches en combinaisons) mais reste pratique pour une saisie de texte occasionnelle et pour faire du bureau à distance vers un système Windows sans BEPO.</p>
 <blockquote>
 <p>Olivier Smedts <script type="text/javascript">
 <!--
@@ -98,6 +99,18 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#x6f;&#108;&#x69;&#118;&#x69;&#x65;&#114;&#32;&#x61;&#116;&#32;&#x67;&#x69;&#100;&#48;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript></p>
 </blockquote>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code># Having a file like this allows you to override Makefile definitions
+# for your own particular keymap
+
+SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
+COMMAND_ENABLE   = no  # Commands for debug and configuration
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+</code></pre>
             </div>
     </div>
   </div>

@@ -121,7 +121,7 @@ void matrix_init(void)
     matrix_scan_count = 0;
 #endif
 
-    matrix_init_quantum();
+    matrix_init_kb();
 
 }
 
