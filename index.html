@@ -1026,10 +1026,10 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <p>Here is a quick demo on Youtube (with NPKC KC60) (<a href="https://www.youtube.com/watch?v=VKrpPAHlisY">https://www.youtube.com/watch?v=VKrpPAHlisY</a>).</p>
 <p>For this mod, you need an unused pin wiring to DI of WS2812 strip. After wiring the VCC, GND, and DI, you can enable the underglow in your Makefile.</p>
 <pre><code>RGBLIGHT_ENABLE = yes</code></pre>
-<p>In order to use the underglow timer functions, you need to have <code>#define RGBLIGHT_TIMER</code> in your <code>config.h</code>, and have audio disabled (<code>AUDIO_ENABLE = no</code> in your Makefile).</p>
+<p>In order to use the underglow animation functions, you need to have <code>#define RGBLIGHT_ANIMATIONS</code> in your <code>config.h</code>.</p>
 <p>Please add the following options into your config.h, and set them up according your hardware configuration. These settings are for the <code>F4</code> pin by default:</p>
 <pre><code>#define RGB_DI_PIN F4     // The pin your RGB strip is wired to
-#define RGBLIGHT_TIMER    // Require for fancier stuff (not compatible with audio)
+#define RGBLIGHT_ANIMATIONS    // Require for fancier stuff (not compatible with audio)
 #define RGBLED_NUM 14     // Number of LEDs
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17

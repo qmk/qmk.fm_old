@@ -165,6 +165,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 <span class="ot">#undef LEADER_TIMEOUT</span>
 <span class="ot">#define LEADER_TIMEOUT 300</span>
+ 
 
 <span class="ot">#endif</span></code></pre>
 <hr />
@@ -174,6 +175,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
 COMMAND_ENABLE   = no  # Commands for debug and configuration
+RGBLIGHT_ENABLE ?= yes
+MIDI_ENABLE ?= yes
 
 ifndef QUANTUM_DIR
     include ../../../../Makefile
@@ -191,6 +194,7 @@ endif
 
 <span class="ot">#undef LEADER_TIMEOUT</span>
 <span class="ot">#define LEADER_TIMEOUT 300</span>
+ 
 
 <span class="ot">#endif</span></code></pre>
             </div>

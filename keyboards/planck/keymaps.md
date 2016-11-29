@@ -36,6 +36,7 @@
 * [pvc](keymaps/pvc/)
 * [sgoodwin](keymaps/sgoodwin/)
 * [tak3over](keymaps/tak3over/)
+* [thermal_printer](keymaps/thermal_printer/)
 * [tong92](keymaps/tong92/)
 * [unicode](keymaps/unicode/)
 * [vifon](keymaps/vifon/)
