@@ -5,6 +5,9 @@
 # Makefile
 
 ```
+# Please remove if no longer applicable
+$(warning THIS FILE MAY BE TOO LARGE FOR YOUR KEYBOARD)
+$(warning Please disable some options in the Makefile to resolve)
 
 
 # Build Options
@@ -30,4 +33,5 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 ifndef QUANTUM_DIR
 	include ../../../../Makefile
 endif
+
 ```
