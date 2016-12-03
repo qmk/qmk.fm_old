@@ -148,6 +148,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <li><a href="#busywait-version">Busywait version</a></li>
         <li><a href="#interrupt-version">Interrupt version</a></li>
         <li><a href="#usart-version">USART version</a></li>
+        <li><a href="#additional-settings">Additional Settings</a></li>
         </ul></li>
         <li><a href="#safety-considerations">Safety Considerations</a></li>
         </ul></li>
@@ -1043,7 +1044,7 @@ float goodbye[][2] = SONG(GOODBYE_SOUND);</code></pre>
 <p>Please note the USB port can only supply a limited amount of power to the keyboard (500mA by standard, however, modern computer and most usb hubs can provide 700+mA.). According to the data of NeoPixel from Adafruit, 30 WS2812 LEDs require a 5V 1A power supply, LEDs used in this mod should not more than 20.</p>
 <h2 id="ps2-mouse-support"><a href="#ps2-mouse-support">PS/2 Mouse Support</a></h2>
 <p>Its possible to hook up a PS/2 mouse (for example touchpads or trackpoints) to your keyboard as a composite device.</p>
-<p>Then, decide whether to use USART (best), interrupts (better) or busywait (not recommended), and enable the relevant option.</p>
+<p>There are three available modes for hooking up PS/2 devices: USART (best), interrupts (better) or busywait (not recommended).</p>
 <h3 id="busywait-version"><a href="#busywait-version">Busywait version</a></h3>
 <p>Note: This is not recommended, you may encounter jerky movement or unsent inputs. Please use interrupt or USART version if possible.</p>
 <p>In rules.mk:</p>
@@ -1137,6 +1138,66 @@ PS2_USE_USART = yes</code></pre>
 #endif
 #endif
 #endif</code></pre>
+<h3 id="additional-settings"><a href="#additional-settings">Additional Settings</a></h3>
+<h4 id="ps2-mouse-features"><a href="#ps2-mouse-features">PS/2 mouse features</a></h4>
+<p>These enable settings supported by the PS/2 mouse protocol: <a href="http://www.computer-engineering.org/ps2mouse/">http://www.computer-engineering.org/ps2mouse/</a></p>
+<pre><code>/* Use remote mode instead of the default stream mode (see link) */
+#define PS2_MOUSE_USE_REMOTE_MODE  
+
+/* Enable the scrollwheel or scroll gesture on your mouse or touchpad */
+#define PS2_MOUSE_ENABLE_SCROLLING
+
+/* Some mice will need a scroll mask to be configured. The default is 0xFF. */
+#define PS2_MOUSE_SCROLL_MASK 0x0F
+
+/* Applies a transformation to the movement before sending to the host (see link) */
+#define PS2_MOUSE_USE_2_1_SCALING
+
+/* The time to wait after initializing the ps2 host */
+#define PS2_MOUSE_INIT_DELAY 1000 /* Default */</code></pre>
+<p>You can also call the following functions from ps2_mouse.h</p>
+<pre><code>void ps2_mouse_disable_data_reporting(void);
+
+void ps2_mouse_enable_data_reporting(void);
+
+void ps2_mouse_set_remote_mode(void);
+
+void ps2_mouse_set_stream_mode(void);
+
+void ps2_mouse_set_scaling_2_1(void);
+
+void ps2_mouse_set_scaling_1_1(void);
+
+void ps2_mouse_set_resolution(ps2_mouse_resolution_t resolution);
+
+void ps2_mouse_set_sample_rate(ps2_mouse_sample_rate_t sample_rate);</code></pre>
+<h4 id="fine-control"><a href="#fine-control">Fine control</a></h4>
+<p>Use the following defines to change the sensitivity and speed of the mouse.<br />Note: you can also use <code>ps2_mouse_set_resolution</code> for the same effect (not supported on most touchpads).</p>
+<pre><code>#define PS2_MOUSE_X_MULTIPLIER 3
+#define PS2_MOUSE_Y_MULTIPLIER 3
+#define PS2_MOUSE_V_MULTIPLIER 1</code></pre>
+<h4 id="scroll-button"><a href="#scroll-button">Scroll button</a></h4>
+<p>If you're using a trackpoint, you will likely want to be able to use it for scrolling.<br />Its possible to enable a &quot;scroll button/s&quot; that when pressed will cause the mouse to scroll instead of moving.<br />To enable the feature, you must set a scroll button mask as follows:</p>
+<pre><code>#define PS2_MOUSE_SCROLL_BTN_MASK (1&lt;&lt;PS2_MOUSE_BUTTON_MIDDLE) /* Default */</code></pre>
+<p>To disable the scroll button feature:</p>
+<pre><code>#define PS2_MOUSE_SCROLL_BTN_MASK 0</code></pre>
+<p>The available buttons are:</p>
+<pre><code>#define PS2_MOUSE_BTN_LEFT      0
+#define PS2_MOUSE_BTN_RIGHT     1
+#define PS2_MOUSE_BTN_MIDDLE    2</code></pre>
+<p>You can also combine buttons in the mask by <code>|</code>ing them together.</p>
+<p>Once you've configured your scroll button mask, you must configure the scroll button send interval.<br />This is the interval before which if the scroll buttons were released they would be sent to the host.<br />After this interval, they will cause the mouse to scroll and will not be sent.</p>
+<pre><code>#define PS2_MOUSE_SCROLL_BTN_SEND 300 /* Default */</code></pre>
+<p>To disable sending the scroll buttons:</p>
+<pre><code>#define PS2_MOUSE_SCROLL_BTN_SEND 0</code></pre>
+<p>Fine control over the scrolling is supported with the following defines:</p>
+<pre><code>#define PS2_MOUSE_SCROLL_DIVISOR_H 2
+#define PS2_MOUSE_SCROLL_DIVISOR_V 2</code></pre>
+<h4 id="debug-settings"><a href="#debug-settings">Debug settings</a></h4>
+<p>To debug the mouse, add <code>debug_mouse = true</code> or enable via bootmagic.</p>
+<pre><code>/* To debug the mouse reports */
+#define PS2_MOUSE_DEBUG_HID
+#define PS2_MOUSE_DEBUG_RAW</code></pre>
 <h2 id="safety-considerations"><a href="#safety-considerations">Safety Considerations</a></h2>
 <p>You probably don't want to &quot;brick&quot; your keyboard, making it impossible<br />to rewrite firmware onto it. Here are some of the parameters to show<br />what things are (and likely aren't) too risky.</p>
 <ul>
