@@ -21,6 +21,7 @@
 * [impossible](keymaps/impossible/)
 * [jacob](keymaps/jacob/)
 * [jeebak](keymaps/jeebak/)
+* [jeremy-dev](keymaps/jeremy-dev/)
 * [jhenahan](keymaps/jhenahan/)
 * [joe](keymaps/joe/)
 * [kyle](keymaps/kyle/)
