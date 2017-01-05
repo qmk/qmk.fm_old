@@ -12,6 +12,7 @@
 * [coderkun_neo2](keymaps/coderkun_neo2/)
 * [colemak](keymaps/colemak/)
 * [colemak_osx_pc_no](keymaps/colemak_osx_pc_no/)
+* [common-nighthawk](keymaps/common-nighthawk/)
 * [csharp_dev](keymaps/csharp_dev/)
 * [dave](keymaps/dave/)
 * [deadcyclo](keymaps/deadcyclo/)
