@@ -14,6 +14,7 @@
 * [colemak_osx_pc_no](keymaps/colemak_osx_pc_no/)
 * [csharp_dev](keymaps/csharp_dev/)
 * [dave](keymaps/dave/)
+* [deadcyclo](keymaps/deadcyclo/)
 * [default](keymaps/default/)
 * [default_osx](keymaps/default_osx/)
 * [dragon788](keymaps/dragon788/)
