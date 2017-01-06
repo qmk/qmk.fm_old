@@ -31,6 +31,7 @@
 * [german](keymaps/german/)
 * [german-kinergo](keymaps/german-kinergo/)
 * [german-manuneo](keymaps/german-manuneo/)
+* [ishigoya-jp](keymaps/ishigoya-jp/)
 * [j3rn](keymaps/j3rn/)
 * [jack](keymaps/jack/)
 * [jacobono](keymaps/jacobono/)
