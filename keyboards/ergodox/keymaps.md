@@ -59,6 +59,7 @@
 * [plover](keymaps/plover/)
 * [plums](keymaps/plums/)
 * [pvinis](keymaps/pvinis/)
+* [replicaJunction](keymaps/replicaJunction/)
 * [reset_eeprom](keymaps/reset_eeprom/)
 * [robot_test_layout](keymaps/robot_test_layout/)
 * [romanzolotarev-norman-osx](keymaps/romanzolotarev-norman-osx/)

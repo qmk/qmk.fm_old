@@ -1,0 +1,234 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/replicaJunction/">replicaJunction</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/replicaJunction/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_replicaJunction.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#replicajunction---ergodox-ez-layout">replicaJunction - Ergodox (EZ) Layout</a></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="replicajunction---ergodox-ez-layout"><a href="#replicajunction---ergodox-ez-layout">replicaJunction - Ergodox (EZ) Layout</a></h1>
+<p>I designed this layout, along with my complimentary Atreus layout, to address the challenge of having an Ergodox as my primary home keyboard and an Atreus as my primary work board. I wanted a layout that provided symbols in comfortable locations on both keyboards - but didn't require me to learn two separate sets of symbols for the two keyboards.</p>
+<p>I had originally used several keys as dual-role keys, where a tap would send a keypress and a long press and hold would trigger a different layer. However, after several months of experimenting with those ideas, I've begun moving away from that design due to performance. It's very hard to strike a balance between the time it takes to press a key normally while typing and the &quot;delay&quot; in the typing motion needed to trigger the alternate layer. I was frequently getting strange characters and artifacts because I pressed the function key + the symbol key too quickly, and the layer never shifted.</p>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Config file - Ergodox QMK with replicaJunction layout</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef KEYBOARDS_ERGODOX_CONFIG_H_</span>
+<span class="ot">#define KEYBOARDS_ERGODOX_CONFIG_H_</span>
+
+<span class="ot">#define MOUSEKEY_DELAY          100</span>
+<span class="ot">#define MOUSEKEY_INTERVAL       20</span>
+<span class="ot">#define MOUSEKEY_MAX_SPEED      3</span>
+<span class="ot">#define MOUSEKEY_TIME_TO_MAX    10</span>
+
+<span class="ot">#define TAPPING_TOGGLE  1</span>
+
+<span class="co">/* define if matrix has ghost */</span>
+<span class="co">//#define MATRIX_HAS_GHOST</span>
+
+<span class="co">// MS the button needs to be held before a tap becomes a hold (default: 200)</span>
+<span class="ot">#define TAPPING_TERM    200</span>
+
+<span class="ot">#define IGNORE_MOD_TAP_INTERRUPT </span><span class="co">// this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn&#39;t enabled, z rapidly followed by x actually sends Ctrl-x. That&#39;s bad.)</span>
+
+<span class="co">// I don&#39;t have any locking keys, so I don&#39;t need these features</span>
+
+
+<span class="co">/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */</span>
+
+<span class="co">//#define LOCKING_SUPPORT_ENABLE</span>
+<span class="co">/* Locking resynchronize hack */</span>
+<span class="co">//#define LOCKING_RESYNC_ENABLE</span>
+
+<span class="co">/* Prevent modifiers from sticking when switching layers */</span>
+<span class="co">/* Uses 5 bytes of memory per 8 keys, but makes sure modifiers don&#39;t get &quot;stuck&quot; switching layers */</span>
+<span class="ot">#define PREVENT_STUCK_MODIFIERS</span>
+
+<span class="co">/* key combination for command */</span>
+<span class="ot">#define IS_COMMAND() ( \</span>
+    keyboard_report-&gt;mods == (MOD_BIT(KC_LCTL) | MOD_BIT(KC_RCTL)) || \
+    keyboard_report-&gt;mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
+)
+
+<span class="ot">#ifdef SUBPROJECT_ez</span>
+    <span class="ot">#include &quot;ez/config.h&quot;</span>
+<span class="ot">#endif</span>
+<span class="ot">#ifdef SUBPROJECT_infinity</span>
+    <span class="ot">#include &quot;infinity/config.h&quot;</span>
+<span class="ot">#endif</span>
+
+
+<span class="ot">#endif </span><span class="co">/* KEYBOARDS_ERGODOX_CONFIG_H_ */</span></code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="co">/*</span>
+<span class="co">Config file - Ergodox QMK with replicaJunction layout</span>
+
+<span class="co">This program is free software: you can redistribute it and/or modify</span>
+<span class="co">it under the terms of the GNU General Public License as published by</span>
+<span class="co">the Free Software Foundation, either version 2 of the License, or</span>
+<span class="co">(at your option) any later version.</span>
+
+<span class="co">This program is distributed in the hope that it will be useful,</span>
+<span class="co">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="co">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="co">GNU General Public License for more details.</span>
+
+<span class="co">You should have received a copy of the GNU General Public License</span>
+<span class="co">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="co">*/</span>
+
+<span class="ot">#ifndef KEYBOARDS_ERGODOX_CONFIG_H_</span>
+<span class="ot">#define KEYBOARDS_ERGODOX_CONFIG_H_</span>
+
+<span class="ot">#define MOUSEKEY_DELAY          100</span>
+<span class="ot">#define MOUSEKEY_INTERVAL       20</span>
+<span class="ot">#define MOUSEKEY_MAX_SPEED      3</span>
+<span class="ot">#define MOUSEKEY_TIME_TO_MAX    10</span>
+
+<span class="ot">#define TAPPING_TOGGLE  1</span>
+
+<span class="co">/* define if matrix has ghost */</span>
+<span class="co">//#define MATRIX_HAS_GHOST</span>
+
+<span class="co">// MS the button needs to be held before a tap becomes a hold (default: 200)</span>
+<span class="ot">#define TAPPING_TERM    200</span>
+
+<span class="ot">#define IGNORE_MOD_TAP_INTERRUPT </span><span class="co">// this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn&#39;t enabled, z rapidly followed by x actually sends Ctrl-x. That&#39;s bad.)</span>
+
+<span class="co">// I don&#39;t have any locking keys, so I don&#39;t need these features</span>
+
+
+<span class="co">/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */</span>
+
+<span class="co">//#define LOCKING_SUPPORT_ENABLE</span>
+<span class="co">/* Locking resynchronize hack */</span>
+<span class="co">//#define LOCKING_RESYNC_ENABLE</span>
+
+<span class="co">/* Prevent modifiers from sticking when switching layers */</span>
+<span class="co">/* Uses 5 bytes of memory per 8 keys, but makes sure modifiers don&#39;t get &quot;stuck&quot; switching layers */</span>
+<span class="ot">#define PREVENT_STUCK_MODIFIERS</span>
+
+<span class="co">/* key combination for command */</span>
+<span class="ot">#define IS_COMMAND() ( \</span>
+    keyboard_report-&gt;mods == (MOD_BIT(KC_LCTL) | MOD_BIT(KC_RCTL)) || \
+    keyboard_report-&gt;mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
+)
+
+<span class="ot">#ifdef SUBPROJECT_ez</span>
+    <span class="ot">#include &quot;ez/config.h&quot;</span>
+<span class="ot">#endif</span>
+<span class="ot">#ifdef SUBPROJECT_infinity</span>
+    <span class="ot">#include &quot;infinity/config.h&quot;</span>
+<span class="ot">#endif</span>
+
+
+<span class="ot">#endif </span><span class="co">/* KEYBOARDS_ERGODOX_CONFIG_H_ */</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
