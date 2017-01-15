@@ -1,4 +1,5 @@
 ### Keymaps
 
 * [default](keymaps/default/)
-* [programmer](keymaps/programmer/)
+* [dvorak](keymaps/dvorak/)
+* [milestogo](keymaps/milestogo/)
