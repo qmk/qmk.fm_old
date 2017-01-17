@@ -29,6 +29,7 @@
 * [lucas](keymaps/lucas/)
 * [lukas](keymaps/lukas/)
 * [max](keymaps/max/)
+* [mitch](keymaps/mitch/)
 * [mollat](keymaps/mollat/)
 * [nico](keymaps/nico/)
 * [pete](keymaps/pete/)
