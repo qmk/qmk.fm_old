@@ -71,7 +71,6 @@
 * [sneako](keymaps/sneako/)
 * [software_neo2](keymaps/software_neo2/)
 * [supercoder](keymaps/supercoder/)
-* [swissgerman](keymaps/swissgerman/)
 * [techtomas](keymaps/techtomas/)
 * [teckinesis](keymaps/teckinesis/)
 * [tkuichooseyou](keymaps/tkuichooseyou/)
