@@ -203,8 +203,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h2 id="layer-notification"><a href="#layer-notification">Layer notification</a></h2>
 <p>There is a very small tool in <code>tools/layer-notify</code>, that listens to the HID console, looking for layer change events, and pops up a notification for every detected change. It is a very simple tool, mainly serving as an example.</p>
 <h1 id="building"><a href="#building">Building</a></h1>
-<p>To make my workflow easier, this layout is maintained in <a href="https://github.com/algernon/ergodox-layout">its own repository</a>. To build it, you will need the <a href="https://github.com/jackhumbert/qmk_firmware">QMK</a> firmware checked out, and this repo either checked out to something like <code>keyboards/ergodox_ez/algernon-master</code>. One way to achieve that is this:</p>
-<pre><code>$ git clone https://github.com/jackhumbert/qmk_firmware.git
+<p>To make my workflow easier, this layout is maintained in <a href="https://github.com/algernon/ergodox-layout">its own repository</a>. To build it, you will need the <a href="https://github.com/qmk/qmk_firmware">QMK</a> firmware checked out, and this repo either checked out to something like <code>keyboards/ergodox_ez/algernon-master</code>. One way to achieve that is this:</p>
+<pre><code>$ git clone https://github.com/qmk/qmk_firmware.git
 $ cd qmk_firmware
 $ git clone https://github.com/algernon/ergodox-layout.git \
             keyboards/ergodox/keymaps/algernon-master
