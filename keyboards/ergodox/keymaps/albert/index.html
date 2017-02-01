@@ -1,0 +1,298 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/albert/">albert</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/albert/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_albert.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#ergodox-ez-configuration-for-typing-like-a-boss.">ErgoDox EZ Configuration for typing like a boss.</a><ul>
+        <li><a href="#the-layers">The layers</a><ul>
+        <li><a href="#base-layer">0. Base layer</a></li>
+        <li><a href="#symbols-and-f-keys">1. Symbols and F-keys</a></li>
+        <li><a href="#number-pad-with-hexadecimal">2. Number pad (with hexadecimal)</a></li>
+        <li><a href="#cursor-keys">3. Cursor keys</a></li>
+        <li><a href="#mouse-movement-and-clicks">4. Mouse movement and clicks</a></li>
+        <li><a href="#keyword-macros">5. Keyword macros</a></li>
+        <li><a href="#emacs">6. Emacs</a></li>
+        </ul></li>
+        </ul></li>
+        <li><a href="#config.h">config.h</a></li>
+        <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="ergodox-ez-configuration-for-typing-like-a-boss."><a href="#ergodox-ez-configuration-for-typing-like-a-boss.">ErgoDox EZ Configuration for typing like a boss.</a></h1>
+<p>This layout has 7 layers:</p>
+<ol>
+<li>Base layers<br /></li>
+<li>Symbols and F-keys<br /></li>
+<li>Number pad (with hexadecimal)<br /></li>
+<li>Cursor keys<br /></li>
+<li>Mouse movement and clicks<br /></li>
+<li>Keyword macros<br /></li>
+<li>Emacs</li>
+</ol>
+<p>There are also some leader keys defined for frequently used commands (git etc).</p>
+<h2 id="the-layers"><a href="#the-layers">The layers</a></h2>
+<p>Double hashes (<code>##</code>) indicate transparent keys (<code>KC_TRNS</code>) and blanks indicate no key (<code>KC_NO</code>).</p>
+<h3 id="base-layer"><a href="#base-layer">0. Base layer</a></h3>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+| ESC    |   1  |   2  |   3  |   4  |   5  | SfLt |           | SfRt |   6  |   7  |   8  |   9  |   0  | BkSp   |
+|--------|------|------|------|------|-------------|           |------|------|------|------|------|------|--------|
+| Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  | Del    |
+|--------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+| Caps/L2|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |Enter/L2|
+|--------|------|------|------|------|------|  L6  |           |  L6  |------|------|------|------|------|--------|
+| LSft/( |   Z  |   X  |   C  | V/L3 | B/L4 |      |           |      | N/L4 | M/L3 |   ,  |   .  |   /  | RSft/) |
+`--------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  |Ctrl/[| Alt/]|   #  | Left |Right |                                       |  Up  | Down |   -  | Alt/[|Ctrl/]|
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |  L2  | lead |       | lead |  Ins |
+                                ,------|------|------|       |------|------|------.
+                                | Space| BkSp | Home |       | PgUp | Enter|Space |
+                                |  /   |  /   |------|       |------|   /  |  /   |
+                                | Ctrl | Alt  |End/L5|       |PDn/L5|  Alt | Ctrl |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<p>Space Cadet shift is enabled. Ctrl and Alt doubles up as normal keys when tapped.<br />SfLt and SfRt sends Shift + left and Shift + Right respectively - for use with emacs with <code>windmove-default-keybindings</code>.<br />Caps and Enter may be held down to activate layer 2 (hexadecimal number pad).<br />Please see <code>matrix_scan_user</code> function in <code>keymap.c</code> for list of commands available via <code>lead</code> key.</p>
+<h3 id="symbols-and-f-keys"><a href="#symbols-and-f-keys">1. Symbols and F-keys</a></h3>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|   ##   |  F1  |  F2  |  F3  |  F4  |  F5  |  ##  |           |  ##  |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
+|--------|------|------|------|------|------|------|           |------|------|------|------|------|------|--------|
+|   ##   |   !  |   &quot;  |   £  |   $  |   %  |  ##  |           |  ##  |   -  |   +  |   =  |   @  |   ~  |   F12  |
+|--------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|   ##   |   ^  |   &amp;  |   *  |   _  |   #  |------|           |------|   {  |   }  |   ;  |   &#39;  |   #  |   ##   |
+|--------|------|------|------|------|------|  ##  |           |  ##  |------|------|------|------|------|--------|
+|   ##   |   \  |   |  |   `  |   -  |   /  |      |           |      |   [  |   ]  |   &lt;  |   &gt;  |   ?  |   ##   |
+`--------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  |  ##  |  ##  |  ##  |  ##  |  ##  |                                       |  ##  |  ##  |  ##  |  ##  |  ##  |
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |  ##  |  ##  |       |  ##  |  ##  |
+                                ,------|------|------|       |------|------|------.
+                                |      |      |  ##  |       |  ##  |      |      |
+                                |  ##  |  ##  |------|       |------|  ##  |  ##  |
+                                |      |      |  ##  |       |  ##  |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="number-pad-with-hexadecimal"><a href="#number-pad-with-hexadecimal">2. Number pad (with hexadecimal)</a></h3>
+<pre><code>,---------------------------------------------------.           ,--------------------------------------------------.
+|   ##    |  A   |  B   |  C   |  D   |  E   |  F   |           |  A   |  B   |  C   |  D   |   E  |   F  |   ##   |
+|---------|------|------|------|------|------|------|           |------|------|------|------|------|------|--------|
+|   ##    |  *   |  7   |  8   |  9   |  *   |  0x  |           |  0x  |  *   |   7  |   8  |   9  |   *  |   ##   |
+|---------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|   ##    |  /   |  4   |  5   |  6   |  /   |------|           |------|  /   |   4  |   5  |   6  |   /  |   ##   |
+|---------|------|------|------|------|------|  ##  |           |  ##  |------|------|------|------|------|--------|
+|   ##    |  -   |  1   |  2   |  3   |  -   |      |           |      |  -   |   1  |   2  |   3  |   -  |   ##   |
+`---------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  |   =   |  +   |  0   |  ,   |  .   |                                       |   0  |   ,  |   .  |   +  |  =   |
+  `-----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |  ##  |  ##  |       |  ##  |  ##  |
+                                ,------|------|------|       |------|------|------.
+                                |      |      |  ##  |       |  ##  |      |      |
+                                |  ##  |  ##  |------|       |------|  ##  |  ##  |
+                                |      |      |  ##  |       |  ##  |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="cursor-keys"><a href="#cursor-keys">3. Cursor keys</a></h3>
+<pre><code>,---------------------------------------------------.           ,--------------------------------------------------.
+|         |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+|---------|------|------|------|------|------|------|           |------|------|------|------|------|------|--------|
+|         | Home |      |  Up  |      | PgUp |      |           |      | PgUp |      |  Up  |      | Home |        |
+|---------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|         | End  | Left | Down | Right| PgDn |------|           |------| PgDn | Left | Down | Right| End  |        |
+|---------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|   ##    |  Up  |      | Down |  ##  |      |      |           |      |      |  ##  | Down |      |  Up  |   ##   |
+`---------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  | Left  | Down | Right|      |      |                                       |      |      | Left | Down | Right|
+  `-----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |      |      |
+                                ,------|------|------|       |------|------|------.
+                                |      |      |      |       |      |      |      |
+                                |  ##  |  ##  |------|       |------|  ##  |  ##  |
+                                |      |      |      |       |      |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="mouse-movement-and-clicks"><a href="#mouse-movement-and-clicks">4. Mouse movement and clicks</a></h3>
+<pre><code>,--------------------------------------------------.           ,--------------------------------------------------.
+|        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+|--------|------|------|------|------|-------------|           |------|------|------|------|------|------|--------|
+|        |      | Lclk | MsUp | Rclk |      |      |           |      |      | Lclk | MsUp | Rclk |      |        |
+|--------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|        |      |MsLeft|MsDown|MsRght|      |------|           |------|      |MsLeft|MsDown|MsRght|      |        |
+|--------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|  Lclk  | MsUp | Rclk |MsDown|      |  ##  |      |           |      |  ##  |      |MsDown| Lclk | MsUp | Rclk   |
+`--------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  |MsLeft|MsDown|MsRight      |      |                                       |      |      |MsLeft|MsDown|MsRght|
+  `----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |      |      |
+                                ,------|------|------|       |------|------|------.
+                                |      |      |      |       |      |      |      |
+                                |      |      |------|       |------|      |      |
+                                |      |      |      |       |      |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<h3 id="keyword-macros"><a href="#keyword-macros">5. Keyword macros</a></h3>
+<pre><code>,---------------------------------------------------.           ,--------------------------------------------------.
+|         |      |      | scarf| sadf | smily|      |           |      | decaf|      |      |      |      |        |
+|---------|------|------|------|------|------|------|           |------|------|------|------|------|------|--------|
+|         | const| volat| oper |  ret | tmpl |      |           |      | typen| cont |  prv |  pro | pub  |        |
+|---------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|         |      |  str |  obj |      | gitl |------|           |------|      |      |      | nulp |      |        |
+|---------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|         |      | extr |  cls | virt | break|      |           |      |namesp| goodm| goodn|      |      |        |
+`---------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  |       |      |  inc |      |      |                                       |      |      |      |      |      |
+  `-----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       | ecet | ecets|
+                                ,------|------|------|       |------|------|------.
+                                |      |      |      |       |      |      |      |
+                                |      |      |------|       |------|      |      |
+                                |      |      |  ##  |       |  ##  |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<p>Please see <code>keymap.c</code> for the keywords/commands.<br />Some are const, volatile, operator, return, template, typename, continue, private,<br />protected, public, struct, class, extern, virtual, break, namespace.<br />Also a git log command I use a lot (<code>git log --oneline --graph --decorate=short</code> (I know git can be configured but that is boring)).</p>
+<h3 id="emacs"><a href="#emacs">6. Emacs</a></h3>
+<pre><code>,---------------------------------------------------.           ,--------------------------------------------------.
+|         |      |      |      |      |      | empb |           | emnb | emfs | emfb |      |      |      |        |
+|---------|------|------|------|------|------|------|           |------|------|------|------|------|------|--------|
+|         | emtr |      |      |      |      |      |           |      | emun | emre | w-up |      |      |        |
+|---------|------|------|------|------|------|      |           |      |------|------|------|------|------|--------|
+|         |      | emwr |      |      |      |------|           |------|      |w-left|w-down|w-rght|      |        |
+|---------|------|------|------|------|------|  ##  |           |  ##  |------|------|------|------|------|--------|
+|         |      |      |      |      |      |      |           |      |      |      |w-down|      |      |        |
+`---------|------|------|------|------|-------------&#39;           `-------------|------|------|------|------|--------&#39;
+  |       |      |      |      |      |                                       |      |      |      |      |      |
+  `-----------------------------------&#39;                                       `----------------------------------&#39;
+                                       ,-------------.       ,-------------.
+                                       |      |      |       |      |      |
+                                ,------|------|------|       |------|------|------.
+                                |      |      |      |       |      |      |      |
+                                |      |      |------|       |------|      |      |
+                                |      |      |      |       |      |      |      |
+                                `--------------------&#39;       `--------------------&#39;</code></pre>
+<p>Some emacs shortcuts like toggle read/write mode (emtr), write file (emwr), previous-buffer (empb),<br />next-buffer (emnb), smaller font(emfs), larger font (emfb), undo (emun), redo (emre) and switching between windows in a frame.</p>
+<hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="co">/* using UK layout for space-cadet-shift */</span>
+<span class="ot">#define LSPO_KEY KC_9</span>
+<span class="ot">#define RSPC_KEY KC_0</span>
+
+<span class="ot">#define LEADER_TIMEOUT 800 </span><span class="co">// leader key sequence timeout in millis</span>
+
+<span class="ot">#endif</span></code></pre>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code>COMMAND_ENABLE = no        # Commands for debug and configuration
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+</code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="co">/* using UK layout for space-cadet-shift */</span>
+<span class="ot">#define LSPO_KEY KC_9</span>
+<span class="ot">#define RSPC_KEY KC_0</span>
+
+<span class="ot">#define LEADER_TIMEOUT 800 </span><span class="co">// leader key sequence timeout in millis</span>
+
+<span class="ot">#endif</span></code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

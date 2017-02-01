@@ -3,6 +3,7 @@
 * [ab](keymaps/ab/)
 * [absenth](keymaps/absenth/)
 * [adnw_k_o_y](keymaps/adnw_k_o_y/)
+* [albert](keymaps/albert/)
 * [alexjj](keymaps/alexjj/)
 * [algernon](keymaps/algernon/)
 * [alphadox](keymaps/alphadox/)
