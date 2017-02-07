@@ -16,6 +16,7 @@
 * [dbroqua](keymaps/dbroqua/)
 * [default](keymaps/default/)
 * [dzobert](keymaps/dzobert/)
+* [espynn](keymaps/espynn/)
 * [experimental](keymaps/experimental/)
 * [gabriel](keymaps/gabriel/)
 * [impossible](keymaps/impossible/)
