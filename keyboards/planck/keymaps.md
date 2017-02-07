@@ -37,6 +37,7 @@
 * [priyadi](keymaps/priyadi/)
 * [pvc](keymaps/pvc/)
 * [sgoodwin](keymaps/sgoodwin/)
+* [smt](keymaps/smt/)
 * [tak3over](keymaps/tak3over/)
 * [thermal_printer](keymaps/thermal_printer/)
 * [tong92](keymaps/tong92/)

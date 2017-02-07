@@ -41,7 +41,7 @@
   <div class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
-        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/preonic">preonic</a> / keymaps / <a href="/keyboards/preonic/keymaps/smt/">smt</a></span>
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/planck">planck</a> / keymaps / <a href="/keyboards/planck/keymaps/smt/">smt</a></span>
         <ul class="nav pull-right doc-info">
           <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
         </ul>
@@ -52,13 +52,13 @@
     <div class="row">
             <div id="TOC" class="span4">
 
-              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/preonic/keymaps/smt/keymap.c" class="button view">View keymap.c</a>
-        <a href="preonic_smt.hex" class="button download">Download .hex</a>
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/planck/keymaps/smt/keymap.c" class="button view">View keymap.c</a>
+        <a href="planck_smt.hex" class="button download">Download .hex</a>
             
         <div class="well toc">
 
         <ul>
-        <li><a href="#smts-preonic-keymap">smt's Preonic keymap</a><ul>
+        <li><a href="#smts-planck-keymap">smt's Planck keymap</a><ul>
         <li><a href="#dvorak-default">Dvorak (default)</a></li>
         <li><a href="#qwerty-same-as-default">Qwerty (same as default)</a></li>
         <li><a href="#lower">Lower</a></li>
@@ -78,8 +78,8 @@
 
       </div>
             <div class="span8">
-            <h1 id="smts-preonic-keymap"><a href="#smts-preonic-keymap">smt's Preonic keymap</a></h1>
-<p>This keymap is primarily based on the default Preonic keymap, which in turn is derived from Planck's default.</p>
+            <h1 id="smts-planck-keymap"><a href="#smts-planck-keymap">smt's Planck keymap</a></h1>
+<p>This keymap is primarily based on the default Planck keymap.</p>
 <p>Notable differences from the default are:</p>
 <ol>
 <li><p><strong>Dvorak by default</strong></p>
@@ -95,8 +95,6 @@
 </ol>
 <h2 id="dvorak-default"><a href="#dvorak-default">Dvorak (default)</a></h2>
 <pre><code>,-----------------------------------------------------------------------------------.
-|   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
-|------+------+------+------+------+------+------+------+------+------+------+------|
 | Tab  |   &quot;  |   ,  |   .  |   P  |   Y  |   F  |   G  |   C  |   R  |   L  | Bksp |
 |------+------+------+------+------+-------------+------+------+------+------+------|
 | Esc  |   A  |   O  |   E  |   U  |   I  |   D  |   H  |   T  |   N  |   S  |  -   |
@@ -107,8 +105,6 @@
 `-----------------------------------------------------------------------------------&#39;</code></pre>
 <h2 id="qwerty-same-as-default"><a href="#qwerty-same-as-default">Qwerty (same as default)</a></h2>
 <pre><code>,-----------------------------------------------------------------------------------.
-|   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
-|------+------+------+------+------+------+------+------+------+------+------+------|
 | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
 |------+------+------+------+------+-------------+------+------+------+------+------|
 | Esc  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  &quot;   |
@@ -120,8 +116,6 @@
 <h2 id="lower"><a href="#lower">Lower</a></h2>
 <p>This is where I put the number row, a numpad cluster, function keys, and some light navigation via Home/End/PageUp/PageDn. Like the &quot;Raise&quot; layer, the top row is redundant to help with Planck compatibility.</p>
 <pre><code>,-----------------------------------------------------------------------------------.
-|   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Del  |
-|------+------+------+------+------+------+------+------+------+------+------+------|
 |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Del  |
 |------+------+------+------+------+-------------+------+------+------+------+------|
 |      |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   4  |   5  |   6  | Home |PageUp|
@@ -136,8 +130,6 @@
 <pre><code>,-----------------------------------------------------------------------------------.
 |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &amp;  |   *  |   (  |   )  | Del  |
 |------+------+------+------+------+-------------+------+------+------+------+------|
-|   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &amp;  |   *  |   (  |   )  | Del  |
-|------+------+------+------+------+-------------+------+------+------+------+------|
 |      |      |      |      |      |      |   _  |   ?  |   +  |   {  |   }  |  |   |
 |------+------+------+------+------+------|------+------+------+------+------+------|
 |      |      |      |      |      |      |   -  |   /  |   =  |   [  |   ]  |  \   |
@@ -147,8 +139,6 @@
 <h2 id="adjust-lower-raise"><a href="#adjust-lower-raise">Adjust (Lower + Raise)</a></h2>
 <p>Utility layer. This is where I'd switch to Qwerty, or <del>fool around with</del> adjust the audio/music settings.</p>
 <pre><code>,-----------------------------------------------------------------------------------.
-|  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
-|------+------+------+------+------+------+------+------+------+------+------+------|
 |      | Reset|      |      |      |      |      |      |      |      |      |  Del |
 |------+------+------+------+------+-------------+------+------+------+------+------|
 |      |      |      |Aud on|AudOff|AGnorm|AGswap|Dvorak|Qwerty|      |      |      |
@@ -161,7 +151,8 @@
 <h1 id="makefile"><a href="#makefile">Makefile</a></h1>
 <pre><code>ifndef QUANTUM_DIR
     include ../../../../Makefile
-endif</code></pre>
+endif
+</code></pre>
             </div>
     </div>
   </div>
