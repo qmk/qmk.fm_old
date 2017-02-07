@@ -44,4 +44,5 @@
 * [unicode](keymaps/unicode/)
 * [vifon](keymaps/vifon/)
 * [xyverz](keymaps/xyverz/)
+* [yale](keymaps/yale/)
 * [yang](keymaps/yang/)
