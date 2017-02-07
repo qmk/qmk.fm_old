@@ -118,6 +118,8 @@
 <p>Configuring the firmware is similar to any other TMK project. One thing<br />to note is that <code>MATIX_ROWS</code> in <code>config.h</code> is the total number of rows between<br />the two halves, i.e. if your split keyboard has 4 rows in each half, then<br /><code>MATRIX_ROWS=8</code>.</p>
 <p>Also the current implementation assumes a maximum of 8 columns, but it would<br />not be very difficult to adapt it to support more if required.</p>
 <h2 id="flashing"><a href="#flashing">Flashing</a></h2>
+<p>From the keymap directory run <code>make SUBPROJECT-KEYMAP-avrdude</code> for automatic serial port resolution and flashing.</p>
+<p>Example: <code>make rev2-serial-avrdude</code></p>
 <p>If you define <code>EE_HANDS</code> in your <code>config.h</code>, you will need to set the<br />EEPROM for the left and right halves. The EEPROM is used to store whether the<br />half is left handed or right handed. This makes it so that the same firmware<br />file will run on both hands instead of having to flash left and right handed<br />versions of the firmware to each half. To flash the EEPROM file for the left<br />half run:</p>
 <pre><code>make eeprom-left</code></pre>
 <p>and similarly for right half</p>
