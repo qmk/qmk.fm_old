@@ -1,6 +1,6 @@
 <!-- -*- mode: markdown; fill-column: 8192 -*- -->
 
-Mnemes Swedish Bonanza
+Mnemes Swedish Bonaza
 =======================
 
 My Layout in process, most of the code is shamelessly stolen from [algernons][algernon] excellent layout
@@ -33,8 +33,6 @@ It's for Windows (current work forces me to) and Swedish (matter of birth) so ym
     - `LEAD s l` : `λ`.
     - `LEAD s s` : `¯\_(ツ)_/¯`
     - `LEAD s f` : `凸(ツ)凸`
-    - `LEAD u l` : Set unicode input mode to linux.
-    - `LEAD s w` : Set unicode input mode to windows.
     - `LEAD a *` : Application switching based on position in start menu. Very specific to my computer.
 
 
@@ -44,7 +42,7 @@ It's for Windows (current work forces me to) and Swedish (matter of birth) so ym
 
 Basic navigation on the right hand and modifiers close
 by for the left. The latter because I tend to use `ctrl+arrows` quite a lot.
-
+ 
 ## Sym layer
 
 ![Sym layer](img/sym.png)
