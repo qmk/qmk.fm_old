@@ -46,11 +46,11 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 
 # Boot Section Size in *bytes*
 #   Teensy halfKay   512
-#   Teensy++ halfKay 2048
+#   Teensy++ halfKay 1024
 #   Atmel DFU loader 4096
 #   LUFA bootloader  4096
 #   USBaspLoader     2048
-OPT_DEFS += -DBOOTLOADER_SIZE=2048
+OPT_DEFS += -DBOOTLOADER_SIZE=1024
 
 
 # Build Options
