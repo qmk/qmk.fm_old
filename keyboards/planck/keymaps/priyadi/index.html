@@ -34,6 +34,25 @@
   <meta name="generator" content="pandoc" />
   <title>QMK Firmware</title>
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 </head>
 <body>
 
@@ -59,7 +78,9 @@
 
         <ul>
         <li><a href="#priyadis-planck-layout">Priyadi's Planck Layout</a></li>
+        <li><a href="#config.h">config.h</a></li>
         <li><a href="#makefile">Makefile</a></li>
+        <li><a href="#config.h-1">config.h</a></li>
         </ul>
 
         </div>
@@ -84,6 +105,47 @@
 <li>Faux-clickey (poor man's replacement for Cherry blue switches)</li>
 </ul>
 <hr />
+<h1 id="config.h"><a href="#config.h">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#define PRIYADI_PLANCK</span>
+
+<span class="co">/* bootmagic salt key */</span>
+<span class="ot">#define BOOTMAGIC_KEY_SALT              KC_ESC</span>
+
+<span class="co">/* skip bootmagic and eeconfig */</span>
+<span class="ot">#define BOOTMAGIC_KEY_SKIP              KC_SPACE</span>
+
+<span class="ot">#define PREVENT_STUCK_MODIFIERS</span>
+
+<span class="ot">#define UNICODE_TYPE_DELAY 0</span>
+
+<span class="ot">#define LAYOUT_DVORAK</span>
+<span class="ot">#define LAYOUT_COLEMAK</span>
+<span class="ot">#define LAYOUT_NORMAN</span>
+<span class="ot">#define LAYOUT_WORKMAN</span>
+
+<span class="ot">#define DOUBLESPACE_LAYER_ENABLE</span>
+    <span class="co">// #define TOLELOT_ENABLE</span>
+
+<span class="ot">#define KEYMAP( \</span>
+    k11, k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b, k1c, \
+    k21, k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b, k2c, \
+    k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, \
+    k41, k42, k43, k44, k45, k46, k47, k48, k49, k4a, k4b, k4c \
+) \
+{ \
+    {k11, k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b, k1c}, \
+    {k21, k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b, k2c}, \
+    {k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c}, \
+    {k41, k42, k43, k44, k45, k46, k47, k48, k49, k4a, k4b, k4c} \
+}
+
+<span class="ot">#endif</span></code></pre>
+<hr />
 <h1 id="makefile"><a href="#makefile">Makefile</a></h1>
 <pre><code># Build Options
 #   change to &quot;no&quot; to disable the options, or define them in the Makefile in 
@@ -97,12 +159,13 @@ COMMAND_ENABLE = no         # Commands for debug and configuration
 NKRO_ENABLE = yes            # Nkey Rollover - if this doesn&#39;t work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 BACKLIGHT_ENABLE = yes      # Enable keyboard backlight functionality
 MIDI_ENABLE = no            # MIDI controls
-AUDIO_ENABLE = yes          # Audio output on port C6
+AUDIO_ENABLE = no           # Audio output on port C6
 UNICODE_ENABLE = no         # Unicode
 UNICODEMAP_ENABLE = yes     # Unicode map
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.  Do not enable this with audio at the same time.
 API_SYSEX_ENABLE = no
+FAUXCLICKY_ENABLE = yes
 
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
@@ -111,6 +174,47 @@ ifndef QUANTUM_DIR
     include ../../../../Makefile
 endif
 </code></pre>
+<hr />
+<h1 id="config.h-1"><a href="#config.h-1">config.h</a></h1>
+<pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef CONFIG_USER_H</span>
+<span class="ot">#define CONFIG_USER_H</span>
+
+<span class="ot">#include &quot;../../config.h&quot;</span>
+
+<span class="ot">#define PRIYADI_PLANCK</span>
+
+<span class="co">/* bootmagic salt key */</span>
+<span class="ot">#define BOOTMAGIC_KEY_SALT              KC_ESC</span>
+
+<span class="co">/* skip bootmagic and eeconfig */</span>
+<span class="ot">#define BOOTMAGIC_KEY_SKIP              KC_SPACE</span>
+
+<span class="ot">#define PREVENT_STUCK_MODIFIERS</span>
+
+<span class="ot">#define UNICODE_TYPE_DELAY 0</span>
+
+<span class="ot">#define LAYOUT_DVORAK</span>
+<span class="ot">#define LAYOUT_COLEMAK</span>
+<span class="ot">#define LAYOUT_NORMAN</span>
+<span class="ot">#define LAYOUT_WORKMAN</span>
+
+<span class="ot">#define DOUBLESPACE_LAYER_ENABLE</span>
+    <span class="co">// #define TOLELOT_ENABLE</span>
+
+<span class="ot">#define KEYMAP( \</span>
+    k11, k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b, k1c, \
+    k21, k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b, k2c, \
+    k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, \
+    k41, k42, k43, k44, k45, k46, k47, k48, k49, k4a, k4b, k4c \
+) \
+{ \
+    {k11, k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b, k1c}, \
+    {k21, k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b, k2c}, \
+    {k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c}, \
+    {k41, k42, k43, k44, k45, k46, k47, k48, k49, k4a, k4b, k4c} \
+}
+
+<span class="ot">#endif</span></code></pre>
             </div>
     </div>
   </div>
