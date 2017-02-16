@@ -3,8 +3,6 @@
 
 #include "../../config.h"
 
-#define PRIYADI_PROMETHIUM
-
 /* bootmagic salt key */
 #define BOOTMAGIC_KEY_SALT              KC_ESC
 
@@ -13,16 +11,7 @@
 
 #define PREVENT_STUCK_MODIFIERS
 
-#define RGBSPS_ENABLE
-
-#define UNICODE_TYPE_DELAY 0
-
-#define LAYOUT_DVORAK
-#define LAYOUT_COLEMAK
-#define LAYOUT_NORMAN
-#define LAYOUT_WORKMAN
-
-#define DOUBLESPACE_LAYER_ENABLE
-// #define TOLELOT_ENABLE
+#define RGB_DI_PIN B5
+#define RGBSPS_NUM 57
 
 #endif
