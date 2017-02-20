@@ -59,6 +59,7 @@
         <li><a href="#qmk-firmware-for-xiudis-60-xd60-pcb">QMK Firmware for XIUDI's 60% XD60 PCB</a><ul>
         <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
         <li><a href="#additional-notes">Additional Notes</a></li>
+        <li><a href="#known-issues">Known Issues</a></li>
         <li><a href="#build">Build</a></li>
         </ul></li>
         </ul>
@@ -83,11 +84,14 @@
       </div>
             <div class="span8">
             <h1 id="qmk-firmware-for-xiudis-60-xd60-pcb"><a href="#qmk-firmware-for-xiudis-60-xd60-pcb">QMK Firmware for XIUDI's 60% XD60 PCB</a></h1>
-<p><img src="./top-view.JPG" alt="Top View of XD60 Keyboard, with DSA Dolch keycaps" /><br /><img src="./arrow-cluster.JPG" alt="Angled View of XD60 Keyboard Arrow Cluster, with DSA Dolch keycaps" /></p>
+<p><img src="./xd60.JPG" alt="Top View of a pair of XD60 Keyboard" /></p>
 <h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
 <p>For the full Quantum feature list, see <a href="/readme.md">the parent readme.md</a>.</p>
 <h2 id="additional-notes"><a href="#additional-notes">Additional Notes</a></h2>
 <p>The XD60 is essentially a GH60 rev. C, with support for a right-hand arrow cluster. Includes full compatibility with GH60 expansion boards. Board also supports in-switch LEDs (two-pin, single colour), as well as WS2182 LED strips for underglow lighting. Default keymap included, matching configuration on sale page.</p>
+<p>Version 2 PCBs include 6 soldered on RGB underglow LEDs on the bottom, and are labelled &quot;XD60v2&quot; on the top. They are otherwise identical to v1 PCBs.</p>
+<h2 id="known-issues"><a href="#known-issues">Known Issues</a></h2>
+<p>In-switch backlight LEDs seem to only support 1 brightness level.</p>
 <h2 id="build"><a href="#build">Build</a></h2>
 <p>To build the default keymap, simply run <code>make xd60-default</code>.</p>
             </div>
