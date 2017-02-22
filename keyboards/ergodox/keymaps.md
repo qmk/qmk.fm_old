@@ -23,6 +23,7 @@
 * [dragon788](keymaps/dragon788/)
 * [dvorak](keymaps/dvorak/)
 * [dvorak_emacs](keymaps/dvorak_emacs/)
+* [dvorak_emacs_software](keymaps/dvorak_emacs_software/)
 * [dvorak_intl_squisher](keymaps/dvorak_intl_squisher/)
 * [dvorak_plover](keymaps/dvorak_plover/)
 * [dvorak_programmer](keymaps/dvorak_programmer/)
