@@ -1,0 +1,107 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/ergodox">ergodox</a> / keymaps / <a href="/keyboards/ergodox/keymaps/colemak_programmer/">colemak_programmer</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/ergodox/keymaps/colemak_programmer/keymap.c" class="button view">View keymap.c</a>
+        <a href="ergodox_colemak_programmer.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#ergodox-ez-colemak_programmer">ErgoDox EZ colemak_programmer</a><ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#notes">Notes</a></li>
+        </ul></li>
+        <li><a href="#makefile">Makefile</a></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="ergodox-ez-colemak_programmer"><a href="#ergodox-ez-colemak_programmer">ErgoDox EZ colemak_programmer</a></h1>
+<h2 id="features"><a href="#features">Features</a></h2>
+<ul>
+<li>Qwerty and colemak 2 in 1<br /></li>
+<li>Use DF() macro to swap the bottom layer so it behaves literally as collemak or qwerty<br /></li>
+<li>Graphical creator did not allow this so I had to use TO(0) and TO(1) on the picture<br /></li>
+<li>Symbol layer programmers friendly<br /></li>
+<li>Not only symbols are easy to access but common combination are easy too: -&gt;, =&gt;, !=, etc.<br /></li>
+<li>Windows and Mac<br /></li>
+<li>The extra repeated Win key is very handy on Mac<br /></li>
+<li>Numlock</li>
+</ul>
+<p>I came to this layout after several iterations. It is not the ultimate best ergonomic layout but it is the best if you switch back and forth between ergodox and laptops.</p>
+<h2 id="notes"><a href="#notes">Notes</a></h2>
+<ul>
+<li>The Quote and Enter can be swapped<br /></li>
+<li>If you use sculpted key caps try turning the bottom key 180 degrees so it became very comfortable to type with thumb.</li>
+</ul>
+<p>Alternatively view the <a href="http://configure.ergodox-ez.com/keyboard_layouts/kmevwm/edit">graphical creator version</a> but beware it is not the same due to the creator limitations.</p>
+<p><img src="colemak_programmer_001.jpg" alt="Default" /><br /><img src="colemak_programmer_002.jpg" alt="Default" /></p>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code>TAP_DANCE_ENABLE = no</code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
