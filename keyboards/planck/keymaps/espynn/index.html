@@ -59,7 +59,9 @@
 
         <ul>
         <li><a href="#espynns-keymap-for-planck-ortholinear-40-mechanical-keyboard">Espynn's keymap for Planck Ortholinear 40% Mechanical Keyboard</a></li>
-        <li><a href="#notes">Notes</a></li>
+        <li><a href="#notes">Notes</a><ul>
+        <li><a href="#changes">changes</a></li>
+        </ul></li>
         <li><a href="#makefile">Makefile</a></li>
         </ul>
 
@@ -75,7 +77,7 @@
             <div class="span8">
             <h1 id="espynns-keymap-for-planck-ortholinear-40-mechanical-keyboard"><a href="#espynns-keymap-for-planck-ortholinear-40-mechanical-keyboard">Espynn's keymap for Planck Ortholinear 40% Mechanical Keyboard</a></h1>
 <p>Created by James Folkert: <a href="https://twitter.com/trekloFsemaJ">https://twitter.com/trekloFsemaJ</a><br />Added several custom functions to the keymap from the &quot;ab&quot; map. Special thanks to &quot;mollat&quot; for demonstration of macros in their keymap.c</p>
-<p><img src="keyboard-layout.png" title="Practical Keymap" alt="Layout" /></p>
+<p><img src="keyboard-layout.jpg" title="Practical Keymap" alt="Layout" /></p>
 <ul>
 <li>Online keyboard layout editor: <a href="http://www.keyboard-layout-editor.com/">http://www.keyboard-layout-editor.com/</a><br /></li>
 <li>[JSON of raw layout] (layout.json &quot;JSON of raw layout&quot;)</li>
@@ -86,8 +88,15 @@
 <li>I disregarded the advice of Jack and used macros for passwords. I accept my fate. These have been abstracted to macros 2, 3, and 4<br /></li>
 <li>add your mobile and email to the keymap before make<br /></li>
 <li>RAISE and LOWER also acts as PgUp and PgDn when tapped.<br /></li>
-<li>[CapsLock] also acts as [Ctrl] key when you press and hold. It is convenient for GNU Emacs users. (not sure if this works)<br /></li>
 <li>Bracket/ paran/ brace keys are placed in the center of the keyboard for programmer's convenience.</li>
+</ul>
+<h2 id="changes"><a href="#changes">changes</a></h2>
+<ul>
+<li>Removed some unneeded keys from raise and lower layers<br /></li>
+<li>moved the + and = signs, backspace is now more intuitive<br /></li>
+<li>moved all the Function keys to CUSTOM layer<br /></li>
+<li>added ctrl alt del to CUSTOM layer<br /></li>
+<li>simplified the layout picture greatly</li>
 </ul>
 <hr />
 <h1 id="makefile"><a href="#makefile">Makefile</a></h1>
