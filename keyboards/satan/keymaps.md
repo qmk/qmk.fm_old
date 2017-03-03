@@ -7,3 +7,4 @@
 * [poker](keymaps/poker/)
 * [sethbc](keymaps/sethbc/)
 * [stanleylai](keymaps/stanleylai/)
+* [unxmaal](keymaps/unxmaal/)
