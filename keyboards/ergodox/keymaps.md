@@ -52,6 +52,7 @@
 * [mpiechotka](keymaps/mpiechotka/)
 * [msc](keymaps/msc/)
 * [naps62](keymaps/naps62/)
+* [neo2_on_qwertz_hardware](keymaps/neo2_on_qwertz_hardware/)
 * [norwegian_programmer_osx_pc](keymaps/norwegian_programmer_osx_pc/)
 * [norwegian_programmer_osx_pc_colemak](keymaps/norwegian_programmer_osx_pc_colemak/)
 * [ordinary](keymaps/ordinary/)
