@@ -1,6 +1,7 @@
 ### Keymaps
 
 * [caps_fn](keymaps/caps_fn/)
+* [colemak](keymaps/colemak/)
 * [default](keymaps/default/)
 * [mac_optimized](keymaps/mac_optimized/)
 * [max](keymaps/max/)
