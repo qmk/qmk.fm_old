@@ -25,6 +25,7 @@
 * [jeremy-dev](keymaps/jeremy-dev/)
 * [jhenahan](keymaps/jhenahan/)
 * [joe](keymaps/joe/)
+* [khord](keymaps/khord/)
 * [kyle](keymaps/kyle/)
 * [leo](keymaps/leo/)
 * [lucas](keymaps/lucas/)

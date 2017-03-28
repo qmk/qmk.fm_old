@@ -41,7 +41,7 @@
   <div class="navbar navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
-        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/satan">satan</a></span>
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/satan">satan</a> / keymaps / <a href="/keyboards/satan/keymaps/smt/">smt</a></span>
         <ul class="nav pull-right doc-info">
           <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
         </ul>
@@ -52,32 +52,19 @@
     <div class="row">
             <div id="TOC" class="span4">
 
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/satan/keymaps/smt/keymap.c" class="button view">View keymap.c</a>
+        <a href="satan_smt.hex" class="button download">Download .hex</a>
             
         <div class="well toc">
 
         <ul>
-        <li><a href="#satan-gh60-keyboard-firmware">Satan GH60 keyboard firmware</a></li>
+        <li><a href="#smts-satan-gh60-layout">smt's Satan GH60 layout</a></li>
+        <li><a href="#makefile">Makefile</a></li>
         </ul>
 
         </div>
 
 
-              <div class="well keymaps">
-
-          <h3 id="keymaps">Keymaps</h3>
-          <ul>
-          <li><a href="keymaps/dbroqua/">dbroqua</a></li>
-          <li><a href="keymaps/default/">default</a></li>
-          <li><a href="keymaps/denolfe/">denolfe</a></li>
-          <li><a href="keymaps/iso_split_rshift/">iso_split_rshift</a></li>
-          <li><a href="keymaps/poker/">poker</a></li>
-          <li><a href="keymaps/sethbc/">sethbc</a></li>
-          <li><a href="keymaps/smt/">smt</a></li>
-          <li><a href="keymaps/stanleylai/">stanleylai</a></li>
-          <li><a href="keymaps/unxmaal/">unxmaal</a></li>
-          </ul>
-        
-        </div>
             
 
       
@@ -85,8 +72,31 @@
 
       </div>
             <div class="span8">
-            <h1 id="satan-gh60-keyboard-firmware"><a href="#satan-gh60-keyboard-firmware">Satan GH60 keyboard firmware</a></h1>
-<p>TODO: to be updated.</p>
+            <h1 id="smts-satan-gh60-layout"><a href="#smts-satan-gh60-layout">smt's Satan GH60 layout</a></h1>
+<hr />
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<pre><code># Build Options
+#   change to &quot;no&quot; to disable the options, or define them in the Makefile in 
+#   the appropriate keymap folder that will get included automatically
+#
+BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration(+1000)
+MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
+EXTRAKEY_ENABLE = yes       # Audio control and System control(+450)
+CONSOLE_ENABLE = no         # Console for debug(+400)
+COMMAND_ENABLE = yes        # Commands for debug and configuration
+NKRO_ENABLE = yes           # Nkey Rollover - if this doesn&#39;t work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+BACKLIGHT_ENABLE = yes      # Enable keyboard backlight functionality
+MIDI_ENABLE = no            # MIDI controls
+AUDIO_ENABLE = no           # Audio output on port C6
+UNICODE_ENABLE = no         # Unicode
+BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
+RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.  Do not enable this with audio at the same time.
+SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
+
+ifndef QUANTUM_DIR
+    include ../../../../Makefile
+endif
+</code></pre>
             </div>
     </div>
   </div>
