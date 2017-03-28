@@ -38,6 +38,7 @@
 * [german-manuneo](keymaps/german-manuneo/)
 * [guni](keymaps/guni/)
 * [ishigoya-jp](keymaps/ishigoya-jp/)
+* [italian](keymaps/italian/)
 * [j3rn](keymaps/j3rn/)
 * [jack](keymaps/jack/)
 * [jacobono](keymaps/jacobono/)
