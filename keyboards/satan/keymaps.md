@@ -1,5 +1,6 @@
 ### Keymaps
 
+* [admiralStrokers](keymaps/admiralStrokers/)
 * [dbroqua](keymaps/dbroqua/)
 * [default](keymaps/default/)
 * [denolfe](keymaps/denolfe/)
