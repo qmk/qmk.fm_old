@@ -215,15 +215,21 @@
 <h1 id="flashing-firmware"><a href="#flashing-firmware">Flashing Firmware</a></h1>
 <h2 id="ergodox-ez"><a href="#ergodox-ez">ErgoDox EZ</a></h2>
 <p>The Ez uses the <a href="https://www.pjrc.com/teensy/loader.html">Teensy Loader</a>.</p>
-<p>Linux users need to modify udev rules as described on the Teensy Linux page.<br />Some distributions provide a binary, maybe called <code>teensy-loader-cli</code>).</p>
+<p>Linux users need to modify udev rules as described on the <a href="https://www.pjrc.com/teensy/loader_linux.html">Teensy<br />Linux page</a>. Some distributions provide a binary, maybe called<br /><code>teensy-loader-cli</code>.</p>
 <p>To flash the firmware:</p>
 <ul>
-<li>Build the firmware with <code>make keymapname</code>, for example <code>make default</code><br /></li>
+<li><p>Build the firmware with <code>make keymapname</code>, for example <code>make default</code></p></li>
 <li><p>This will result in a hex file called <code>ergodox_ez_keymapname.hex</code>, e.g.<br /> <code>ergodox_ez_default.hex</code></p></li>
 <li><p>Start the teensy loader.</p></li>
 <li><p>Load the .hex file into it.</p></li>
 <li><p>Press the Reset button by inserting a paperclip gently into the reset hole<br /> in the top right corder.</p></li>
 <li><p>Click the button in the Teensy app to download the firmware.</p></li>
+</ul>
+<p>To flash with ´teensy-loader-cli´:</p>
+<ul>
+<li><p>Build the firmware with <code>make keymapname</code>, for example <code>make default</code></p></li>
+<li><p>Run ´<path/to/>teensy_loader_cli --mcu=atmega32u4 -w ergodox_ez_<keymap>.hex´</p></li>
+<li><p>Press the Reset button by inserting a paperclip gently into the reset hole<br /> in the top right corder.</p></li>
 </ul>
 <h2 id="ergodox-infinity"><a href="#ergodox-infinity">ErgoDox Infinity</a></h2>
 <p>The Infinity is two completely independent keyboards, and needs to be flashed<br />for the left and right halves seperately. To flash them:</p>
