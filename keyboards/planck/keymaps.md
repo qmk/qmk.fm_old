@@ -49,3 +49,4 @@
 * [xyverz](keymaps/xyverz/)
 * [yale](keymaps/yale/)
 * [yang](keymaps/yang/)
+* [zach](keymaps/zach/)

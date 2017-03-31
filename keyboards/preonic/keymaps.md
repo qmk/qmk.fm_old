@@ -7,3 +7,4 @@
 * [kinesis](keymaps/kinesis/)
 * [smt](keymaps/smt/)
 * [xyverz](keymaps/xyverz/)
+* [zach](keymaps/zach/)
