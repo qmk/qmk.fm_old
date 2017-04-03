@@ -1,0 +1,97 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/handwired">handwired</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#kbod-keyboard-firmware">KBOD keyboard firmware</a><ul>
+        <li><a href="#quantum-mk-firmware">Quantum MK Firmware</a></li>
+        <li><a href="#building">Building</a></li>
+        <li><a href="#flashing">Flashing</a></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="kbod-keyboard-firmware"><a href="#kbod-keyboard-firmware">KBOD keyboard firmware</a></h1>
+<p>KBOD is a 60% Keyboard kit, hand-wired, with Arduino Micro as its controller. It's utilize 8x8 matrix and has layout similar to GH-60</p>
+<h2 id="quantum-mk-firmware"><a href="#quantum-mk-firmware">Quantum MK Firmware</a></h2>
+<p>For the full Quantum feature list, see <a href="/">the parent readme</a>.</p>
+<h2 id="building"><a href="#building">Building</a></h2>
+<p>Download or clone the whole firmware and use <code>make handwired-kbod-default</code> to generate the .hex file. You may flash it with avrdude</p>
+<h2 id="flashing"><a href="#flashing">Flashing</a></h2>
+<p>Something along this line:</p>
+<pre><code>avrdude -p m32u4 -c avr109 -P &lt;COM PORT&gt; -C &lt;avrdude conf file&gt; -e -u flash:w:handwired_kbod_default.hex</code></pre>
+<p><a href="https://github.com/fudanchii/keyboard_of_disapproval">More info</a></p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

@@ -11,3 +11,4 @@
 * [skully](keymaps/skully/)
 * [unix_optimized](keymaps/unix_optimized/)
 * [win_optimized](keymaps/win_optimized/)
+* [xyverz](keymaps/xyverz/)
