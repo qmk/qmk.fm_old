@@ -57,6 +57,7 @@
 
         <ul>
         <li><a href="#lets-split">Let's Split</a><ul>
+        <li><a href="#build-guide">Build Guide</a></li>
         <li><a href="#first-time-setup">First Time Setup</a><ul>
         <li><a href="#lets-split-1.0">Let's split 1.0</a></li>
         </ul></li>
@@ -101,6 +102,9 @@
             <h1 id="lets-split"><a href="#lets-split">Let's Split</a></h1>
 <p>This readme and most of the code are from <a href="https://github.com/ahtn/tmk_keyboard/">https://github.com/ahtn/tmk_keyboard/</a></p>
 <p>Split keyboard firmware for Arduino Pro Micro or other ATmega32u4<br />based boards.</p>
+<h2 id="build-guide"><a href="#build-guide">Build Guide</a></h2>
+<p>A build guide for putting together the Let's Split v2 can be found here: <a href="https://github.com/nicinabox/lets-split-guide">An Overly Verbose Guide to Building a Let's Split Keyboard</a></p>
+<p>There is additional information there about flashing and adding RGB underglow.</p>
 <h2 id="first-time-setup"><a href="#first-time-setup">First Time Setup</a></h2>
 <p>Download or clone the whole firmware and navigate to the keyboards/lets_split directory. Once your dev env is setup, you'll be able to generate the default .hex using:</p>
 <pre><code>$ make rev2</code></pre>
@@ -126,14 +130,13 @@ lets_split_rev2_i2c.hex</code></pre>
 <p>Apart from diodes and key switches for the keyboard matrix in each half, you<br />will need:</p>
 <ul>
 <li>2 Arduino Pro Micro's. You can find theses on aliexpress for ≈3.50USD each.<br /></li>
-<li>2 TRS sockets<br /></li>
-<li>1 TRS cable.</li>
+<li>2 TRRS sockets and 1 TRRS cable, or 2 TRS sockets and 1 TRS cable</li>
 </ul>
 <p>Alternatively, you can use any sort of cable and socket that has at least 3<br />wires. If you want to use I2C to communicate between halves, you will need a<br />cable with at least 4 wires and 2x 4.7kΩ pull-up resistors</p>
 <h2 id="optional-hardware"><a href="#optional-hardware">Optional Hardware</a></h2>
 <p>A speaker can be hooked-up to either side to the <code>5</code> (<code>C6</code>) pin and <code>GND</code>, and turned on via <code>AUDIO_ENABLE</code>.</p>
 <h2 id="wiring"><a href="#wiring">Wiring</a></h2>
-<p>The 3 wires of the TRS cable need to connect GND, VCC, and digital pin 3 (i.e.<br />PD0 on the ATmega32u4) between the two Pro Micros.</p>
+<p>The 3 wires of the TRS/TRRS cable need to connect GND, VCC, and digital pin 3 (i.e.<br />PD0 on the ATmega32u4) between the two Pro Micros.</p>
 <p>Then wire your key matrix to any of the remaining 17 IO pins of the pro micro<br />and modify the <code>matrix.c</code> accordingly.</p>
 <p>The wiring for serial:</p>
 <p><img src="imgs/split-keyboard-serial-schematic.png" alt="serial wiring" /></p>
