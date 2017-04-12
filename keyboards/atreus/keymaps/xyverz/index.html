@@ -1,0 +1,172 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/atreus">atreus</a> / keymaps / <a href="/keyboards/atreus/keymaps/xyverz/">xyverz</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+              <a href="http://github.com/jackhumbert/qmk_firmware/blob/master/keyboards/atreus/keymaps/xyverz/keymap.c" class="button view">View keymap.c</a>
+        <a href="atreus_xyverz.hex" class="button download">Download .hex</a>
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#xyverzs-atreus-keymap">Xyverz's Atreus Keymap</a><ul>
+        <li><a href="#about-this-keymap">About this keymap:</a></li>
+        <li><a href="#still-to-do">Still to do:</a><ul>
+        <li><a href="#layer-0-dvorak-layer">Layer 0: Dvorak layer</a></li>
+        <li><a href="#layer-1-qwerty-layer">Layer 1: QWERTY layer</a></li>
+        <li><a href="#keymap-2-colemak-layer">Keymap 2: Colemak layer</a></li>
+        <li><a href="#keymap-3-dvorak-for-mac-layout">Keymap 3: Dvorak for Mac layout</a></li>
+        <li><a href="#keymap-4-lower-layer">Keymap 4: LOWER layer</a></li>
+        <li><a href="#keymap-5-raise-layer">Keymap 5: RAISE layer</a></li>
+        <li><a href="#keymap-6-adjust-layer">Keymap 6: ADJUST layer</a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="xyverzs-atreus-keymap"><a href="#xyverzs-atreus-keymap">Xyverz's Atreus Keymap</a></h1>
+<h2 id="about-this-keymap"><a href="#about-this-keymap">About this keymap:</a></h2>
+<p>This is the second iteration of my Atreus keymap. The first one was as close to the planck as I could get at the<br />time, but still very much like the original Atreus keymap. I've managed to get things working better now and have<br />implemented (more like copied) the RAISE/LOWER/ADJUST layers. This is a work in progress, but I think I'm closer<br />to a final go with this.</p>
+<p>I'm using MOD_TAP quite a bit in this keymap. On all layers, R4 pinky keys use mod-tap and are SHIFT when held<br />and their normal keys when tapped. In addition, ESC and TAB are also set as Ctrl and ALT respectively when held,<br />and Enter/ALT on the right thumb key for all layers.</p>
+<p>I've enabled persistent keymaps for Qwerty, Dvorak and Colemak layers, similar to the default Planck layouts.</p>
+<p>Recently added: Documentation, Formatting, and another Dvorak layer that has Command on the left thumb, instead of<br />Control.</p>
+<h2 id="still-to-do"><a href="#still-to-do">Still to do:</a></h2>
+<ul>
+<li>Enjoy this revision; figure out new things later.</li>
+</ul>
+<h3 id="layer-0-dvorak-layer"><a href="#layer-0-dvorak-layer">Layer 0: Dvorak layer</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|   &#39;  |   ,  |   .  |   P  |   Y  |              |   F  |   G  |   C  |   R  |   L  |
+|------+------+------+------+------|              |------+------+------+------+------|
+|   A  |   O  |   E  |   U  |   I  |              |   D  |   H  |   T  |   N  |   S  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|Shft ;|   Q  |   J  |   K  |   X  | CTRL ||Alt / |   B  |   M  |   W  |   V  |Shft Z|
+|------+------+------+------+------|      ||Enter |------+------+------+------+------|
+|  Esc |  Tab |  GUI | LOWER| BkSp |------&#39;`------|  Spc | RAISE|   -  |   /  |   \  |
+`----------------------------------&#39;              `----------------------------------&#39;</code></pre>
+<h3 id="layer-1-qwerty-layer"><a href="#layer-1-qwerty-layer">Layer 1: QWERTY layer</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|   Q  |   W  |   E  |   R  |   T  |              |   Y  |   U  |   I  |   O  |   P  |
+|------+------+------+------+------|              |------+------+------+------+------|
+|   A  |   S  |   D  |   F  |   G  |              |   H  |   J  |   K  |   L  |   ;  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|Shft Z|   X  |   C  |   V  |   B  | CTRL ||Alt / |   N  |   M  |   ,  |   .  |Shft /|
+|------+------+------+------+------|      ||Enter |------+------+------+------+------|
+|  Esc |  Tab |  GUI | LOWER| BkSp |------&#39;`------|  Spc | RAISE|   -  |   &#39;  |   \  |
+`----------------------------------&#39;              `----------------------------------&#39;
+ </code></pre>
+<h3 id="keymap-2-colemak-layer"><a href="#keymap-2-colemak-layer">Keymap 2: Colemak layer</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|   Q  |   W  |   F  |   P  |   G  |              |   J  |   L  |   U  |   Y  |   L  |
+|------+------+------+------+------|              |------+------+------+------+------|
+|   A  |   R  |   S  |   T  |   D  |              |   H  |   N  |   E  |   I  |   S  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|Shft Z|   X  |   C  |   V  |   B  | CTRL ||Alt / |   K  |   M  |   ,  |   .  |Shft /|
+|------+------+------+------+------|      ||Enter |------+------+------+------+------|
+|  Esc |  Tab |  GUI | LOWER| BkSp |------&#39;`------|  Spc | RAISE|   -  |   &#39;  |   \  |
+`----------------------------------&#39;              `----------------------------------&#39;</code></pre>
+<h3 id="keymap-3-dvorak-for-mac-layout"><a href="#keymap-3-dvorak-for-mac-layout">Keymap 3: Dvorak for Mac layout</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|   &#39;  |   ,  |   .  |   P  |   Y  |              |   F  |   G  |   C  |   R  |   L  |
+|------+------+------+------+------|              |------+------+------+------+------|
+|   A  |   O  |   E  |   U  |   I  |              |   D  |   H  |   T  |   N  |   S  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|SFT/ ;|   Q  |   J  |   K  |   X  | CMD  ||Alt / |   B  |   M  |   W  |   V  |SFT/ Z|
+|------+------+------+------+------|      ||Enter |------+------+------+------+------|
+|  Esc |  Tab |  GUI | LOWER| BkSp |------&#39;`------|  Spc | RAISE|   -  |   /  |   \  |
+`----------------------------------&#39;              `----------------------------------&#39;</code></pre>
+<h3 id="keymap-4-lower-layer"><a href="#keymap-4-lower-layer">Keymap 4: LOWER layer</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|   !  |   @  |   #  |   $  |   %  |              |   ^  |   &amp;  |   *  |   (  |   )  |
+|------+------+------+------+------|              |------+------+------+------+------|
+| CAPS |      |  UP  |      | Home |              | PgDn |      |   +  |   {  |   }  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|      | Left | Down | Right| End  |      ||      | PgUp | Mute | Vol- | Vol+ |      |
+|------+------+------+------+------|      ||      |------+------+------+------+------|
+|   ~  |      |      |      | Del  |------&#39;`------| Ins  |      |      |      |      |
+`----------------------------------&#39;              `----------------------------------&#39;</code></pre>
+<h3 id="keymap-5-raise-layer"><a href="#keymap-5-raise-layer">Keymap 5: RAISE layer</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|   1  |   2  |   3  |   4  |   5  |              |   6  |   7  |   8  |   9  |   0  |
+|------+------+------+------+------|              |------+------+------+------+------|
+| CAPS |      |  UP  |      | Home |              | PgDn |      |   =  |   [  |   ]  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|      | Left | Down | Right| End  |      ||      | PgUp | Prev | Play | Next |      |
+|------+------+------+------+------|      ||      |------+------+------+------+------|
+|   `  |      |      |      | Del  |------&#39;`------| Ins  |      |      |      |      |
+`----------------------------------&#39;              `----------------------------------&#39;</code></pre>
+<h3 id="keymap-6-adjust-layer"><a href="#keymap-6-adjust-layer">Keymap 6: ADJUST layer</a></h3>
+<pre><code>,----------------------------------.              ,----------------------------------.
+|  F1  |  F2  |  F3  |  F4  |  F5  |              |  F6  |  F7  |  F8  |  F9  | F10  |
+|------+------+------+------+------|              |------+------+------+------+------|
+|  F11 |      |      |      |      |              |      | PScr | SLck | Paus | F12  |
+|------+------+------+------+------|------.,------|------+------+------+------+------|
+|      |QWERTY|COLEMK|DVORAK|DVORMC|      ||      |      |      |      |      |      |
+|------+------+------+------+------|      ||      |------+------+------+------+------|
+|      |      |      |      |      |------&#39;`------|      |      |      |      | RESET|
+`----------------------------------&#39;              `----------------------------------&#39;</code></pre>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

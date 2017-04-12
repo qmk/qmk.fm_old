@@ -31,6 +31,7 @@
 * [dvorak_spanish](keymaps/dvorak_spanish/)
 * [emacs_osx_dk](keymaps/emacs_osx_dk/)
 * [erez_experimental](keymaps/erez_experimental/)
+* [familiar](keymaps/familiar/)
 * [galson](keymaps/galson/)
 * [german](keymaps/german/)
 * [german-kinergo](keymaps/german-kinergo/)
