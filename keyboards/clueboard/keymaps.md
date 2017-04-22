@@ -7,6 +7,7 @@
 * [max](keymaps/max/)
 * [maximised](keymaps/maximised/)
 * [mouse_keys](keymaps/mouse_keys/)
+* [serubin](keymaps/serubin/)
 * [shift_fn](keymaps/shift_fn/)
 * [skully](keymaps/skully/)
 * [unix_optimized](keymaps/unix_optimized/)
