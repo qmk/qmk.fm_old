@@ -2,6 +2,7 @@
 
 * [ansi_qwertz](keymaps/ansi_qwertz/)
 * [custom](keymaps/custom/)
+* [dbroqua](keymaps/dbroqua/)
 * [default](keymaps/default/)
 * [hasu](keymaps/hasu/)
 * [hhkb](keymaps/hhkb/)

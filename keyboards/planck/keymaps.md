@@ -27,6 +27,7 @@
 * [joe](keymaps/joe/)
 * [khord](keymaps/khord/)
 * [kyle](keymaps/kyle/)
+* [lae3](keymaps/lae3/)
 * [leo](keymaps/leo/)
 * [lucas](keymaps/lucas/)
 * [lukas](keymaps/lukas/)
