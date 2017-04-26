@@ -77,6 +77,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
         <div class="well toc">
 
         <ul>
+        <li><a href="#lae3">Lae3</a><ul>
+        <li><a href="#base-layout">Base Layout</a></li>
+        <li><a href="#lower-layer">Lower Layer</a></li>
+        <li><a href="#raise-layer">Raise Layer</a></li>
+        <li><a href="#movement-layer">Movement Layer</a></li>
+        <li><a href="#meta-layer">Meta Layer</a></li>
+        <li><a href="#arrow-layer">Arrow Layer</a></li>
+        <li><a href="#numpad-layer">Numpad Layer</a></li>
+        </ul></li>
         <li><a href="#config.h">config.h</a></li>
         <li><a href="#makefile">Makefile</a></li>
         <li><a href="#config.h-1">config.h</a></li>
@@ -92,7 +101,85 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
       </div>
             <div class="span8">
-            <p>Keymap based around mode-switching for extended functionality</p>
+            <h1 id="lae3"><a href="#lae3">Lae3</a></h1>
+<p><em>Keymap based around mode-switching for extended functionality</em></p>
+<h2 id="base-layout"><a href="#base-layout">Base Layout</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+| Esc  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| Tab  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |Enter |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|Shift |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+| Ctrl | GUI  | Alt  | Move |Lower |    Space    |Raise | Move | Alt  | GUI  | Ctrl |
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>This is more similar to a standard keyboard layout than the standard planck<br />layout, but I have found that this is better for programming, especially for<br />editor shortcuts.</p>
+<h2 id="lower-layer"><a href="#lower-layer">Lower Layer</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+|   `  |   1  |   2  |   3  |   4  |   5  |   -  |   =  |  Del | End  | PgDn |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| Caps |   6  |   7  |   8  |   9  |   0  |   [  |   ]  |   \  |   &#39;  |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |  F1  |  F2  |  F3  |  F4  |      |      |  F5  |  F6  |  F7  |  F8  |      |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+|      |      |      |      |      |             |      |      |      |      |      |
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>All the numbers are on one hand so that they can all be easily accessed when<br />playing games. The punctuation was placed in a way that is as similar as<br />possible the qwerty punctuation layout on a standard keyboard.</p>
+<h2 id="raise-layer"><a href="#raise-layer">Raise Layer</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+|   ~  |   !  |   @  |   #  |   $  |   %  |   _  |   +  |  Ins | Home | PgUp |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+| Caps |   ^  |   &amp;  |   *  |   (  |   )  |   {  |   }  |   |  |   &quot;  |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |  F9  |  F10 |  F11 |  F12 |      |      |      |      |      |      |      |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+|      |      |      |      |      |             |      |      |      |      |      |
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>This layer with the exception of the function and control keys is effectively<br />the lower layer in combination with the shift key, like on the standard planck<br />layout.</p>
+<h2 id="movement-layer"><a href="#movement-layer">Movement Layer</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+|      |MsBut2|Ms Up |MsBut1|MsWhUp|      | Home | PgDn | PgUp |  End |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |Ms Lft|Ms Dn |Ms Rgt|MsWhDn|      | Left | Down |  Up  | Right|      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |      |      |      |      |      |      |      |      |      |      |      |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+|      |      |      |      |      |             |      |      |      |      |      |
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>Layer for simplifying movement.</p>
+<h2 id="meta-layer"><a href="#meta-layer">Meta Layer</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+|Reset |      |      |      |      |      |      |      |      |      |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |Bcklgt| Mute |Vol Dn|Vol Up|      |      |Qwerty|Arrow |Numpad|      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |      |      |      |      |      |      |      |      |      |      |      |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+|      |      |      |      |      |             |      |      |      |      |      |
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>This Layer is activated when pressing both the Lower and Raise keys. The Arrow<br />and Numpad keys each activate a layer between the base layer and the Movement<br />layer. The Qwerty key disables both of the layers leaving just the base layer<br />active.</p>
+<h2 id="arrow-layer"><a href="#arrow-layer">Arrow Layer</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+|      |      |      |      |      |      |      |      |      |      |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |      |      |      |      |      |      |      |      |      |      |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |      |      |      |      |      |      |      |      |      |  Up  |      |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+|      |      |      |      |      |             |      |      | Left | Down | Right|
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>Replaces the bottom right of the keyboard with arrow keys for games like The<br />Binding of Isaac.</p>
+<h2 id="numpad-layer"><a href="#numpad-layer">Numpad Layer</a></h2>
+<pre><code>┌-----------------------------------------------------------------------------------┐
+|      |      |      |      |      |      |NumLck|   7  |   8  |   9  |   /  |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |      |      |      |      |      |Enter |   4  |   5  |   6  |   *  |      |
+|------+------+------+------+------+------+------+------+------+------+------+------|
+|      |      |      |      |      |      |      |   3  |   2  |   1  |   -  |      |
+|------+------+------+------+------+-------------+------+------+------+------+------|
+|      |      |      |      |      |             |      |   0  |   .  |   +  |      |
+└-----------------------------------------------------------------------------------┘</code></pre>
+<p>Replaces the majority of the right side of the keyboard with a numpad because<br />why not?</p>
 <hr />
 <h1 id="config.h"><a href="#config.h">config.h</a></h1>
 <pre class="sourceCode c"><code class="sourceCode c"><span class="ot">#ifndef LAE3_KEYMAP_H</span>
