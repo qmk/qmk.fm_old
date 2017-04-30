@@ -1,0 +1,323 @@
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/template.css" />
+
+  <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript' src='/menu/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
+
+<link href="/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+<link href="/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+  
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+  
+  <script src="/script.js"></script>
+  
+    <script src="/jquery.sticky-kit.js "></script>
+  <meta name="generator" content="pandoc" />
+  <title>QMK Firmware</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+
+    
+  <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title"><a href="/">QMK Firmware</a> / <a href="/keyboards/">keyboards</a> / <a href="/keyboards/s60_x">s60_x</a></span>
+        <ul class="nav pull-right doc-info">
+          <li><p class="navbar-text"><a href="http://github.com/jackhumbert/qmk_firmware">View on Github</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+            <div id="TOC" class="span4">
+
+            
+        <div class="well toc">
+
+        <ul>
+        <li><a href="#s60-x-keyboard-firmware">S60-x keyboard firmware</a><ul>
+        <li><a href="#s60x-resources">S60X Resources</a></li>
+        <li><a href="#flashing-your-keyboard">Flashing your keyboard</a></li>
+        <li><a href="#building-the-firmware">Building the firmware</a></li>
+        <li><a href="#list-of-included-keymaps">List of included Keymaps</a><ul>
+        <li><a href="#initial-explanations">0 Initial explanations</a></li>
+        <li><a href="#standard---ansi-default-layout">1 <a href="keymaps/default/keymap.c">Standard - ANSI (default layout)</a></a></li>
+        <li><a href="#standard---iso">2 <a href="keymaps/iso/keymap.c">Standard - ISO</a></a></li>
+        <li><a href="#poker">3 Poker</a></li>
+        <li><a href="#plain">4. <a href="keymaps/plain/keymap.c">Plain</a></a></li>
+        <li><a href="#hasu">5. <a href="keymaps/hasu/keymap.c">Hasu</a></a></li>
+        <li><a href="#spacefn">6. <a href="keymaps/spacefn/keymap.c">SpaceFN</a></a></li>
+        <li><a href="#hhkb">7. <a href="keymap/hhkb/keymap.c">HHKB</a></a></li>
+        <li><a href="#custom">8 <a href="keymaps/custom/keymap.c">Custom</a></a></li>
+        <li><a href="#ansi_qwertz">9. <a href="keymaps/ansi_qwertz/keymap.c">ANSI_QWERTZ</a></a></li>
+        </ul></li>
+        </ul></li>
+        </ul>
+
+        </div>
+
+
+              <div class="well keymaps">
+
+          <h3 id="keymaps">Keymaps</h3>
+          <ul>
+          <li><a href="keymaps/ansi_qwertz/">ansi_qwertz</a></li>
+          <li><a href="keymaps/custom/">custom</a></li>
+          <li><a href="keymaps/dbroqua/">dbroqua</a></li>
+          <li><a href="keymaps/default/">default</a></li>
+          <li><a href="keymaps/hasu/">hasu</a></li>
+          <li><a href="keymaps/hhkb/">hhkb</a></li>
+          <li><a href="keymaps/iso/">iso</a></li>
+          <li><a href="keymaps/jpec/">jpec</a></li>
+          <li><a href="keymaps/plain/">plain</a></li>
+          <li><a href="keymaps/poker/">poker</a></li>
+          <li><a href="keymaps/poker_bit/">poker_bit</a></li>
+          <li><a href="keymaps/poker_set/">poker_set</a></li>
+          <li><a href="keymaps/spacefn/">spacefn</a></li>
+          </ul>
+        
+        </div>
+            
+
+      
+            
+
+      </div>
+            <div class="span8">
+            <h1 id="s60-x-keyboard-firmware"><a href="#s60-x-keyboard-firmware">S60-x keyboard firmware</a></h1>
+<p>DIY compact keyboard designed by VinnyCordeiro for Sentraq. Most of the keymaps are based on GH60 code. This is a port from TMK to QMK based on the <a href="https://github.com/VinnyCordeiro/tmk_keyboard">original S60-X Repo</a>.</p>
+<h2 id="s60x-resources"><a href="#s60x-resources">S60X Resources</a></h2>
+<ul>
+<li><a href="https://www.massdrop.com/buy/sentraq-60-diy-keyboard-kit?mode=guest_open">Massdrop page</a></li>
+</ul>
+<h2 id="flashing-your-keyboard"><a href="#flashing-your-keyboard">Flashing your keyboard</a></h2>
+<p>The recommended programs for flashing your keyboard are <a href="http://www.atmel.com/tools/FLIP.aspx">Atmel FLIP</a> (Windows) and <a href="http://dfu-programmer.sourceforge.net/">dfu-programmer</a> (Linux/Windows).</p>
+<p><a href="https://github.com/qmk/qmk_firmware_flasher/releases">QMK Firmware Flasher</a> may work, as the S60-X keyboard uses the ATMega32U4 microcontroller, but it is untested. Use at your own risk.</p>
+<p><a href="https://deskthority.net/wiki/Easy_AVR_USB_Keyboard_Firmware">Easy AVR USB Keyboard Firmware</a> also supports S60-X, but it is completely unrelated to TMK firmware. Use at your own risk.</p>
+<p><strong>Programming the firmware (Windows)</strong></p>
+<ol>
+<li>download and install FLIP (<a href="http://www.atmel.com/tools/FLIP.aspx">http://www.atmel.com/tools/FLIP.aspx</a>)<br /></li>
+<li>connect the keyboard, press the program button on the underside of the board (S1) and wait until it enumerates (you'll hear the &quot;disconnect&quot; and &quot;connect&quot; sound)<br /></li>
+<li>go to device manager, find the atmega32u4 chip and click &quot;update driver&quot;<br /></li>
+<li>choose location manually: folder named &quot;usb&quot; inside the installation directory of FLIP<br /></li>
+<li>once the driver is installed, run flip<br /></li>
+<li>Device -&gt; Select: choose ATMega32U4<br /></li>
+<li>Settings -&gt; Communication -&gt; USB, FLIP should show the signature at this point (58 1E 95 87)<br /></li>
+<li>File -&gt; Load HEX file: choose the hex firmware: <firmware>.hex<br /></li>
+<li>click &quot;Run&quot;<br /></li>
+<li>after programming is done, disconnect the device from USB and connect again.</li>
+</ol>
+<p><strong>Programming the firmware (Linux)</strong></p>
+<ol>
+<li>Download and install/compile/unpack dfu-programmer from <a href="http://dfu-programmer.sourceforge.net/">http://dfu-programmer.sourceforge.net/</a>.<br /></li>
+<li>Issue the following commands in the command prompt after connecting the device and pressing the programming button (S1). You may need root permissions or udev rules to do that.<br /></li>
+<li><code>sudo dfu-programmer atmega32u4 erase</code><br /></li>
+<li><code>sudo dfu-programmer atmega32u4 flash &lt;firmware&gt;.hex</code><br /></li>
+<li><code>sudo dfu-programmer atmega32u4 start</code><br /></li>
+<li>The keyboard should start working. If it doesn't, reconnect the cable.</li>
+</ol>
+<h2 id="building-the-firmware"><a href="#building-the-firmware">Building the firmware</a></h2>
+<p>To build the firmware binary hex file with a keymap just do <code>make</code> with a keymap like this:</p>
+<pre><code>$ make [custom|poker|poker_set|poker_bit|plain|hasu|spacefn|hhkb|&lt;name&gt;]</code></pre>
+<p>For a more detailed explanation of the build process and the environment setup, see the <a href="/readme.md#getting-started">&quot;Getting Started&quot; section</a>.</p>
+<h2 id="list-of-included-keymaps"><a href="#list-of-included-keymaps">List of included Keymaps</a></h2>
+<p>Several versions of keymaps are available in advance but you are recommended to define your favorite layout yourself.<br />To define your own keymap, copy the <a href="/quantum/template/keymaps/default">default keymap template</a> directory into the <code>keymaps</code> directory and start modifying the <code>keymap.c</code> file. Some options might require you to change the <code>config.h</code> or <code>Makefile</code> as well, refer to the main documentation for more information on those.<br />If you want to later merge your finalised keymap into this repository to make it available for everyone, make sure to also modify the <code>readme.md</code> in your keymap directory to show a visual version of your keymap.</p>
+<p>Here's a list of the standard layouts that are provided with the precompiled .hex-files.</p>
+<h3 id="initial-explanations"><a href="#initial-explanations">0 Initial explanations</a></h3>
+<p>The █████ blocks on the layouts hides the switch positions that do not exist physically on the PCB. If you feel like hacking the keyboard and adding new keys, those are the positions that can be used. You'll have to modify the <a href="keymap_common.h">keymap_common.h</a> file for that.</p>
+<p>The ▒▒▒▒▒ blocks hides switch positions not used on this particular layout, but they do exist on the PCB.</p>
+<p>There is no LED support on the PCB at the moment, but I'll let the code for that untouched.</p>
+<h3 id="standard---ansi-default-layout"><a href="#standard---ansi-default-layout">1 <a href="keymaps/default/keymap.c">Standard - ANSI (default layout)</a></a></h3>
+<p>The standard keymap is the one that is pre-flashed on the S60-X.</p>
+<h4 id="default-layer"><a href="#default-layer">1.0 Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ ESC │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │▒▒▒▒▒│BKSPC│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ TAB │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │  \  │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│CAPSL│  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  ;  │  &#39;  │▒▒▒▒▒│ENTER│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│LSHFT│▒▒▒▒▒│  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │▒▒▒▒▒│RSHFT│▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│LCTRL│L_GUI│L_ALT│█████│█████│█████│ SPC │█████│█████│█████│R_ALT│ FN0 │ APP │RCTRL│█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h4 id="fn-layer"><a href="#fn-layer">1.1 Fn layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│GRAVE│ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │▒▒▒▒▒│     │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │ Up  │     │     │     │     │     │PGUP │PGDWN│PRTSC│SCLCK│PAUSE│     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │Left │Down │Right│     │     │     │     │     │     │     │     │▒▒▒▒▒│     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │▒▒▒▒▒│     │     │     │     │     │     │     │     │     │     │▒▒▒▒▒│     │▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │█████│█████│█████│     │█████│█████│█████│     │     │     │     │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="standard---iso"><a href="#standard---iso">2 <a href="keymaps/iso/keymap.c">Standard - ISO</a></a></h3>
+<p>The same as the standard keymap, but with additional ISO keys.</p>
+<h4 id="default-layer-1"><a href="#default-layer-1">2.0 Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ ESC │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │▒▒▒▒▒│BKSPC│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ TAB │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │▒▒▒▒▒│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│CAPSL│  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  ;  │  &#39;  │NUHS │ENTER│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│LSHFT│  \  │  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │▒▒▒▒▒│RSHFT│▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│LCTRL│L_GUI│L_ALT│█████│█████│█████│ SPC │█████│█████│█████│R_ALT│ FN0 │ APP │RCTRL│█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h4 id="fn-layer-1"><a href="#fn-layer-1">2.1 Fn layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│GRAVE│ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │▒▒▒▒▒│     │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │ Up  │     │     │     │     │     │PGUP │PGDWN│PRTSC│SCLCK│PAUSE│▒▒▒▒▒│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │Left │Down │Right│     │     │     │     │     │     │     │     │     │     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │     │     │     │     │     │     │     │     │     │▒▒▒▒▒│     │▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │█████│█████│█████│     │█████│█████│█████│     │     │     │     │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="poker"><a href="#poker">3 Poker</a></h3>
+<p><a href="keymaps/poker/keymap.c">The poker keymap</a> emulates original Vortex Poker layers<br />while both <a href="keymaps/poker_bit/keymap.c">poker_bit</a> and <a href="keymap/poker_set/keymap.c">poker_set</a> implement the same layout in a slightly different way, fix a minor issue of the original poker Layout and enhance arrow keys.</p>
+<pre><code>Fn + Esc = `
+Fn + {left, down, up, right}  = {home, pgdown, pgup, end}</code></pre>
+<h4 id="default-layer-2"><a href="#default-layer-2">3.0 Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│  `  │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │▒▒▒▒▒│BkSpc│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ Tab │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │  \  │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Caps │  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  ;  │  &#39;  │▒▒▒▒▒│Enter│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Shift│▒▒▒▒▒│  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │▒▒▒▒▒│Shift│▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Ctrl │ Gui │ Alt │█████│█████│█████│Space│█████│█████│█████│ Fn  │ Gui │ App │Ctrl │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h4 id="poker-fn-layer"><a href="#poker-fn-layer">3.1 Poker Fn layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ Esc │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │▒▒▒▒▒│     │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │ FnQ │ Up  │     │     │     │     │     │     │ Cal │     │Home │ Ins │     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │Left │Down │Right│     │     │ Psc │ Slk │Pause│     │ Tsk │ End │▒▒▒▒▒│     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │▒▒▒▒▒│ Del │     │ Web │Mute │ VoU │ VoD │     │PgUp │PgDwn│ Del │▒▒▒▒▒│ Up  │▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │█████│█████│█████│ FnS │█████│█████│█████│ Fn  │Left │Down │Right│█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="plain"><a href="#plain">4. <a href="keymaps/plain/keymap.c">Plain</a></a></h3>
+<p>Without any Fn layer this will be useful if you want to use key remapping tool like AHK on host.</p>
+<h4 id="plain-default-layer"><a href="#plain-default-layer">4.0 Plain Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ Esc │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │▒▒▒▒▒│BkSpc│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ Tab │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │  \  │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Caps │  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  ;  │  &#39;  │▒▒▒▒▒│Enter│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Shift│▒▒▒▒▒│  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │▒▒▒▒▒│Shift│▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Ctrl │ Gui │ Alt │█████│█████│█████│Space│█████│█████│█████│ Alt │ Gui │ App │Ctrl │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="hasu"><a href="#hasu">5. <a href="keymaps/hasu/keymap.c">Hasu</a></a></h3>
+<p>This is Hasu's favorite keymap with HHKB Fn, Vi cursor and Mousekey layer.</p>
+<p>(Hasu is the creator of the TMK firmware, for those who do not know that.)</p>
+<h3 id="spacefn"><a href="#spacefn">6. <a href="keymaps/spacefn/keymap.c">SpaceFN</a></a></h3>
+<p>This layout proposed by spiceBar uses space bar to change layer with using Dual role key technique. Check the sourcefile and <a href="http://geekhack.org/index.php?topic=51069.0">SpaceFN discussion</a> for more information.</p>
+<h4 id="default-layer-3"><a href="#default-layer-3">6.0 Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ Esc │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │▒▒▒▒▒│BkSpc│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ Tab │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │  \  │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Caps │  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  ;  │  &#39;  │▒▒▒▒▒│Enter│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Shift│▒▒▒▒▒│  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │▒▒▒▒▒│Shift│▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Ctrl │ Gui │ Alt │█████│█████│████ Space/Fn ███│█████│█████│ Alt │ Gui │ App │Ctrl │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h4 id="spacefn-layer"><a href="#spacefn-layer">6.1 SpaceFN layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│  `  │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │▒▒▒▒▒│ Del │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │     │     │     │     │Home │ Up  │ End │ Psc │ Slk │Pause│ Ins │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │     │     │     │PgUp │Left │Down │Right│     │     │▒▒▒▒▒│     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │▒▒▒▒▒│     │     │     │     │Space│PgDwn│  `  │  ~  │     │     │▒▒▒▒▒│     │▒▒▒▒▒│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │     │█████│█████│█████│ Fn  │█████│█████│█████│ Alt │ Gui │ App │Ctrl │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="hhkb"><a href="#hhkb">7. <a href="keymap/hhkb/keymap.c">HHKB</a></a></h3>
+<p>The HHKB keymap emulates original HHKB layers.</p>
+<h4 id="default-layer-4"><a href="#default-layer-4">7.0: Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ Esc │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │  \  │  `  │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ Tab │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │BkSpc│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Ctrl │  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │ Fn3 │  &#39;  │▒▒▒▒▒│Enter│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Shift│▒▒▒▒▒│  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │▒▒▒▒▒│Shift│ Fn  │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│▒▒▒▒▒│ Gui │ Alt │█████│█████│█████│Space│█████│█████│█████│▒▒▒▒▒│ Alt │ Gui │▒▒▒▒▒│█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h4 id="hhkb-fn-layer"><a href="#hhkb-fn-layer">7.1: HHKB Fn layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│ Pwr │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │ Ins │ Del │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Caps │     │     │     │     │     │     │     │ Psc │ Slk │ Pus │ Up  │     │     │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │ VoD │ VoU │ Mut │ Ejc │     │  *  │  /  │Home │PgUp │Left │Right│▒▒▒▒▒│Enter│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│     │▒▒▒▒▒│     │     │     │     │     │  +  │  -  │ End │PgDwn│Down │▒▒▒▒▒│     │     │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│▒▒▒▒▒│     │     │█████│█████│█████│     │█████│█████│█████│▒▒▒▒▒│     │     │▒▒▒▒▒│█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="custom"><a href="#custom">8 <a href="keymaps/custom/keymap.c">Custom</a></a></h3>
+<p>The custom keymap is where I tested all the switches, not being concerned with a specific layout or layers. It's a plain layout option with the extra keys used on ISO &amp; HHKB layouts being assigned some other keys.</p>
+<h4 id="default-layer-5"><a href="#default-layer-5">8.0 Default layer</a></h4>
+<pre><code>┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+│  `  │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │  -  │  =  │PgUp │BkSpc│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│ Tab │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  [  │  ]  │  \  │█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Caps │  A  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  ;  │  &#39;  │PgDwn│Enter│█████│
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Shift│Home │  Z  │  X  │  C  │  V  │  B  │  N  │  M  │  ,  │  .  │  /  │ End │Shift│  Up │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+│Ctrl │ Gui │ Alt │█████│█████│█████│Space│█████│█████│█████│ Alt │ Gui │ App │Ctrl │█████│
+└─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┘</code></pre>
+<h3 id="ansi_qwertz"><a href="#ansi_qwertz">9. <a href="keymaps/ansi_qwertz/keymap.c">ANSI_QWERTZ</a></a></h3>
+<p>This keymap was designed for inputting characters with diacritics with ANSI keycaps.<br />It provides toggleable SpaceFn functionality, a dedicated arrow cluster and a microphone mute key on the function layer as well as a bootloader reset key.</p>
+<p>For more info, <a href="keymaps/ansi_qwertz/readme.md">check here</a>.</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>
