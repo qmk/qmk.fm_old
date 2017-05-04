@@ -1,5 +1,6 @@
 ### Keymaps
 
+* [cinaeco](keymaps/cinaeco/)
 * [dbroqua](keymaps/dbroqua/)
 * [default](keymaps/default/)
 * [jp](keymaps/jp/)
