@@ -15,6 +15,7 @@
 * [david](keymaps/david/)
 * [dbroqua](keymaps/dbroqua/)
 * [default](keymaps/default/)
+* [dshields](keymaps/dshields/)
 * [dzobert](keymaps/dzobert/)
 * [espynn](keymaps/espynn/)
 * [experimental](keymaps/experimental/)
