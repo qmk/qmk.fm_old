@@ -2,6 +2,5 @@
 layout: default
 ---
 
-# QMK Firmware
+## Keyboards supported
 
-Hello!
