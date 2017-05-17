@@ -1,1 +1,9 @@
+title: QMK Firmware
+email: hello@qmk.fm
+description: >
+  QMK Firmware is an open-source keyboard firmware that supports many keyboard projects.
+baseurl: ""
+url: "http://qmk.fm"
+github_username: qmk
+
 theme: jekyll-theme-minimal
