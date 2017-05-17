@@ -17,21 +17,10 @@
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        {% if site.github.is_project_page %}
-          <p class="view"><a href="https://github.com/qmk/qmk_firmware">View the Project on GitHub <small>{{ github_name }}</small></a></p>
-        {% endif %}
+        <p class="view"><a href="https://github.com/qmk/qmk_firmware">View the Project on GitHub <small>{{ github_name }}</small></a></p>
 
-        {% if site.github.is_user_page %}
-          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
-
-        {% if site.show_downloads %}
-          <ul>
-            <li><a href="https://github.com/qmk/qmk_firmware/zipball/master">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/qmk/qmk_firmware/tarball/master">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/qmk/qmk_firmware">View On <strong>GitHub</strong></a></li>
-          </ul>
-        {% endif %}
+        {% capture my_include %}{% include sidebar.md %}{% endcapture %}
+        {{ my_include | markdownify }}
       </header>
       <section>
 
@@ -40,7 +29,7 @@
       </section>
       <footer>
         {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">QMK collaborators</a> and contributors like you!</p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
