@@ -7,3 +7,5 @@ url: "http://qmk.fm"
 github_username: qmk
 
 theme: jekyll-theme-minimal
+gems:
+  - jekill-feed

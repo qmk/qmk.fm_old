@@ -1,8 +1,7 @@
 ---
 layout: page
-title: QMK Firmware
+title: "QMK Firmware"
 ---
-
 # QMK Firmware
 
 [Check it out on Github](https://github.com/qmk/qmk_firmware)
