@@ -5,6 +5,7 @@ description: QMK Firmware is an open-source keyboard firmware that supports many
 baseurl: ""
 url: "http://qmk.fm"
 github_username: qmk
+repository: qmk/qmk_firmware
 
 theme: jekyll-theme-minimal
 gems:
