@@ -6,7 +6,10 @@ baseurl: ""
 url: "http://qmk.fm"
 github_username: qmk
 repository: qmk/qmk_firmware
-
+collections:
+  pages:
+    output: true
+    permalink: /:name
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
