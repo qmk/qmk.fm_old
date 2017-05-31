@@ -8,3 +8,10 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
 
+### How to support QMK
+
+[Get QMK Merch](https://teespring.com/stores/qmk)
+
+[Donate via Gratipay](https://gratipay.com/QMK/)
+
+[Donate via Donorbox](https://donorbox.org/qmk)
