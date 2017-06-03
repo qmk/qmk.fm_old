@@ -6,7 +6,7 @@ permalink: /planck/keymap/
 
 ### *Blanck* Keymap Printouts
 
-Here's a couple of printable blank 11x8.5" sheets for the Planck. Each has a notes section, layer labels, and some helpful tips for customizing.
+Here's a couple of printable, foldable (for standing-up) blank 11x8.5" sheets for the Planck. Each has a notes section, layer labels, and some helpful tips for customizing.
 
 * [Default keymap with qwerty](keymap-printout-blanck-qwerty.pdf)
 * [Default keymap with colemak](keymap-printout-blanck-colemak.pdf)
