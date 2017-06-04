@@ -16,5 +16,3 @@ Here's a couple of printable, foldable (for standing-up), blank 8.5 x 11" sheets
 * [2 blank keymaps with Dvorak](https://github.com/qmk/qmk.fm/raw/gh-pages/_pages/planck/keymap-printout-blanck-dvorak.pdf)
 * [2 entirely blank keymaps](https://github.com/qmk/qmk.fm/raw/gh-pages/_pages/planck/keymap-printout-blanck.pdf)
 * [3 entirely blank keymaps](https://github.com/qmk/qmk.fm/raw/gh-pages/_pages/planck/keymap-printout-blanck-triple.pdf)
-
-Also available is all of these as [one pdf](https://github.com/qmk/qmk.fm/raw/gh-pages/_pages/planck/keymap-printout.pdf).
