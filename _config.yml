@@ -13,3 +13,4 @@ collections:
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
+  - jekyll-redirect-from
