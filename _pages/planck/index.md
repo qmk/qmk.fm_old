@@ -3,8 +3,8 @@ title: Planck
 layout: qmk
 permalink: /planck/
 redirect_from: 
- - /planck/keymap
- - /planck/keymap/
+  - /planck/keymap
+  - /planck/keymap/
 ---
 
 ## The Planck Keyboard
