@@ -7,11 +7,13 @@ redirect_from:
   - /planck/keymap/
 ---
 
-## The Planck Keyboard
+# The Planck Keyboard
+
+[![](https://img.shields.io/badge/planck-qmk-lightgrey.svg)](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
 
 The Planck is a 12x4 ortholinear, 47/48-key keyboard kit, made by [olkb](https://olkb.com).
 
-### *Blanck* Keymap Printouts
+## *Blanck* Keymap Printouts
 
 Here's a couple of printable, foldable (for standing-up), blank 8.5 x 11" sheets for Planck keymaps. Each has a notes section, layer labels, and some helpful tips for customizing.
 
@@ -24,7 +26,7 @@ Here's a couple of printable, foldable (for standing-up), blank 8.5 x 11" sheets
 * [2 entirely blank keymaps](/planck/keymap-printout-blanck.pdf)
 * [3 entirely blank keymaps](/planck/keymap-printout-blanck-triple.pdf)
 
-### Planck Default Keymap Footnotes
+## Planck Default Keymap Footnotes
 
 * **OS**: the Windows/Command key
 * **Fn**: an alternate shift key that cycles through the backlight settings.
