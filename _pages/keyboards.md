@@ -1,8 +1,9 @@
 ---
+title: All QMK-supported Keyboards
 layout: qmk
 permalink: /keyboards/
 ---
-# All QMK Projects
+# All QMK-supported Keyboards
 
 * {% include badge.html path="alps64" %}
 * {% include badge.html path="amj60" %}
