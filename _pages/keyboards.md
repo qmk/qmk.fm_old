@@ -1,6 +1,6 @@
 ---
 layout: qmk
-url: keyboards
+permalink: /keyboards/
 ---
 # All QMK Projects
 
