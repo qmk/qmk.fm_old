@@ -1,5 +1,5 @@
 ---
-title: Let's Split
+title: "Let's Split"
 layout: qmk-editable
 permalink: /lets_split/
 ---
@@ -8,7 +8,7 @@ permalink: /lets_split/
 
 {% include badge.html path="lets_split" %}
 
-A split 40% board (4x6 on each half), that using a Pro Micro (or clone), and Serial or I2C to communicate between the halves. Designed by Wootpatoot.
+A split 40% board (4x6 on each half), that uses a Pro Micro (or clone), and Serial or I2C to communicate between the halves. Designed by Wootpatoot.
 
 *Links to purchasable products needed*
 

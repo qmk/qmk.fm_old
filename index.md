@@ -13,7 +13,7 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
 * [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad/)
 
-The project also includes community support for [lots of other keyboards](https://github.com/qmk/qmk_firmware/blob/master/keyboards/).
+The project also includes community support for [lots of other keyboards](/keyboards/).
 
 ## Maintainers
 

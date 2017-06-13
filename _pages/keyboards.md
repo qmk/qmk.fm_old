@@ -1,9 +1,9 @@
 ---
-title: All QMK-supported Keyboards
-layout: qmk
+title: "All Supported Keyboards"
+layout: qmk-editable
 permalink: /keyboards/
 ---
-# All QMK-supported Keyboards
+# All Supported Keyboards
 
 * [alps64](https://github.com/qmk/qmk_firmware/blob/master/keyboards/alps64)
 * [amj60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amj60)
