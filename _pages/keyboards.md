@@ -5,55 +5,54 @@ permalink: /keyboards/
 ---
 # All QMK-supported Keyboards
 
-* {% include badge.html path="alps64" %}
-* {% include badge.html path="amj60" %}
-* {% include badge.html path="amjpad" %}
-* {% include badge.html path="arrow_pad" %}
-* {% include badge.html path="atomic" %}
-* {% include badge.html path="atreus" %}
-* {% include badge.html path="atreus62" %}
-* {% include badge.html path="bantam44" %}
-* {% include badge.html path="chibios_test" %}
-* {% include badge.html path="clueboard" %}
-* {% include badge.html path="cluecard" %}
-* {% include badge.html path="cluepad" %}
-* {% include badge.html path="converter" %}
-* {% include badge.html path="dk60" %}
-* {% include badge.html path="ergodox" %}
-* {% include badge.html path="frosty_flake" %}
-* {% include badge.html path="gh60" %}
-* {% include badge.html path="gherkin" %}
-* {% include badge.html path="gonnerd" %}
-* {% include badge.html path="handwired" %}
-* {% include badge.html path="hhkb" %}
-* {% include badge.html path="infinity60" %}
-* {% include badge.html path="jd40" %}
-* {% include badge.html path="jd45" %}
-* {% include badge.html path="kc60" %}
-* {% include badge.html path="kinesis" %}
-* {% include badge.html path="kitten_paw" %}
-* {% include badge.html path="kmac" %}
-* {% include badge.html path="lets_split" %} - [more info for the Let's Split](/lets_split/) 
-* {% include badge.html path="m10a" %}
-* {% include badge.html path="maxipad" %}
-* {% include badge.html path="mechmini" %}
-* {% include badge.html path="mitosis" %}
-* {% include badge.html path="miuni32" %}
-* {% include badge.html path="nyquist" %}
-* {% include badge.html path="pegasushoof" %}
-* {% include badge.html path="phantom" %}
-* {% include badge.html path="planck" %} - [more info for the Planck](/planck/) 
-* {% include badge.html path="preonic" %}
-* {% include badge.html path="ps2avrGB" %}
-* {% include badge.html path="roadkit" %}
-* {% include badge.html path="s60_x" %}
-* {% include badge.html path="s65_x" %}
-* {% include badge.html path="satan" %}
-* {% include badge.html path="sixkeyboard" %}
-* {% include badge.html path="subatomic" %}
-* {% include badge.html path="tada68" %}
-* {% include badge.html path="tiger_lily" %}
-* {% include badge.html path="tv44" %}
-* {% include badge.html path="vision_division" %}
-* {% include badge.html path="whitefox" %}
-* {% include badge.html path="xd60" %}
+* [alps64](https://github.com/qmk/qmk_firmware/blob/master/keyboards/alps64)
+* [amj60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amj60)
+* [amjpad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amjpad)
+* [arrow_pad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/arrow_pad)
+* [atomic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atomic)
+* [atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus)
+* [atreus62](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus62)
+* [bantam44](https://github.com/qmk/qmk_firmware/blob/master/keyboards/bantam44)
+* [clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard)
+* [cluecard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluecard)
+* [cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad)
+* [converter](https://github.com/qmk/qmk_firmware/blob/master/keyboards/converter)
+* [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60)
+* [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox)
+* [frosty_flake](https://github.com/qmk/qmk_firmware/blob/master/keyboards/frosty_flake)
+* [gh60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gh60)
+* [gherkin](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gherkin)
+* [gonnerd](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gonnerd)
+* [handwired](https://github.com/qmk/qmk_firmware/blob/master/keyboards/handwired)
+* [hhkb](https://github.com/qmk/qmk_firmware/blob/master/keyboards/hhkb)
+* [infinity60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/infinity60)
+* [jd40](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd40)
+* [jd45](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd45)
+* [kc60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kc60)
+* [kinesis](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kinesis)
+* [kitten_paw](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kitten_paw)
+* [kmac](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kmac)
+* [lets_split](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lets_split) - [more info for the Let's Split](/lets_split/) 
+* [m10a](https://github.com/qmk/qmk_firmware/blob/master/keyboards/m10a)
+* [maxipad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/maxipad)
+* [mechmini](https://github.com/qmk/qmk_firmware/blob/master/keyboards/mechmini)
+* [mitosis](https://github.com/qmk/qmk_firmware/blob/master/keyboards/mitosis)
+* [miuni32](https://github.com/qmk/qmk_firmware/blob/master/keyboards/miuni32)
+* [nyquist](https://github.com/qmk/qmk_firmware/blob/master/keyboards/nyquist)
+* [pegasushoof](https://github.com/qmk/qmk_firmware/blob/master/keyboards/pegasushoof)
+* [phantom](https://github.com/qmk/qmk_firmware/blob/master/keyboards/phantom)
+* [planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck) - [more info for the Planck](/planck/) 
+* [preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic)
+* [ps2avrGB](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ps2avrGB)
+* [roadkit](https://github.com/qmk/qmk_firmware/blob/master/keyboards/roadkit)
+* [s60_x](https://github.com/qmk/qmk_firmware/blob/master/keyboards/s60_x)
+* [s65_x](https://github.com/qmk/qmk_firmware/blob/master/keyboards/s65_x)
+* [satan](https://github.com/qmk/qmk_firmware/blob/master/keyboards/satan)
+* [sixkeyboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/sixkeyboard)
+* [subatomic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/subatomic)
+* [tada68](https://github.com/qmk/qmk_firmware/blob/master/keyboards/tada68)
+* [tiger_lily](https://github.com/qmk/qmk_firmware/blob/master/keyboards/tiger_lily)
+* [tv44](https://github.com/qmk/qmk_firmware/blob/master/keyboards/tv44)
+* [vision_division](https://github.com/qmk/qmk_firmware/blob/master/keyboards/vision_division)
+* [whitefox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/whitefox)
+* [xd60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/xd60)
