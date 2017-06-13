@@ -6,7 +6,7 @@ permalink: /lets_split/
 
 # Let's Split
 
-[![](https://img.shields.io/badge/lets__split-qmk-lightgrey.svg)](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lets_split/)
+{% include badge.html path="lets_split" %}
 
 A split 40% board (4x6 on each half), that using a Pro Micro (or clone), and Serial or I2C to communicate between the halves. Designed by Wootpatoot.
 

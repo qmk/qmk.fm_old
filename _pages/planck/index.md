@@ -9,7 +9,7 @@ redirect_from:
 
 # The Planck Keyboard
 
-[![](https://img.shields.io/badge/planck-qmk-lightgrey.svg)](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
+{% include badge.html path="planck" %}
 
 The Planck is a 12x4 ortholinear, 47/48-key keyboard kit, made by [olkb](https://olkb.com).
 

@@ -450,3 +450,8 @@ footer {
 header h1 a {
 	color: inherit;
 }
+
+
+a img {
+  vertical-align: middle;
+}
