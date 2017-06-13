@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>QMK Firmware</title>
+    <title>QMK Firmware{% if page.title != null %} - {{ page.title }}{% endif %}</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="icon" 
@@ -19,8 +19,6 @@
       <header>
         <h1><a href="/"><img src="/psi-48.png" alt="QMK Logo" width="48" style="vertical-align: middle" /> {{ site.title | default: site.github.repository_name }}</a></h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        <p class="view"><a href="https://github.com/qmk/qmk_firmware">View the Project on GitHub <small>{{ github_name }}</small></a></p>
 
         {% capture my_include %}{% include sidebar.md %}{% endcapture %}
         {{ my_include | markdownify }}

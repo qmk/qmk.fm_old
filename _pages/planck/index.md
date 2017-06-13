@@ -1,5 +1,5 @@
 ---
-title: Planck
+title: "Planck"
 layout: qmk
 permalink: /planck/
 redirect_from: 

@@ -1,3 +1,6 @@
+[QMK on GitHub](https://github.com/qmk/qmk_firmware)
+
+[All Supported Keyboards](/keyboards/)
 
 [![Download Zip](https://img.shields.io/badge/download-zip-blue.svg)](https://github.com/qmk/qmk_firmware/zipball/master)
 [![Download Tar](https://img.shields.io/badge/download-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarpball/master)
