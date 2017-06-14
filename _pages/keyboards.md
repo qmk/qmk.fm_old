@@ -18,7 +18,7 @@ permalink: /keyboards/
 * [cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad)
 * [converter](https://github.com/qmk/qmk_firmware/blob/master/keyboards/converter)
 * [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60)
-* [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox)
+* [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox) - [more info for the Ergodox](/ergodox/) 
 * [frosty_flake](https://github.com/qmk/qmk_firmware/blob/master/keyboards/frosty_flake)
 * [gh60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gh60)
 * [gherkin](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gherkin)
