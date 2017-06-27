@@ -12,6 +12,8 @@ A split ortholinear mechanical keyboard. Open-source design. Available commercia
 
 A different, ARM-based design called ErgoDox Infinity is periodically available in kit form via [Massdrop](https://www.massdrop.com/buy/infinity-ergodox). 
 
+The ErgoDox EZ setup is also compatible with the [ErgoDox kit](https://www.ergodox.io/).
+
 ## Graphical configurator
 
 A graphical configurator that uses QMK in the backend is available at [configure.ergodox-ez.com](http://configure.ergodox-ez.com). The configurator outputs Hex files as well as C files which can be used as a jumping-off point in a local QMK installation.
