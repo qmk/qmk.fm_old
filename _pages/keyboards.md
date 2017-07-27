@@ -17,6 +17,7 @@ permalink: /keyboards/
 * [cluecard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluecard)
 * [cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad)
 * [converter](https://github.com/qmk/qmk_firmware/blob/master/keyboards/converter)
+* [deltasplit75](https://github.com/qmk/qmk_firmware/blob/master/keyboards/deltasplit75) - [Build guide found here](/deltasplit75/)
 * [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60)
 * [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox) - [more info for the Ergodox](/ergodox/) 
 * [frosty_flake](https://github.com/qmk/qmk_firmware/blob/master/keyboards/frosty_flake)
