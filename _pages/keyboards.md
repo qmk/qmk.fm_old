@@ -5,29 +5,71 @@ permalink: /keyboards/
 ---
 # All Supported Keyboards
 
-* [alps64](https://github.com/qmk/qmk_firmware/blob/master/keyboards/alps64)
-* [amj60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amj60)
-* [amjpad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amjpad)
-* [arrow_pad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/arrow_pad)
+## Ortholinear Keyboards
+
 * [atomic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atomic)
-* [atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus)
-* [atreus62](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus62)
-* [bantam44](https://github.com/qmk/qmk_firmware/blob/master/keyboards/bantam44)
+* [planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck) - [more info for the Planck](/planck/) 
+* [preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic)
+
+## Clueboard
+
 * [clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard)
 * [cluecard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluecard)
 * [cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad)
-* [converter](https://github.com/qmk/qmk_firmware/blob/master/keyboards/converter)
-* [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60)
+
+## Ergodox EZ
+
 * [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox) - [more info for the Ergodox](/ergodox/) 
+
+## Sentraq
+
+* [s60_x](https://github.com/qmk/qmk_firmware/blob/master/keyboards/s60_x)
+* [s65_x](https://github.com/qmk/qmk_firmware/blob/master/keyboards/s65_x)
+
+## MechkeysCA
+
+* [mechmini](https://github.com/qmk/qmk_firmware/blob/master/keyboards/mechmini)
+
+## 40percent.club
+
+* [gherkin](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gherkin)
+
+## Carpe Keyboards
+
+* [jd40](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd40)
+* [jd45](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd45)
+
+## AMJKeyboard
+
+* [amj60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amj60)
+* [amjpad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amjpad)
+
+## Technomancy
+
+* [atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus)
+
+## Profet Keyboards
+
+* [atreus62](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus62)
+
+## Bantam Keyboards
+
+* [bantam44](https://github.com/qmk/qmk_firmware/blob/master/keyboards/bantam44)
+
+## TMK Keyboards
+
+* [alps64](https://github.com/qmk/qmk_firmware/blob/master/keyboards/alps64)
+* [converter](https://github.com/qmk/qmk_firmware/blob/master/keyboards/converter)
+
+
+
+* [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60)
 * [frosty_flake](https://github.com/qmk/qmk_firmware/blob/master/keyboards/frosty_flake)
 * [gh60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gh60)
-* [gherkin](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gherkin)
 * [gonnerd](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gonnerd)
 * [handwired](https://github.com/qmk/qmk_firmware/blob/master/keyboards/handwired)
 * [hhkb](https://github.com/qmk/qmk_firmware/blob/master/keyboards/hhkb)
 * [infinity60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/infinity60)
-* [jd40](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd40)
-* [jd45](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd45)
 * [kc60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kc60)
 * [kinesis](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kinesis)
 * [kitten_paw](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kitten_paw)
@@ -35,18 +77,13 @@ permalink: /keyboards/
 * [lets_split](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lets_split) - [more info for the Let's Split](/lets_split/) 
 * [m10a](https://github.com/qmk/qmk_firmware/blob/master/keyboards/m10a)
 * [maxipad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/maxipad)
-* [mechmini](https://github.com/qmk/qmk_firmware/blob/master/keyboards/mechmini)
 * [mitosis](https://github.com/qmk/qmk_firmware/blob/master/keyboards/mitosis)
 * [miuni32](https://github.com/qmk/qmk_firmware/blob/master/keyboards/miuni32)
 * [nyquist](https://github.com/qmk/qmk_firmware/blob/master/keyboards/nyquist)
 * [pegasushoof](https://github.com/qmk/qmk_firmware/blob/master/keyboards/pegasushoof)
 * [phantom](https://github.com/qmk/qmk_firmware/blob/master/keyboards/phantom)
-* [planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck) - [more info for the Planck](/planck/) 
-* [preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic)
 * [ps2avrGB](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ps2avrGB)
 * [roadkit](https://github.com/qmk/qmk_firmware/blob/master/keyboards/roadkit)
-* [s60_x](https://github.com/qmk/qmk_firmware/blob/master/keyboards/s60_x)
-* [s65_x](https://github.com/qmk/qmk_firmware/blob/master/keyboards/s65_x)
 * [satan](https://github.com/qmk/qmk_firmware/blob/master/keyboards/satan)
 * [sixkeyboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/sixkeyboard)
 * [subatomic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/subatomic)
