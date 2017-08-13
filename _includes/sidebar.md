@@ -3,7 +3,7 @@
 [All Supported Keyboards](/keyboards/)
 
 [![Download Zip](https://img.shields.io/badge/download-zip-blue.svg)](https://github.com/qmk/qmk_firmware/zipball/master)
-[![Download Tar](https://img.shields.io/badge/download-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarpball/master)
+[![Download Tar](https://img.shields.io/badge/download-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarball/master)
 
 [![Build Status](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
 [![Gitter](https://img.shields.io/gitter/room/qmk/qmk_firmware.js.svg)](https://gitter.im/qmk/qmk_firmware)

@@ -60,9 +60,7 @@ permalink: /keyboards/
 
 * [alps64](https://github.com/qmk/qmk_firmware/blob/master/keyboards/alps64)
 * [converter](https://github.com/qmk/qmk_firmware/blob/master/keyboards/converter)
-
-
-
+* [deltasplit75](https://github.com/qmk/qmk_firmware/blob/master/keyboards/deltasplit75) - [Build guide found here](/deltasplit75/)
 * [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60)
 * [frosty_flake](https://github.com/qmk/qmk_firmware/blob/master/keyboards/frosty_flake)
 * [gh60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gh60)
