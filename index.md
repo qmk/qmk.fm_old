@@ -1,8 +1,6 @@
 ---
 layout: qmk
 ---
-## QMK Firmware
-
 This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
 
 ## Keyboards powered by QMK
@@ -25,7 +23,7 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 
 ## Documentation
 
-[Documentation](https://docs.qmk.fm) is hosted on [Gitbook](https://www.gitbook.com/book/qmk/firmware/details) and [Github](https://github.com/qmk/qmk_firmware/) (they are synced). You can request changes by making a fork and [pull request](https://github.com/qmk/qmk_firmware/pulls) or by clicking the "suggest an edit" on any page.
+[Documentation](https://docs.qmk.fm) is hosted on [Gitbook](https://www.gitbook.com/book/qmk/firmware/details) and [Github](https://github.com/qmk/qmk_firmware/tree/master/docs) (they are synced). You can request changes by making a fork and [pull request](https://github.com/qmk/qmk_firmware/pulls) or by clicking the "suggest an edit" on any page.
 
 
 

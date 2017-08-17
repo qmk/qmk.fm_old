@@ -1,4 +1,4 @@
-[QMK on GitHub](https://github.com/qmk/qmk_firmware)
+[View on <i class="fa fa-github" aria-hidden="true"></i> GitHub](https://github.com/qmk/qmk_firmware)
 
 [All Supported Keyboards](/keyboards/)
 
