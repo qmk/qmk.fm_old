@@ -20,8 +20,8 @@ These are the default-sized badges:
 
 <table>
     <tr>
-        <td><img src="assets/images/badge-dark.png" alt="QMK Badge Dark" /></td>
-        <td><img src="assets/images/badge-light.png" alt="QMK Badge Light" /></td>
+        <td><img src="/assets/images/badge-dark.png" alt="QMK Badge Dark" /></td>
+        <td><img src="/assets/images/badge-light.png" alt="QMK Badge Light" /></td>
     </tr>
 </table>
 
@@ -29,8 +29,8 @@ A smaller version of each:
 
 <table>
     <tr>
-        <td><img src="assets/images/badge-small-dark.png" alt="QMK Badge Small Dark" /></td>
-        <td><img src="assets/images/badge-small-light.png" alt="QMK Badge Small Light" /></td>
+        <td><img src="/assets/images/badge-small-dark.png" alt="QMK Badge Small Dark" /></td>
+        <td><img src="/assets/images/badge-small-light.png" alt="QMK Badge Small Light" /></td>
     </tr>
 </table>
 
@@ -38,8 +38,8 @@ And badges for compatible or community-supported keyboards:
 
 <table>
     <tr>
-        <td><img src="assets/images/badge-community-dark.png" alt="QMK Community Badge Dark" /></td>
-        <td><img src="assets/images/badge-community-light.png" alt="QMK Community Badge Light" /></td>
+        <td><img src="/assets/images/badge-community-dark.png" alt="QMK Community Badge Dark" /></td>
+        <td><img src="/assets/images/badge-community-light.png" alt="QMK Community Badge Light" /></td>
     </tr>
 </table>
 
