@@ -5,12 +5,12 @@ permalink: /powered/
 ---
 ## Keyboards Powered by QMK
 
-If you'd like to advertise QMK compatibility, or use QMK as the default and official firmware for your keyboard, we ask that you do the following:
+If you'd like to advertise QMK compatibility or use QMK as the default and official firmware for your keyboard, please do the following:
 
 1. Submit a [Pull Request](https://github.com/qmk/qmk_firmware/pulls/) with support for your keyboard<sup>†</sup>
 2. Consider using one of the badges below on your product's webpage, and linking to http://qmk.fm
 
-<small><sup>†</sup>If you need help with this, please [submit an issue](https://github.com/qmk/qmk_firmware/issues), and we'd be happy to help! A schematic of your keyboard, and as much information you can provide would be helpful</small>
+<small><sup>†</sup>If you need help with this, please [open an issue](https://github.com/qmk/qmk_firmware/issues), and we'd be happy to help! A schematic of your keyboard, and as much information you can provide would be helpful</small>
 
 If your project does use QMK as the default and official firmware, we'd like to add it to the list on the homepage, so [let us know](https://github.com/qmk/qmk.fm/issues) if it's not there!
 
