@@ -8,7 +8,7 @@ permalink: /powered/
 If you'd like to advertise QMK compatibility, or use QMK as the default and official firmware for your keyboard, we ask that you do the following:
 
 1. Submit a [Pull Request](https://github.com/qmk/qmk_firmware/pulls/) with support for your keyboard†
-2. Consider using one of the badges below on your product's webpage
+2. Consider using one of the badges below on your product's webpage, and linking to http://qmk.fm
 
 <small>†If you need help with this, please [submit an issue](https://github.com/qmk/qmk_firmware/issues), and we'd be happy to help! A schematic of your keyboard, and as much information you can provide would be helpful</small>
 
