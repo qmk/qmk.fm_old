@@ -18,10 +18,16 @@ If your project does use QMK as the default and official firmware, we'd like to 
 
 These are the default-sized badges:
 
+<style>
+td {
+    border: 0;
+}
+</style
+
 <table>
     <tr>
-        <td><img src="/assets/images/badge-dark.png" alt="QMK Badge Dark" /></td>
-        <td><img src="/assets/images/badge-light.png" alt="QMK Badge Light" /></td>
+        <td><a href="/assets/images/badge-dark.svg"><img src="/assets/images/badge-dark.svg" alt="QMK Badge Dark" /></a></td>
+        <td><a href="/assets/images/badge-light.svg"><img src="/assets/images/badge-light.svg" alt="QMK Badge Light" /></a></td>
     </tr>
 </table>
 
@@ -29,8 +35,8 @@ A smaller version of each:
 
 <table>
     <tr>
-        <td><img src="/assets/images/badge-small-dark.png" alt="QMK Badge Small Dark" /></td>
-        <td><img src="/assets/images/badge-small-light.png" alt="QMK Badge Small Light" /></td>
+        <td><a href="/assets/images/badge-small-dark.svg"><img src="/assets/images/badge-small-dark.svg" alt="QMK Badge Small Dark" /></a></td>
+        <td><a href="/assets/images/badge-small-light.svg"><img src="/assets/images/badge-small-light.svg" alt="QMK Badge Small Light" /></a></td>
     </tr>
 </table>
 
@@ -38,8 +44,8 @@ And badges for compatible or community-supported keyboards:
 
 <table>
     <tr>
-        <td><img src="/assets/images/badge-community-dark.png" alt="QMK Community Badge Dark" /></td>
-        <td><img src="/assets/images/badge-community-light.png" alt="QMK Community Badge Light" /></td>
+        <td><a href="/assets/images/badge-community-dark.svg"><img src="/assets/images/badge-community-dark.svg" alt="QMK Community Badge Dark" /></a></td>
+        <td><a href="/assets/images/badge-community-light.svg"><img src="/assets/images/badge-community-light.svg" alt="QMK Community Badge Light" /></a></td>
     </tr>
 </table>
 
