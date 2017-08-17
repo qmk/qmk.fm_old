@@ -1,5 +1,7 @@
 ---
+title: "Keyboards Powered by QMK"
 layout: qmk
+permalink: /powered/
 ---
 ## Keyboards Powered by QMK
 
