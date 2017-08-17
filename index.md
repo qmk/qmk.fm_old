@@ -17,7 +17,7 @@ These projects use QMK as their official and default firmware - is yours missing
 
 QMK is compatible with [lots of other community-supported keyboards and projects](/keyboards/). 
 
-You can read more about using QMK with your keyboard [here](powered.md).
+You can read more about using QMK with your keyboard [here](_pages/powered.md).
 
 ## Maintainers
 
