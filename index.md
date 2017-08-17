@@ -1,11 +1,11 @@
 ---
 layout: qmk
 ---
-## Quantum Mechanical Keyboard Firmware
+## QMK Firmware
 
 This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
 
-## Supported Keyboards
+## Keyboards powered by QMK
 
 * [Planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
 * [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
@@ -13,7 +13,11 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
 * [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad/)
 
-The project also includes community support for [lots of other keyboards](/keyboards/).
+These projects use QMK as their official and default firmware - is yours missing from the list? [Let us know!](https://github.com/qmk/qmk.fm/issues/new) 
+
+QMK is compatible with [lots of other community-supported keyboards and projects](/keyboards/). 
+
+You can read more about using QMK with your keyboard [here](powered.md).
 
 ## Maintainers
 
