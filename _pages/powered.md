@@ -22,7 +22,7 @@ These are the default-sized badges:
 td {
     border: 0;
 }
-</style
+</style>
 
 <table>
     <tr>
