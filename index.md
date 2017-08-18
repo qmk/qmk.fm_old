@@ -1,9 +1,10 @@
 ---
+title: "An open source firmware for AVR and ARM based keyboards"
 layout: qmk
 ---
 This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
 
-## Keyboards powered by QMK
+## Keyboards Powered by QMK
 
 * [Planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
 * [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
