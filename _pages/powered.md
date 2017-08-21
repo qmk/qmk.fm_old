@@ -16,7 +16,7 @@ If your project does use QMK as the default and official firmware, we'd like to 
 
 ## Badges
 
-These are the default-sized badges:
+These are the default-sized badges in svg format (pngs: [dark](/assets/images/badge-dark.png), [light](/assets/images/badge-light.png)):
 
 <style>
 td {
@@ -31,7 +31,7 @@ td {
     </tr>
 </table>
 
-A smaller version of each:
+A smaller version of each (pngs: [dark](/assets/images/badge-small-dark.png), [light](/assets/images/badge-small-light.png)):
 
 <table>
     <tr>
@@ -40,7 +40,7 @@ A smaller version of each:
     </tr>
 </table>
 
-And badges for compatible or community-supported keyboards:
+And badges for compatible or community-supported keyboards (pngs: [dark](/assets/images/badge-community-dark.png), [light](/assets/images/badge-community-light.png)):
 
 <table>
     <tr>
