@@ -1,4 +1,5 @@
 _site/*
 .sass-cache/*
 /.idea/
-qmk.fm
+id_rsa_*
+secrets.tar
