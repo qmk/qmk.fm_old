@@ -289,8 +289,11 @@ blockquote {
 
 code, pre {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color: #333;
-  font-size: 12px; }
+  color: #666;
+  font-size: 12px;     
+  background: #f1f1f1;
+  padding: 4px 4px;
+  border-radius: 2px; }
 
 pre {
   padding: 8px 15px;
