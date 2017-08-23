@@ -49,4 +49,4 @@ And badges for compatible or community-supported keyboards (pngs: [dark](/assets
     </tr>
 </table>
 
-Please do not use modified versions these images - if you'd like to use something different, [let us know](https://github.com/qmk/qmk.fm/issues), and we'll do our best to accomodate your wishes!
+Please do not use modified versions these images - if you'd like to use something different, [let us know](https://github.com/qmk/qmk.fm/issues), and we'll do our best to accommodate your wishes!

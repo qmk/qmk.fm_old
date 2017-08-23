@@ -5,7 +5,7 @@ permalink: /keyboards/
 ---
 ## All Supported Keyboards
 
-This page was manually created, but will eventually be generated automatically. If a keyboard is missing from this list [add it here](https://github.com/qmk/qmk.fm/blob/gh-pages/_pages/keyboards.md)!
+This page was created manually, but will eventually be generated automatically. If a keyboard is missing from this list, [add it here](https://github.com/qmk/qmk.fm/blob/gh-pages/_pages/keyboards.md)!
 
 Default .hex files are up-to-date with the latest version of QMK, and get pushed every build via Travis. Each uses the `default` keymap, but alternative ones are stored here as well - substitute `default` for `<keymap>` in the url to access them. All links take the format `<keyboard>_<keymap>.hex` or `<keyboard>_<subproject>_<keymap>.hex`.
 
