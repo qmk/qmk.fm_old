@@ -9,7 +9,7 @@ These binaries are up-to-date with the latest version of QMK, and get pushed eve
 
 
 | QMK Folder | Default Binary | qmk.fm page |
-| ------------- | ------------- | ---- |
+| --- | --- | --- |
 | [9key](https://github.com/qmk/qmk_firmware/blob/master/keyboards/9key) | [9key](9key_default.hex) | |
 | [alps64](https://github.com/qmk/qmk_firmware/blob/master/keyboards/alps64) | [alps64](alps64_default.hex) | |
 | [amj40](https://github.com/qmk/qmk_firmware/blob/master/keyboards/amj40) | [amj40](amj40_default.hex) | |
@@ -20,26 +20,19 @@ These binaries are up-to-date with the latest version of QMK, and get pushed eve
 | [atreus62](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus62) | [atreus62](atreus62_default.hex) | |
 | [bananasplit](https://github.com/qmk/qmk_firmware/blob/master/keyboards/bananasplit) | [bananasplit](bananasplit_default.hex) | |
 | [bantam44](https://github.com/qmk/qmk_firmware/blob/master/keyboards/bantam44) | [bantam44](bantam44_default.hex) | |
-| [clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard) | 
-    [rev1](clueboard_rev1_default.hex)<br />
-    [rev2](clueboard_rev2_default.hex) | |
+| [clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard) | [rev1](clueboard_rev1_default.hex)<br />[rev2](clueboard_rev2_default.hex) | |
 | [cluecard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluecard) | [cluecard](cluecard_default.hex) | |
 | [cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad) | [cluepad](cluepad_default.hex) | |
 | [deltasplit75](https://github.com/qmk/qmk_firmware/blob/master/keyboards/deltasplit75) | [deltasplit75](deltasplit75_default.hex) | [deltasplit75](/deltasplit75/) |
 | [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60) | [dk60](dk60_default.hex) | |
 | [eco](https://github.com/qmk/qmk_firmware/blob/master/keyboards/eco) | [eco](eco_default.hex) | |
-| [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox) | 
-    [ez](ergodox_ez_default.hex)<br />
-    [infinity](ergodox_infinity_default.hex)<br />
-    [ergodone](ergodox_ergodone_default.hex) | [ergodox](/ergodox/) |
+| [ergodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox) | [ez](ergodox_ez_default.hex)<br />[infinity](ergodox_infinity_default.hex)<br />[ergodone](ergodox_ergodone_default.hex) | [ergodox](/ergodox/) |
 | [four_banger](https://github.com/qmk/qmk_firmware/blob/master/keyboards/four_banger) | [four_banger](four_banger_default.hex) | |
 | [frosty_flake](https://github.com/qmk/qmk_firmware/blob/master/keyboards/frosty_flake) | [frosty_flake](frosty_flake_default.hex) | |
 | [gh60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gh60) | [gh60](gh60_default.hex) | |
 | [gherkin](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gherkin) | [gherkin](gherkin_default.hex) | |
 | [gonnerd](https://github.com/qmk/qmk_firmware/blob/master/keyboards/gonnerd) | [gonnerd](gonnerd_default.hex) | |
-| [hadron](https://github.com/qmk/qmk_firmware/blob/master/keyboards/hadron) | 
-     [ver0](hadron_ver0_default.hex)<br />
-     [ver2](hadron_ver2_default.hex) | |
+| [hadron](https://github.com/qmk/qmk_firmware/blob/master/keyboards/hadron) | [ver0](hadron_ver0_default.hex)<br />[ver2](hadron_ver2_default.hex) | |
 | [hhkb](https://github.com/qmk/qmk_firmware/blob/master/keyboards/hhkb) | [hhkb](hhkb_default.hex) | |
 | [infinity60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/infinity60) | [infinity60](infinity60_default.hex) | |
 | [jc65](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jc65) | [jc65](jc65_default.hex) | |
@@ -47,14 +40,10 @@ These binaries are up-to-date with the latest version of QMK, and get pushed eve
 | [jd45](https://github.com/qmk/qmk_firmware/blob/master/keyboards/jd45) | [jd45](jd45_default.hex) | |
 | [kbd75](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kbd75) | [kbd75](kbd75_default.hex) | |
 | [kc60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kc60) | [kc60](kc60_default.hex) | |
-| [kinesis](https://github.com/qmk/qmk_firmware/blob/master/keyboards/inesis) | 
-    [alvicstep](kinesis_alvicstep_default.hex)<br />
-    [stapelberg](kinesis_stapelberg_default.hex) | |
+| [kinesis](https://github.com/qmk/qmk_firmware/blob/master/keyboards/inesis) | [alvicstep](kinesis_alvicstep_default.hex)<br />[stapelberg](kinesis_stapelberg_default.hex) | |
 | [kitten_paw](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kitten_paw) | [kitten_paw](kitten_paw_default.hex) | |
 | [kmac](https://github.com/qmk/qmk_firmware/blob/master/keyboards/kmac) | [kmac](kmac_default.hex) | |
-| [lets_split](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lets_split) | 
-    [rev1](lets_split_rev1_default.hex)<br />
-    [rev2](lets_split_rev2_default.hex) | [lets_split](/lets_split/) |
+| [lets_split](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lets_split) | [rev1](lets_split_rev1_default.hex)<br />[rev2](lets_split_rev2_default.hex) | [lets_split](/lets_split/) |
 | [m10a](https://github.com/qmk/qmk_firmware/blob/master/keyboards/m10a) | [m10a](m10a_default.hex) | |
 | [maxipad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/maxipad) | [maxipad](maxipad_default.hex) | |
 | [mechmini](https://github.com/qmk/qmk_firmware/blob/master/keyboards/mechmini) | [mechmini](mechmini_default.hex) | |
@@ -66,9 +55,7 @@ These binaries are up-to-date with the latest version of QMK, and get pushed eve
 | [orthodox](https://github.com/qmk/qmk_firmware/blob/master/keyboards/orthodox) | [orthodox_rev1](orthodox_rev1_default.hex) | |
 | [pegasushoof](https://github.com/qmk/qmk_firmware/blob/master/keyboards/pegasushoof) | [pegasushoof](pegasushoof_default.hex) | |
 | [phantom](https://github.com/qmk/qmk_firmware/blob/master/keyboards/phantom) | [phantom](phantom_default.hex) | |
-| [planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lanck) | 
-    [rev3](planck_rev3_default.hex)<br />
-    [rev4](planck_rev4_default.hex) | [planck](/planck/)|
+| [planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/lanck) | [rev3](planck_rev3_default.hex)<br />[rev4](planck_rev4_default.hex) | [planck](/planck/)|
 | [preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic) | [preonic](preonic_default.hex) | |
 | [ps2avrGB](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ps2avrGB) | [ps2avrGB](ps2avrGB_default.hex) | |
 | [roadkit](https://github.com/qmk/qmk_firmware/blob/master/keyboards/roadkit) | [roadkit](roadkit_default.hex) | |
