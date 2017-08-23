@@ -3,6 +3,9 @@ title: "Pre-compiled Binaries for QMK Keyboards"
 layout: qmk-editable
 permalink: /compiled/
 ---
+## Up-to-date keyboard binaries
+
+These files are up-to-date with the latest version of QMK, and get pushed every build via Travis. Each uses the `default` keymap, but alternative ones are store here as well - substitue `default` for `<keymap>` in the url to access them.
 
 * [9key](9key_default.hex)
 * [alps64](alps64_default.hex)

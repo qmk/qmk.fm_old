@@ -1,7 +1,5 @@
 [View on <i class="fa fa-github" aria-hidden="true"></i> GitHub](https://github.com/qmk/qmk_firmware)
 
-[All Supported Keyboards](/keyboards/)
-
 [![Download Zip](https://img.shields.io/badge/download-zip-blue.svg)](https://github.com/qmk/qmk_firmware/zipball/master)
 [![Download Tar](https://img.shields.io/badge/download-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarball/master)
 
@@ -11,6 +9,12 @@
 [![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+
+### Pages
+
+* [All Supported Keyboards](/keyboards/)
+* [Powering Your Board with QMK](/powered/)
+* [Default Firmware Binaries](/compiled/)
 
 ### How to support QMK
 
