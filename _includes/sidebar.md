@@ -14,7 +14,6 @@
 
 * [All Supported Keyboards](/keyboards/)
 * [Powering Your Board with QMK](/powered/)
-* [Default Firmware Binaries](/compiled/)
 
 ### How to support QMK
 
