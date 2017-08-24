@@ -29,7 +29,7 @@ Want a qmk.fm page? [Create a `<keyboard>.md` file for it here](https://github.c
 | <i class="fa fa-github" aria-hidden="true"></i> [deltasplit75](https://github.com/qmk/qmk_firmware/blob/master/keyboards/deltasplit75) | [deltasplit75_default.hex](/compiled/deltasplit75_default.hex) | [qmk.fm/deltasplit75](/deltasplit75/) |
 | <i class="fa fa-github" aria-hidden="true"></i> [dk60](https://github.com/qmk/qmk_firmware/blob/master/keyboards/dk60) | [dk60_default.hex](/compiled/dk60_default.hex) | |
 | <i class="fa fa-github" aria-hidden="true"></i> [eco](https://github.com/qmk/qmk_firmware/blob/master/keyboards/eco) | [eco_default.hex](/compiled/eco_default.hex) | |
-| <i class="fa fa-github" aria-hidden="true"></i> [ergodone](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodone) | [ergodox_ergodone_default.hex](/compiled/ergodone_default.hex) | |
+| <i class="fa fa-github" aria-hidden="true"></i> [ergodone](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodone) | [ergodone_default.hex](/compiled/ergodone_default.hex) | |
 | <i class="fa fa-github" aria-hidden="true"></i> [ergodox_ez](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez) | [ergodox_ez_default.hex](/compiled/ergodox_ez_default.hex) | [qmk.fm/ergodox_ez](/ergodox_ez/) |
 | <i class="fa fa-github" aria-hidden="true"></i> [ergodox_infinity](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_infinity) | [ergodox_infinity_default.hex](/compiled/ergodox_infinity_default.hex) | [qmk.fm/ergodox_infinity](/ergodox_infinity/) |
 | <i class="fa fa-github" aria-hidden="true"></i> [four_banger](https://github.com/qmk/qmk_firmware/blob/master/keyboards/four_banger) | [four_banger_default.hex](/compiled/four_banger_default.hex) | |
