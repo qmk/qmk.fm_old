@@ -8,7 +8,7 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 
 * [Planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
 * [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
-* [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox/)
+* [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/)
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
 * [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad/)
 

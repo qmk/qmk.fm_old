@@ -1,16 +1,14 @@
 ---
-title: "ErgoDox EZ and Infinity"
+title: "ErgoDox EZ"
 layout: qmk-editable
-permalink: /ergodox/
+permalink: /ergodox_ez/
 ---
 
-# ErgoDox EZ and Infinity
+# ErgoDox EZ
 
-{% include badge.html path="ergodox" %}
+{% include badge.html path="ergodox_ez" %}
 
 A split ortholinear mechanical keyboard. Open-source design. Available commercially at [ErgoDox-EZ.com](https://ergodox-ez.com). Comes fully assembled with a two-year warranty.
-
-A different, ARM-based design called ErgoDox Infinity is periodically available in kit form via [Massdrop](https://www.massdrop.com/buy/infinity-ergodox). 
 
 ## Graphical configurator
 
