@@ -1,10 +1,11 @@
 ---
 title: "Planck"
 layout: qmk
-permalink: /planck/
+permalink: /keyboards/planck/
 redirect_from: 
   - /planck/keymap
   - /planck/keymap/
+  - /planck/
 ---
 
 # The Planck Keyboard

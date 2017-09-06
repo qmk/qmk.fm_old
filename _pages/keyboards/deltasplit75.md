@@ -1,7 +1,9 @@
 ---
 title: "Deltasplit75"
 layout: qmk-editable
-permalink: /deltasplit75/
+permalink: /keyboards/deltasplit75/
+redirect_from: 
+  - /deltasplit75/
 ---
 
 # Deltasplit75

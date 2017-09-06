@@ -1,7 +1,9 @@
 ---
 title: "Let's Split"
 layout: qmk-editable
-permalink: /lets_split/
+permalink: /keyboards/lets_split/
+redirect_from: 
+  - /lets_split/
 ---
 
 # Let's Split

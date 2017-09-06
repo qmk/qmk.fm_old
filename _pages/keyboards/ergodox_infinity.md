@@ -1,7 +1,9 @@
 ---
 title: "ErgoDox Infinity"
 layout: qmk-editable
-permalink: /ergodox_infinity/
+permalink: /keyboards/ergodox_infinity/
+redirect_from: 
+  - /ergodox_infinity/
 ---
 
 # ErgoDox Infinity

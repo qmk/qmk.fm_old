@@ -9,5 +9,9 @@ This is a collection of useful tools packaged into one app. This is a pretty rec
 
 Currently it can:
 
- * Flash .hex files to DFU-compatible bootloaders
+ * Flash .hex, .bin, .qmk files to:
+    * DFU (Atmel/Lufa) bootloaders
+    * Halfkay (Teensy) bootloaders
+    * Caterina (Arduino) bootloaders
+    * STM32 (ARM) bootloaders
  * Listen to HID console messages from QMK boards

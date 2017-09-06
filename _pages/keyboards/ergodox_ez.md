@@ -1,7 +1,9 @@
 ---
 title: "ErgoDox EZ"
 layout: qmk-editable
-permalink: /ergodox_ez/
+permalink: /keyboards/ergodox_ez/
+redirect_from: 
+  - /ergodox_ez/
 ---
 
 # ErgoDox EZ
