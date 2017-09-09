@@ -18,14 +18,14 @@ The Planck is a 12x4 ortholinear, 47/48-key keyboard kit, made by [olkb](https:/
 
 Here's a couple of printable, foldable (for standing-up), blank 8.5 x 11" sheets for Planck keymaps. Each has a notes section, layer labels, and some helpful tips for customizing.
 
-* [Default keymap with Qwerty](/planck/keymap-printout-default-qwerty.pdf)
-* [Default keymap with Colemak](/planck/keymap-printout-default-colemak.pdf)
-* [Default keymap with Dvorak](/planck/keymap-printout-default-dvorak.pdf)
-* [2 blank keymaps with Qwerty](/planck/keymap-printout-blanck-qwerty.pdf)
-* [2 blank keymaps with Colemak](/planck/keymap-printout-blanck-colemak.pdf)
-* [2 blank keymaps with Dvorak](/planck/keymap-printout-blanck-dvorak.pdf)
-* [2 entirely blank keymaps](/planck/keymap-printout-blanck.pdf)
-* [3 entirely blank keymaps](/planck/keymap-printout-blanck-triple.pdf)
+* [Default keymap with Qwerty](/keyboards/planck/keymap-printout-default-qwerty.pdf)
+* [Default keymap with Colemak](/keyboards/planck/keymap-printout-default-colemak.pdf)
+* [Default keymap with Dvorak](/keyboards/planck/keymap-printout-default-dvorak.pdf)
+* [2 blank keymaps with Qwerty](/keyboards/planck/keymap-printout-blanck-qwerty.pdf)
+* [2 blank keymaps with Colemak](/keyboards/planck/keymap-printout-blanck-colemak.pdf)
+* [2 blank keymaps with Dvorak](/keyboards/planck/keymap-printout-blanck-dvorak.pdf)
+* [2 entirely blank keymaps](/keyboards/planck/keymap-printout-blanck.pdf)
+* [3 entirely blank keymaps](/keyboards/planck/keymap-printout-blanck-triple.pdf)
 
 ## Planck Default Keymap Footnotes
 
