@@ -16,4 +16,4 @@ A split 75% board (with the option of choosing which side you want the b key on)
 
 ## Build Guide
 
-* [Build Guide PDF](/deltasplit75/deltasplit.pdf)
+* [Build Guide PDF](/keyboards/deltasplit75/deltasplit.pdf)
