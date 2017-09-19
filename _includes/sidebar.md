@@ -12,11 +12,12 @@
 
 ### Pages
 
+* [Recent Changes in QMK](/posts/)
 * [All Supported Keyboards](/keyboards/)
 * [Powering Your Board with QMK](/powered/)
 
 ### How to support QMK
 
 * [Get QMK Merch](https://teespring.com/stores/qmk)
-* [Donate via Gratipay](https://gratipay.com/QMK/)
-* [Donate via Donorbox](https://donorbox.org/qmk)
+* Donate via [Gratipay](https://gratipay.com/QMK/) or [Donorbox](https://donorbox.org/qmk)
+* [Contribute!](https://github.com/qmk/qmk_firmware/issues)
