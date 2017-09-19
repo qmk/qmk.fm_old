@@ -295,6 +295,10 @@ code, pre {
   padding: 4px 4px;
   border-radius: 2px; }
 
+pre code {
+  background: transparent;
+}
+
 pre {
   padding: 8px 15px;
   background: #f8f8f8;
