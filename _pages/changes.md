@@ -1,10 +1,8 @@
 ---
-title: "All posts"
-layout: qmk
-permalink: /posts/
+title: "All recent changes in QMK"
+layout: qmk-title
+permalink: /changes/
 ---
-
-## All posts
 
 <ul>
   {% for post in site.posts %}

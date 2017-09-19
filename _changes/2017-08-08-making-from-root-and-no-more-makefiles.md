@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: qmk-title
 title: "Making from root and no more Makefiles"
 date: 2017-08-08 13:47:00 -0500
 categories: core
