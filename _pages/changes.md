@@ -5,10 +5,10 @@ permalink: /changes/
 ---
 
 <ul>
-  {% for post in site.posts %}
+  {% for change in site.changes %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
+      <a href="{{ change.url }}">{{ change.title }}</a>
+      {{ change.excerpt }}
     </li>
   {% endfor %}
 </ul>
