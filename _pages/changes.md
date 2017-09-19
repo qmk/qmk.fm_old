@@ -4,10 +4,8 @@ layout: qmk-title
 permalink: /changes/
 ---
 
-<ul>
   {% for change in site.changes %}
-    <li>
-      <a href="{{ change.url }}">{{ change.title }} - {{change.date}}</a>
-    </li>
+    <p>
+      {{change.date | date: "%F"}}  - <a href="{{ change.url }}">{{ change.title }}</a>
+    </p>
   {% endfor %}
-</ul>
