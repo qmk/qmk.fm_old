@@ -297,6 +297,7 @@ code, pre {
 
 pre code {
   background: transparent;
+  padding: 0px;
 }
 
 pre {
