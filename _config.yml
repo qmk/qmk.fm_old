@@ -10,6 +10,9 @@ collections:
   pages:
     output: true
     permalink: /:name
+  posts:
+    output: true
+    permalink: /posts/:name
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
