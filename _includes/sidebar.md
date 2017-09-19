@@ -12,7 +12,7 @@
 
 ### Pages
 
-* [Recent Changes in QMK](/posts/)
+* [Recent Changes in QMK](/changes/)
 * [All Supported Keyboards](/keyboards/)
 * [Powering Your Board with QMK](/powered/)
 
