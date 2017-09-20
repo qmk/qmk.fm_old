@@ -5,8 +5,8 @@ permalink: /changes/
 ---
 
 {% for change in site.posts %}
-<a href="{{ change.url }}">**{{ change.title }}**   
-<img src="https://img.shields.io/badge/date-{{ change.date | date: "%F" | replace:'-','--' }}-lightgrey.svg" /></a>
+**<a href="{{ change.url }}">{{ change.title }}</a>**   
+<a href="{{ change.url }}"><img src="https://img.shields.io/badge/date-{{ change.date | date: "%F" | replace:'-','--' }}-lightgrey.svg" /></a>
 <a href="https://github.com/qmk/qmk_firmware/commit/{{ change.commit }}">
     <img src="https://img.shields.io/badge/commit-{{ change.commit }}-000000.svg" />
 </a>
