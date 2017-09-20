@@ -12,5 +12,6 @@ permalink: /changes/
 <a href="/changes/{{ change.category }}">
     <img src="https://img.shields.io/badge/category-{{ change.category }}-{{ site.data.categories[change.category].color }}.svg" />
 </a>
+{{ change.excerpt }}
 
 {% endfor %}
