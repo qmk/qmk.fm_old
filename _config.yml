@@ -12,7 +12,7 @@ collections:
     permalink: /:name
   posts:
     label: changes
-    directory: _changes
+    relative_directory: _changes/
     output: true
     permalink: /changes/:name
 theme: jekyll-theme-minimal
