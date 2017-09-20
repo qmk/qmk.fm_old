@@ -4,8 +4,8 @@ layout: qmk-title
 permalink: /changes/
 ---
 
-{% for change in site.posts reversed %}
+{% for change in site.posts %}
 <p>
-  {{change.date | date: "%F"}}  - <a href="{{ change.url }}">{{ change.title }}</a>
+  {{change.date | date: "%F"}}  - <a href="{{ change.url }}">{{ change.title }}</a> <a href="/changes/types/{{ change.category }}"><img src="https://img.shields.io/badge/{{ change.category }}--lightgrey.svg" /></a>
 </p>
 {% endfor %}
