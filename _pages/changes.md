@@ -6,6 +6,11 @@ permalink: /changes/
 
 {% for change in site.posts %}
 {{change.date | date: "%F"}} - <a href="{{ change.url }}">{{ change.title }}</a>  
- <a href="/changes/{{ change.category }}"><img src="https://img.shields.io/badge/category-{{ change.category }}-{{ site.data.categories[change.category].color }}.svg" /></a>
+<a href="https://github.com/qmk/qmk_firmware/commit/{{ change.commit }}">
+    <img src="https://img.shields.io/badge/commit-{{ change.commit }}-lightgrey.svg" />
+</a>
+<a href="/changes/{{ change.category }}">
+    <img src="https://img.shields.io/badge/category-{{ change.category }}-{{ site.data.categories[change.category].color }}.svg" />
+</a>
 
 {% endfor %}

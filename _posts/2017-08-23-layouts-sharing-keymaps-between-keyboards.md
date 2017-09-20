@@ -3,6 +3,7 @@ layout: qmk-title
 title: "Layouts: Sharing keymaps between keyboards"
 date: 2017-08-23 22:29:00 -0500
 category: core
+commit: d2ff66a
 ---
 
 With the merging of [#1609](https://github.com/qmk/qmk_firmware/pull/1609), we've added the `layouts/` folder - it contains collections of keymaps sorted by physical key layouts that different keyboards can use, and is organised like this: 

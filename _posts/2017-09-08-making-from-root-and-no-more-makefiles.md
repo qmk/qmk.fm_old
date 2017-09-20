@@ -3,6 +3,7 @@ layout: qmk-title
 title: "Making from root and no more Makefiles"
 date: 2017-09-08 13:47:00 -0500
 category: core
+commit: 4cdcbdb
 ---
 
 After merging in the implementation of [#1659](https://github.com/qmk/qmk_firmware/issues/1659), the only way to compile QMK is in the root directory, with the full command:
