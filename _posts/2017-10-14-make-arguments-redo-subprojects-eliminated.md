@@ -7,7 +7,7 @@ commit: 800ec55
 pr: 1710
 ---
 
-## Make arguments
+### Make arguments
 
 Rather than using `-` to separate rules in QMK, we're now using `:`, so a basic build command will look like this:
 
@@ -22,7 +22,7 @@ There can be up to **5 folders of depth** this way (not including `keyboards/`),
 
 Upon compliation, folders/keymaps are combined with `_`, keeping the `planck_rev4_default.hex` filename format.
 
-## rules.mk
+### rules.mk
 
 If a `rules.mk` file exists in a keyboard folder, it's assumed to be a project folder that can be compiled, otherwise it's just an organisational folder (e.g. `converter`, `handwired`). Default revisions can be set via the `rules.mk`:
 
@@ -39,7 +39,7 @@ Each level's `rules.mk` file is included, from most broad to most specific, e.g.
 1. `planck/rules.mk`
 2. `planck/rev4/rules.mk`
 
-## config.h
+### config.h
 
 Each level's `config.h` is included if it exists, from most broad to most specific, e.g.:
 
@@ -63,11 +63,11 @@ Be sure to use a different `#ifdef CONFIG_H` line for each file, or things won't
 
     #endif
 
-## Paths
+### Paths
 
 All folder levels are added to the path.
 
-## folder.c
+### folder.c
 
 All `<folder>.c` files are now included automatically if they exist. e.g.:
 
@@ -76,7 +76,7 @@ All `<folder>.c` files are now included automatically if they exist. e.g.:
 
 are both added.
 
-## folder.h
+### folder.h
 
 Each folder level's `<folder>.h` file should be including the parent's `<folder>.h`, and in some instances, it should include their children's as well - the easiest way to do this with a conditional is like this in the `folder1.h` file:
 
@@ -90,19 +90,19 @@ For example, `/keyboards/planck/planck.h` has this:
       #include "rev4.h"
     #endif
 
-## Keymaps
+### Keymaps
 
 Keymaps can exist at any level, but are only available if that folder is in the project path, for example, `/keyboards/planck/keymaps` and `/keyboards/planck/rev4/keymaps` are accessible to both `planck/rev4` and `planck` (because `planck/rev4` is the default folder), but only `/keyboards/planck/keymaps` is accessible to `planck/rev3`.
 
 Generally, keymaps should exist in the broadest folder available.
 
-## Layouts
+### Layouts
 
 Layouts are included automatically and can be added to any `rules.mk` file, e.g.:
 
     LAYOUTS = ortho_4x12
 
-## Chibios
+### Chibios
 
 `bootloader_defs.h` and the `boards` directory (and necessary files) can exist at any folder level, and are included automatically. Your board's `board.mk` will need to use `$(BOARD_PATH)` in the path, e.g.:
 
