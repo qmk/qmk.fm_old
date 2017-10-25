@@ -57,27 +57,24 @@ but the `LAYOUT_<layout>` variable must be defined in `<subproject>.h` as well.
 
 ## Tips for making layouts keyboard-agnostic
 
-Instead of using `#include "planck.h"`, you can use this line to include whatever `<keyboard>.h` (`<subproject>.h` should not be included here) file that is being compiled:
+Instead of using `#include "planck.h"`, you can use this line to include whatever `<keyboard>.h` file that is being compiled:
 
     #include QMK_KEYBOARD_H
 
-In your config.h, you can also use this variable to include the keyboard's `config.h`:
-
-    #include QMK_KEYBOARD_CONFIG_H
+~~In your config.h, you can also use this variable to include the keyboard's `config.h`:~~ This is no longer needed, as the config.h files are included automatically.
 
 If you want to keep some keyboard-specific code, you can use these variables to escape it with an `#ifdef` statement:
 
-* `KEYBOARD_<keyboard>`
-* `SUBPROJECT_<subproject>`
+* `KEYBOARD_<keyboard_folder1>_<keyboard_folder2>`
 
 For example:
 
 ```c
 #ifdef KEYBOARD_planck
-    #ifdef SUBPROJECT_rev4
+    #ifdef KEYBOARD_planck_rev4
         planck_rev4_function();
     #endif
 #endif
 ```
 
-Note that the names are lowercase and match the folder/file names for the keyboard/subproject exactly.
+Note that the names are lowercase and match the folder/file names for the keyboard/revision exactly.
