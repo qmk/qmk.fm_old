@@ -5,7 +5,7 @@ permalink: /powered/
 ---
 ## Keyboards Powered by QMK
 
-If you'd like to advertise QMK compatibility or use QMK as the default and official firmware for your keyboard, please do the following:
+If you'd like to advertise QMK compatibility or use QMK as the default/official firmware for your keyboard, we ask that you do the following to help the community provide support for your keyboard through our help channels (r/mk, r/olkb, Gitter, QMK GitHub, etc).
 
 1. Submit a [pull request](https://github.com/qmk/qmk_firmware/pulls/) (and have it merged) with support for your keyboard as advertised (with accurate info) to [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) <sup>†</sup>
 2. If your keyboard has an integrated chip, ship your keyboard with QMK pre-flashed on it (this is optional for Teensy/Pro Micro kits)
