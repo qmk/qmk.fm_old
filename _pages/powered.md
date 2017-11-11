@@ -9,7 +9,7 @@ If you'd like to advertise QMK compatibility or use QMK as the default and offic
 
 1. Submit a [pull request](https://github.com/qmk/qmk_firmware/pulls/) (and have it merged) with support for your keyboard as advertised (with accurate info) to [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) <sup>†</sup>
 2. If your keyboard has an integrated chip, ship your keyboard with QMK pre-flashed on it (this is optional for Teensy/Pro Micro kits)
-    a. Request a tag (`<keyboard>-<version>` e.g. `planck-4.2`) of the commit shipped with the keyboard in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) by contacting a collaborator via [the Gitter](https://gitter.im/qmk/qmk_firmware). A compiled .hex/.bin is usually added to the release page for this.
+    - Request a tag (`<keyboard>-<version>` e.g. `planck-4.2`) of the commit shipped with the keyboard in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) by contacting a collaborator via [the Gitter](https://gitter.im/qmk/qmk_firmware). A compiled .hex/.bin is usually added to the release page for this.
 3. Link to `http://qmk.fm` or `https://github.com/qmk/qmk_firmware` from your product page, optionally using a badge below.
 4. Be aware of [GPL compliance](https://fsfe.org/activities/ftf/useful-tips-for-vendors.en.html) - having a tag in the repo helps with this.
 
