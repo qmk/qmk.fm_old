@@ -7,16 +7,19 @@ permalink: /powered/
 
 If you'd like to advertise QMK compatibility or use QMK as the default and official firmware for your keyboard, please do the following:
 
-1. Submit a [Pull Request](https://github.com/qmk/qmk_firmware/pulls/) with support for your keyboard<sup>†</sup>
-2. Consider using one of the badges below on your product's webpage, and linking to http://qmk.fm
+1. Submit a [pull request](https://github.com/qmk/qmk_firmware/pulls/) (and have it merged) with support for your keyboard as advertised (with accurate info) to [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) <sup>†</sup>
+2. If your keyboard has an integrated chip, ship your keyboard with QMK pre-flashed on it (this is optional for Teensy/Pro Micro kits)
+    a. Request a tag (`<keyboard>-<version>` e.g. `planck-4.2`) of the commit shipped with the keyboard in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) by contacting a collaborator via [the Gitter](https://gitter.im/qmk/qmk_firmware). A compiled .hex/.bin is usually added to the release page for this.
+3. Link to `http://qmk.fm` or `https://github.com/qmk/qmk_firmware` from your product page, optionally using a badge below.
+4. Be aware of [GPL compliance](https://fsfe.org/activities/ftf/useful-tips-for-vendors.en.html) - having a tag in the repo helps with this.
 
-<small><sup>†</sup>If you need help with this, please [open an issue](https://github.com/qmk/qmk_firmware/issues), and we'd be happy to help! A schematic of your keyboard, and as much information you can provide would be helpful</small>
+<small><sup>†</sup>If you need help with this, please [open an issue](https://github.com/qmk/qmk_firmware/issues) or hop on [Gitter](https://gitter.im/qmk/qmk_firmware), and we'd be happy to help! A schematic of your keyboard, and as much information you can provide would be helpful</small>
 
-If your project does use QMK as the default and official firmware, we'd like to add it to the list on the homepage, so [let us know](https://github.com/qmk/qmk.fm/issues) if it's not there!
+If your project uses QMK as the default and official firmware, we'd like to add it to the list on the homepage, so [let us know by creating an pull request on qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/) if it's not there!
 
 ## Badges
 
-These are the default-sized badges in svg format (pngs: [dark](/assets/images/badge-dark.png), [light](/assets/images/badge-light.png)):
+If you've followed the steps above, you can use these badges! These are the default-sized badges in svg format (pngs: [dark](/assets/images/badge-dark.png), [light](/assets/images/badge-light.png)):
 
 <style>
 td {
@@ -49,4 +52,6 @@ And badges for compatible or community-supported keyboards (pngs: [dark](/assets
     </tr>
 </table>
 
-Please do not use modified versions these images - if you'd like to use something different, [let us know](https://github.com/qmk/qmk.fm/issues), and we'll do our best to accommodate your wishes!
+**Please do not use modified versions these images** - if you'd like to use something different, [let us know](https://github.com/qmk/qmk.fm/issues), and we'll do our best to accommodate your wishes!
+
+<small>This page's modification history can be viewed [here](https://github.com/qmk/qmk.fm/commits/gh-pages/_pages/powered.md).</small>
