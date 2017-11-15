@@ -10,7 +10,7 @@ This page is automatically generated from keyboards currently in QMK. Default .h
 
 Want a qmk.fm page? [Create a `<keyboard>.md` file for it here](https://github.com/qmk/qmk.fm/tree/gh-pages/_pages/keyboards)! (use others as examples/templates)
 
-Currently only .hex files are provided - some listed here may not be what's needed flash the keyboard. If this is the case, [please open an issue](https://github.com/qmk/qmk.fm/issues)!
+Currently only .hex files are provided - some listed here may not be what's needed to flash the keyboard. If this is the case, [please open an issue](https://github.com/qmk/qmk.fm/issues)!
 
 <style>
 .fa.psi-icon {
