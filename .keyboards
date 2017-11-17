@@ -10,6 +10,8 @@ atreus
 atreus62
 bananasplit
 bantam44
+bfake
+bmini
 chibios_test
 chibios_test/stm32_f072_onekey
 chibios_test/stm32_f103_onekey
@@ -113,6 +115,7 @@ obelus
 org60
 orthodox
 orthodox/rev1
+pearl
 pegasushoof
 phantom
 planck
@@ -123,8 +126,6 @@ preonic
 preonic/rev1
 preonic/rev2
 ps2avrGB
-ps2avrGB/bfake
-ps2avrGB/bmini_x2
 roadkit
 s60_x
 s60_x/default
