@@ -10,7 +10,7 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 * [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
 * [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/)
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
-* [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/cluepad/)
+* [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/17/)
 
 These projects use QMK as their official and default firmware - is yours missing from the list? [Let us know!](https://github.com/qmk/qmk.fm/issues/new) 
 
