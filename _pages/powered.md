@@ -1,9 +1,9 @@
 ---
-title: "Keyboards Powered by QMK"
+title: "Using the (pending) QMK Trademark"
 layout: qmk
 permalink: /powered/
 ---
-## Keyboards Powered by QMK
+## Using the (pending) QMK Trademark
 
 If you'd like to advertise QMK compatibility or use QMK as the default/official firmware for your keyboard, we ask that you do the following to help the community provide support for your keyboard through our help channels (r/mk, r/olkb, Gitter, QMK GitHub, etc).
 
