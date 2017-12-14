@@ -17,6 +17,7 @@ chibios_test/stm32_f072_onekey
 chibios_test/stm32_f103_onekey
 chibios_test/teensy_lc_onekey
 chimera_ortho
+christmas_tree
 clueboard/17
 clueboard/60
 clueboard/66
