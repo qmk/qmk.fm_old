@@ -31,6 +31,7 @@ converter/usb_usb
 converter/usb_usb/ble
 converter/usb_usb/hasu
 converter/usb_usb/pro_micro
+cospad
 crawlpad
 daisy
 deltasplit75
