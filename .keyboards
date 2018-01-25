@@ -18,6 +18,7 @@ chibios_test/stm32_f072_onekey
 chibios_test/stm32_f103_onekey
 chibios_test/teensy_lc_onekey
 chimera_ortho
+chocopad
 christmas_tree
 christmas_tree/V2017
 clueboard/17
@@ -101,6 +102,7 @@ jj40
 jm60
 k_type
 katana60
+kbd66
 kbd75
 kc60
 kinesis
