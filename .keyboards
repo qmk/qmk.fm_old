@@ -18,6 +18,8 @@ chibios_test
 chibios_test/stm32_f072_onekey
 chibios_test/stm32_f103_onekey
 chibios_test/teensy_lc_onekey
+chimera_ergo
+chimera_ls
 chimera_ortho
 chocopad
 christmas_tree
