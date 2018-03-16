@@ -15,6 +15,7 @@ bananasplit
 bantam44
 bfake
 bmini
+ca66
 chibios_test
 chibios_test/stm32_f072_onekey
 chibios_test/stm32_f103_onekey
@@ -81,6 +82,7 @@ handwired/MS_sculpt_mobile
 handwired/arrow_pad
 handwired/atreus50
 handwired/dactyl
+handwired/dactyl_manuform
 handwired/fivethirteen
 handwired/frenchdev
 handwired/gamenum
