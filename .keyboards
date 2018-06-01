@@ -23,7 +23,6 @@ bfo9000
 bigseries
 bigswitch
 bmini
-ca66
 canoe
 chibios_test
 chibios_test/stm32_f072_onekey
@@ -204,12 +203,13 @@ paladin64
 pearl
 pegasushoof
 phantom
-pk60
 planck
 planck/light
 planck/rev3
 planck/rev4
 planck/rev5
+playkbtw/ca66
+playkbtw/pk60
 preonic
 preonic/rev1
 preonic/rev2
