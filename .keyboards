@@ -54,6 +54,8 @@ converter/usb_usb/hasu
 converter/usb_usb/pro_micro
 cospad
 crawlpad
+crkbd
+crkbd/rev1
 cu24
 cu75
 daisy
