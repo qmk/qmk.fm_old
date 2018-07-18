@@ -62,6 +62,10 @@ crkbd/rev1
 cu24
 cu75
 daisy
+dc01/arrow
+dc01/left
+dc01/numpad
+dc01/right
 deltasplit75
 deltasplit75/v2
 dichotemy
@@ -182,6 +186,7 @@ levinson
 levinson/rev1
 levinson/rev2
 lfkeyboards
+lfkeyboards/lfk65_hs
 lfkeyboards/lfk78
 lfkeyboards/lfk87
 lfkeyboards/lfkpad
