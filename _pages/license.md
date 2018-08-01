@@ -35,9 +35,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 Modified BSD License
 ====================
 
-_Copyright © `<year>`, `<copyright holder>`_  
-_All rights reserved._
-
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
