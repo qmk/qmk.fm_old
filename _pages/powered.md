@@ -3,23 +3,28 @@ title: "Using the QMK Firmware Trademark"
 layout: qmk
 permalink: /powered/
 ---
-## Using the QMK Firmware Trademark
+# The QMK Trademark
 
-If you'd like to advertise QMK compatibility or use QMK as the default/official firmware for your keyboard, we ask that you do the following to help the community provide support for your keyboard through our help channels (r/mk, r/olkb, Gitter, QMK GitHub, etc).
+"QMK Firmware" and the logo are a trademark registered by Jack Humbert to help encourage keyboard makers to contribute back to the community and to help the community offer support for the keyboards running QMK. 
 
-1. Submit a [pull request](https://github.com/qmk/qmk_firmware/pulls/) (and have it merged) with support for your keyboard as advertised (with accurate info) to [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) <sup>†</sup>
-2. If your keyboard has an integrated chip, ship your keyboard with QMK pre-flashed on it (this is optional for Teensy/Pro Micro kits)
-    - Request a tag (`<keyboard>-<version>` e.g. `planck-4.2`) of the commit shipped with the keyboard in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) by contacting a collaborator via [the Gitter](https://gitter.im/qmk/qmk_firmware). A compiled .hex/.bin is usually added to the release page for this.
-3. Link to `http://qmk.fm` or `https://github.com/qmk/qmk_firmware` from your product page, optionally using a badge below.
-4. Be aware of [GPL compliance](https://fsfe.org/activities/ftf/useful-tips-for-vendors.en.html) - having a tag in the repo helps with this.
+Anyone is entitled and encouraged to use the logo, the term "QMK (Firmware)", "Powered by QMK (Firmware)" (or similar wording with "running", "compatible with", etc) provided they:
 
-<small><sup>†</sup>If you need help with this, please [open an issue](https://github.com/qmk/qmk_firmware/issues) or hop on [Gitter](https://gitter.im/qmk/qmk_firmware), and we'd be happy to help! A schematic of your keyboard, and as much information you can provide would be helpful</small>
+1. Don't imply QMK or its contributors endorse/make the keyboard
+2. [Contribute their keyboard's configuration back to qmk:master roughly by the keyboard's ship date](https://github.com/qmk/qmk_firmware/pulls/)
+3. Link to the [QMK website](https://qmk.fm) or [Github repo](https://github.com/qmk/qmk_firmware) on their product page
+
+Images with the logo and preferred wording to use on PCBs, print-outs, websites, stickers, merch, etc are below.
+
+## Optional steps
+
+1. Request a tag (`<keyboard>-<version>` e.g. `planck-4.2`) of the commit shipped with the keyboard in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware). A compiled .hex/.bin is usually added to the release page for this.
+2. Be aware of [GPL compliance](https://fsfe.org/activities/ftf/useful-tips-for-vendors.en.html) - having a tag in the repo helps with this.
 
 If your project uses QMK as the default and official firmware, we'd like to add it to the list on the homepage, so [let us know by creating an pull request on qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/) if it's not there!
 
-## Badges
+## Images
 
-If you've followed the steps above, you can use these badges! These are the default-sized badges in svg format (pngs: [dark](/assets/images/badge-dark.png), [light](/assets/images/badge-light.png)):
+These are the default-sized badges in svg format (pngs: [dark](/assets/images/badge-dark.png), [light](/assets/images/badge-light.png)):
 
 <style>
 td {
