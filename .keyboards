@@ -10,7 +10,6 @@ al1
 alf_x2
 alpha
 alps64
-alt67
 alu84
 amj40
 amj60
@@ -72,7 +71,6 @@ cospad
 crawlpad
 crkbd
 crkbd/rev1
-ctrl
 cu24
 cu75
 daisy
@@ -226,6 +224,8 @@ lfkeyboards/lfkpad
 lfkeyboards/mini1800
 lfkeyboards/smk65
 m10a
+massdrop/alt67
+massdrop/ctrl
 maxipad
 mechmini
 mechmini/v1
