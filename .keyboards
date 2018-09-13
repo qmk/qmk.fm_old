@@ -7,7 +7,8 @@
 9key
 acr60
 al1
-alf_x2
+alf/dc60
+alf/x2
 alpha
 alps64
 alu84
@@ -22,7 +23,6 @@ atom47/rev3
 atomic
 atreus
 atreus62
-bananasplit
 bantam44
 bface
 bfake
@@ -78,7 +78,6 @@ dc01/arrow
 dc01/left
 dc01/numpad
 dc01/right
-dc60
 deltasplit75
 deltasplit75/v2
 dichotemy
@@ -286,7 +285,6 @@ rama/m10_b
 rama/m6_a
 redox
 redox/rev1
-roadkit
 rorschach
 rorschach/rev1
 s60_x
@@ -308,12 +306,14 @@ tanuki
 telophase
 tetris
 the_ruler
+thevankeyboards/bananasplit
+thevankeyboards/minivan
+thevankeyboards/roadkit
 tiger_lily
 tkc1800
 tokyo60
 tomato
 tragicforce68
-tv44
 uk78
 unloved_bastard
 ut47
