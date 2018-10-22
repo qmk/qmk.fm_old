@@ -148,6 +148,8 @@ handwired/CMD60
 handwired/MS_sculpt_mobile
 handwired/arrow_pad
 handwired/atreus50
+handwired/bluepill
+handwired/bluepill/bluepill70
 handwired/dactyl
 handwired/dactyl_manuform
 handwired/dactyl_manuform/4x5
@@ -234,6 +236,7 @@ lets_split/sockets
 lets_split_eh
 lets_split_eh/eh
 levinson
+levinson/keymaps/mmacdougall/keymap
 levinson/rev1
 levinson/rev2
 lfkeyboards
@@ -317,6 +320,7 @@ rama/m6_b
 rama/u80_a
 redox
 redox/rev1
+redox_w
 rorschach
 rorschach/rev1
 s60_x
