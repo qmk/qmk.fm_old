@@ -7,6 +7,8 @@ commit: 524053e3
 pr: 2301
 ---
 
+Adds better support for Pro Micro (Caterina Bootloader) flashing.
+
 * Add AVRDUDE to MSYS2 setup
 
 * Remap detected USB port in MSYS2 to COM port

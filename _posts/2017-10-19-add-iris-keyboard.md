@@ -2,10 +2,12 @@
 layout: qmk-title
 title: "Add Iris Keyboard"
 date: 2017-10-19 17:30:00 -0500
-category: core
-commit: b5464cf20aa21bfe3671bd584dfc727878d508e0
+category: keyboards
+commit: b5464cf
 pr: 1863
 ---
+
+We've added support for the [Iris](https://github.com/nooges/qmk_firmware/tree/master/keyboards/iris) from [Keebio](http://keeb.io)!
 
 * Clone Nyquist code to Iris and rename
 

@@ -6,6 +6,9 @@ category: core
 commit: e885c79
 pr: 3084
 ---
+
+This adds support for keyboard and keymaps to be able to use EEPROM, as well as resetting those settings. 
+
 * Add Function level EEPROM configuration
 
   Add kb and user functions for EEPROM, and example of how to use it.

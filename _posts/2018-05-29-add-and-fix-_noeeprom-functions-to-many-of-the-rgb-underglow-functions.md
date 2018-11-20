@@ -7,7 +7,7 @@ commit: 751719
 pr: 3070
 ---
 
-* And and fix _noeeprom functions to many of the RGB Underglow functions
+And and fix _noeeprom functions to many of the RGB Underglow functions
 
 * Many functions are unnecessarily calling the eeprom write code. The toggle/enable is command is especially guilty of this, as it writes to EEPROM 3 times.  But rgb mode writes twice, every time it's called. And init resets the rgb eeprom range and then writes back to it twice!
 * Fixed the rgblight_sethsv_noeeprom to work as expected, by moving a lot of the code to a helper function.

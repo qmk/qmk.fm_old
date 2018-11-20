@@ -7,7 +7,7 @@ commit: 8b0b17a
 pr: 2748
 ---
 
-* Add Faux Clicky to main Audio feature
+Add Faux Clicky to the  Audio feature
 
 * Make clicky settings user configurable
 

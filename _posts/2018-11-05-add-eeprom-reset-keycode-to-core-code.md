@@ -7,4 +7,4 @@ commit: 6e44f94
 pr: 4234
 ---
 
-Adds a keycode to reset the EEPROM on the keyboard back to default settings.
+Adds a keycode to reset the EEPROM on the keyboard (to reset persistant settings back to their default settings).

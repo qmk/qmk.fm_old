@@ -7,6 +7,8 @@ commit: 7434494
 pr: 3107
 ---
 
+This changes the default behavior of QMK to use the `PREVENT_STUCK_MODIFIERS` behavior by default.  This way, modifiers are remembered correctly. 
+
 * Remove chording as it is not documented, not used, and needs work.
 
 * Make Leader Key an optional feature.
