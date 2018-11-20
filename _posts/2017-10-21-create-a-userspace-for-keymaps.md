@@ -3,9 +3,11 @@ layout: qmk-title
 title: "Creates a userspace for keymaps"
 date: 2017-10-21 17:30:00 -0500
 category: core
-commit: 06f196c589b3c8c70c6cda6e95db6d1a2bf6e80b
+commit: 06f196c5
 pr: 1559
 ---
+
+Added Userspace so you can share common code between different keyboards.
 
 * create a user space
 

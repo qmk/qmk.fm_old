@@ -7,7 +7,7 @@ commit: 39bd760
 pr: 3951
 ---
 
-Unify multiple HID interfaces into one
+Unify multiple HID interfaces into a single Endpoint.
 
 This reduces the number of USB endpoints required, which frees them up
 for other things.

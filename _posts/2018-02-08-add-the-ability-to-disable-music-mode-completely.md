@@ -7,6 +7,8 @@ commit: 6835ae82
 pr: 2339
 ---
 
+We've added the option to disable Music Mode when Audio is enabled.  This saves a great deal of space for the firmware.
+
 * Skip process_music in NO_MUSIC_MODE is defined
 
 * Skip matrix_scan_music if NO_MUSIC_MODE is defined

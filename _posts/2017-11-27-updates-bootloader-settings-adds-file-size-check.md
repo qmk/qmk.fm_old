@@ -7,6 +7,8 @@ commit: 9fdc27
 pr: 
 ---
 
+We've improved the Bootloader handling.  Not only does it handling jumping to bootloader better, but makes configuration of the settings handled by the compiler, rather than having to set everything.
+
 * pull fuse settings for bootloader jump
 
 * fix 32a chips

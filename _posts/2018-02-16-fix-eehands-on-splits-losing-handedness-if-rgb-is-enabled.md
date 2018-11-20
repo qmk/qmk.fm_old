@@ -7,4 +7,4 @@ commit: b0e8de1
 pr: 2399
 ---
 
-* Fix EE HANDS on splits losing handedness if RGB is enabled
+Fixes EE HANDS on splits losing handedness if RGB is enabled
