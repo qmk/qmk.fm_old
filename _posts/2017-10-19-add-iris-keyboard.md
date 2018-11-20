@@ -2,7 +2,7 @@
 layout: qmk-title
 title: "Add Iris Keyboard"
 date: 2017-10-19 17:30:00 -0500
-category: core
+category: keyboards
 commit: b5464cf
 pr: 1863
 ---
