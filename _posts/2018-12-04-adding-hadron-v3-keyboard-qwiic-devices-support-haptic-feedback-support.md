@@ -2,7 +2,7 @@
 layout: qmk-title
 title: "adding Hadron v3 keyboard, QWIIC devices support, haptic feedback support"
 date: 2018-12-04 00:00:00 -0500
-category: core, keyboards
+category: core
 commit:  4099536
 pr: 4462
 ---
