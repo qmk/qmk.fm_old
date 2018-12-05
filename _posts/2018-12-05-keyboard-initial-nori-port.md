@@ -1,7 +1,7 @@
 ---
 layout: qmk-title
 title: "Keyboard: Initial nori port"
-date: 2018-12-04 08:34:00 -0800
+date: 2018-12-05 08:34:00 -0800
 category: keyboards
 commit: 20130e0
 pr: 4542
