@@ -20,6 +20,3 @@ theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
   - jekyll-redirect-from
-  - jekyll-multiple-languages
-languages: ["en", "zh"]
-exclude_from_localizations: ["assets", "compiled"]
