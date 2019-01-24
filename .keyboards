@@ -79,7 +79,6 @@ ckeys/obelus
 clueboard/17
 clueboard/2x1800
 clueboard/60
-clueboard/66
 clueboard/66/rev1
 clueboard/66/rev2
 clueboard/66/rev3
@@ -250,7 +249,8 @@ katana60
 kbd19x
 kbd4x
 kbd66
-kbd67
+kbd67/hotswap
+kbd67/rev1
 kbd6x
 kbd75
 kbd75/rev1
