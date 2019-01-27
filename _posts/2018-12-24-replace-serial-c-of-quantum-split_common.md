@@ -2,7 +2,7 @@
 layout: qmk-title
 title: "Replace serial.c of quantum/split_common/"
 date: 2018-12-24 00:00:00 -0500
-category: core
+category: split
 commit:  72d4e4b 
 pr: 4669
 ---

@@ -1,4 +1,3 @@
-
 ---
 layout: qmk-title
 title: "Keyboard: Initial i75 port"
