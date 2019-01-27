@@ -25,3 +25,11 @@ You can find the Proton C for purchase at:
 * [NovelKeys](https://novelkeys.xyz/products/qmk-proton-c)
 
 Support for Split Keyboards, RGB Underglow, and Backlighting are being worked on and should be available soon.
+
+## Warnings
+
+Some of  PCBs compatible with Pro Micro have VCC (3.3V) and RAW (5VDC) pins connected (shorted) on the pcb. Using the Proton C will short 5V power from USB and regulated 3.3V which is connected directly to MCU. Shorting those pins may damage the MCU on the Proton C.
+
+So far, it appears that this is only an issue on the Gherkin PCBs, but other PCBs may be affected in this way. 
+
+In this case, you may want to not hook up the RAW (5VDC) pin, at all.
