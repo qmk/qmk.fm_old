@@ -2,7 +2,7 @@
 layout: qmk-title
 title: "Split Common"
 date: 2018-06-17 00:00:00 -0500
-category: core
+category: split
 commit: a012113
 pr: 3429
 ---

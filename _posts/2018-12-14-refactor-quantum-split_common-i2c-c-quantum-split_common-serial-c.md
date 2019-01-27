@@ -2,7 +2,7 @@
 layout: qmk-title
 title: "Refactor quantum/split_common/i2c.c, quantum/split_common/serial.c"
 date: 2018-12-14 00:00:00 -0500
-category: core
+category: split
 commit:  8f79094
 pr: 4522
 ---

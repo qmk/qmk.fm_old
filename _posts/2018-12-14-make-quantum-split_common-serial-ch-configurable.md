@@ -2,7 +2,7 @@
 layout: qmk-title
 title: "Make quantum/split_common/serial.[ch] configurable"
 date: 2018-12-14 00:00:00 -0500
-category: core
+category: split
 commit: 155e931 
 pr: 4419
 ---
