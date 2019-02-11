@@ -1,14 +1,35 @@
 ---
+title: "About the Proton C"
 layout: qmk
-permalink: proton-c
+permalink: /proton-c/
 ---
 
-More info on this to come soon! Here's our annoucement:
+<img src="https://static1.squarespace.com/static/5701bc562eeb810fd9247c88/5701e2154c2f85f4f9bd84bf/5bd1319a652dea160084f9f2/1540436392567/IMG_7448_clean.jpg?format=1500w" alt="Proton C" />
 
-> /u/ishtob, /u/skullydazed, and I have been working a USB-C ARM Pro Micro drop-in replacement that we've decided to call the **QMK Proton C**. It uses an STM32F303 chip (same chip as the rev 6 Planck and Skully's new ARM boards), and has some more pin-outs and extended functionality on a break-off-able tab. [Here's a render to get the idea of what we're talking about](https://i.imgur.com/ce3wXGj.png).
-> 
-> The extended tab also has a slot cut in it for an SMD speaker that will be flush with the PCB - the same speaker that I've use on my boards. The pin alignment uses the same spacing as the main side, skipping one for the cutting/breakable area.
-> 
-> This should work on any board that currently accepts a Pro Micro, as all of the pin-outs are in the same locations, including 5V, 3.3V, GND, SPI, Serial, and I2C. The reset pin works slightly different, but will have a reset button on the front. 
-> 
-> We’re planning on stocking this on olkb.com and clueboard.co, but if you’d like to see this on your shop as well, please reach out to me or Skully!
+The Proton C is an ARM STM32F303xC based drop-in replacement for the Pro Micro.  It uses the same chip as the Planck rev6 boards, and Skull's new ARM Clueboards. 
+
+* Through-hole mounted USB-C Port
+* 32-bit 72Mhz Cortex-M4 processor (STM32F303CCT6)
+* I2C, SPI, PWM, DMA, DAC, USART, I2S
+* 23x 3.3V I/O Ports
+* 1x 5V output for WS2812 LED chains
+* 256Kb Flash
+* 40Kb RAM
+* AST1109MLTRQ speaker footprint  
+* Reset button
+
+You can find the Proton C for purchase at: 
+* [OLKB](https://olkb.com/parts/qmk-proton-c)
+* [Clueboard](https://clueboard.co/parts/qmk-proton-c)
+* [Keebio](https://keeb.io/products/qmk-proton-c?variant=13039808610398)
+* [NovelKeys](https://novelkeys.xyz/products/qmk-proton-c)
+
+Support for Split Keyboards, RGB Underglow, and Backlighting are being worked on and should be available soon.
+
+## Warnings
+
+Some of  PCBs compatible with Pro Micro have VCC (3.3V) and RAW (5VDC) pins connected (shorted) on the pcb. Using the Proton C will short 5V power from USB and regulated 3.3V which is connected directly to MCU. Shorting those pins may damage the MCU on the Proton C.
+
+So far, it appears that this is only an issue on the Gherkin PCBs, but other PCBs may be affected in this way. 
+
+In this case, you may want to not hook up the RAW (5VDC) pin, at all.

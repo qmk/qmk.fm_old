@@ -2,3 +2,5 @@ keyboards:
   color: blue
 core:
   color: red
+split:
+  color: green

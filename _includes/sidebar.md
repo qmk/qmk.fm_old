@@ -18,11 +18,7 @@ The goal of the QMK software project is to develop a completely customizable, po
 * [Recent Changes in QMK](/changes/)
 * [All Supported Keyboards](/keyboards/)
 * [Powering Your Board with QMK](/powered/)
+* [About the Proton C](/proton-c/)
 * [License Information](/license/)
 * [Code of Conduct](/coc/)
-
-### How to support QMK
-
-* [Get QMK Merch](https://teespring.com/stores/qmk)
-* Donate via [Gratipay](https://gratipay.com/QMK/) or [Donorbox](https://donorbox.org/qmk)
-* [Contribute!](https://github.com/qmk/qmk_firmware/issues)
+* [How to support QMK](/support/)
