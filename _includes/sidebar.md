@@ -14,6 +14,7 @@ The goal of the QMK software project is to develop a completely customizable, po
 
 ### Pages
 
+* [Online Configurator](https://config.qmk.fm)
 * [Recent Changes in QMK](/changes/)
 * [All Supported Keyboards](/keyboards/)
 * [Powering Your Board with QMK](/powered/)
