@@ -8,10 +8,16 @@ fi
 cat _util/keyboards_template.md > _pages/keyboards.md
 while IFS='' read -r line || [[ -n "$line" ]]; do
     keyboard=${line/\//_}
-    if [ -e compiled/${keyboard}_default.hex ]; then
+    if [ -e compiled/${keyboard}_default.hex ] || [ -e compiled/${keyboard}_default.bin ]; then
         echo -n "| <i class='fa fa-github' aria-hidden='true'></i> [${line}](https://github.com/qmk/qmk_firmware/tree/master/keyboards/${line}) | " >> _pages/keyboards.md
-        echo -n "[<i class='fa fa-download' aria-hidden='true'></i>](https://qmk.fm/compiled/${keyboard}_default.hex \"$line's latest default QMK firmware\")" >> _pages/keyboards.md
-        echo -n "[<span class='fa-stack fa-lg'><i class='fa fa-circle fa-stack-1x'></i><i class='fa fa-inverse fa-stack-1x psi-icon'>&Psi;</i></span>](qmk:https://qmk.fm/compiled/${keyboard}_default.hex \"Open in QMK Toolbox\")" >> _pages/keyboards.md
+        if [ -e compiled/${keyboard}_default.hex ]; then
+          echo -n "[<i class='fa fa-download' aria-hidden='true'></i>](https://qmk.fm/compiled/${keyboard}_default.hex \"$line's latest default QMK firmware\") " >> _pages/keyboards.md
+          echo -n "[<span class='fa-stack fa-lg'><i class='fa fa-circle fa-stack-1x'></i><i class='fa fa-inverse fa-stack-1x psi-icon'>&Psi;</i></span>](qmk:https://qmk.fm/compiled/${keyboard}_default.hex \"Open ${keyboard}_default.hex in QMK Toolbox\") " >> _pages/keyboards.md
+        fi
+        if [ -e compiled/${keyboard}_default.bin ]; then
+          echo -n "[<i class='fa fa-download' aria-hidden='true'></i>](https://qmk.fm/compiled/${keyboard}_default.bin \"$line's latest default QMK firmware\") " >> _pages/keyboards.md
+          echo -n "[<span class='fa-stack fa-lg'><i class='fa fa-circle fa-stack-1x'></i><i class='fa fa-inverse fa-stack-1x psi-icon'>&Psi;</i></span>](qmk:https://qmk.fm/compiled/${keyboard}_default.bin \"Open ${keyboard}_default.bin in QMK Toolbox\") " >> _pages/keyboards.md
+        fi
         if [ -e _pages/keyboards/${line/\/*/}.md ]; then
             echo -n " | [${line/\/*/}](http://qmk.fm/keyboards/${line/\/*/}/) |" >> _pages/keyboards.md
         else
