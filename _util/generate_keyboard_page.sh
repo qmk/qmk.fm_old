@@ -7,6 +7,7 @@ fi
 
 OUTPUT=_pages/keyboards.md
 
+rm -f $OUTPUT
 # open file handle #3
 exec 3<>$OUTPUT
 
