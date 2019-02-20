@@ -20,7 +20,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 
         if [ -e "compiled/${keyboard}_default.hex" ]; then
           echo -n "[<i class='fa fa-download' aria-hidden='true'></i>](https://qmk.fm/compiled/${keyboard}_default.hex \"$line's latest default QMK firmware\") " >&3
-          echo -n "[<span class='fa-stack fa-lg'><i class='fa fa-circle fa-stack-1x'></i><i class='fa fa-inverse fa-stack-1x psi-icon'>&Psi;</i></span>](qmk:https://qmk.fm/compiled/${keyboard}_default.hex \"Open ${keyboard}_default.hex in QMK Toolbox\") "
+          echo -n "[<span class='fa-stack fa-lg'><i class='fa fa-circle fa-stack-1x'></i><i class='fa fa-inverse fa-stack-1x psi-icon'>&Psi;</i></span>](qmk:https://qmk.fm/compiled/${keyboard}_default.hex \"Open ${keyboard}_default.hex in QMK Toolbox\") " >&3
         fi
 
         if [ -e "compiled/${keyboard}_default.bin" ]; then
