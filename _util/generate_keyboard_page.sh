@@ -14,7 +14,7 @@ exec 3<>$OUTPUT
 cat _util/keyboards_template.md >&3
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
-    keyboard=${line/\//_}
+    keyboard=${line//\//_}
     if [ -e "compiled/${keyboard}_default.hex" ] || [ -e "compiled/${keyboard}_default.bin" ]; then
         echo -n "| <i class='fa fa-github' aria-hidden='true'></i> [${line}](https://github.com/qmk/qmk_firmware/tree/master/keyboards/${line}) | " >&3
 
