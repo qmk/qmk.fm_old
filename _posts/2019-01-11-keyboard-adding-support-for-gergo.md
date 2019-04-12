@@ -7,4 +7,4 @@ commit: d8eace3
 pr: 4792
 ---
 
-We've added support for the Gergo keyboard from [g Heavy Industries](http://gboards.ca}! 
+We've added support for the Gergo keyboard from [g Heavy Industries](http://gboards.ca)! 
