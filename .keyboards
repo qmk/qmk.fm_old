@@ -106,6 +106,7 @@ converter/hp_46010a
 converter/ibm_5291
 converter/ibm_terminal
 converter/m0110_usb
+converter/modelm101
 converter/numeric_keypad_IIe
 converter/palm_usb
 converter/palm_usb/stowaway
