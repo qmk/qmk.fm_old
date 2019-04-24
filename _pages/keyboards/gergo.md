@@ -12,7 +12,7 @@ redirect_from:
 
 ![Gergo!](/keyboards/gergo/top.jpg)
 
-Gergo is a 14x4 ortholinear, 50-key keyboard kit, made by [g Heavy Industries](http://gboards.ca). Supporting MX, Alps and Choc switches and with a onboard processor it's one of the lowest profile QMK boards available at the moment. With fullsize mods and a thin profile, Gergo is a great addition to your desk or your bag!
+Gergo is a 14x4 ortholinear, 50-key keyboard kit, made by [g Heavy Industries](http://gboards.ca). Supporting MX, Alps and Choc switches and with an onboard processor, it's one of the lowest profile QMK boards available at the moment. With fullsize mods and a thin profile, Gergo is a great addition to your desk or your bag!
 
 
 ![Gergo!](/keyboards/gergo/chocs.jpg)
