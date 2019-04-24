@@ -12,7 +12,7 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
 * [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/17/)
 * [Gergo](https://qmk.fm/keyboards/gergo/)
-* [Georgi](/georgi/)
+* [Georgi](https://qmk.fm/keyboards/georgi/)
 * [Atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus/)
 
 These projects use QMK as their official and default firmware - is yours missing from the list? [Let us know!](https://github.com/qmk/qmk.fm/issues/new) 
