@@ -11,7 +11,7 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 * [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/)
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
 * [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/17/)
-* [Gergo](/gergo/)
+* [Gergo](https://qmk.fm/keyboards/gergo/)
 * [Georgi](/georgi/)
 * [Atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus/)
 
