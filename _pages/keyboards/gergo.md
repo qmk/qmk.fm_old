@@ -27,7 +27,7 @@ Here is a printable default layout for the first few days of getting used to Ger
 * [Blank keymap](/keyboards/gergo/keymap-blank.png)
 
 ## Gadgets
-Gergo comes suited for gadgets to be added to the keyboard. Currently a 1u Trackball is avalible and others
+Gergo comes suited for gadgets to be added to the keyboard. Currently a 1u Trackball is available and others
 are on the way! Modify your rules.mk to enable/disable specfic gadgets.
 
 Or if you're impaitent, build your own using the open source footprint avalible [on Github!](http://github.com/germ/germ-footprints). 
