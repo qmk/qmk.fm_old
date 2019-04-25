@@ -13,6 +13,6 @@ This PR:
 
 * Eliminates the need for the RGB/Backlit dirty flags
 * Move over to i2c_master.c and i2c_slave.c for i2c transport (a large leap forward to ARM support)
-* Support greater than 8 columns for i2c based split keyboards
+* Support greater than 8 columns for i2c-based split keyboards
 
 Remember, you will need to flash both controllers with this update, since it changes the communication code.
