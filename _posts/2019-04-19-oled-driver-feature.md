@@ -9,4 +9,4 @@ pr: 5288
 
 This adds a new OLED driver to QMK Firmware.
 
-This driver is smaller and faster, and includes features such as rotation of the OLED, or scroll an image
+This driver is smaller and faster, and includes features such as rotation of the OLED, or scrolling an image.
