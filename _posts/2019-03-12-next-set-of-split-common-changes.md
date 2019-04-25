@@ -7,7 +7,7 @@ commit: 37932c2
 pr: 4974
 ---
 
-THis updates a number of parts for the Split Keyboard code, to get it more ready for ARM Support (no, not here yet).
+This updates a number of parts for the Split Keyboard code, to get it more ready for ARM Support (no, not here yet).
 
 This PR: 
 
