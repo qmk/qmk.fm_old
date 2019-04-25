@@ -9,4 +9,4 @@ pr: 5385
 
 We've added support for the Lazy Designer's [THE60](http://lazydesigners.cn) keyboard! 
 
-Check out this keyboard on the [QMK Configurator](https://config.qmk.fm/#/hotdox/LAYOUT_ergodox).
+Check out this keyboard on the [QMK Configurator](https://config.qmk.fm/#/lazydesigners/the60/LAYOUT_split_spc_split_bspc).
