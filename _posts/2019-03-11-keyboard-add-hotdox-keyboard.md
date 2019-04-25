@@ -11,4 +11,4 @@ We've added support for the [HotDox](https://shop.alpacakeyboards.com/) keyboard
 
 Check out this keyboard on the [QMK Configurator](https://config.qmk.fm/#/hotdox/LAYOUT_ergodox).
 
-You can also find the [Kono Store](https://kono.store/products/ergodox-hotdox).
+You can also find the HotDox for sale on [Kono Store](https://kono.store/products/ergodox-hotdox).
