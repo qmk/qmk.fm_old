@@ -7,4 +7,4 @@ commit: 0137b02
 pr: 5091
 ---
 
-Adds support for Direct Pin connection keyboards (eg, no matrix, no diodes, just connected to the controller)
+Adds support for Direct Pin connection keyboards (e.g. no matrix, no diodes, just connected to the controller).
