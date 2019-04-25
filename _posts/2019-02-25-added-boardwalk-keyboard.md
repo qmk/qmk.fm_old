@@ -1,6 +1,6 @@
 ---
 layout: qmk-title
-title: "{Keyboard] Add boardwalk Keyboard"
+title: "[Keyboard] Add Boardwalk Keyboard"
 date: 2019-02-25 00:00:00 -0500
 category: keyboards
 commit: 5838c45
