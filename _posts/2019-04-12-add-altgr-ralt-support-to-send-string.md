@@ -7,4 +7,4 @@ commit: a6857d1
 pr: 4046
 ---
 
-Adds support for AltGR, allowing for non-US keycodes in `SEND_STRING`
+Adds support for AltGR, allowing for non-US keycodes in `SEND_STRING`.
