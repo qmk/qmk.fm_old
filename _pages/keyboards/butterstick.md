@@ -8,7 +8,7 @@ redirect_from:
 
 # Butter Stick, 20% Ortholinear
 
-{% include badge.html path="Butter Stick" %}
+{% include badge.html path="butterstick" %}
 
 ![Butter Stick](/keyboards/butterstick/flashy.jpg)
 
