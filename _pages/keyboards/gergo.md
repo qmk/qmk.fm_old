@@ -12,7 +12,7 @@ redirect_from:
 
 ![Gergo!](/keyboards/gergo/top.jpg)
 
-Gergo is a 14x4 ortholinear, 50-key keyboard kit, made by [g Heavy Industries](http://gboards.ca). Supporting MX, Alps and Choc switches and with a onboard processor it's one of the lowest profile QMK boards available at the moment. With fullsize mods and a thin profile, Gergo is a great addition to your desk or your bag!
+Gergo is a 14x4 ortholinear, 50-key keyboard kit, made by [g Heavy Industries](http://gboards.ca). Supporting MX, Alps and Choc switches and with an onboard processor, it's one of the lowest profile QMK boards available at the moment. With fullsize mods and a thin profile, Gergo is a great addition to your desk or your bag!
 
 
 ![Gergo!](/keyboards/gergo/chocs.jpg)
@@ -27,7 +27,7 @@ Here is a printable default layout for the first few days of getting used to Ger
 * [Blank keymap](/keyboards/gergo/keymap-blank.png)
 
 ## Gadgets
-Gergo comes suited for gadgets to be added to the keyboard. Currently a 1u Trackball is avalible and others
+Gergo comes suited for gadgets to be added to the keyboard. Currently a 1u Trackball is available and others
 are on the way! Modify your rules.mk to enable/disable specfic gadgets.
 
-Or if you're impaitent, build your own using the open source footprint avalible [on Github!](http://github.com/germ/germ-footprints). 
+Or if you're impatient, build your own using the open source footprint available [on Github!](http://github.com/germ/germ-footprints). 

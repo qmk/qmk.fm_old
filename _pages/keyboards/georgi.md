@@ -12,7 +12,7 @@ redirect_from:
 
 ![Georgi!](/keyboards/georgi/flashy.jpg)
 
-Georgi is a 2x12 Split Ortho keyboard for general use and stenography. Integrating a built in steno engine on top of QMK it's a ergonomic and economical wonder. Sporting full QWERTY support, easy chording and a well designed/extensible firmware it's not only the inexpensive way to try steno, but the most ergonomic and hacker friendly. Shipping with 12g switches, this is optimized for chording usage.
+Georgi is a 2x12 Split Ortho keyboard for general use and stenography. Integrating a built-in steno engine on top of QMK, it's a ergonomic and economical wonder. Sporting full QWERTY support, easy chording and a well-designed/extensible firmware, it's not only the inexpensive way to try steno, but the most ergonomic and hacker friendly. Shipping with 12g switches, this is optimized for chording usage.
 
 ### Georgi is avalible from **[g Heavy Industries](http://gboards.ca)**.
 
