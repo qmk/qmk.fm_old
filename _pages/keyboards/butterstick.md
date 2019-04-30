@@ -12,7 +12,7 @@ redirect_from:
 
 ![Butter Stick](/keyboards/butterstick/flashy.jpg)
 
-Butter Stick is a 2x10 Split Ortho keyboard for general use based heavily on the [Georgi](/georgi/). Integrating a built in steno engine on top of QMK it's a tiny daily carry. Sporting full QWERTY support, easy chording and a well designed/extensible firmware it's a ergonomic and hacker friendly ortholinear. This is optimized for chording usage and pairs well with light switches.
+Butter Stick is a 2x10 Split Ortho keyboard for general use based heavily on the [Georgi](/georgi/). Integrating a built-in steno engine on top of QMK, it's a tiny daily carry. Sporting full QWERTY support, easy chording and a well designed/extensible firmware, it's an ergonomic and hacker-friendly ortholinear. This is optimized for chording usage and pairs well with light switches.
 
 ### Butter Stick is available from **[g Heavy Industries](http://gboards.ca)**.
 
