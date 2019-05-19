@@ -125,6 +125,8 @@ converter/usb_usb/ble
 converter/usb_usb/hasu
 converter/usb_usb/pro_micro
 converter/xt_usb
+coseyfannitutti/mullet
+coseyfannitutti/mulletpad
 cospad
 crawlpad
 crkbd
@@ -503,6 +505,7 @@ tmo50
 toad
 tokyo60
 touchpad
+treadstone32
 treadstone48
 treadstone48/rev1
 treasure/type9
