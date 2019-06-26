@@ -279,6 +279,14 @@ handwired/not_so_minidox
 handwired/numbrero
 handwired/numpad20
 handwired/onekey
+handwired/onekey/bluepill
+handwired/onekey/elite_c
+handwired/onekey/promicro
+handwired/onekey/proton_c
+handwired/onekey/teensy_2
+handwired/onekey/teensy_2pp
+handwired/onekey/teensy_32
+handwired/onekey/teensy_lc
 handwired/ortho5x13
 handwired/pilcrow
 handwired/prime_exl
@@ -541,6 +549,7 @@ speedo
 standaside
 staryu
 subatomic
+suihankey
 sx60
 ta65
 tada68
