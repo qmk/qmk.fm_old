@@ -33,6 +33,11 @@ The keymap used, is the [vitamins_included/keymaps/default](https://github.com/q
 * [Left case](3d/flat/1.5mm_plate/case-left.step)
 * [right case](3d/flat/1.5mm_plate/case-right.step)
 
+Apart from the case and the plate, you'll also need:
+
+* 12 M3 nuts
+* 12 M3x10mm bolts
+
 ## Source
 The case was designed in Fusion 360. The right half is just a mirrored left-half
 
