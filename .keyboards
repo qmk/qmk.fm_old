@@ -105,6 +105,7 @@ chibios_test/teensy_lc_onekey
 chimera_ergo
 chimera_ls
 chimera_ortho
+choco60
 christmas_tree
 christmas_tree/V2017
 ckeys/handwire_101
@@ -122,6 +123,7 @@ clueboard/66/rev4
 clueboard/66_hotswap/gen1
 clueboard/66_hotswap/prototype
 clueboard/card
+cocoa40
 comet46
 contra
 converter/adb_usb
