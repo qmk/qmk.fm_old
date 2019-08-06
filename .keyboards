@@ -54,9 +54,6 @@ amjpad
 angel64
 ares
 at101_blackheart
-atom47
-atom47/rev2
-atom47/rev3
 atomic
 atreus
 atreus62
@@ -146,6 +143,7 @@ converter/usb_usb/ble
 converter/usb_usb/hasu
 converter/usb_usb/pro_micro
 converter/xt_usb
+coseyfannitutti/discipline
 coseyfannitutti/mullet
 coseyfannitutti/mulletpad
 cospad
@@ -228,7 +226,8 @@ ft/mars80
 geekboards/tester
 georgi
 gergo
-gh60
+gh60/revc
+gh60/satan
 gh80_3000
 gingham
 gonnerd
@@ -432,6 +431,12 @@ lily58
 lily58/rev1
 m0lly
 m10a
+maartenwut/atom47
+maartenwut/atom47/rev2
+maartenwut/atom47/rev3
+maartenwut/plain60
+maartenwut/ta65
+maartenwut/wasdat
 massdrop/alt
 massdrop/ctrl
 maxipad
@@ -501,7 +506,6 @@ pinky
 pinky/3
 pinky/4
 plaid
-plain60
 planck/ez
 planck/light
 planck/rev1
@@ -552,7 +556,6 @@ runner3680/5x6
 runner3680/5x7
 runner3680/5x8
 s7_elephant
-satan
 scarletbandana
 scythe
 sentraq/number_pad
@@ -584,7 +587,6 @@ suihankey/split
 suihankey/split/alpha
 suihankey/split/rev1
 sx60
-ta65
 tada68
 tanuki
 telophase
@@ -612,7 +614,6 @@ vision_division
 vitamins_included
 vitamins_included/rev1
 waldo
-wasdat
 westfoxtrot/aanzee
 westfoxtrot/cyclops
 westfoxtrot/cypher
