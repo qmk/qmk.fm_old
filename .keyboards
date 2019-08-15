@@ -96,10 +96,6 @@ cannonkeys/satisfaction75/prototype
 cannonkeys/satisfaction75/rev1
 canoe
 catch22
-chibios_test
-chibios_test/stm32_f072_onekey
-chibios_test/stm32_f103_onekey
-chibios_test/teensy_lc_onekey
 chimera_ergo
 chimera_ls
 chimera_ortho
@@ -293,6 +289,7 @@ handwired/onekey/bluepill
 handwired/onekey/elite_c
 handwired/onekey/promicro
 handwired/onekey/proton_c
+handwired/onekey/stm32f0_disco
 handwired/onekey/teensy_2
 handwired/onekey/teensy_2pp
 handwired/onekey/teensy_32
@@ -532,7 +529,6 @@ primekb/prime_m
 primekb/prime_o
 primekb/prime_r
 projectkb/alice
-proton_c
 puck
 quantrik/kyuu
 qwertyydox
