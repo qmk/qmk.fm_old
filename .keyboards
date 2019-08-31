@@ -57,6 +57,8 @@ ares
 at101_blackheart
 atomic
 atreus
+atreus/astar
+atreus/teensy2
 atreus62
 baguette
 bantam44
@@ -364,6 +366,7 @@ kbdfans/kbd66
 kbdfans/kbd67/hotswap
 kbdfans/kbd67/rev1
 kbdfans/kbd67/rev2
+kbdfans/kbd67mkiirgb
 kbdfans/kbd6x
 kbdfans/kbd75
 kbdfans/kbd75/rev1
@@ -508,6 +511,8 @@ otaku_split/rev0
 otaku_split/rev1
 paladin64
 panc60
+pancake/feather
+pancake/promicro
 pdxkbc
 pearl
 peiorisboards/ixora
@@ -545,6 +550,7 @@ redox/rev1
 redox_w
 redscarf_iiplus/verb
 redscarf_iiplus/verc
+reviung39
 rgbkb/sol
 rgbkb/sol/rev1
 rgbkb/sol/rev2
@@ -605,6 +611,7 @@ tgr/alice
 tgr/jane
 the_ruler
 thevankeyboards/bananasplit
+thevankeyboards/caravan
 thevankeyboards/minivan
 thevankeyboards/roadkit
 tkc1800
