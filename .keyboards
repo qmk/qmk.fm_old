@@ -296,6 +296,7 @@ handwired/onekey/bluepill
 handwired/onekey/elite_c
 handwired/onekey/promicro
 handwired/onekey/proton_c
+handwired/onekey/pytest
 handwired/onekey/stm32f0_disco
 handwired/onekey/teensy_2
 handwired/onekey/teensy_2pp
