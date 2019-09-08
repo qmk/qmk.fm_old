@@ -145,6 +145,7 @@ converter/usb_usb/ble
 converter/usb_usb/hasu
 converter/usb_usb/pro_micro
 converter/xt_usb
+copenhagen_click/click_pad_v1
 coseyfannitutti/discipline
 coseyfannitutti/mullet
 coseyfannitutti/mulletpad
