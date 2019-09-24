@@ -4,7 +4,7 @@ layout: qmk
 permalink: /proton-c/
 ---
 
-<img src="https://static1.squarespace.com/static/5701bc562eeb810fd9247c88/5701e2154c2f85f4f9bd84bf/5bd1319a652dea160084f9f2/1540436392567/IMG_7448_clean.jpg?format=1500w" alt="Proton C" />
+<img src="https://i.imgur.com/GdsN1Rd.jpg" alt="Proton C" />
 
 The Proton C is an ARM STM32F303xC based drop-in replacement for the Pro Micro.  It uses the same chip as the Planck rev6 boards, and Skullydazed's ARM Clueboards. 
 
@@ -18,11 +18,23 @@ The Proton C is an ARM STM32F303xC based drop-in replacement for the Pro Micro. 
 * AST1109MLTRQ speaker footprint  
 * Reset button
 
+Rev 2 made the following changes:
+
+* Speaker pads on both sides of the PCB
+* You can now connect one side of the speaker to GND to gain an additional I/O pin
+* Both sides use a clear soldermask
+* The gold-dipping was done before the soldermask, so the traces are now gold
+
 You can find the Proton C for purchase at: 
-* [OLKB](https://olkb.com/parts/qmk-proton-c)
-* [Clueboard](https://clueboard.co/parts/qmk-proton-c)
-* [Keebio](https://keeb.io/products/qmk-proton-c?variant=13039808610398)
-* [NovelKeys](https://novelkeys.xyz/products/qmk-proton-c)
+
+* [Clueboard](https://clueboard.co/parts/qmk-proton-c) (US-West)  
+* [Keebio](https://keeb.io/products/qmk-proton-c) (US-East)  
+* [NovelKeys](https://novelkeys.xyz/products/qmk-proton-c) (US-East)  
+* [SpaceCat](https://spacecat.design/products/proton-c-by-qmk) (US-East)  
+* 1upkeyboads (US-East) - no link yet :(  
+* [Oh, Keycaps!](https://ohkeycaps.com/products/proton-c) (US-Midwest)  
+* [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (EU)  
+* [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)  
 
 Support for Split Keyboards, RGB Underglow, and Backlighting are being worked on and should be available soon.
 
