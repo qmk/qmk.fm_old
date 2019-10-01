@@ -16,8 +16,6 @@ collections:
   i18n:
     output: true
     permalink: /:path/:name
-  i18n/zh-cn:
-    lang: "zh-cn"
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
@@ -28,3 +26,9 @@ defaults:
       path: ""
     values:
       layout: qmk
+      lang: "en"
+  -
+    scope:
+      path: "zh-cn"
+    values:
+      lang: "zh-cn"
