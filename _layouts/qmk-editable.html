@@ -21,7 +21,7 @@
       <header>
         <h1><a href="/{% if page.lang %}{{ page.lang }}/{% endif %}"><img src="/qmk_icon_48.png" alt="QMK Logo" width="48" style="vertical-align: middle" /> {{ site.title | default: site.github.repository_name }}</a></h1>
 
-        {% capture my_include %}{% include_relative sidebar.md %}{% endcapture %}
+        {% capture my_include %}{% if page.lang %}{% include_relative sidebar.md %}{% else %}{% include sidebar.md %}{% endif%}{% endcapture %}
         {{ my_include | markdownify }}
 
         {% if site.github.is_project_page %}
