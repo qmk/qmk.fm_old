@@ -3,7 +3,7 @@ email: hello@qmk.fm
 show_downloads: true
 description: An open source firmware for AVR and ARM based keyboards
 baseurl: ""
-url: "http://qmk.fm"
+url: "https://qmk.fm"
 github_username: qmk
 repository: qmk/qmk_firmware
 collections:
@@ -20,3 +20,14 @@ theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
   - jekyll-redirect-from
+defaults:
+  -
+    scope:
+      path: "zh-cn"
+    values:
+      lang: "zh-cn"
+  -
+    scope:
+      path: ""
+    values:
+      layout: qmk

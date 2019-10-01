@@ -1,6 +1,7 @@
 ---
 title: "An open source firmware for AVR and ARM based keyboards"
-layout: qmk
+permalink: /
+redirect_from: /en/
 ---
 This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
 
