@@ -7,12 +7,15 @@ url: "https://qmk.fm"
 github_username: qmk
 repository: qmk/qmk_firmware
 collections:
-  posts:
+  i18n/en/changes:
     output: true
     permalink: /changes/:name
-  tags:
+  i18n/en/tags:
     output: true
     permalink: /tags/:name
+  i18n/en:
+    output: true
+    permalink: /:name
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
