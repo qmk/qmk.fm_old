@@ -7,9 +7,6 @@ url: "https://qmk.fm"
 github_username: qmk
 repository: qmk/qmk_firmware
 collections:
-  pages:
-    output: true
-    permalink: /:name
   posts:
     output: true
     permalink: /changes/:name
