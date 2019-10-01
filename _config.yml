@@ -30,5 +30,6 @@ defaults:
   -
     scope:
       path: "zh-cn"
+      type: "i18n"
     values:
       lang: "zh-cn"
