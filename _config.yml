@@ -23,7 +23,7 @@ gems:
 defaults:
   -
     scope:
-      path: "zh-cn"
+      path: "i18n/zh-cn"
     values:
       lang: "zh-cn"
   -
