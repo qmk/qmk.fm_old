@@ -1,7 +1,6 @@
 ---
 title: "QMK机械键盘固件"
 permalink: /zh-cn/
-lang: "zh-cn"
 ---
 
 [![当前版本](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)

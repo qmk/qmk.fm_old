@@ -16,16 +16,12 @@ collections:
   i18n:
     output: true
     permalink: /:path/:name
+    lang: :path
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
   - jekyll-redirect-from
 defaults:
-  -
-    scope:
-      path: "zh-cn/*"
-    values:
-      lang: "zh-cn"
   -
     scope:
       path: ""
