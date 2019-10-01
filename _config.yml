@@ -26,9 +26,3 @@ defaults:
       path: ""
     values:
       layout: qmk
-      lang: en
-  -
-    scope:
-      path: "zh-cn"
-    values:
-      lang: zh-cn
