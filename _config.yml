@@ -6,16 +6,20 @@ baseurl: ""
 url: "https://qmk.fm"
 github_username: qmk
 repository: qmk/qmk_firmware
+collections_dir: _src
 collections:
-  i18n/en/changes:
+  changes:
     output: true
     permalink: /changes/:name
-  i18n/en/tags:
+  tags:
     output: true
     permalink: /tags/:name
-  i18n/en:
+  en:
     output: true
     permalink: /:name
+  zh-cn:
+    output: true
+    permalink: /zh-cn/:name
 theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
