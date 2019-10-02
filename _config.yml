@@ -1,5 +1,6 @@
 title: QMK Firmware
 email: hello@qmk.fm
+locale: en
 show_downloads: true
 description: An open source firmware for AVR and ARM based keyboards
 baseurl: ""

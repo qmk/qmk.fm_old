@@ -1,6 +1,6 @@
 <!doctype html>
 {% if page.lang %}{% assign navlang = page.lang %}{% else %}{% assign navlang = site.locale %}{% endif %}
-<html lang="{{ navlang | default: "en-US" }}">
+<html lang="{{ navlang }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -39,7 +39,7 @@
         {{ site.data.strings.locales[navlang].language }}:<br />
 		<select onchange="window.location.pathname = '/' + this.value + '/'">        
         {% for locale in site.data.strings.locales %}
-        	<option value"{{ locale[0] }}"{% if locale[0] == navlang %} selected{% endif %}>{{ locale[1].language_name }}</option>
+        	<option value="{{ locale[0] }}"{% if locale[0] == navlang %} selected{% endif %}>{{ locale[1].language_name }}</option>
         {% endfor %}
 	    </selecte>
 
