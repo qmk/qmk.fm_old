@@ -10,4 +10,4 @@ locales:
     <<: *DEFAULT_EN
     language_name: "中文"
     language: "官话"
-    qmk_firmware: "QMK机械键盘固件"
+    qmk_firmware: "QMK固件"

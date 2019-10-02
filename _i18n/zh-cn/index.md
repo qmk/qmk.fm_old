@@ -1,5 +1,5 @@
 ---
-title: "QMK机械键盘固件"
+title: "QMK固件"
 permalink: /zh-cn/
 lang: "zh-cn"
 ---
