@@ -4,7 +4,7 @@ layout: qmk-title
 permalink: /changes/
 ---
 
-{% for change in site.posts %}
+{% for change in site.changes %}
 **<a href="{{ change.url }}">{{ change.title }}</a>**   
 <a href="{{ change.url }}"><img src="https://img.shields.io/badge/date-{{ change.date | date: "%F" | replace:'-','--' }}-lightgrey.svg" /></a>
 <a href="https://github.com/qmk/qmk_firmware/commit/{{ change.commit }}">

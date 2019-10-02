@@ -48,8 +48,8 @@ for keyboard in keyboards:
     elif os.path.exists('compiled/%s_default.hex' % keyboard_name):
         format = 'hex'
 
-    if os.path.exists('_pages/keyboards/%s.md' % keyboard.split('/')[0]):
-        readme = '_pages/keyboards/%s.md' % keyboard.split('/')[0]
+    if os.path.exists('_i18n/en/keyboards/%s.md' % keyboard.split('/')[0]):
+        readme = '_i18n/en/keyboards/%s.md' % keyboard.split('/')[0]
 
     if format:
         keyboard_entries.append({
@@ -60,9 +60,9 @@ for keyboard in keyboards:
         })
 
 # Write out the generated template
-if os.path.exists('_pages/keyboards.md'):
-    os.remove('_pages/keyboards.md')
+if os.path.exists('_i18n/en/keyboards.md'):
+    os.remove('_i18n/en/keyboards.md')
 
-with open('_pages/keyboards.md', 'w') as fd:
+with open('_i18n/en/keyboards.md', 'w') as fd:
     t = Template(pagetext)
     fd.write(t.render(keyboards=keyboard_entries))

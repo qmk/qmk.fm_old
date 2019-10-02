@@ -5,7 +5,7 @@ if [[ $0 != *"util"* ]]; then
     exit 1
 fi
 
-OUTPUT=_pages/keyboards.md
+OUTPUT=_i18n/en/keyboards.md
 
 rm -f $OUTPUT
 # open file handle #3
@@ -28,7 +28,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
           echo -n "[<span class='fa-stack fa-lg'><i class='fa fa-circle fa-stack-1x'></i><i class='fa fa-inverse fa-stack-1x psi-icon'>&Psi;</i></span>](qmk:https://qmk.fm/compiled/${keyboard}_default.bin \"Open ${keyboard}_default.bin in QMK Toolbox\") " >&3
         fi
 
-        if [ -e "_pages/keyboards/${line/\/*/}.md" ]; then
+        if [ -e "_i18n/en/keyboards/${line/\/*/}.md" ]; then
             echo -n " | [${line/\/*/}](http://qmk.fm/keyboards/${line/\/*/}/) |" >&3
         else
             echo -n " | | " >&3
