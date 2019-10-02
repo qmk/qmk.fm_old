@@ -1,0 +1,9 @@
+locales:
+  en: &DEFAULT_EN
+    qmk_firmware: "QMK Firmware"
+    made_possible: "This project is maintained by <a href="{{ site.github.owner_url }}">QMK collaborators</a> and contributors like you!"
+    hosted_on: "Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>"
+    description: "An open source firmware for AVR and ARM based keyboards"
+  zh-cn: &DEFAULT_ZH_CN
+    <<: *DEFAULT_EN
+    qmk_firmware: "QMK机械键盘固件"

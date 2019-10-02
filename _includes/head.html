@@ -1,0 +1,39 @@
+<!doctype html>
+{% if page.lang %}{% assign navlang = page.lang %}{% else %}{% assign navlang = site.locale %}{% endif %}
+<html lang="{{ navlang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ site.data.strings.locales[navlang].qmk_firmware }}{% if page.title != null %} - {{ page.title }}{% endif %}</title>
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@qmk_firmware">
+    <meta name="twitter:creator" content="@jackhumbert">
+    <meta property="og:url" content="https://qmk.fm/">
+    <meta property="og:site_name" content="QMK Firmware">
+    <meta property="og:title" content="{{ site.data.strings.locales[navlang].qmk_firmware }}{% if page.title != null %} - {{ page.title }}{% endif %}">
+    <meta property="og:description" content="{{ site.data.strings.locales[navlang].description }}">
+    <meta property="og:image" content="https://qmk.fm/assets/images/social.png">
+
+    <script src="https://use.fontawesome.com/87ba803a6e.js"></script>
+    {% feed_meta %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/{% if page.lang %}{{ page.lang }}/{% endif %}"><img src="/qmk_icon_48.png" alt="QMK Logo" width="48" style="vertical-align: middle" /> {{ site.data.strings.locales[navlang].qmk_firmware }}</a></h1>
+
+        {% capture my_include %}{% if page.lang %}{% include_relative sidebar.md %}{% else %}{% include en_sidebar.md %}{% endif %}{% endcapture %}
+        {{ my_include | markdownify }}
+
+        <p>{{ site.data.strings.locales[navlang].made_possible }}</p>
+        <p><small></small></p>
+      </header>
+      <section>
