@@ -34,6 +34,15 @@
         {{ my_include | markdownify }}
 
         <p>{{ site.data.strings.locales[navlang].made_possible }}</p>
-        <p><small></small></p>
+        <p><small>{{ site.data.strings.locales[navlang].hosted_on }}</small></p>
+
+        {{ site.data.strings.locales[navlang].language }}:<br />
+		<select onchange="window.location.pathname = '/' + this.value + '/'">        
+        {% for locale in site.data.strings.locales %}
+        	<option value"{{ locale[0] }}"{% if locale[0] == navlang %} selected{% endif %}>{{ locale[1].language_name }}</option>
+        {% endfor %}
+	    </selecte>
+
+
       </header>
       <section>
