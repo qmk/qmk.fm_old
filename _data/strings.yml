@@ -7,9 +7,9 @@ locales:
     hosted_on: "Hosted on GitHub Pages &mdash; Theme by <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "An open source firmware for AVR and ARM based keyboards"
   en-US:
-    <<: &DEFAULT_EN
+    <<: *DEFAULT_EN
   en-GB:
-    <<: &DEFAULT_EN
+    <<: *DEFAULT_EN
   zh-cn: &DEFAULT_ZH_CN
     <<: *DEFAULT_EN
     language_name: "中文"
