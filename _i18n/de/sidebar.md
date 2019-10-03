@@ -15,7 +15,7 @@ Das Ziel des QMK-Softwareprojektes ist die Entwicklung einer anpassungsfähigen,
 ### Seiten
 
 * [Online-Konfiguration](https://config.qmk.fm)
-* [Neue Änderungen in QMK](/changes/)
+* [Neue Änderungen in QMK](/de/changes/)
 * [Alle unterstützten Tastaturen](/keyboards/)
 * [QMK für Ihre Tastatur](/powered/)
 * [Über den Proton C](/proton-c/)
