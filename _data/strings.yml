@@ -27,3 +27,11 @@ locales:
     language_name: "中文"
     language: "官话"
     qmk_firmware: "QMK固件"
+  ru: &DEFAULT_RU
+    <<: *DEFAULT_EN
+    language_name: "Русский"
+    language: "Язык"
+    qmk_firmware: "QMK Прошивка"
+    made_possible: "Данный проект поддерживается <a href='https://github.com/qmk'>коллабораторами QMK</a> и такими же соавторами, как ты!"
+    hosted_on: "Хостинг предоставлен GitHub Pages &mdash; Тема создана <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Прошивка с открытым исходным кодом для клавиатур на базе AVR и ARM"
