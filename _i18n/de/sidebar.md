@@ -1,4 +1,4 @@
-Das Ziel des QMK-Softwareprojektes ist die Entwicklung einer anpassungsfähigen, funktionsreichen und benutzerfreundlichen Firmware für jeglichen Anwendungsbereich, egal ob Tastatur oder anderes. Außerdem streben wir danach, interessierten Personen unabhängig ihrer Berufserfahrung hilfreiche und freundliche Unterstützung und Feedback anzubieten.
+Das Ziel des QMK-Softwareprojektes ist die Entwicklung einer benutzerfreundlichen, leistungsstarken und anpassungsfähigen Firmware, deren Anwendungsbereich den einer gewöhnlichen Tastatur übersteigt. Außerdem möchten wir interessierten Personen unabhängig ihrer Programmiererfahrung mit ermutigender, freundlicher Hilfestellung und Feedback zur Seite stehen.
 
 [Auf <i class="fa fa-github" aria-hidden="true"></i> GitHub ansehen](https://github.com/qmk/qmk_firmware)
 

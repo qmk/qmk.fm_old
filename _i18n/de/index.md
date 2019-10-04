@@ -3,7 +3,7 @@ title: "Eine Open Source Firmware für auf AVR oder ARM basierende Tastaturen"
 permalink: /de/
 lang: "de"
 ---
-QMK ist eine auf der [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) basierende Tastatur-Firmware mit einigen nützlichen Zusatzfunktionen für Atmel AVR- sowie ARM-Controller, insbesondere [Produkte von OLKB](http://olkb.com), das [ErgoDox EZ](http://www.ergodox-ez.com) sowie [Produkte von Clueboard](http://clueboard.co/).
+QMK ist eine Weiterentwicklung der [tmk\_keyboard](http://github.com/tmk/tmk_keyboard)-Tastatur-Firmware mit einigen nützlichen Zusatzfunktionen für Atmel AVR- sowie ARM-Prozessoren. Es wurde ursprünglich für Produkte von [OLKB](http://olkb.com), das [ErgoDox EZ](http://www.ergodox-ez.com) und [Clueboard](http://clueboard.co/) entwickelt.
 
 ## Tastaturen mit QMK
 
@@ -20,7 +20,7 @@ Diese Projekte verwenden QMK als ihre offizielle Firmware - fehlt Ihres? [Lassen
 
 QMK ist kompatibel mit [vielen anderen Tastaturen und Projekten, welche von der Community unterstützt werden](/keyboards/).
 
-Erfahren Sie mehr über die Verwendung von QMK mit Ihrer Tastatur [hier](/powered/).
+[Hier](/powered/) können Sie mehr über die Verwendung von QMK mit Ihrer Tastatur erfahren.
 
 ## Entwickler
 
@@ -28,7 +28,7 @@ QMK wird von Jack Humbert entwickelt und erhalten, mit Hilfe der QMK-Community u
 
 ## Informationen
 
-Die [Dokumentation](https://docs.qmk.fm) ist auf [Gitbook](https://www.gitbook.com/book/qmk/firmware/details) und [Github](https://github.com/qmk/qmk_firmware/tree/master/docs) zu finden (beide sind identisch). Änderungen können über eine Fork und [Pull Request](https://github.com/qmk/qmk_firmware/pulls) oder über den "suggest an edit"-Knopf auf jeder Seite vorgeschlagen werden.
+Die [Dokumentation](https://docs.qmk.fm) ist auf [Gitbook](https://docs.qmk.fm) und [Github](https://github.com/qmk/qmk_firmware/tree/master/docs) zu finden (beide sind identisch). Änderungen können über eine Fork und [Pull Request](https://github.com/qmk/qmk_firmware/pulls) oder über den "suggest an edit"-Knopf auf jeder Seite vorgeschlagen werden.
 
 ## Konfigurationssoftware
 
