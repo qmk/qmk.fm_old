@@ -6,6 +6,14 @@ locales:
     made_possible: "This project is maintained by <a href='https://github.com/qmk'>QMK collaborators</a> and contributors like you!"
     hosted_on: "Hosted on GitHub Pages &mdash; Theme by <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "An open source firmware for AVR and ARM based keyboards"
+  de: &DEFAULT_DE
+    <<: *DEFAULT_EN
+    language_name: "Deutsch"
+    language: "Sprache"
+    qmk_firmware: "QMK-Firmware"
+    made_possible: "Dieses Projekt wird von den <a href='https://github.com/qmk'>QMK-Entwicklern</a> und Mitwirkenden wie Ihnen unterstützt!"
+    hosted_on: "Betrieben mit GitHub Pages &mdash; Layout von <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Eine Open Source Firmware für auf AVR oder ARM basierende Tastaturen"
   zh-cn: &DEFAULT_ZH_CN
     <<: *DEFAULT_EN
     language_name: "中文"
