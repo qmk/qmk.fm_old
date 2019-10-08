@@ -28,7 +28,7 @@ QMK est développé et maintenu par Jak Humbert d'OLKB avec les contributions de
 
 ## Documentation
 
-La [documentation](https://docs.qmk.fm) est consultable sur [Gitbook](https://www.gitbook.com/book/qmk/firmware/details) et gérée sur [Github](https://github.com/qmk/qmk_firmware/tree/master/docs). Vous pouvez demander des changements en faisant un "fork" et une "[pull request](https://github.com/qmk/qmk_firmware/pulls)" ou bien en cliquant sur le bouton "suggest an edit" sur la page concernée.
+La [documentation](https://docs.qmk.fm) est consultable sur [Gitbook](https://docs.qmk.fm) et gérée sur [Github](https://github.com/qmk/qmk_firmware/tree/master/docs). Vous pouvez demander des changements en faisant un "fork" et une "[pull request](https://github.com/qmk/qmk_firmware/pulls)" ou bien en cliquant sur le bouton "suggest an edit" sur la page concernée.
 
 ## Configurateur
 
