@@ -3,7 +3,7 @@ title: "Прошивка с открытым исходным кодом для 
 permalink: /ru/
 lang: "ru"
 ---
-QMK - это прошивка для клавиатур, основанная на [прошивке tmk\_keyboard](http://github.com/tmk/tmk_keyboard) и включающая в себя много полезных изменений для Atmel AVR и ARM микроконтроллеров, а также поддерживающая продукты компаний [OLKB](https://olkb.com), [ErgoDox EZ](https://ergodox-ez.com/), и [Clueboard](https://clueboard.co/).
+QMK - это прошивка для клавиатур, основанная на [прошивке tmk\_keyboard](http://github.com/tmk/tmk_keyboard) и включающая в себя много полезных изменений для Atmel AVR и ARM микроконтроллеров, в частности для продуктов компаний [OLKB](https://olkb.com), [ErgoDox EZ](https://ergodox-ez.com/), и [Clueboard](https://clueboard.co/).
 
 ## Клавиатуры, работающие на QMK
 
@@ -24,12 +24,12 @@ QMK совместима с [множеством клавиатур и прое
 
 ## Разработчики
 
-QMK разработана и поддерживается Jack Humbert из OLKB вместе с соавторами из сообщества и, конечно же, [Hasu](https://github.com/tmk). Прошивки для OLKB разрабатываются [Jack Humbert](https://github.com/jackhumbert), для ErgoDox EZ - [ZSA Technology Labs](https://github.com/zsa), а для Clueboard - [Zach White](https://github.com/skullydazed).
+QMK разработана и поддерживается Jack Humbert из OLKB вместе с соавторами из сообщества и, конечно же, [Hasu](https://github.com/tmk). Прошивки для OLKB поддерживаются [Jack Humbert](https://github.com/jackhumbert), для ErgoDox EZ - [ZSA Technology Labs](https://github.com/zsa), а для Clueboard - [Zach White](https://github.com/skullydazed).
 
 ## Документация
 
-[Документация](https://docs.qmk.fm) расположена на [GitBook](https://www.gitbook.com/book/qmk/firmware/details) и [GitHub](https://github.com/qmk/qmk_firmware/tree/master/docs) (они синхронизированы). Вы можете предложить изменения, создав fork и [pull request](https://github.com/qmk/qmk_firmware/pulls), или кликнув по "suggest an edit" на любой странице.
+[Документация](https://docs.qmk.fm) расположена на [GitBook](https://www.gitbook.com/book/qmk/firmware/details) и [GitHub](https://github.com/qmk/qmk_firmware/tree/master/docs) (они синхронизированы). Вы можете предложить изменения, создав форк и [пулреквест](https://github.com/qmk/qmk_firmware/pulls), или кликнув по "suggest an edit" на любой странице.
 
 ## Конфигуратор
 
-Используйте наш [онлайн конфигуратор](https://config.qmk.fm), чтобы с комфортом сконструировать файл раскладки, а затем скомпилировать и скачать прошивку прямо из своего браузера. На данный момент поддерживаются только Chrome и Firefox.
+Используйте наш [онлайн-конфигуратор](https://config.qmk.fm), чтобы с комфортом сконструировать файл раскладки, а затем скомпилировать и скачать прошивку прямо из своего браузера. На данный момент поддерживаются только Chrome и Firefox.
