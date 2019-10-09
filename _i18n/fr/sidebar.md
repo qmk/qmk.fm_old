@@ -1,4 +1,4 @@
-Le but du projet QMK est de développer un micrologiciel complètement personnalisable, puissant et facile à utiliser pour tous type de projet de clavier ou autre, et de fournir une aide bienveillante, encourageante et utile ainsi que des retours pour des personnes avec n'import quelle expérience en développement logiciel.
+Le but du projet QMK est de développer un firmware complètement personnalisable, puissant et facile à utiliser pour tous type de projet de clavier ou autre, et de fournir une aide bienveillante, encourageante et utile ainsi que des retours pour des personnes avec n'import quelle expérience en développement logiciel.
 
 [Voir sur <i class="fa fa-github" aria-hidden="true"></i> GitHub](https://github.com/qmk/qmk_firmware)
 

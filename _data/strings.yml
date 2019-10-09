@@ -21,7 +21,7 @@ locales:
     qmk_firmware: Firmware QMK
     made_possible: "Ce projet est maintenu par <a href='https://github.com/qmk'>les collaborateurs QMK</a> et des contributeurs comme vous !"
     hosted_on: "Hébergé grâce à GitHub Pages &mdash; Thème par <a href='https://github.com/orderedlist'>orderedlist</a>"
-    description: "Un micrologiciel open source pour les claviers basés sur des contrôleurs AVR ou ARM"
+    description: "Un firmware open source pour les claviers basés sur des contrôleurs AVR ou ARM"
   zh-cn: &DEFAULT_ZH_CN
     <<: *DEFAULT_EN
     language_name: "中文"
