@@ -3,7 +3,7 @@ title: "Прошивка с открытым исходным кодом для 
 permalink: /ru/
 lang: "ru"
 ---
-QMK - это прошивка для клавиатур, основанная на [прошивке tmk\_keyboard](http://github.com/tmk/tmk_keyboard) и включающая в себя много полезных изменений для микроконтроллеров Atmel AVR и ARM, в частности для продуктов компаний [OLKB](https://olkb.com), [ErgoDox EZ](https://ergodox-ez.com/), и [Clueboard](https://clueboard.co/).
+QMK - это прошивка для клавиатур, основанная на [прошивке tmk\_keyboard](http://github.com/tmk/tmk_keyboard) и включающая в себя много полезных изменений для микроконтроллеров Atmel AVR и ARM, в частности для продуктов компаний [OLKB](https://olkb.com), [ErgoDox EZ](https://ergodox-ez.com/) и [Clueboard](https://clueboard.co/).
 
 ## Клавиатуры, работающие на QMK
 
