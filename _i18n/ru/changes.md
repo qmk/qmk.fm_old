@@ -1,5 +1,5 @@
 ---
-title: "Все недавние изменения в QMK"
+title: "Все последние изменения в QMK"
 layout: qmk-title
 permalink: /ru/changes/
 ---
