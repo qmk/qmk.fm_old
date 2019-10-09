@@ -19,3 +19,11 @@ locales:
     language_name: "中文"
     language: "官话"
     qmk_firmware: "QMK固件"
+  es: &DEFAULT_ES
+    <<: *DEFAULT_EN
+    language_name: "Español"
+    language: "Idioma"
+    qmk_firmware: "Firmware QMK"
+    made_possible: "Este proyecto se mantiene por <a href='https://github.com/qmk'>colaboradores QMK</a> y personas como tu!"
+    hosted_on: "Alojado en GitHub Pages &mdash; Plantilla por <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Un firmware open source para teclados basados en ARV y ARM"
