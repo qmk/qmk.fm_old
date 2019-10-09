@@ -24,7 +24,7 @@ QMK совместима с [множеством клавиатур и прое
 
 ## Разработчики
 
-QMK разработана и поддерживается Jack Humbert из OLKB вместе с соавторами из сообщества и, конечно же, [Hasu](https://github.com/tmk). Прошивки для OLKB поддерживаются [Jack Humbert](https://github.com/jackhumbert), для ErgoDox EZ - [ZSA Technology Labs](https://github.com/zsa), а для Clueboard - [Zach White](https://github.com/skullydazed).
+QMK разработана и поддерживается Джеком Гумбертом (Jack Humbert) из OLKB вместе с соавторами из сообщества и, конечно же, [Хасу (Hasu)](https://github.com/tmk). Прошивки для OLKB поддерживаются [Джеком Гумбертом](https://github.com/jackhumbert), для ErgoDox EZ - [ZSA Technology Labs](https://github.com/zsa), а для Clueboard - [Заком Уайтом (Zach White)](https://github.com/skullydazed).
 
 ## Документация
 
