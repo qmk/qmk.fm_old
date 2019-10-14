@@ -1,7 +1,7 @@
 ---
 title: "Code de conduite de QMK"
 layout: qmk
-permalink: /coc/
+permalink: "/fr/coc/"
 lang: fr
 ---
 
