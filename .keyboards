@@ -354,8 +354,17 @@ hecomi
 hecomi/alpha
 helix
 helix/pico
+helix/pico/back
+helix/pico/under
 helix/rev1
 helix/rev2
+helix/rev2/back
+helix/rev2/back/oled
+helix/rev2/oled
+helix/rev2/oled/back
+helix/rev2/oled/under
+helix/rev2/under
+helix/rev2/under/oled
 hhkb
 hid_liber
 hifumi
