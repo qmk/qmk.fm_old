@@ -12,7 +12,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
 
-### Pages
+### Σελίδες
 
 * [Online Configurator](https://config.qmk.fm)
 * [Πρόσφατες Αλλαγές στο QMK](/el/changes/)
