@@ -20,6 +20,7 @@ locales:
     language: "官话"
     qmk_firmware: "QMK固件"
   en: &DEFAULT_EL
+    <<: *DEFAULT_EN
     language_name: "Ελληνικά"
     language: "Γλώσσα"
     qmk_firmware: "QMK Firmware"
