@@ -15,7 +15,7 @@ O objetivo do projeto de software QMK é o desenvolvimento de um firmware fácil
 ### Páginas
 
 * [Configuração online](https://config.qmk.fm)
-* [Novas mudanças no QMK](/de/changes/)
+* [Novas mudanças no QMK](/pt-br/changes/)
 * [Todos os teclados suportados](/keyboards/)
 * [QMK para o seu teclado](/powered/)
 * [Sobre o próton C](/proton-c/)
