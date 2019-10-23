@@ -20,7 +20,7 @@ locales:
     language: "Linguagem"
     qmk_firmware: "Firmware QMK"
     made_possible: "Este projeto é mantido por <a href='https://github.com/qmk'>colaboradores do QMK</a> e colaboradores como você!"
-    hosted_on: "Hospedado em páginas &mdash do GitHub; Tema por <a href='https://github.com/orderedlist'>lista ordenada</a>"
+    hosted_on: "Hospedado em Páginas do GitHub &mdash; Tema por <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "Um firmware de código aberto para teclados baseados em AVR e ARM"
   zh-cn: &DEFAULT_ZH_CN
     <<: *DEFAULT_EN
