@@ -19,3 +19,9 @@ locales:
     language_name: "中文"
     language: "官话"
     qmk_firmware: "QMK固件"
+
+  hi: &DEFAULT_HI
+    <<: *DEFAULT_EN
+    language_name: "हिंदी"
+    language: "भाषा"
+    qmk_firmware: "QMK-फर्मवेयर"
