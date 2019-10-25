@@ -22,3 +22,4 @@ Das Ziel des QMK-Softwareprojektes ist die Entwicklung einer benutzerfreundliche
 * [Lizenz-Informationen](/license/)
 * [Verhaltenskodex](/coc/)
 * [QMK unterstützen](/support/)
+* [QMK Toolbox](/toolbox/)
