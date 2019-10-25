@@ -56,3 +56,4 @@ For Homebrew users, it is also available as a Cask:
 $ brew tap homebrew/cask-drivers
 $ brew cask install qmk-toolbox
 ```
+
