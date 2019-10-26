@@ -19,3 +19,11 @@ locales:
     language_name: "中文"
     language: "官话"
     qmk_firmware: "QMK固件"
+  it: &DEFAULT_IT
+    <<: *DEFAULT_EN
+    language_name: "Italiano"
+    language: "Lingua"
+    qmk_firmware: "Firmware QMK"
+    made_possible: "Questo progetto è mantenuto da <a href='https://github.com/qmk'>collaboratori di QMK</a> e collaboratori come te!"
+    hosted_on: "Ospitato in GitHub Pages &mdash; Tema per <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Un firmware open source per tastiere basato su AVR e ARM"
