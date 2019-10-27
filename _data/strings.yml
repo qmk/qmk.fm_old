@@ -19,3 +19,11 @@ locales:
     language_name: "中文"
     language: "官话"
     qmk_firmware: "QMK固件"
+  en: &DEFAULT_EL
+    <<: *DEFAULT_EN
+    language_name: "Ελληνικά"
+    language: "Γλώσσα"
+    qmk_firmware: "QMK Firmware"
+    made_possible: "Αυτό το project συντηρείται από <a href='https://github.com/qmk'>QMK και συνεργάτες</a> σαν κι εσένα !"
+    hosted_on: "Φιλοξενείται στο GitHub Pages &mdash; Θέμα από <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Ένα ανοιχτού κώδικα λογισμικό για πληκτρολόγια βασισμένο σε AVR and ARM"
