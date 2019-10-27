@@ -52,10 +52,7 @@ Memory         | 2.5KB               | 8KB                  | 48KB
 Timers         | 4 total             | 4 total              | 10 total
 Digital IO     | 25 pins             | 46 pins              | 37 pins
 
-The STM32F303 has 9 times the usable storage space that the ATMega32U4 has.   You could enable a bunch of features and still have plenty of room  left.  For instance, the Planck EZ, which has audio and rgb matrix fully enabled (no sub-features disabled), and has the Link Time Optimization option turned off uses 45KB of firmware, leaving 200+KB free, still.   Plenty of room for most anything you want to do. 
-
 Der STM32F303 hat neunmal soviel Speicher wie der ATmega32U4. Das erlaubt eine Vielzahl an Features zu aktivieren und immernoch genug Speicher übrig zu haben. Das Planck EZ zum Beispiel, hat Audio und RGB vollständig aktiviert (keine sub-features disabled) und verwendet ohne Link Time Optimization 45KB für die Firmware und hat demnach immernoch mehr als 200KB für den User zur Verwendung frei. Mehr als genug für die meisten Anwendungsfälle.
-
 
 ## Warnung
 
