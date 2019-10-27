@@ -4,7 +4,7 @@ layout: qmk
 permalink: /de/license/
 ---
 
-# Lizensen
+# Lizenzen
 
 Ein Großteil von QMK steht unter der GPL v2, aber QMK beinhaltet ebenso Software-Elemente die unter anderen Lizensen stehen, die alle hier kurz beschrieben werden. Der ganze Text der jeweiligeb Lizensen können Sie in dem Code-Repository und unten finden
 
