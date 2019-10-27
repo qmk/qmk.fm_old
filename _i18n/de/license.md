@@ -1,5 +1,5 @@
 ---
-title: "Lizensen"
+title: "Lizenzen"
 layout: qmk
 permalink: /de/license/
 ---
