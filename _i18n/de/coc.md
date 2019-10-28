@@ -23,7 +23,7 @@ Von unseren Anwender, Mitwirkende, und Mitarbeiter wird erwartet sich gegenseiti
 
 # Melden
 
-Sollte jemand gegen diese Verhaltensregeln verstößt, schreiben Sie bitte eine E-Mail an `hello@qmk.fm` oder kontaktieren Sie einen der Mitarbeiter (Collaborators), um darauf aufmerksam zu machen. Alle Beschwerden werden überprüft und untersucht.
+Sollte jemand gegen diese Verhaltensregeln verstoßen, schreibe bitte eine E-Mail an `hello@qmk.fm` oder kontaktiere einen der MitarbeiterInnen (Collaborators), um darauf aufmerksam zu machen. Alle Beschwerden werden überprüft und untersucht.
 
 QMK wird versuchen die kleinsten strafenden Maßnahmen zu verwenden, um ein Problem zu lösen. Falls die Umstände es erfordern den Täter zu fragen zu gehen, werden wir das tun.
 
