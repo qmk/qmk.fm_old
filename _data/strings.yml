@@ -14,11 +14,6 @@ locales:
     made_possible: "Dieses Projekt wird von den <a href='https://github.com/qmk'>QMK-Entwicklern</a> und Mitwirkenden wie Ihnen unterstützt!"
     hosted_on: "Betrieben mit GitHub Pages &mdash; Layout von <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "Eine Open Source Firmware für auf AVR oder ARM basierende Tastaturen"
-  zh-cn: &DEFAULT_ZH_CN
-    <<: *DEFAULT_EN
-    language_name: "中文"
-    language: "官话"
-    qmk_firmware: "QMK固件"
   es: &DEFAULT_ES
     <<: *DEFAULT_EN
     language_name: "Español"
@@ -27,3 +22,24 @@ locales:
     made_possible: "Este proyecto se mantiene por <a href='https://github.com/qmk'>colaboradores QMK</a> y personas como tu!"
     hosted_on: "Alojado en GitHub Pages &mdash; Plantilla por <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "Un firmware open source para teclados basados en ARV y ARM"
+  pt-br: &DEFAULT_PT_BR
+    <<: *DEFAULT_EN
+    language_name: "Português"
+    language: "Linguagem"
+    qmk_firmware: "Firmware QMK"
+    made_possible: "Este projeto é mantido por <a href='https://github.com/qmk'>colaboradores do QMK</a> e colaboradores como você!"
+    hosted_on: "Hospedado em Páginas do GitHub &mdash; Tema por <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Um firmware de código aberto para teclados baseados em AVR e ARM"
+  zh-cn: &DEFAULT_ZH_CN
+    <<: *DEFAULT_EN
+    language_name: "中文"
+    language: "官话"
+    qmk_firmware: "QMK固件"
+  ru: &DEFAULT_RU
+    <<: *DEFAULT_EN
+    language_name: "Русский"
+    language: "Язык"
+    qmk_firmware: "QMK Firmware"
+    made_possible: "Данный проект поддерживается <a href='https://github.com/qmk'>коллабораторами QMK</a> и такими же участниками, как вы!"
+    hosted_on: "Размещено на GitHub Pages &mdash; Тема от <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Прошивка с открытым исходным кодом для клавиатур на базе AVR и ARM"
