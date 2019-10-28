@@ -6,7 +6,7 @@ permalink: /proton-c/
 
 <img src="https://i.imgur.com/GdsN1Rd.jpg" alt="Proton C" />
 
-Der Proton C ist ein auf ARM STM32F303xC basierter Ersatz für den Pro Micro. Er benutzt den gleichen Chip wie die Planck rev6 Tastaturen und Skullydazeds ARM Clueboards.
+Der Proton C ist ein auf ARM STM32F303xC basierter Ersatz für den Pro Micro. Er benutzt den gleichen Chip wie die Planck rev6 Tastaturen und Skullydazed's ARM Clueboards.
 
 * Durchgangsbohrung (Through-hole) montierter USB-C Port
 * 32-bit 72Mhz Cortex-M4 Prozessor (STM32F303CCT6)
@@ -18,14 +18,14 @@ Der Proton C ist ein auf ARM STM32F303xC basierter Ersatz für den Pro Micro. Er
 * AST1109MLTRQ Lautsprecher Footprint  
 * Reset-Knopf
 
-Rev 2 hat die folgenden Änderungen:
+Rev 2 hat folgenden Änderungen:
 
 * Pads für Lautsprecher auf beiden Seiten des PCBs
-* Du kannst jetzt eine Seite des Lautsprechersmit GND verbinden um einen zusätzlichen I/O Pin zu gewinnen
+* Sie können jetzt eine Seite des Lautsprechers mit GND verbinden um einen zusätzlichen I/O Pin zu gewinnen
 * Die Traces wurden vor der Soldermask in Gold eingefärbt
 * Beide Seiten benutzen eine durchsichtige Soldermask
 
-Du kannst den Proton C bei folgenden Shops kaufen:
+Sie können den Proton C bei folgenden Shops kaufen:
 
 * [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (EU)  
 * [Clueboard](https://clueboard.co/parts/qmk-proton-c) (US-West)  
@@ -36,23 +36,23 @@ Du kannst den Proton C bei folgenden Shops kaufen:
 * [Oh, Keycaps!](https://ohkeycaps.com/products/proton-c) (US-Midwest)  
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)  
 
-Unterstützung für Split Tastaturen, RGB Unterbeleuchtung und Hintergrundbeleuchtung ist noch in der Entwicklung und sollte bald verfügbar sein.
+Unterstützung für Split-Tastaturen, RGB Unterbeleuchtung und Hintergrundbeleuchtung ist noch in der Entwicklung und sollte bald verfügbar sein.
 
 ## Vergleich
 
-Wenn Du wissen möchtest, warum dein nächstes Projekt einen Proton C verwenden sollte, ist hier eine Vergleichstabelle:
+Wenn Sie wissen möchten, warum ihr nächstes Projekt einen Proton C verwenden sollte, ist hier eine Vergleichstabelle:
 
 &nbsp;         | ATMega32u4          | AT90USB1286          | STM32F303xC
 -------------- | ------------------- | -------------------- | ----------------
-Speed          | 16MHz               | 16MHz                | 72MHz
-Voltage        | 5v                  | 5v                   | 3.3v with some 5v capable pins
-Flash size     | 32KB (28 usable)    | 128KB (120KB usable) | 256KB (248KB usable)
-EEPROM size    | 1024 bytes          | 4098 Bytes           | 4096 bytes (emulated in flash)
-Memory         | 2.5KB               | 8KB                  | 48KB
-Timers         | 4 total             | 4 total              | 10 total
-Digital IO     | 25 pins             | 46 pins              | 37 pins
+Geschwindigkeit | 16MHz               | 16MHz                | 72MHz
+Spannung        | 5v                  | 5v                   | 3.3v mit einigen 5v fähigen Pins
+Flash Kapazität     | 32KB (28 verwendbar)    | 128KB (120KB verwendbar) | 256KB (248KB verwendbar)
+EEPROM Kapazität    | 1024 bytes          | 4098 Bytes           | 4096 Bytes (emuliert in Flash)
+RAM         | 2.5KB               | 8KB                  | 48KB
+Timer         | 4 total             | 4 total              | 10 total
+Digital IO     | 25 Pins             | 46 Pins              | 37 Pins
 
-Der STM32F303 hat neunmal soviel Speicher wie der ATmega32U4. Das erlaubt eine Vielzahl an Features zu aktivieren und immernoch genug Speicher übrig zu haben. Das Planck EZ zum Beispiel, hat Audio und RGB vollständig aktiviert (keine sub-features disabled) und verwendet ohne Link Time Optimization 45KB für die Firmware und hat demnach immernoch mehr als 200KB für den User zur Verwendung frei. Mehr als genug für die meisten Anwendungsfälle.
+Der STM32F303 hat neunmal soviel Speicher wie der ATmega32U4. Das erlaubt eine Vielzahl an Features zu aktivieren und immer noch genug Speicher übrig zu haben. Das Planck EZ zum Beispiel, hat Audio und RGB vollständig aktiviert (keine sub-features disabled) und verwendet ohne Link Time Optimization 45KB für die Firmware. D.h. es bleiben immer noch mehr als 200KB für den User zur Verwendung. Mehr als genug für die meisten Anwendungsfälle.
 
 ## Warnung
 
@@ -60,4 +60,4 @@ Einige der Pro Micro kompatiblen PCBs haben VCC (3.3V) und RAW (5VDC) Pins mit d
 
 Bisher ist dieses Problem nur mit Gherkin PCBs bekannt, aber andere PCBs könnten auf ähnliche Art und Weise davon betroffen sein.
 
-In diesem Fall darfst Du den RAW (5VDC) nicht verwenden.
+In diesem Fall dürfen Sie den RAW (5VDC) nicht verwenden.
