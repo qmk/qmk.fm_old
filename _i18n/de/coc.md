@@ -25,6 +25,6 @@ Von unseren Anwender, Mitwirkende, und Mitarbeiter wird erwartet sich gegenseiti
 
 Sollte jemand gegen diese Verhaltensregeln verstoßen, schreibe bitte eine E-Mail an `hello@qmk.fm` oder kontaktiere einen der MitarbeiterInnen (Collaborators), um darauf aufmerksam zu machen. Alle Beschwerden werden überprüft und untersucht.
 
-QMK wird versuchen die kleinsten strafenden Maßnahmen zu verwenden, um ein Problem zu lösen. Falls die Umstände es erfordern den Täter zu fragen zu gehen, werden wir das tun.
+QMK wird versuchen die kleinsten strafenden Maßnahmen zu verwenden, um ein Problem zu lösen. Falls die Umstände es erfordern den/die TäterIn zu fragen zu gehen, werden wir das tun.
 
 Beschwerden werden mit strenger Vertraulichkeit angenommen und aufbewahrt. Es ist für Sie nicht notwendig dem Täter direkt zu begegnen. 
