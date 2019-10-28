@@ -10,7 +10,7 @@ QMK strebt danach eine inklusive, tolerante, und einladende Community zu sein. W
 
 > "Ein sanftes Wort wendet Zorn ab, aber ein strenges Wort erregt Wut."
 
-Von unseren Anwender, Mitwirkende, und Mitarbeiter wird erwartet sich gegenseitig mit Freundlichkeit und Respekt zu behandeln, gute Absichten zu vermuten, und freundlich zu korrigieren, wenn möglich, anstatt mit Eskalation zu reagieren. Obwohl es unser Ziel ist so genau wie möglich zu sein, sind Freundlichkeit und Verständnis wertvoller als Richtigkeit. Einige Beispiele von Verhalten, die wir nicht tolerieren werden, umfassen nicht ausschließlich):
+Von unseren AnwenderInnen, Mitwirkenden, und MitarbeiterInnen wird erwartet sich gegenseitig mit Freundlichkeit und Respekt zu behandeln, gute Absichten zu vermuten, und wenn möglich freundlich zu korrigieren, anstatt zu Eskalieren. Obwohl es unser Ziel ist so genau wie möglich zu sein, sind Freundlichkeit und Verständnis wertvoller als Korrektheit. Einige Beispiele von Verhalten, die wir nicht tolerieren werden, umfassen nicht ausschließlich:
 
 * Die Verwendung von sexualisierter Sprache oder Bildern
 * Voreingenommenheit, sexuell oder anderweitig
