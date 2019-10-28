@@ -1,7 +1,7 @@
 ---
 title: "Über den Proton C"
 layout: qmk
-permalink: /proton-c/
+permalink: /de/proton-c/
 ---
 
 <img src="https://i.imgur.com/GdsN1Rd.jpg" alt="Proton C" />
