@@ -6,7 +6,7 @@ lang: "de"
 
 # Verhaltensregeln (Code of Conduct)
 
-QMK strebt danach eine inklusive, tolerante, und einladende Community zu sein. Wir ermutigen Beteiligung von jedem, unabhängig vom Alter, Behinderung, ethnischer Zugehörigkeit, Geschlechtsidentität und -Ausdruck, Erfahrungsniveau, Nationalität, Aussehen, politischer Ansichten, Abstammung, Religion, oder sexuellen Identität oder Ausrichtung.
+QMK strebt danach eine inklusive, tolerante, und einladende Community zu sein. Wir ermutigen die Beteiligung von jedem Individuum, unabhängig vom Alter, Behinderung, ethnischer Zugehörigkeit, Geschlechtsidentität und -Ausdruck, Erfahrungsniveau, Nationalität, persönlichem Auftreten, politischer Ansicht, Abstammung, Religion, oder sexueller Identität oder Ausrichtung.
 
 > "Ein sanftes Wort wendet Zorn ab, aber ein strenges Wort erregt Wut."
 
