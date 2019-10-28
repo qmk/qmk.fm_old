@@ -2,7 +2,7 @@
 
 Each language should have its own folder in `_i18n/`, named using the ISO 639-1 language code, followed by `-` and the country code where relevant. [A list of common ones can be found here](https://www.andiamo.co.uk/resources/iso-language-codes/).
 
-Permalinks should be generated automatically from the filename, but need to be set manually for `index.md` pages. The `lang` variable should be set on all pages. Both of these, along with `title` (used in `<title>` in the head, and other metadata) are examplified in the front matter (put at the top of the file) here:
+Permalinks should be generated automatically from the filename, but need to be set manually for `index.md` pages. The `lang` variable should be set on all pages. Both of these, along with `title` (used in `<title>` in the head, and other metadata) are exemplified in the front matter (put at the top of the file) here:
 
     ---
     title: "QMK固件"
