@@ -22,6 +22,9 @@ The keymap used, is the [vitamins_included/keymaps/default](https://github.com/q
 
 *When the keyboard is through production, it'll be available at novelkeys.xyz*
 
+## Important issue
+Rev2.0 is missing the pull-down resistors on the CCx pins. This means that it won't work with USB-C <> USB-C cables, used in USB-C hosts. Using a USB-C <> USB-A adapter, and then a USB-A <> USB-C cable will however work.
+
 ## 3D printable files
 
 * [Left case](3d/flat/1.5mm_plate/case-left-FDM.stl)
@@ -46,6 +49,7 @@ The PCB files are available [on github](https://github.com/Duckle29/Vitamins-inc
 ![Bottom render](images/bot.png)
 
 ### Top side
+## NOTE: Rev 2.0 has an error in the labeling of the LED_O jumpers on the right half. They are swapped. Just the lables are swapped. Functionally they're identical.
 
 1. Reset header: Here the reset pin and a gnd pin is exposed. You can hook up a button here if you want to mount a reset button in your case.
 2. RGB mode:
