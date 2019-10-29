@@ -11,7 +11,7 @@ QMK s'efforce d'être une communauté, accueillante, tolérante et inclusive. No
 
 > "Une réponse douce calme la fureur, Mais une parole dure excite la colère."
 
-Nous attendons de nos utilisateurs, contributeurs et collaborateurs qu'ils se traitent avec gentillesse et respect, qu'ils aient de bonnes intentions, de corriger avec pédagogie, quand cela est possible, plutôt que de régir de façon disproportionnée. Même si notre but est d'être aussi précis que possible, la compréhension et la gentillesse sont plus précieuses que l'exactitude.
+Nous attendons de nos utilisateurs, contributeurs et collaborateurs qu'ils se traitent avec gentillesse et respect, qu'ils aient de bonnes intentions, de corriger avec pédagogie, quand cela est possible, plutôt que de réagir de façon disproportionnée. Même si notre but est d'être aussi précis que possible, la compréhension et la gentillesse sont plus précieuses que l'exactitude.
 
 Voici quelques exemples de comportements que nous ne tolérerons pas (liste non exhaustive):
 
