@@ -26,7 +26,7 @@ Voici quelques exemples de comportements que nous ne tolérerons pas (liste non 
 
 # Signaler
 
-Si quelqu'un viole ce Code de Conduite, veuillez envoyer un email à hello arobase qmk.fm ou contactez l'un des collaborateur. Toutes les plaintes seront évaluées et prises en considération.
+Si quelqu'un viole ce Code de Conduite, veuillez envoyer un email à hello@qmk.fm ou contactez l'un des collaborateur. Toutes les plaintes seront évaluées et prises en considération.
 
 QMK essaiera d'utiliser le moins possible quelque punition que ce soit pour résoudre un conflit. Si les circonstances requièrent l'exclusion d'un agresseur, nous prendrons les décisions nécessaires.
 
