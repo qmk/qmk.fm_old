@@ -1,6 +1,7 @@
 ---
 title: "QMK Verhaltensregeln"
 layout: qmk
+permalink: /de/coc/
 lang: "de"
 ---
 
