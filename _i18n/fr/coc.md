@@ -7,7 +7,7 @@ lang: fr
 
 # Code de conduite
 
-QMK s'efforce d'être une communauté, accueillante, tolérante et inclusive. Nous encourageons toutes les contributions indépendamment de l'âge, de quelconque handicap, de l'appartenance éthnique, du genre, du niveau d'expérience technique, de la nationalité, de l'apparence physique, des orientations politiques, de la race, de la religion ou de l'orientation et de l'identification sexuelle.
+QMK s'efforce d'être une communauté, accueillante, tolérante et inclusive. Nous encourageons toutes les contributions indépendamment de l'âge, de quelconque handicap, de l'appartenance ethnique, du genre, du niveau d'expérience technique, de la nationalité, de l'apparence physique, des orientations politiques, de la race, de la religion ou de l'orientation et de l'identification sexuelle.
 
 > "Une réponse douce calme la fureur, Mais une parole dure excite la colère."
 
