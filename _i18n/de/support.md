@@ -4,7 +4,7 @@ layout: qmk
 permalink: /de/support/
 ---
 
-# Unterstütze QMK
+# QMK unterstützen
 
 * [QMK Fan-Artikel auf olkb.com](https://olkb.com/parts)
 * [Teespring Online-Shop](https://teespring.com/de/stores/qmk)
