@@ -10,7 +10,7 @@ permalink: /de/powered/
 Alle sind berechtigt und ermutigt das Logo, die Begriffe "QMK (Firmware)", "Powered by QMK (Firmware)" (oder ähnlich Formulierungen mit "running", "compatible with", etc.) verwenden. Dem wird vorausgesetzt, dass: 
 
 1. Nicht impliziert wird, dass QMK oder Mitwirkende die Tastatur befürworten oder herstellen
-2. [Der Hersteller seine Konfigurationen der Tastatur zu qmk:master zeitlich nach Versand der Tastaturen beitragen](https://github.com/qmk/qmk_firmware/pulls/)
+2. [Der/Die HerstellerIn die Konfiguration der Tastatur zeitnah zum Release der Tastatur zu qmk:master beitragen](https://github.com/qmk/qmk_firmware/pulls/)
 3. Auf der Produkt-Webseite auf die [QMK-Webseite](https://qmk.fm) oder das [GitHub-Repository](https://github.com/qmk/qmk_firmware) verlinkt wird
 
 Bilder mit dem Logo und bevorzugten Formulierungen zur Verwendung auf PCBs, Ausdrucken, Webseiten, Stickers, Fan-Artikeln, etc. sind unten zu finden.
