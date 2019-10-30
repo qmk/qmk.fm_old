@@ -17,7 +17,8 @@ Bilder mit dem Logo und bevorzugten Formulierungen zur Verwendung auf PCBs, Ausd
 
 ## Optionale Schritte
 
-1. Einen Etikett / Tag (`<keyboard>-<version>`z.B. `planck-4.2`) von dem geliefertem Commit mit der Tastatur-Firmware in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) erfragen.
+1. Beantragen Sie ein Etikett / Tag (`<keyboard>-<version>`z.B. `planck-4.2`) für das Commit mit dem die Tastatur in [qmk/qmk_firmware](https://github.com/qmk/qmk_firmware) ausgeliefert wird.
+Üblicherweise wird für das Tag eine kompilierte .hex/.bin Datei auf der Release-Seite hinzugefügt.
 2. Sich über [GPL Einhaltung](https://fsfe.org/activities/ftf/useful-tips-for-vendors.de.html) bewusst sein - Dabei hilft es ein Etikett / Tag zu haben.
 
 Wenn Ihr Projekt QMK als die standardmäßige und offizielle Firmware verwendet, würden wir es gerne zu der Liste auf unserer Webseite hinzufügen. Also [geben Sie bescheid, indem ein Pull Request auf qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/) öffnen, sollte es noch nicht dort sein!
