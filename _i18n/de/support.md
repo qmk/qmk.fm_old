@@ -11,7 +11,7 @@ permalink: /de/support/
 * [Spenden Sie via Donorbox](https://donorbox.org/qmk)
 * [Wirke mit!](https://github.com/qmk/qmk_firmware/issues)
 
-## Was machen wir mit Spenden?
+## Wofür wir die Spenden verwenden
 
 * Helfen, die Server- und Infrastruktur-Kosten zu decken (letztendlich für den QMK Konfigurator)
 * Helfen, die Entwicklungs-Kosten für QMK-branded Produkte, wie den [Proton C](https://qmk.fm/proton-c)
