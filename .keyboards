@@ -428,7 +428,6 @@ keebio/chocopad
 keebio/dilly
 keebio/ergodicity
 keebio/fourier
-keebio/iris
 keebio/iris/rev1
 keebio/iris/rev1_led
 keebio/iris/rev2
@@ -439,7 +438,6 @@ keebio/levinson
 keebio/levinson/rev1
 keebio/levinson/rev2
 keebio/levinson/rev3
-keebio/nyquist
 keebio/nyquist/rev1
 keebio/nyquist/rev2
 keebio/nyquist/rev3
@@ -637,6 +635,7 @@ runner3680/5x8
 s7_elephant
 scarletbandana
 sck/gtm
+sck/m0116b
 sck/neiso
 sck/osa
 scythe
