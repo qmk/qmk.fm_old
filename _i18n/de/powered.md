@@ -40,7 +40,7 @@ td {
     </tr>
 </table>
 
-A smaller version of each (pngs: [dark](/assets/images/badge-small-dark.png), [light](/assets/images/badge-small-light.png)):
+ 
 
 Eine jeweils kleinere Version (PNGs: [dunkel](/assets/images/badge-small-dark.png), [hell](/assets/images/badge-small-light.png)):
 
