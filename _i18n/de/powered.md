@@ -7,7 +7,7 @@ permalink: /de/powered/
 
 "QMK Firmware" und das Logo sind von Jack Humbert registrierte Schutzmarken, um Tastaturen-HerstellerInnen zu ermutigen zur Community beizutragen und der Community Unterstützung für Tastaturen mit QMK zu bieten.
 
-Jeder ist berechtigt und ermutigt das Logo, die Begriffe "QMK (Firmware)", "Powered by QMK (Firmware)" (oder ähnlich Formulierungen mit "running", "compatible with", etc.) verwenden. Dem wird vorausgesetzt, dass: 
+Alle sind berechtigt und ermutigt das Logo, die Begriffe "QMK (Firmware)", "Powered by QMK (Firmware)" (oder ähnlich Formulierungen mit "running", "compatible with", etc.) verwenden. Dem wird vorausgesetzt, dass: 
 
 1. Nicht impliziert wird, dass QMK oder Beitragende die Tastatur befürworten / herstellen
 2. [Der Hersteller seine Konfigurationen der Tastatur zu qmk:master zeitlich nach Versand der Tastaturen beitragen](https://github.com/qmk/qmk_firmware/pulls/)
