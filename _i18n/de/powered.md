@@ -51,7 +51,7 @@ Eine jeweils kleinere Version (PNGs: [dunkel](/assets/images/badge-small-dark.pn
     </tr>
 </table>
 
-And badges for compatible or community-supported keyboards (pngs: [dark](/assets/images/badge-community-dark.png), [light](/assets/images/badge-community-light.png)):
+ 
 
 Und Badges für kompatible oder *von-der-Community-unterstützte*n Tastaturen (PNGs:  [dunkel](/assets/images/badge-community-dark.png), [hell](/assets/images/badge-community-light.png)):
 
