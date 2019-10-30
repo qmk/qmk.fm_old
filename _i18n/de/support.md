@@ -13,7 +13,7 @@ permalink: /de/support/
 
 ## Wofür wir die Spenden verwenden
 
-* Helfen, die Server- und Infrastruktur-Kosten zu decken (letztendlich für den QMK Konfigurator)
+* Spenden helfen uns, die Server- und Infrastruktur-Kosten zu decken (letztendlich für den QMK Konfigurator)
 * Helfen, die Entwicklungs-Kosten für QMK-branded Produkte, wie den [Proton C](https://qmk.fm/proton-c)
 * Fan-Artikel zu Treffen als Werbegeschenke / Preise senden. Schreiben Sie uns eine E-Mail, falls Sie interessiert sind! hello at-Symbol qmk.fm
 * [QMK Info Pakete](https://i.imgur.com/EoXgApN.png) für Tastaturen-Hersteller kaufen. (Optional $0.10 Spende, um die Kosten zu decken) - Schreiben Sie eine E-Mail, falls Sie Interesse haben!
