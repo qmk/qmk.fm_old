@@ -1,5 +1,5 @@
 ---
-title: "Unterstütze QMK"
+title: "Unterstützen Sie QMK"
 layout: qmk
 permalink: /de/support/
 ---
