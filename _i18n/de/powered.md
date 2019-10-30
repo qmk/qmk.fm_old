@@ -21,7 +21,7 @@ Bilder mit dem Logo und bevorzugten Formulierungen zur Verwendung auf PCBs, Ausd
 Üblicherweise wird für das Tag eine kompilierte .hex/.bin Datei auf der Release-Seite hinzugefügt.
 2. Sich über [GPL Einhaltung](https://fsfe.org/activities/ftf/useful-tips-for-vendors.de.html) bewusst sein - Dabei hilft es ein Etikett / Tag zu haben.
 
-Wenn Ihr Projekt QMK als die standardmäßige und offizielle Firmware verwendet, würden wir es gerne zu der Liste auf unserer Webseite hinzufügen. Also [geben Sie bescheid, indem ein Pull Request auf qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/) öffnen, sollte es noch nicht dort sein!
+Wenn Ihr Projekt QMK als die standardmäßige und offizielle Firmware verwendet, würden wir es gerne zu der Liste auf unserer Webseite hinzufügen. Also [geben Sie uns Bescheid, indem Sie ein Pull Request auf qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/) eröffnen, sollte es noch nicht dort sein!
 
 ## Bilder
 
