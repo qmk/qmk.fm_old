@@ -18,7 +18,7 @@ Das Ziel des QMK-Softwareprojektes ist die Entwicklung einer benutzerfreundliche
 * [Neue Änderungen in QMK](/de/changes/)
 * [Alle unterstützten Tastaturen](/keyboards/)
 * [QMK für Ihre Tastatur](/de/powered/)
-* [Über den Proton C](/proton-c/)
+* [Über den Proton C](/de/proton-c/)
 * [Lizenz-Informationen](/de/license/)
 * [Verhaltenskodex](/de/coc/)
 * [QMK unterstützen](/de/support/)
