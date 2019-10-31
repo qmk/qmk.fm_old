@@ -22,3 +22,4 @@ The goal of the QMK software project is to develop a completely customizable, po
 * [License Information](/license/)
 * [Code of Conduct](/coc/)
 * [How to support QMK](/support/)
+* [QMK Toolbox](/toolbox/)

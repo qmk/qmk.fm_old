@@ -3,10 +3,14 @@
 1upkeyboards/1up60rgb
 1upkeyboards/super16
 1upkeyboards/sweet16
+1upkeyboards/sweet16/v1
+1upkeyboards/sweet16/v2/promicro
+1upkeyboards/sweet16/v2/proton_c
 2_milk
 2key2crawl
 30wer
 40percentclub/25
+40percentclub/4pack
 40percentclub/4x4
 40percentclub/5x5
 40percentclub/6lit
@@ -30,6 +34,7 @@
 8pack/rev12
 9key
 abstract/ellipse/rev1
+acheron/shark
 acr60
 adkb96
 adkb96/rev1
@@ -63,6 +68,7 @@ at_at/660m
 atomic
 atreus
 atreus/astar
+atreus/astar_mirrored
 atreus/teensy2
 atreus62
 baguette
@@ -74,6 +80,7 @@ bigseries/2key
 bigseries/3key
 bigseries/4key
 bigswitch
+blackplum
 blockey
 bm16a
 bm16s
@@ -99,6 +106,7 @@ candybar
 cannonkeys/an_c
 cannonkeys/chimera65
 cannonkeys/instant60
+cannonkeys/iron165
 cannonkeys/ortho48
 cannonkeys/ortho60
 cannonkeys/ortho75
@@ -107,6 +115,8 @@ cannonkeys/practice65
 cannonkeys/satisfaction75
 cannonkeys/satisfaction75/prototype
 cannonkeys/satisfaction75/rev1
+cannonkeys/savage65
+cannonkeys/tmov2
 catch22
 chimera_ergo
 chimera_ls
@@ -129,6 +139,7 @@ clueboard/66/rev3
 clueboard/66/rev4
 clueboard/66_hotswap/gen1
 clueboard/66_hotswap/prototype
+clueboard/california
 clueboard/card
 cocoa40
 comet46
@@ -254,6 +265,8 @@ gonnerd
 gray_studio/cod67
 gray_studio/hb85
 gray_studio/space65
+gray_studio/think65/hotswap
+gray_studio/think65/solder
 grid600/press
 gskt00
 hadron
@@ -263,12 +276,15 @@ halberd
 handwired/108key_trackpoint
 handwired/2x5keypad
 handwired/412_64
+handwired/42
 handwired/6macro
 handwired/aek64
+handwired/aranck
 handwired/arrow_pad
 handwired/atreus50
 handwired/bluepill
 handwired/bluepill/bluepill70
+handwired/chiron
 handwired/ck4x4
 handwired/cmd60
 handwired/co60/rev1
@@ -289,11 +305,13 @@ handwired/datahand
 handwired/downbubble
 handwired/fivethirteen
 handwired/frenchdev
+handwired/fruity60
 handwired/gamenum
 handwired/hacked_motospeed
 handwired/hexon38
 handwired/hnah108
 handwired/hnah40
+handwired/hnah40rgb
 handwired/ibm122m
 handwired/jn68m
 handwired/jopr
@@ -339,6 +357,7 @@ handwired/splittest
 handwired/splittest/promicro
 handwired/splittest/teensy_2
 handwired/steamvan/rev1
+handwired/sticc14
 handwired/tennie
 handwired/terminus_mini
 handwired/trackpoint
@@ -354,8 +373,17 @@ hecomi
 hecomi/alpha
 helix
 helix/pico
+helix/pico/back
+helix/pico/under
 helix/rev1
 helix/rev2
+helix/rev2/back
+helix/rev2/back/oled
+helix/rev2/oled
+helix/rev2/oled/back
+helix/rev2/oled/under
+helix/rev2/under
+helix/rev2/under/oled
 hhkb
 hid_liber
 hifumi
@@ -387,6 +415,7 @@ kbdfans/kbd19x
 kbdfans/kbd4x
 kbdfans/kbd66
 kbdfans/kbd67/hotswap
+kbdfans/kbd67/mkii_soldered
 kbdfans/kbd67/mkiirgb
 kbdfans/kbd67/rev1
 kbdfans/kbd67/rev2
@@ -406,7 +435,6 @@ keebio/chocopad
 keebio/dilly
 keebio/ergodicity
 keebio/fourier
-keebio/iris
 keebio/iris/rev1
 keebio/iris/rev1_led
 keebio/iris/rev2
@@ -417,7 +445,6 @@ keebio/levinson
 keebio/levinson/rev1
 keebio/levinson/rev2
 keebio/levinson/rev3
-keebio/nyquist
 keebio/nyquist/rev1
 keebio/nyquist/rev2
 keebio/nyquist/rev3
@@ -516,6 +543,11 @@ mt980
 mxss
 naked48
 naked48/rev1
+naked60
+naked60/rev1
+naked64
+naked64/rev1
+namecard2x4
 namecard2x4/rev1
 namecard2x4/rev2
 nek_type_a
@@ -609,6 +641,9 @@ runner3680/5x7
 runner3680/5x8
 s7_elephant
 scarletbandana
+sck/gtm
+sck/m0116b
+sck/neiso
 sck/osa
 scythe
 sentraq/number_pad
@@ -663,6 +698,8 @@ treasure/type9
 uk78
 unikorn
 ut472
+uzu42
+uzu42/rev1
 v60_type_r
 vinta
 vision_division
@@ -696,6 +733,8 @@ wilba_tech/zeal65
 winkeyless/bface
 winkeyless/bmini
 winkeyless/bminiex
+xbows/knight
+xbows/woody
 xd004/v1
 xd60/rev2
 xd60/rev3
