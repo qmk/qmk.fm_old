@@ -22,8 +22,8 @@ Rev 2 made the following changes:
 
 * Speaker pads on both sides of the PCB
 * You can now connect one side of the speaker to GND to gain an additional I/O pin
-* Both sides use a clear soldermask
-* The gold-dipping was done before the soldermask, so the traces are now gold
+* Both sides use a clear solder mask
+* The gold-dipping was done before the solder mask, so the traces are now gold
 
 You can find the Proton C for purchase at: 
 
@@ -40,7 +40,7 @@ Support for Split Keyboards, RGB Underglow, and Backlighting are being worked on
 
 ## Comparison
 
-If you want to know why you should chose the Proton C for your next product, here is a comparison of the chips:
+If you want to know why you should choose the Proton C for your next product, here is a comparison of the chips:
 
 &nbsp;         | ATMega32u4          | AT90USB1286          | STM32F303xC
 -------------- | ------------------- | -------------------- | ----------------
@@ -52,7 +52,7 @@ Memory         | 2.5KB               | 8KB                  | 48KB
 Timers         | 4 total             | 4 total              | 10 total
 Digital IO     | 25 pins             | 46 pins              | 37 pins
 
-The STM32F303 has 9 times the usable storage space that the ATMega32U4 has.   You could enable a bunch of features and still have plenty of room  left.  For instance, the Planck EZ, which has audio and rgb matrix fully enabled (no sub-features disabled), and has the Link Time Optimization option turned off uses 45KB of firmware, leaving 200+KB free, still.   Plenty of room for most anything you want to do. 
+The STM32F303 has 9 times the usable storage space that the ATMega32U4 has.   You could enable a bunch of features and still have plenty of room  left.  For instance, the Planck EZ, which has audio and RGB matrix fully enabled (no sub-features disabled), and has the Link Time Optimization option turned off uses 45KB of firmware, leaving 200+KB free, still.   Plenty of room for most anything you want to do. 
 
 
 ## Warnings
