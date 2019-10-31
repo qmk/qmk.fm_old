@@ -19,11 +19,3 @@ locales:
     language_name: "中文"
     language: "官话"
     qmk_firmware: "QMK固件"
-  ml: &DEFAULT_ML
-    <<: *DEFAULT_EN
-    language_name: "മലയാളം"
-    language: "ഭാഷ"
-    qmk_firmware: "QMK ഫേംവെയർ"
-    made_possible: "ഈ പ്രൊജക്ട് മെയിന്റൈൻ ചെയ്യുന്നത് <a href='https://github.com/qmk'>QMK കൊളാബൊറേറ്റേഴ്സും</a> താങ്കളെപ്പോലെയുള്ള സംഭാവകരുമാണ്!"
-    hosted_on: "ഈ വെബ്സൈറ്റ്, GitHub Pagesലാണ് ഹോസ്റ്റ് ചെയ്തിരിക്കുന്നത്&mdash; തീം നിർമിച്ചിരിക്കുന്നത് <a href='https://github.com/orderedlist'>orderedlist</a> ആണ്"
-    description: "AVR, ARM എന്നിവയെ അടിസ്ഥാനമാക്കി നിർമ്മിച്ച കീബോർഡുകൾക്ക് വേണ്ടിയുള്ള ഓപ്പൺ സോഴ്സ് ഫേംവെയർ"
