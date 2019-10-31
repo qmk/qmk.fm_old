@@ -38,6 +38,14 @@ locales:
     made_possible: "这个项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
     hosted_on: "托管在 GitHub Pages &mdash; 主题由 <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "AVR和基于ARM键盘的开源固件"
+  it: &DEFAULT_IT
+    <<: *DEFAULT_EN
+    language_name: "Italiano"
+    language: "Lingua"
+    qmk_firmware: "Firmware QMK"
+    made_possible: "Questo progetto è mantenuto da <a href='https://github.com/qmk'>collaboratori di QMK</a> e collaboratori come te!"
+    hosted_on: "Ospitato in GitHub Pages &mdash; Tema per <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Un firmware open source per tastiere basato su AVR e ARM"
   ru: &DEFAULT_RU
     <<: *DEFAULT_EN
     language_name: "Русский"
