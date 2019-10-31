@@ -1,10 +1,10 @@
 ---
 title: "क्यूएमके मधील सर्व अलीकडील बदल"
 layout: qmk-title
-permalink: mr/changes/
+permalink: /mr/changes/
 ---
 
-{% for change in site.changes %}
+{% for change in site.changes reversed %}
 **<a href="{{ change.url }}">{{ change.title }}</a>**   
 <a href="{{ change.url }}"><img src="https://img.shields.io/badge/date-{{ change.date | date: "%F" | replace:'-','--' }}-lightgrey.svg" /></a>
 <a href="https://github.com/qmk/qmk_firmware/commit/{{ change.commit }}">
