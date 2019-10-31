@@ -1,7 +1,7 @@
 ---
 title: "AVR, ARM അടിസ്ഥാനമാക്കിയുള്ള കീബോർഡുകൾക്ക് വേണ്ടിയുള്ള ഓപ്പൺ സോഴ്സ് ഫേംവെയർ"
-permalink: /ml-in/
-lang: ml-in
+permalink: /ml/
+lang: ml
 ---
 Atmel AVR നും ARM കൺട്രോളറിനും അഥവാ [OLKB product line](http://olkb.com), [ErgoDox EZ](http://www.ergodox-ez.com) കീബോർഡ്, [Clueboard product line](http://clueboard.co/) തുടങ്ങിയവയ്ക്ക് ഉപകാരപ്രദമായ കുറേ സവിശേഷതകളുള്ള, 
 [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) നെ അടിസ്ഥാനമാക്കിയുള്ള കീബോർഡ് ഫേംവെയറാണ് ഇത്.
