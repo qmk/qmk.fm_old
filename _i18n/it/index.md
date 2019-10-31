@@ -18,7 +18,7 @@ Il firmware QMK è un firmware per tastiera basato su [tmk\_keyboard](http://git
 
 Questi progetti usano QMK come firmware ufficiale e per default - il tuo e ' scomparso dalla lista? [Facci sapere!](https://github.com/qmk/qmk.fm/issues/new)
 
-Ora QMK è compatibile con [molte altre tastiere e progetti mantenuti dalla comunità](/it/keyboards/).
+Ora QMK è compatibile con [molte altre tastiere e progetti mantenuti dalla comunità](/keyboards/).
 
 Puoi leggere di più usare QMK con la tua tastiera [qui](/it/powered/).
 

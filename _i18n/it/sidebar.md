@@ -16,7 +16,7 @@ L'obiettivo di questo progetto di software QMK è sviluppare un'esperienza firmw
 
 * [Configuratore online](https://config.qmk.fm)
 * [Cambiamenti recenti nel QMK](/it/changes/)
-* [Tutte le trastiere compatibili](/it/keyboards/)
+* [Tutte le trastiere compatibili](/keyboards/)
 * [Usare QMK con la tastiera](/it/powered/)
 * [Su il Proton C](/it/proton-c/)
 * [Informazioni sulla licenza](/it/license/)
