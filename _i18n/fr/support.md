@@ -1,7 +1,7 @@
 ---
 title: "Contribuer à QMK"
 layout: qmk
-permalink: /support/
+permalink: /fr/support/
 lang: fr
 ---
 
