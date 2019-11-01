@@ -1,7 +1,8 @@
 ---
-title: "Letzte Änderungen in QMK"
+title: "Tutte i cambiamenti recenti in QMK"
 layout: qmk-title
-permalink: /de/changes/
+permalink: /it/changes/
+lang: "it"
 ---
 
 {% for change in site.changes reversed %}
