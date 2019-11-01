@@ -30,6 +30,27 @@ locales:
     made_possible: "Ce projet est maintenu par <a href='https://github.com/qmk'>les collaborateurs QMK</a> et des contributeurs comme vous !"
     hosted_on: "Hébergé grâce à GitHub Pages &mdash; Thème par <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "Un firmware open source pour les claviers basés sur des contrôleurs AVR ou ARM"
+  hi: &DEFAULT_HI
+    <<: *DEFAULT_EN
+    language_name: "हिंदी"
+    language: "भाषा"
+    qmk_firmware: "QMK-फर्मवेयर"
+  it: &DEFAULT_IT
+    <<: *DEFAULT_EN
+    language_name: "Italiano"
+    language: "Lingua"
+    qmk_firmware: "Firmware QMK"
+    made_possible: "Questo progetto è mantenuto da <a href='https://github.com/qmk'>collaboratori di QMK</a> e collaboratori come te!"
+    hosted_on: "Ospitato in GitHub Pages &mdash; Tema per <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "Un firmware open source per tastiere basato su AVR e ARM"
+  ml: &DEFAULT_ML
+    <<: *DEFAULT_EN
+    language_name: "മലയാളം"
+    language: "ഭാഷ"
+    qmk_firmware: "QMK ഫേംവെയർ"
+    made_possible: "ഈ പ്രൊജക്ട് മെയിന്റൈൻ ചെയ്യുന്നത് <a href='https://github.com/qmk'>QMK കൊളാബൊറേറ്റേഴ്സും</a> താങ്കളെപ്പോലെയുള്ള സംഭാവകരുമാണ്!"
+    hosted_on: "ഈ വെബ്സൈറ്റ്, GitHub Pagesലാണ് ഹോസ്റ്റ് ചെയ്തിരിക്കുന്നത്&mdash; തീം നിർമിച്ചിരിക്കുന്നത് <a href='https://github.com/orderedlist'>orderedlist</a> ആണ്"
+    description: "AVR, ARM എന്നിവയെ അടിസ്ഥാനമാക്കി നിർമ്മിച്ച കീബോർഡുകൾക്ക് വേണ്ടിയുള്ള ഓപ്പൺ സോഴ്സ് ഫേംവെയർ"
   mr: &DEFAULT_MR
     language_name: "Marathi"
     language: "इंग्रजी"
@@ -45,27 +66,6 @@ locales:
     made_possible: "Este projeto é mantido por <a href='https://github.com/qmk'>colaboradores do QMK</a> e colaboradores como você!"
     hosted_on: "Hospedado em Páginas do GitHub &mdash; Tema por <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "Um firmware de código aberto para teclados baseados em AVR e ARM"
-  zh-cn: &DEFAULT_ZH_CN
-    <<: *DEFAULT_EN
-    language_name: "中文"
-    language: "官话"
-    qmk_firmware: "QMK固件"
-    made_possible: "这个项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
-    hosted_on: "托管在 GitHub Pages &mdash; 主题由 <a href='https://github.com/orderedlist'>orderedlist</a>"
-    description: "AVR和基于ARM键盘的开源固件"
-  hi: &DEFAULT_HI
-    <<: *DEFAULT_EN
-    language_name: "हिंदी"
-    language: "भाषा"
-    qmk_firmware: "QMK-फर्मवेयर"
-  it: &DEFAULT_IT
-    <<: *DEFAULT_EN
-    language_name: "Italiano"
-    language: "Lingua"
-    qmk_firmware: "Firmware QMK"
-    made_possible: "Questo progetto è mantenuto da <a href='https://github.com/qmk'>collaboratori di QMK</a> e collaboratori come te!"
-    hosted_on: "Ospitato in GitHub Pages &mdash; Tema per <a href='https://github.com/orderedlist'>orderedlist</a>"
-    description: "Un firmware open source per tastiere basato su AVR e ARM"
   ru: &DEFAULT_RU
     <<: *DEFAULT_EN
     language_name: "Русский"
@@ -74,11 +74,11 @@ locales:
     made_possible: "Данный проект поддерживается <a href='https://github.com/qmk'>коллабораторами QMK</a> и такими же участниками, как вы!"
     hosted_on: "Размещено на GitHub Pages &mdash; Тема от <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "Прошивка с открытым исходным кодом для клавиатур на базе AVR и ARM"
-  ml: &DEFAULT_ML
+  zh-cn: &DEFAULT_ZH_CN
     <<: *DEFAULT_EN
-    language_name: "മലയാളം"
-    language: "ഭാഷ"
-    qmk_firmware: "QMK ഫേംവെയർ"
-    made_possible: "ഈ പ്രൊജക്ട് മെയിന്റൈൻ ചെയ്യുന്നത് <a href='https://github.com/qmk'>QMK കൊളാബൊറേറ്റേഴ്സും</a> താങ്കളെപ്പോലെയുള്ള സംഭാവകരുമാണ്!"
-    hosted_on: "ഈ വെബ്സൈറ്റ്, GitHub Pagesലാണ് ഹോസ്റ്റ് ചെയ്തിരിക്കുന്നത്&mdash; തീം നിർമിച്ചിരിക്കുന്നത് <a href='https://github.com/orderedlist'>orderedlist</a> ആണ്"
-    description: "AVR, ARM എന്നിവയെ അടിസ്ഥാനമാക്കി നിർമ്മിച്ച കീബോർഡുകൾക്ക് വേണ്ടിയുള്ള ഓപ്പൺ സോഴ്സ് ഫേംവെയർ"
+    language_name: "中文"
+    language: "官话"
+    qmk_firmware: "QMK固件"
+    made_possible: "这个项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
+    hosted_on: "托管在 GitHub Pages &mdash; 主题由 <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "AVR和基于ARM键盘的开源固件"

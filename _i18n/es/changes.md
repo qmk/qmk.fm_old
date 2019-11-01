@@ -1,6 +1,7 @@
 ---
 title: "Cambios recientes en QMK"
 layout: qmk-title
+permalink: /es/changes/
 lang: "es"
 ---
 

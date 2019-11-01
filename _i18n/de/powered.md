@@ -2,6 +2,7 @@
 title: "Die QMK Firmware Schutzmarke verwenden"
 layout: qmk
 permalink: /de/powered/
+lang: "de"
 ---
 # Die QMK Schutzmarke
 

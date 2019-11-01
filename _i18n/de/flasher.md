@@ -1,5 +1,6 @@
 ---
 layout: qmk
-permalink: /de/flasher
+permalink: /de/flasher/
+lang: "de"
 ---
 Hallo!

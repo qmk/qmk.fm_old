@@ -2,6 +2,7 @@
 title: "Unterstützen Sie QMK"
 layout: qmk
 permalink: /de/support/
+lang: "de"
 ---
 
 # QMK unterstützen
