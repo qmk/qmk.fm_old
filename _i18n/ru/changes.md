@@ -2,6 +2,7 @@
 title: "Все последние изменения в QMK"
 layout: qmk-title
 permalink: /ru/changes/
+lang: "ru"
 ---
 
 {% for change in site.changes reversed %}
