@@ -53,6 +53,11 @@ locales:
     made_possible: "这个项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
     hosted_on: "托管在 GitHub Pages &mdash; 主题由 <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "AVR和基于ARM键盘的开源固件"
+  hi: &DEFAULT_HI
+    <<: *DEFAULT_EN
+    language_name: "हिंदी"
+    language: "भाषा"
+    qmk_firmware: "QMK-फर्मवेयर"
   it: &DEFAULT_IT
     <<: *DEFAULT_EN
     language_name: "Italiano"
