@@ -1,6 +1,7 @@
 ---
 title: "Usar la marca registrada del Firmware QMK"
 layout: qmk
+permalink: /es/powered/
 lang: "es"
 ---
 # La marca registrada de QMK

@@ -1,6 +1,7 @@
 ---
 title: "Sobre el Proton C"
 layout: qmk
+permalink: /es/proton-c/
 lang: "es"
 ---
 

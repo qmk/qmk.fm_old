@@ -1,6 +1,7 @@
 ---
 title: "QMK Toolbox"
 layout: qmk-editable
+permalink: /es/toolbox/
 lang: "es"
 ---
 ## QMK Toolbox - [Ver en Github](https://github.com/qmk/qmk_toolbox)

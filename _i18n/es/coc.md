@@ -1,6 +1,7 @@
 ---
 title: "QMK Código de conducta"
 layout: qmk
+permalink: /es/coc/
 lang: "es"
 ---
 

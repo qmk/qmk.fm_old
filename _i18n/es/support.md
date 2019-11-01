@@ -1,6 +1,7 @@
 ---
 title: "Soporte de QMK"
 layout: qmk
+permalink: /es/support/
 lang: "es"
 ---
 

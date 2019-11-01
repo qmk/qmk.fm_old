@@ -1,6 +1,7 @@
 ---
 title: "Licencia"
 layout: qmk
+permalink: /es/license/
 lang: "es"
 ---
 

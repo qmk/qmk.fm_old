@@ -1,6 +1,7 @@
 ---
 title: "Convertir KLE a QMK info.json"
 layout: qmk
+permalink: /es/converter/
 lang: "es"
 ---
 
