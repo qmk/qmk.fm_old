@@ -2,6 +2,7 @@
 title: "Konvertiere KLE zu QMK info.json"
 layout: qmk
 permalink: /de/converter/
+lang: "de"
 ---
 
 ## Konvertiere KLE Rohdaten zu QMK info.json

@@ -2,6 +2,7 @@
 title: "QMK Toolbox"
 layout: qmk-editable
 permalink: /de/toolbox/
+lang: "de"
 ---
 # QMK Toolbox
 

@@ -2,6 +2,7 @@
 title: "Über den Proton C"
 layout: qmk
 permalink: /de/proton-c/
+lang: "de"
 ---
 
 <img src="https://i.imgur.com/GdsN1Rd.jpg" alt="Proton C" />

@@ -2,6 +2,7 @@
 title: "Lizenzen"
 layout: qmk
 permalink: /de/license/
+lang: "de"
 ---
 
 # Lizenzen
