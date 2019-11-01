@@ -2,9 +2,10 @@
 title: "QMK में सभी हाल के बदलाव"
 layout: qmk-title
 permalink: /hi/changes/
+lang: "hi"
 ---
 
-{% for change in site.changes %}
+{% for change in site.changes reversed %}
 **<a href="{{ change.url }}">{{ change.title }}</a>**   
 <a href="{{ change.url }}"><img src="https://img.shields.io/badge/date-{{ change.date | date: "%F" | replace:'-','--' }}-lightgrey.svg" /></a>
 <a href="https://github.com/qmk/qmk_firmware/commit/{{ change.commit }}">
