@@ -2,6 +2,7 @@
 title: "क्यूएमके मधील सर्व अलीकडील बदल"
 layout: qmk-title
 permalink: /mr/changes/
+lang: "mr"
 ---
 
 {% for change in site.changes reversed %}
