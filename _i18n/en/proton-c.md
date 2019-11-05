@@ -31,7 +31,7 @@ You can find the Proton C for purchase at:
 * [Keebio](https://keeb.io/products/qmk-proton-c) (US-East)  
 * [NovelKeys](https://novelkeys.xyz/products/qmk-proton-c) (US-East)  
 * [SpaceCat](https://spacecat.design/products/proton-c-by-qmk) (US-East)  
-* 1upkeyboads (US-East) - no link yet :(  
+* [1upkeyboards](https://www.1upkeyboards.com/shop/controllers/qmk-proton-c/) (US-East)  
 * [Oh, Keycaps!](https://ohkeycaps.com/products/proton-c) (US-Midwest)  
 * [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (EU)  
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)  
