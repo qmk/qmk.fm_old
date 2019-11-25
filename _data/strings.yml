@@ -82,3 +82,11 @@ locales:
     made_possible: "这个项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
     hosted_on: "托管在 GitHub Pages &mdash; 主题由 <a href='https://github.com/orderedlist'>orderedlist</a>"
     description: "AVR和基于ARM键盘的开源固件"
+  ja: &DEFAULT_JA
+    <<: *DEFAULT_EN
+    language_name: "日本語"
+    language: "言語"
+    qmk_firmware: "QMK Firmware"
+    made_possible: "このプロジェクトは、<a href='https://github.com/qmk'>QMK 協力者</a>とあなたのような貢献者によって保守されています！"
+    hosted_on: "Github Pages でホストされています &mdash; テーマ <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "AVR と ARM ベースのキーボード用オープンソースファームウェア"
