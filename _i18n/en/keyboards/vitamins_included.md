@@ -20,7 +20,7 @@ Revision 2 also has 6 WS2812B underglow leds on each half, and has spots for fur
 The board ships with QMK-DFU and a default QWERTY keymap flashed.  
 The keymap used, is the [vitamins_included/keymaps/default](https://github.com/qmk/qmk_firmware/tree/master/keyboards/vitamins_included/keymaps/default)
 
-*When the keyboard is through production, it'll be available at novelkeys.xyz*
+The PCBs are available at [Novelkeys](https://novelkeys.xyz/collections/frontpage/products/vitamins-included-rev-2)
 
 ## Important issue
 Rev2.0 is missing the pull-down resistors on the CCx pins. This means that it won't work with USB-C <> USB-C cables, used in USB-C hosts. Using a USB-C <> USB-A adapter, and then a USB-A <> USB-C cable will however work.
