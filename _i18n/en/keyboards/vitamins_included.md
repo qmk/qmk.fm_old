@@ -49,7 +49,7 @@ The PCB files are available [on github](https://github.com/Duckle29/Vitamins-inc
 ![Bottom render](images/bot.png)
 
 ### Top side
-## NOTE: Rev 2.0 has an error in the labeling of the LED_O jumpers on the right half. They are swapped. Just the lables are swapped. Functionally they're identical.
+#### NOTE: Rev 2.0 has an error in the labeling of the `LED_O` jumpers on the right half. The labels are swapped, but are functionally identical to the previous revision.
 
 1. Reset header: Here the reset pin and a gnd pin is exposed. You can hook up a button here if you want to mount a reset button in your case.
 2. RGB mode:
