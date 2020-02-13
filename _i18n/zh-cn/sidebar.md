@@ -1,6 +1,6 @@
-TRANSLATE: The goal of the QMK software project is to develop a completely customizable, powerful, and enjoyable firmware experience for any project - keyboard or otherwise - and to provide helpful, encouraging, and kind support and feedback for people with any software development experience.
+QMK软件项目的目标是为其他工程开发一个完全可定制的强大固件，无论是键盘还是其他的项目都能在QMK收获愉悦的体验。我们还为有软件开发经验的人提供帮助、鼓励和善意的支持与反馈。
 
-[View on <i class="fa fa-github" aria-hidden="true"></i> GitHub](https://github.com/qmk/qmk_firmware)
+[来 <i class="fa fa-github" aria-hidden="true"></i> GitHub加入我们](https://github.com/qmk/qmk_firmware)
 
 [![Download Zip](https://img.shields.io/badge/download-zip-blue.svg)](https://github.com/qmk/qmk_firmware/zipball/master)
 [![Download Tar](https://img.shields.io/badge/download-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarball/master)
@@ -12,14 +12,14 @@ TRANSLATE: The goal of the QMK software project is to develop a completely custo
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
 
-### Pages
+### 页面向导
 
-* [Online Configurator](https://config.qmk.fm)
-* [Recent Changes in QMK](/changes/)
-* [All Supported Keyboards](/keyboards/)
-* [Powering Your Board with QMK](/powered/)
-* [About the Proton C](/proton-c/)
-* [License Information](/license/)
-* [Code of Conduct](/coc/)
-* [How to support QMK](/support/)
-* [QMK Toolbox](/toolbox/)
+* [在线配置工具](https://config.qmk.fm)
+* [QMK近期的修改](/changes/)
+* [支持的键盘](/keyboards/)
+* [QMK商标](/powered/)
+* [关于Proton C](/proton-c/)
+* [协议信息](/license/)
+* [行为准则](/coc/)
+* [支持QMK]](/support/)
+* [QMK工具箱](/toolbox/)
