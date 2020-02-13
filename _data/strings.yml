@@ -77,11 +77,11 @@ locales:
   zh-cn: &DEFAULT_ZH_CN
     <<: *DEFAULT_EN
     language_name: "中文"
-    language: "官话"
+    language: "语言"
     qmk_firmware: "QMK固件"
-    made_possible: "这个项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
-    hosted_on: "托管在 GitHub Pages &mdash; 主题由 <a href='https://github.com/orderedlist'>orderedlist</a>"
-    description: "AVR和基于ARM键盘的开源固件"
+    made_possible: "本项目由 <a href='https://github.com/qmk'>QMK协作者</a> 和像你一样的贡献者维护!"
+    hosted_on: "托管在 GitHub Pages &mdash; 主题提供： <a href='https://github.com/orderedlist'>orderedlist</a>"
+    description: "为基于AVR或ARM的键盘设计的开源固件"
   ja: &DEFAULT_JA
     <<: *DEFAULT_EN
     language_name: "日本語"
