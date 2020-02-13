@@ -17,7 +17,7 @@ The `_data/strings.yml` file also needs to have an entry for the language:
       zh-cn: &DEFAULT_ZH_CN
         <<: *DEFAULT_EN
         language_name: "中文"
-        language: "官话"
+        language: "语言"
         qmk_firmware: "QMK固件"
 
 The `<<: *DEFAULT_EN` allows `zh-cn` to inherit all values from the English entry, and the keys following it override those. It's recommended to translate all entries for full coverage.
