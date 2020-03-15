@@ -28,7 +28,7 @@ textarea {
 $("#submit").on("click", function() {
     $.ajax({
         'type': 'POST',
-        'url': "https://compile.clueboard.co/v1/converters/kle",
+        'url': "https://api.qmk.fm/v1/converters/kle",
         'contentType': 'application/json',
         'data': JSON.stringify({raw: $("#input").val()}),
         'dataType': 'text',
