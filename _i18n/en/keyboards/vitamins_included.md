@@ -39,7 +39,9 @@ Rev2.0 is missing the pull-down resistors on the CCx pins. This means that it wo
 ## Source
 The case was designed in Fusion 360. The right half is just a mirrored left-half
 
-* [Left flat-case source](https://a360.co/2IwRsjE)
+* [Left flat-case source](https://a360.co/2yVzpj2)
+* [Wedge source](https://a360.co/3fIED2e)
+* [Plate source](https://a360.co/2TqNtYX)
 
 The PCB files are available [on github](https://github.com/Duckle29/Vitamins-included/)
 
