@@ -6,7 +6,6 @@
 1upkeyboards/sweet16/v1
 1upkeyboards/sweet16/v2/promicro
 1upkeyboards/sweet16/v2/proton_c
-2_milk
 2key2crawl
 30wer
 40percentclub/25
@@ -83,7 +82,7 @@ arabica37/rev1
 ares
 ash1800
 ashpil/modelm_usbc
-at101_blackheart
+at101_bh
 at_at/660m
 atomic
 atreus
@@ -231,6 +230,9 @@ dichotomy
 diverge3
 divergetm2
 dk60
+dm9records/ergoinu
+dm9records/plaid
+dm9records/tartan
 dmqdesign/spin
 do60
 donutcables/budget96
@@ -280,7 +282,6 @@ ergodone
 ergodox_ez
 ergodox_infinity
 ergodox_stm32
-ergoinu
 ergosaurus
 ergoslab
 ergoslab/rev1
@@ -496,7 +497,8 @@ helix/rev2/sc/oledunder
 helix/rev2/sc/under
 helix/rev2/under
 helix/rev2/under/oled
-hhkb
+hhkb/ansi
+hhkb/jp
 hid_liber
 hifumi
 hineybush/h75_singa
@@ -591,6 +593,7 @@ keebio/viterbi/rev1
 keebio/viterbi/rev2
 keebio/wavelet
 keebwerk/nano_slider
+keyboardio/model01
 keycapsss/o4l_5x12
 keycapsss/plaid_pad
 keyhive/maypad
@@ -704,7 +707,6 @@ minidox/rev1
 mint60
 mitosis
 miuni32
-model01
 montsinger/rebound
 montsinger/rebound/rev1
 montsinger/rebound/rev2
@@ -749,7 +751,7 @@ oddball
 ogre/ergo_single
 ogre/ergo_split
 ok60
-omnikey_blackheart
+omnikey_bh
 omnikeyish
 orange75
 org60
@@ -766,8 +768,6 @@ paladin64
 palette1202
 panc40
 panc60
-pancake/feather
-pancake/promicro
 pdxkbc
 pearl
 peiorisboards/ixora
@@ -786,7 +786,6 @@ pimentoso/paddino02/rev2/right
 pinky
 pinky/3
 pinky/4
-plaid
 planck/ez
 planck/light
 planck/rev1
@@ -878,6 +877,9 @@ snampad
 sofle
 sofle/rev1
 southpole
+spaceman/2_milk
+spaceman/pancake/feather
+spaceman/pancake/promicro
 spacetime
 spacetime/rev1
 spacetime/rev2
@@ -899,7 +901,6 @@ switchplate/southpaw_fullsize
 sx60
 tada68
 tanuki
-tartan
 telophase
 tenki
 tetris
@@ -1023,7 +1024,7 @@ yosino58
 yosino58/rev1
 yurei
 yushakobo/quick7
-z150_blackheart
+z150_bh
 zfrontier/big_switch
 zinc
 zinc/rev1
