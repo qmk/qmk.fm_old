@@ -126,7 +126,6 @@ bigseries/1key
 bigseries/2key
 bigseries/3key
 bigseries/4key
-bigswitch
 bioi/g60ble
 blackplum
 blockey
@@ -158,8 +157,6 @@ business_card/alpha
 business_card/beta
 butterstick
 c39
-candybar/lefty
-candybar/righty
 cannonkeys/an_c
 cannonkeys/atlas
 cannonkeys/chimera65
@@ -352,6 +349,11 @@ fallacy
 fc660c
 fc980c
 felix
+flehrad/bigswitch
+flehrad/downbubble
+flehrad/numbrero
+flehrad/snagpad
+flehrad/tradestation
 fleuron
 fluorite
 flx/lodestone
@@ -435,7 +437,6 @@ handwired/dactyl_promicro
 handwired/daishi
 handwired/datahand
 handwired/ddg_56
-handwired/downbubble
 handwired/eagleii
 handwired/fc200rt_qmk
 handwired/ferris
@@ -473,7 +474,6 @@ handwired/myskeeb
 handwired/nicekey
 handwired/not_so_minidox
 handwired/novem
-handwired/numbrero
 handwired/numpad20
 handwired/obuwunkunubi/spaget
 handwired/onekey
@@ -528,7 +528,6 @@ handwired/symmetry60
 handwired/tennie
 handwired/terminus_mini
 handwired/trackpoint
-handwired/tradestation
 handwired/traveller
 handwired/tritium_numpad
 handwired/twadlee/tp69
@@ -754,7 +753,6 @@ lfkeyboards/mini1800
 lfkeyboards/smk65
 lily58
 lily58/rev1
-m0lly
 m10a
 maartenwut/atom47
 maartenwut/atom47/rev2
@@ -1033,7 +1031,6 @@ sirius/uni660/rev2/iso
 sirius/unigo66
 sixkeyboard
 smk60
-snagpad
 snampad
 sofle
 sofle/rev1
@@ -1084,9 +1081,12 @@ thevankeyboards/bananasplit
 thevankeyboards/caravan
 thevankeyboards/minivan
 thevankeyboards/roadkit
+tkc/candybar/lefty
+tkc/candybar/righty
 tkc/godspeed75
+tkc/m0lly
 tkc/osav2
-tkc1800
+tkc/tkc1800
 tmo50
 toad
 tokyo60
