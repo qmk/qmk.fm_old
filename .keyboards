@@ -343,6 +343,8 @@ exclusive/e6v2/oe_bmc
 exclusive/e7v1
 exclusive/e7v1se
 exclusive/e85
+exclusive/e85/hotswap
+exclusive/e85/soldered
 exent
 facew
 fallacy
