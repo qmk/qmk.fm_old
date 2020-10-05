@@ -58,14 +58,6 @@ locales:
     made_possible: "हा प्रकल्प कायम ठेवला आहे <a href='https://github.com/qmk'>क्यूएमके सहयोगी</a> आणि आपल्यासारखे सहयोगी!"
     hosted_on: "गिटहब पृष्ठांवर होस्ट केलेले & mdash; द्वारा थीम <a href='https://github.com/orderedlist'>ऑर्डरलिस्ट</a>"
     description: "एव्हीआर आणि एआरएम आधारित कीबोर्डसाठी ओपन सोर्स फर्मवेअर"
-  pl: &DEFAULT_PL
-    <<: *DEFAULT_EN
-    language_name: "Polish"
-    language: "Język"
-    qmk_firmware: "QMK Firmware"
-    made_possible: "Ten projekt jest współtworzony przez <a href='https://github.com/qmk'>twórców QMK</a> i współpracowników jak Ty!"
-    hosted_on: "Hostowane na GitHub Pages &mdash; Motyw stworzony przez <a href='https://github.com/orderedlist'>orderedlist</a>"
-    description: "Oprogramowanie open source dla klawiatur opartych na AVR i ARM"
   pt-br: &DEFAULT_PT_BR
     <<: *DEFAULT_EN
     language_name: "Português"
