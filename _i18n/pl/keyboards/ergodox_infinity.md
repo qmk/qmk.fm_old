@@ -13,4 +13,4 @@ redirect_from:
 
 Podzielona klawiatura mechaniczna ortho.
 
-Okresowo dostêpne w postaci zestawu za poœrednictwem [Massdrop](https://www.massdrop.com/buy/infinity-ergodox). 
+Okresowo dostÄ™pne w postaci zestawu za poÅ›rednictwem [Massdrop](https://www.massdrop.com/buy/infinity-ergodox). 

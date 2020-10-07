@@ -10,20 +10,20 @@ permalink: /pl/keyboards/vitamins_included/
 {% include badge.html path="vitamins_included" %}
 
 The Vitamins to wariant Let's Split.
-Zaczê³o siê od zestawu DIY dla wersji Let's Split z gniazdami kailh, a potem urós³ do pierwszej wersji. Wyci¹gniêto lekcje i wprowadzono zmiany, i to doprowadzi³o nas do tej wersji. Klawiatura nosi nazwê „Vitamins Included”, poniewa¿ nie jest wymagane lutowanie. Wszystko jest na PCB.
+ZaczÄ™Å‚o siÄ™ od zestawu DIY dla wersji Let's Split z gniazdami kailh, a potem urÃ³sÅ‚ do pierwszej wersji. WyciÄ…gniÄ™to lekcje i wprowadzono zmiany, i to doprowadziÅ‚o nas do tej wersji. Klawiatura nosi nazwÄ™ â€Vitamins Includedâ€, poniewaÅ¼ nie jest wymagane lutowanie. Wszystko jest na PCB.
 
-Termin witaminy jest czêsto u¿ywany w drukarkach reprap 3D do opisania czêœci, których nie mo¿esz zrobiæ sam / musisz kupiæ, i jako taki by³ inspiracj¹ dla nazwy. Nic bardzo skomplikowanego :)
+Termin witaminy jest czÄ™sto uÅ¼ywany w drukarkach reprap 3D do opisania czÄ™Å›ci, ktÃ³rych nie moÅ¼esz zrobiÄ‡ sam / musisz kupiÄ‡, i jako taki byÅ‚ inspiracjÄ… dla nazwy. Nic bardzo skomplikowanego :)
 
-Podobnie jak w przypadku podzia³u Let's, jest to podzielona 40% p³yta (4x6 na ka¿d¹ po³owê), która wykorzystuje ATMega32U4 i Serial lub I2C do komunikacji miêdzy po³ówkami.
-Wersja 2 ma równie¿ 6 œwiec¹cych diod WS2812B na ka¿dej po³owie i ma miejsca na dalsz¹ ekspansjê WS2812, a tak¿e miejsce na brzêczyk, jeœli ktoœ chce to dodaæ.
+Podobnie jak w przypadku podziaÅ‚u Let's, jest to podzielona 40% pÅ‚yta (4x6 na kaÅ¼dÄ… poÅ‚owÄ™), ktÃ³ra wykorzystuje ATMega32U4 i Serial lub I2C do komunikacji miÄ™dzy poÅ‚Ã³wkami.
+Wersja 2 ma rÃ³wnieÅ¼ 6 Å›wiecÄ…cych diod WS2812B na kaÅ¼dej poÅ‚owie i ma miejsca na dalszÄ… ekspansjÄ™ WS2812, a takÅ¼e miejsce na brzÄ™czyk, jeÅ›li ktoÅ› chce to dodaÄ‡.
 
-P³yta jest dostarczana z QMK-DFU i migaj¹c¹ domyœln¹ map¹ klawiszy QWERTY.  
-U¿ywana mapa klawiszy to [vitamins_included/keymaps/default](https://github.com/qmk/qmk_firmware/tree/master/keyboards/vitamins_included/keymaps/default)
+PÅ‚yta jest dostarczana z QMK-DFU i migajÄ…cÄ… domyÅ›lnÄ… mapÄ… klawiszy QWERTY.  
+UÅ¼ywana mapa klawiszy to [vitamins_included/keymaps/default](https://github.com/qmk/qmk_firmware/tree/master/keyboards/vitamins_included/keymaps/default)
 
-P³ytki drukowane s¹ dostêpne pod adresem [Novelkeys](https://novelkeys.xyz/collections/frontpage/products/vitamins-included-rev-2)
+PÅ‚ytki drukowane sÄ… dostÄ™pne pod adresem [Novelkeys](https://novelkeys.xyz/collections/frontpage/products/vitamins-included-rev-2)
 
-## Wa¿na kwestia
-Rev2.0 nie ma rezystorów pull-down na pinach CCx. Oznacza to, ¿e nie bêdzie dzia³aæ z kablami USB-C <> USB-C u¿ywanymi w hostach USB-C. Jednak u¿ycie adaptera USB-C <> USB-A, a nastêpnie kabla USB-A <> USB-C bêdzie dzia³aæ.
+## WaÅ¼na kwestia
+Rev2.0 nie ma rezystorÃ³w pull-down na pinach CCx. Oznacza to, Å¼e nie bÄ™dzie dziaÅ‚aÄ‡ z kablami USB-C <> USB-C uÅ¼ywanymi w hostach USB-C. Jednak uÅ¼ycie adaptera USB-C <> USB-A, a nastÄ™pnie kabla USB-A <> USB-C bÄ™dzie dziaÅ‚aÄ‡.
 
 ## Pliki do druku 3D
 
@@ -32,36 +32,36 @@ Rev2.0 nie ma rezystorów pull-down na pinach CCx. Oznacza to, ¿e nie bêdzie dzia
 
 ## Pliki .step i .dxf
 
-* [P³yta](3d/flat/plate.dxf)
+* [PÅ‚yta](3d/flat/plate.dxf)
 * [Lewa obudowa](3d/flat/1.5mm_plate/case-left.step)
 * [Prawa obudowa](3d/flat/1.5mm_plate/case-right.step)
 
-## ród³a
-Obudowa zosta³a zaprojektowana w Fusion 360. Prawa po³owa to tylko lustrzane odbicie lewej po³owy.
+## Å¹rÃ³dÅ‚a
+Obudowa zostaÅ‚a zaprojektowana w Fusion 360. Prawa poÅ‚owa to tylko lustrzane odbicie lewej poÅ‚owy.
 
-* [ród³o lewej czêœci obudowy](https://a360.co/2AxxmCx)
-* [ród³o ³ódeczki/klina](https://a360.co/3fIED2e)
-* [ród³o p³yty](https://a360.co/2TqNtYX)
+* [Å¹rÃ³dÅ‚o lewej czÄ™Å›ci obudowy](https://a360.co/2AxxmCx)
+* [Å¹rÃ³dÅ‚o Å‚Ã³deczki/klina](https://a360.co/3fIED2e)
+* [Å¹rÃ³dÅ‚o pÅ‚yty](https://a360.co/2TqNtYX)
 
-Pliki PCB s¹ dostêpne [na github](https://github.com/Duckle29/Vitamins-included/)
+Pliki PCB sÄ… dostÄ™pne [na github](https://github.com/Duckle29/Vitamins-included/)
 
 ## Cechy PCB
 
-![Render góry](images/top.png)
-![Render do³u](images/bot.png)
+![Render gÃ³ry](images/top.png)
+![Render doÅ‚u](images/bot.png)
 
-### Górna strona
-#### UWAGA: Rev 2.0 ma b³¹d w oznaczeniu zworek `LED_O` na prawej po³owie. Etykiety s¹ zamienione, ale funkcjonalnie s¹ identyczne jak w poprzedniej wersji.
+### GÃ³rna strona
+#### UWAGA: Rev 2.0 ma bÅ‚Ä…d w oznaczeniu zworek `LED_O` na prawej poÅ‚owie. Etykiety sÄ… zamienione, ale funkcjonalnie sÄ… identyczne jak w poprzedniej wersji.
 
-1. Reset: Tutaj ods³oniêty jest pin resetowania i pin uziemienia. Mo¿esz tutaj pod³¹czyæ przycisk, jeœli chcesz zamontowaæ przycisk resetowania w swoim etui.
+1. Reset: Tutaj odsÅ‚oniÄ™ty jest pin resetowania i pin uziemienia. MoÅ¼esz tutaj podÅ‚Ä…czyÄ‡ przycisk, jeÅ›li chcesz zamontowaÄ‡ przycisk resetowania w swoim etui.
 2. Tryb RGB:
-   * Master (domyœlnie): W tym trybie wejœcie danych z diod WS2812B jest pod³¹czone do F0 w ATMega32U4
-   * Slave: W tym trybie wejœcie danych z diod WS2812B jest pod³¹czone do styku SDA gniazda TRRS, jeœli chcesz uzyskaæ animacje typu cross-half.
-3. Wyjœcie RGB:
-   * Pady (domyœlnie): W tym trybie wyjœcie danych z diod LED WS2812B jest po³¹czone z padami rozszerzaj¹cymi LED (**_10_**), co pozwala na dodanie wiêkszej liczby diod LED, jeœli chcesz. Pamiêtaj o ograniczeniach mocy (2 A dla diody wejœciowej 1 A przez gniazda TRRS)
-   * Jack: W tym trybie dane z diod LED WS2812B s¹ kierowane do styku SDA gniazda TRRS.
+   * Master (domyÅ›lnie): W tym trybie wejÅ›cie danych z diod WS2812B jest podÅ‚Ä…czone do F0 w ATMega32U4
+   * Slave: W tym trybie wejÅ›cie danych z diod WS2812B jest podÅ‚Ä…czone do styku SDA gniazda TRRS, jeÅ›li chcesz uzyskaÄ‡ animacje typu cross-half.
+3. WyjÅ›cie RGB:
+   * Pady (domyÅ›lnie): W tym trybie wyjÅ›cie danych z diod LED WS2812B jest poÅ‚Ä…czone z padami rozszerzajÄ…cymi LED (**_10_**), co pozwala na dodanie wiÄ™kszej liczby diod LED, jeÅ›li chcesz. PamiÄ™taj o ograniczeniach mocy (2 A dla diody wejÅ›ciowej 1 A przez gniazda TRRS)
+   * Jack: W tym trybie dane z diod LED WS2812B sÄ… kierowane do styku SDA gniazda TRRS.
 
-### Wa¿ne: (**_2_**) and (**_3_**) musz¹ byæ dopasowane razem. Tylko poni¿sze konfiguracje s¹ wa¿ne:
+### WaÅ¼ne: (**_2_**) and (**_3_**) muszÄ… byÄ‡ dopasowane razem. Tylko poniÅ¼sze konfiguracje sÄ… waÅ¼ne:
 
 <table>
   <tr>
@@ -94,14 +94,14 @@ Pliki PCB s¹ dostêpne [na github](https://github.com/Duckle29/Vitamins-included/
   </tr>
 </table>
 
-Strona A mo¿e znajdowaæ siê po obu stronach (lewa / prawa), a strona B to druga.
-Równie¿ konfiguracja œrodkowa dzia³a jako pierwsza, ale nie pozwala na I2C.
-Ka¿da konfiguracja wykorzystuj¹ca Jack do danych RBG nie pozwoli na I2C.
+Strona A moÅ¼e znajdowaÄ‡ siÄ™ po obu stronach (lewa / prawa), a strona B to druga.
+RÃ³wnieÅ¼ konfiguracja Å›rodkowa dziaÅ‚a jako pierwsza, ale nie pozwala na I2C.
+KaÅ¼da konfiguracja wykorzystujÄ…ca Jack do danych RBG nie pozwoli na I2C.
 
 ### Bottom side
 
- 10. Nag³ówek rozszerzenia WS2812B: Ten nag³ówek umo¿liwia dodanie wiêkszej liczby diod LED WS2812B po diodach na p³ycie, zak³adaj¹c, ¿e nag³ówek LED O (**_3_**) jest odpowiednio skonfigurowany
- 11. Przycisk resetowania: resetuje MCU. Zwykle u¿ywany do flashowania.
- 12. QMK-DFU LED: u¿ywana przez bootloader QMK-DFU do przekazywania informacji zwrotnych.
- 13. Opcjonalny brzêczyk: u¿yj pasywnego brzêczyka, aby umo¿liwiæ p³ytce wysterowanie tonu. Jest równie¿ u¿ywany przez QMK-DFU
- 14. Zworki I2C pull-up: Po³¹cz te dwie zworki, jeœli chcesz u¿ywaæ I2C miêdzy po³ówkami. Nale¿y pamiêtaæ, ¿e w tym celu zworka LED O (**_3_**) musi byæ ustawiona na _pads_.
+ 10. NagÅ‚Ã³wek rozszerzenia WS2812B: Ten nagÅ‚Ã³wek umoÅ¼liwia dodanie wiÄ™kszej liczby diod LED WS2812B po diodach na pÅ‚ycie, zakÅ‚adajÄ…c, Å¼e nagÅ‚Ã³wek LED O (**_3_**) jest odpowiednio skonfigurowany
+ 11. Przycisk resetowania: resetuje MCU. Zwykle uÅ¼ywany do flashowania.
+ 12. QMK-DFU LED: uÅ¼ywana przez bootloader QMK-DFU do przekazywania informacji zwrotnych.
+ 13. Opcjonalny brzÄ™czyk: uÅ¼yj pasywnego brzÄ™czyka, aby umoÅ¼liwiÄ‡ pÅ‚ytce wysterowanie tonu. Jest rÃ³wnieÅ¼ uÅ¼ywany przez QMK-DFU
+ 14. Zworki I2C pull-up: PoÅ‚Ä…cz te dwie zworki, jeÅ›li chcesz uÅ¼ywaÄ‡ I2C miÄ™dzy poÅ‚Ã³wkami. NaleÅ¼y pamiÄ™taÄ‡, Å¼e w tym celu zworka LED O (**_3_**) musi byÄ‡ ustawiona na _pads_.

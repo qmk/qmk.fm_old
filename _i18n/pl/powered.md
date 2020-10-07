@@ -6,26 +6,26 @@ permalink: /pl/powered/
 ---
 # Znak towarowy QMK
 
-„QMK Firmware” i logo s¹ znakiem towarowym zarejestrowanym przez Jacka Humberta, aby zachêciæ twórców klawiatur do wniesienia wk³adu w spo³ecznoœæ i aby pomóc spo³ecznoœci w oferowaniu wsparcia dla klawiatur z systemem QMK.
+â€QMK Firmwareâ€ i logo sÄ… znakiem towarowym zarejestrowanym przez Jacka Humberta, aby zachÄ™ciÄ‡ twÃ³rcÃ³w klawiatur do wniesienia wkÅ‚adu w spoÅ‚ecznoÅ›Ä‡ i aby pomÃ³c spoÅ‚ecznoÅ›ci w oferowaniu wsparcia dla klawiatur z systemem QMK.
 
-Ka¿dy jest uprawniony i zachêcany do u¿ywania logo, terminu „QMK (oprogramowanie)”, „zasilany przez QMK (oprogramowanie)” (lub podobnego sformu³owania z „dzia³aj¹cym”, „kompatybilnym z” itp.) Pod warunkiem, ¿e:
+KaÅ¼dy jest uprawniony i zachÄ™cany do uÅ¼ywania logo, terminu â€QMK (oprogramowanie)â€, â€zasilany przez QMK (oprogramowanie)â€ (lub podobnego sformuÅ‚owania z â€dziaÅ‚ajÄ…cymâ€, â€kompatybilnym zâ€ itp.) Pod warunkiem, Å¼e:
 
-1. Nie sugeruj, ¿e QMK lub jego wspó³twórcy popieraj¹/tworz¹ klawiaturê
-2. [Przeœlij konfiguracjê klawiatury do qmk:master mniej wiêcej przed dat¹ wysy³ki klawiatury] (https://github.com/qmk/qmk_firmware/pulls/)
-3. Zamieœci ³¹cze do [witryny QMK] (https://qmk.fm) lub [repozytorium Github] (https://github.com/qmk/qmk_firmware) na stronie produktu
+1. Nie sugeruj, Å¼e QMK lub jego wspÃ³Å‚twÃ³rcy popierajÄ…/tworzÄ… klawiaturÄ™
+2. [PrzeÅ›lij konfiguracjÄ™ klawiatury do qmk:master mniej wiÄ™cej przed datÄ… wysyÅ‚ki klawiatury] (https://github.com/qmk/qmk_firmware/pulls/)
+3. ZamieÅ›ci Å‚Ä…cze do [witryny QMK] (https://qmk.fm) lub [repozytorium Github] (https://github.com/qmk/qmk_firmware) na stronie produktu
 
-Zdjêcia z logo i preferowanym tekstem do wykorzystania na PCB, wydrukach, stronach internetowych, naklejkach, towarach itp. znajduj¹ siê poni¿ej.
+ZdjÄ™cia z logo i preferowanym tekstem do wykorzystania na PCB, wydrukach, stronach internetowych, naklejkach, towarach itp. znajdujÄ… siÄ™ poniÅ¼ej.
 
 ## Kroki opcjonalne
 
-1. Za¿¹daj tagu (`<keyboard>-<version>` np. `Planck-4.2`) zatwierdzenia dostarczonego z klawiatur¹ w [qmk/qmk_firmware] (https://github.com/qmk/qmk_firmware). Skompilowany .hex / .bin jest zwykle dodawany do strony wydania w tym celu.
-2. Pamiêtaj o [zgodnoœci z GPL] (https://fsfe.org/activities/ftf/useful-tips-for-vendors.en.html) - pomaga w tym posiadanie tagu w repozytorium.
+1. ZaÅ¼Ä…daj tagu (`<keyboard>-<version>` np. `Planck-4.2`) zatwierdzenia dostarczonego z klawiaturÄ… w [qmk/qmk_firmware] (https://github.com/qmk/qmk_firmware). Skompilowany .hex / .bin jest zwykle dodawany do strony wydania w tym celu.
+2. PamiÄ™taj o [zgodnoÅ›ci z GPL] (https://fsfe.org/activities/ftf/useful-tips-for-vendors.en.html) - pomaga w tym posiadanie tagu w repozytorium.
 
-Jeœli Twój projekt u¿ywa QMK jako domyœlnego i oficjalnego oprogramowania uk³adowego, chcielibyœmy dodaæ go do listy na stronie g³ównej, wiêc [daj nam znaæ, tworz¹c ¿¹danie œci¹gniêcia na qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/), jeœli go tam nie ma!
+JeÅ›li TwÃ³j projekt uÅ¼ywa QMK jako domyÅ›lnego i oficjalnego oprogramowania ukÅ‚adowego, chcielibyÅ›my dodaÄ‡ go do listy na stronie gÅ‚Ã³wnej, wiÄ™c [daj nam znaÄ‡, tworzÄ…c Å¼Ä…danie Å›ciÄ…gniÄ™cia na qmk/qmk.fm](https://github.com/qmk/qmk.fm/pulls/), jeÅ›li go tam nie ma!
 
 ## Loga
 
-Oto odznaki o domyœlnym rozmiarze w formacie svg (pngs: [ciemny] (/ asset / images / badge-dark.png), [jasny] (/ asset / images / badge-light.png)):
+Oto odznaki o domyÅ›lnym rozmiarze w formacie svg (pngs: [ciemny] (/ asset / images / badge-dark.png), [jasny] (/ asset / images / badge-light.png)):
 
 <style>
 td {
@@ -49,7 +49,7 @@ Mniejsza wersja (pngs: [dark](/assets/images/badge-small-dark.png), [light](/ass
     </tr>
 </table>
 
-Oraz plakietki do klawiatur zgodnych lub obs³ugiwanych przez spo³ecznoœæ (png: [dark](/assets/images/badge-community-dark.png), [light](/assets/images/badge-community-light.png)):
+Oraz plakietki do klawiatur zgodnych lub obsÅ‚ugiwanych przez spoÅ‚ecznoÅ›Ä‡ (png: [dark](/assets/images/badge-community-dark.png), [light](/assets/images/badge-community-light.png)):
 
 <table>
     <tr>
@@ -58,7 +58,7 @@ Oraz plakietki do klawiatur zgodnych lub obs³ugiwanych przez spo³ecznoœæ (png: [
     </tr>
 </table>
 
-**Proszê nie u¿ywaæ zmodyfikowanych wersji tych obrazów** - jeœli chcesz u¿yæ czegoœ innego, [daj nam znaæ] (https://github.com/qmk/qmk.fm/issues), a my do³o¿ymy wszelkich starañ, aby spe³niæ Twoje ¿yczenia!
+**ProszÄ™ nie uÅ¼ywaÄ‡ zmodyfikowanych wersji tych obrazÃ³w** - jeÅ›li chcesz uÅ¼yÄ‡ czegoÅ› innego, [daj nam znaÄ‡] (https://github.com/qmk/qmk.fm/issues), a my doÅ‚oÅ¼ymy wszelkich staraÅ„, aby speÅ‚niÄ‡ Twoje Å¼yczenia!
 
 
-<small>Historiê modyfikacji tej strony mo¿na wyœwietliæ [tutaj] (https://github.com/qmk/qmk.fm/commits/gh-pages/_pages/powered.md).</small>
+<small>HistoriÄ™ modyfikacji tej strony moÅ¼na wyÅ›wietliÄ‡ [tutaj] (https://github.com/qmk/qmk.fm/commits/gh-pages/_pages/powered.md).</small>

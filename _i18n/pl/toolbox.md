@@ -8,13 +8,13 @@ permalink: /pl/toolbox/
 
 [Zobacz na GitHub](https://github.com/qmk/qmk_toolbox)
 
-To jest zbiór narzêdzi do flashowania spakowanych w jednej aplikacji. Obs³uguje automatyczne wykrywanie i automatyczne flashowanie oprogramowania do klawiatur.
+To jest zbiÃ³r narzÄ™dzi do flashowania spakowanych w jednej aplikacji. ObsÅ‚uguje automatyczne wykrywanie i automatyczne flashowanie oprogramowania do klawiatur.
 
 ![](https://i.imgur.com/7bFh7vJ.png)
 
 ## Programowanie
 
-QMK Toolbox obs³uguje nastêpuj¹ce programy ³aduj¹ce:
+QMK Toolbox obsÅ‚uguje nastÄ™pujÄ…ce programy Å‚adujÄ…ce:
 
  - Atmel/LUFA/QMK DFU via [dfu-programmer](http://dfu-programmer.github.io/)
  - Caterina (Arduino, Pro Micro) via [avrdude](http://nongnu.org/avrdude/)
@@ -23,35 +23,35 @@ QMK Toolbox obs³uguje nastêpuj¹ce programy ³aduj¹ce:
  - Atmel SAM-BA (Massdrop) via [Massdrop Loader](https://github.com/massdrop/mdloader)
  - BootloadHID (Atmel, PS2AVRGB) via [bootloadHID](https://www.obdev.at/products/vusb/bootloadhid.html)
 
-Oraz nastêpuj¹ce programatory ISP:
+Oraz nastÄ™pujÄ…ce programatory ISP:
 
  - USBTiny (kieszonkowy AVR)
  - AVRISP (Arduino ISP)
  - USBasp (AVR ISP)
 
-Jeœli jest zainteresowanie innymi, mo¿na je dodaæ, jeœli znane s¹ ich polecenia.
+JeÅ›li jest zainteresowanie innymi, moÅ¼na je dodaÄ‡, jeÅ›li znane sÄ… ich polecenia.
 
 ## Konsola HID
 
-Zestaw narzêdzi nas³uchuje równie¿ komunikatów HID na stronie u¿ycia `0xFF31` i u¿ycia` 0x0074`, zgodnych z [`hid_listen`] PJRC (https://www.pjrc.com/teensy/hid_listen.html).
+Zestaw narzÄ™dzi nasÅ‚uchuje rÃ³wnieÅ¼ komunikatÃ³w HID na stronie uÅ¼ycia `0xFF31` i uÅ¼ycia` 0x0074`, zgodnych z [`hid_listen`] PJRC (https://www.pjrc.com/teensy/hid_listen.html).
 
-Jeœli masz ustawione `CONSOLE_ENABLE = yes` w` rules.mk` swojej klawiatury, mo¿esz wypisywaæ komunikaty za pomoc¹ `xprintf ()`, przydatne do debugowania:
+JeÅ›li masz ustawione `CONSOLE_ENABLE = yes` w` rules.mk` swojej klawiatury, moÅ¼esz wypisywaÄ‡ komunikaty za pomocÄ… `xprintf ()`, przydatne do debugowania:
 
 ![](https://i.imgur.com/03xuJhU.png)
 
-Wiêcej informacji mo¿na znaleŸæ w [Dokumentach QMK](https://docs.qmk.fm/#/newbs_testing_debugging?id=debugging).
+WiÄ™cej informacji moÅ¼na znaleÅºÄ‡ w [Dokumentach QMK](https://docs.qmk.fm/#/newbs_testing_debugging?id=debugging).
 
 ## Instalacja
 
-### Zale¿noœci
+### ZaleÅ¼noÅ›ci
 
-Podczas korzystania z narzêdzia QMK Toolbox w systemie Windows przy pierwszym uruchomieniu zostanie wyœwietlony monit o zainstalowanie niezbêdnych sterowników. Mo¿esz pobraæ najnowsz¹ wersjê instalatora sterownika QMK [tutaj](https://github.com/qmk/qmk_driver_installer/releases).
+Podczas korzystania z narzÄ™dzia QMK Toolbox w systemie Windows przy pierwszym uruchomieniu zostanie wyÅ›wietlony monit o zainstalowanie niezbÄ™dnych sterownikÃ³w. MoÅ¼esz pobraÄ‡ najnowszÄ… wersjÄ™ instalatora sterownika QMK [tutaj](https://github.com/qmk/qmk_driver_installer/releases).
 
 ### Pobieranie
 
-Dostêpna jest wersja dla systemu Windows i macOS, któr¹ mo¿na pobraæ [najnowsz¹ wersjê tutaj](https://github.com/qmk/qmk_toolbox/releases).
+DostÄ™pna jest wersja dla systemu Windows i macOS, ktÃ³rÄ… moÅ¼na pobraÄ‡ [najnowszÄ… wersjÄ™ tutaj](https://github.com/qmk/qmk_toolbox/releases).
 
-Dla u¿ytkowników Homebrew jest równie¿ dostêpny z Cask:
+Dla uÅ¼ytkownikÃ³w Homebrew jest rÃ³wnieÅ¼ dostÄ™pny z Cask:
 
 ```
 $ brew tap homebrew/cask-drivers

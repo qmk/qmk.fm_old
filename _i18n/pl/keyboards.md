@@ -5,13 +5,13 @@ layout: qmk-editable
 permalink: /pl/keyboards/
 # this page is automatically generated
 ---
-## Wszystkie obs³ugiwane klawiatury
+## Wszystkie obsÅ‚ugiwane klawiatury
 
-Ta strona jest generowana automatycznie z klawiatur znajduj¹cych siê obecnie w QMK. Domyœlne pliki .hex s¹ aktualne z najnowsz¹ wersj¹ QMK i s¹ wypychane przy ka¿dej kompilacji za poœrednictwem Travisa.
+Ta strona jest generowana automatycznie z klawiatur znajdujÄ…cych siÄ™ obecnie w QMK. DomyÅ›lne pliki .hex sÄ… aktualne z najnowszÄ… wersjÄ… QMK i sÄ… wypychane przy kaÅ¼dej kompilacji za poÅ›rednictwem Travisa.
 
-Chcesz stronê qmk.fm? [Utwórz dla niego plik `<keyboard> .md`] (https://github.com/qmk/qmk.fm/tree/gh-pages/_pages/keyboards)! (u¿yj innych jako przyk³adów / szablonów)
+Chcesz stronÄ™ qmk.fm? [UtwÃ³rz dla niego plik `<keyboard> .md`] (https://github.com/qmk/qmk.fm/tree/gh-pages/_pages/keyboards)! (uÅ¼yj innych jako przykÅ‚adÃ³w / szablonÃ³w)
 
-Obecnie dostêpne s¹ tylko pliki .hex - niektóre z wymienionych tutaj mog¹ nie byæ tym, co jest potrzebne do flashowania klawiatury. W takim przypadku [proszê otworzyæ problem] (https://github.com/qmk/qmk.fm/issues)!
+Obecnie dostÄ™pne sÄ… tylko pliki .hex - niektÃ³re z wymienionych tutaj mogÄ… nie byÄ‡ tym, co jest potrzebne do flashowania klawiatury. W takim przypadku [proszÄ™ otworzyÄ‡ problem] (https://github.com/qmk/qmk.fm/issues)!
 
 <style>
 .fa.psi-icon {

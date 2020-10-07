@@ -1,32 +1,32 @@
 ---
-title: "QMK Kodeks postêpowania"
+title: "QMK Kodeks postÄ™powania"
 lang: "pl"
 layout: qmk
 permalink: /pl/coc/
 ---
 
-# Kodeks postêpowania
+# Kodeks postÄ™powania
 
-Celem QMK jest bycie spo³ecznoœci¹ otwart¹ i tolerancyjn¹. Zachêcamy do brania udzia³u ka¿dego, niezale¿nie od wieku, nipe³nosprawnoœci, pochodzenia, p³ci fizycznej i to¿samoœciowej, poziomu doœwiadczenia, narodowoœci, wygl¹du osobistego, przekonañ politycznych, rasy, religii czy torzsamoœci i orientacji seksualnej.
+Celem QMK jest bycie spoÅ‚ecznoÅ›ciÄ… otwartÄ… i tolerancyjnÄ…. ZachÄ™camy do brania udziaÅ‚u kaÅ¼dego, niezaleÅ¼nie od wieku, nipeÅ‚nosprawnoÅ›ci, pochodzenia, pÅ‚ci fizycznej i toÅ¼samoÅ›ciowej, poziomu doÅ›wiadczenia, narodowoÅ›ci, wyglÄ…du osobistego, przekonaÅ„ politycznych, rasy, religii czy torzsamoÅ›ci i orientacji seksualnej.
 
-> â€œDelikatne s³owo uœmierza gniew, ale ostre s³owo wywo³uje gniew."
+> Ã¢â‚¬Å›Delikatne sÅ‚owo uÅ›mierza gniew, ale ostre sÅ‚owo wywoÅ‚uje gniew."
 
-Od naszych u¿ytkowników, wspó³autorów i wspó³pracowników oczekujemy traktowania siê z szacunkiem i ¿yczliwoœci¹, zak³adaj¹c dobre intencje i poprawiaj¹c ³agodnie, gdy jest to mo¿liwe, zamiast reagowaæ uniesieniem. Chocia¿ naszym celem jest byæ jak najbardziej dok³adnym, ¿yczliwoœæ i zrozumienie s¹ cenniejsze ni¿ poprawnoœæ. Niektóre przyk³ady zachowañ, których nie bêdziemy tolerowaæ, obejmuj¹ miêdzy innymi:
+Od naszych uÅ¼ytkownikÃ³w, wspÃ³Å‚autorÃ³w i wspÃ³Å‚pracownikÃ³w oczekujemy traktowania siÄ™ z szacunkiem i Å¼yczliwoÅ›ciÄ…, zakÅ‚adajÄ…c dobre intencje i poprawiajÄ…c Å‚agodnie, gdy jest to moÅ¼liwe, zamiast reagowaÄ‡ uniesieniem. ChociaÅ¼ naszym celem jest byÄ‡ jak najbardziej dokÅ‚adnym, Å¼yczliwoÅ›Ä‡ i zrozumienie sÄ… cenniejsze niÅ¼ poprawnoÅ›Ä‡. NiektÃ³re przykÅ‚ady zachowaÅ„, ktÃ³rych nie bÄ™dziemy tolerowaÄ‡, obejmujÄ… miÄ™dzy innymi:
 
 
-* U¿ycie zseksualizowanego jêzyka lub obrazów
-* Niepo¿¹dane zaloty, seksualne lub inne
-* Celowe zastraszanie, przeœladowanie lub œledzenie
-* Zniewagi lub uw³aczaj¹ce komentarze lub ataki osobiste lub polityczne
-* Publikowanie prywatnych informacji innych osób bez wyraŸnej zgody
-* Trwa³e zak³ócanie rozmów lub innych wydarzeñ
-* Inne zachowanie, które mo¿na rozs¹dnie uznaæ za nieodpowiednie w œrodowisku zawodowym
-* Popieranie lub zachêcanie do któregokolwiek z powy¿szych zachowañ
+* UÅ¼ycie zseksualizowanego jÄ™zyka lub obrazÃ³w
+* NiepoÅ¼Ä…dane zaloty, seksualne lub inne
+* Celowe zastraszanie, przeÅ›ladowanie lub Å›ledzenie
+* Zniewagi lub uwÅ‚aczajÄ…ce komentarze lub ataki osobiste lub polityczne
+* Publikowanie prywatnych informacji innych osÃ³b bez wyraÅºnej zgody
+* TrwaÅ‚e zakÅ‚Ã³canie rozmÃ³w lub innych wydarzeÅ„
+* Inne zachowanie, ktÃ³re moÅ¼na rozsÄ…dnie uznaÄ‡ za nieodpowiednie w Å›rodowisku zawodowym
+* Popieranie lub zachÄ™canie do ktÃ³regokolwiek z powyÅ¼szych zachowaÅ„
 
-# Zg³aszanie zaniedbañ
+# ZgÅ‚aszanie zaniedbaÅ„
 
-Jeœli ktoœ narusza niniejszy Kodeks postêpowania, wyœlij wiadomoœæ e-mail na adres hello@qmk.fm lub skontaktuj siê z jednym ze wspó³pracowników, aby zwróciæ na to nasz¹ uwagê. Wszystkie skargi zostan¹ rozpatrzone i zbadane.
+JeÅ›li ktoÅ› narusza niniejszy Kodeks postÄ™powania, wyÅ›lij wiadomoÅ›Ä‡ e-mail na adres hello@qmk.fm lub skontaktuj siÄ™ z jednym ze wspÃ³Å‚pracownikÃ³w, aby zwrÃ³ciÄ‡ na to naszÄ… uwagÄ™. Wszystkie skargi zostanÄ… rozpatrzone i zbadane.
 
-QMK bêdzie stara³o siê u¿yæ najmniej karnych dostêpnych œrodków, aby rozwi¹zaæ problem. Jeœli okolicznoœci wymagaj¹ wezwania sprawcy do opuszczenia sprawy, zrobimy to.
+QMK bÄ™dzie staraÅ‚o siÄ™ uÅ¼yÄ‡ najmniej karnych dostÄ™pnych Å›rodkÃ³w, aby rozwiÄ…zaÄ‡ problem. JeÅ›li okolicznoÅ›ci wymagajÄ… wezwania sprawcy do opuszczenia sprawy, zrobimy to.
 
-Raporty bêd¹ zbierane i utrzymywane w œcis³ej tajemnicy. Nie bêdziesz musia³ bezpoœrednio konfrontowaæ siê ze sprawc¹.
+Raporty bÄ™dÄ… zbierane i utrzymywane w Å›cisÅ‚ej tajemnicy. Nie bÄ™dziesz musiaÅ‚ bezpoÅ›rednio konfrontowaÄ‡ siÄ™ ze sprawcÄ….

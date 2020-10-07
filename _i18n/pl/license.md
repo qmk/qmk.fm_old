@@ -7,14 +7,14 @@ permalink: /pl/license/
 
 # Licencja
 
-Wi�kszo�� samego QMK jest obj�ta licencj� GPL v2, ale zawiera oprogramowanie obj�te r�nymi innymi licencjami, z kt�rych wszystkie s� kr�tko opisane we wn�trzu tego pakietu. Pe�ny tekst ka�dej licencji jest dost�pny w repozytorium kodu i poni�ej.
+Większość samego QMK jest objęta licencją GPL v2, ale zawiera oprogramowanie objęte różnymi innymi licencjami, z których wszystkie są krótko opisane we wnętrzu tego pakietu. Pełny tekst każdej licencji jest dostępny w repozytorium kodu i poniżej.
 
 The MIT License (MIT)
 =====================
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
-files (the “Software”), to deal in the Software without
+files (the â€śSoftwareâ€ť), to deal in the Software without
 restriction, including without limitation the rights to use,
 copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the
@@ -24,7 +24,7 @@ conditions:
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+THE SOFTWARE IS PROVIDED â€śAS ISâ€ť, WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
@@ -48,7 +48,7 @@ modification, are permitted provided that the following conditions are met:
    names of its contributors may be used to endorse or promote products
    derived from this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS â€śAS ISâ€ť AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
 DISCLAIMED. IN NO EVENT SHALL `<COPYRIGHT HOLDER>` BE LIABLE FOR ANY
@@ -69,55 +69,55 @@ _&lt;<http://www.apache.org/licenses/>&gt;_
 
 #### 1. Definitions
 
-“License” shall mean the terms and conditions for use, reproduction, and
+â€śLicenseâ€ť shall mean the terms and conditions for use, reproduction, and
 distribution as defined by Sections 1 through 9 of this document.
 
-“Licensor” shall mean the copyright owner or entity authorized by the copyright
+â€śLicensorâ€ť shall mean the copyright owner or entity authorized by the copyright
 owner that is granting the License.
 
-“Legal Entity” shall mean the union of the acting entity and all other entities
+â€śLegal Entityâ€ť shall mean the union of the acting entity and all other entities
 that control, are controlled by, or are under common control with that entity.
-For the purposes of this definition, “control” means **(i)** the power, direct or
+For the purposes of this definition, â€ścontrolâ€ť means **(i)** the power, direct or
 indirect, to cause the direction or management of such entity, whether by
 contract or otherwise, or **(ii)** ownership of fifty percent (50%) or more of the
 outstanding shares, or **(iii)** beneficial ownership of such entity.
 
-“You” (or “Your”) shall mean an individual or Legal Entity exercising
+â€śYouâ€ť (or â€śYourâ€ť) shall mean an individual or Legal Entity exercising
 permissions granted by this License.
 
-“Source” form shall mean the preferred form for making modifications, including
+â€śSourceâ€ť form shall mean the preferred form for making modifications, including
 but not limited to software source code, documentation source, and configuration
 files.
 
-“Object” form shall mean any form resulting from mechanical transformation or
+â€śObjectâ€ť form shall mean any form resulting from mechanical transformation or
 translation of a Source form, including but not limited to compiled object code,
 generated documentation, and conversions to other media types.
 
-“Work” shall mean the work of authorship, whether in Source or Object form, made
+â€śWorkâ€ť shall mean the work of authorship, whether in Source or Object form, made
 available under the License, as indicated by a copyright notice that is included
 in or attached to the work (an example is provided in the Appendix below).
 
-“Derivative Works” shall mean any work, whether in Source or Object form, that
+â€śDerivative Worksâ€ť shall mean any work, whether in Source or Object form, that
 is based on (or derived from) the Work and for which the editorial revisions,
 annotations, elaborations, or other modifications represent, as a whole, an
 original work of authorship. For the purposes of this License, Derivative Works
 shall not include works that remain separable from, or merely link (or bind by
 name) to the interfaces of, the Work and Derivative Works thereof.
 
-“Contribution” shall mean any work of authorship, including the original version
+â€śContributionâ€ť shall mean any work of authorship, including the original version
 of the Work and any modifications or additions to that Work or Derivative Works
 thereof, that is intentionally submitted to Licensor for inclusion in the Work
 by the copyright owner or by an individual or Legal Entity authorized to submit
 on behalf of the copyright owner. For the purposes of this definition,
-“submitted” means any form of electronic, verbal, or written communication sent
+â€śsubmittedâ€ť means any form of electronic, verbal, or written communication sent
 to the Licensor or its representatives, including but not limited to
 communication on electronic mailing lists, source code control systems, and
 issue tracking systems that are managed by, or on behalf of, the Licensor for
 the purpose of discussing and improving the Work, but excluding communication
 that is conspicuously marked or otherwise designated in writing by the copyright
-owner as “Not a Contribution.”
+owner as â€śNot a Contribution.â€ť
 
-“Contributor” shall mean Licensor and any individual or Legal Entity on behalf
+â€śContributorâ€ť shall mean Licensor and any individual or Legal Entity on behalf
 of whom a Contribution has been received by Licensor and subsequently
 incorporated within the Work.
 
@@ -158,7 +158,7 @@ changed the files; and
 all copyright, patent, trademark, and attribution notices from the Source form
 of the Work, excluding those notices that do not pertain to any part of the
 Derivative Works; and
-* **(d)** If the Work includes a “NOTICE” text file as part of its distribution, then any
+* **(d)** If the Work includes a â€śNOTICEâ€ť text file as part of its distribution, then any
 Derivative Works that You distribute must include a readable copy of the
 attribution notices contained within such NOTICE file, excluding those notices
 that do not pertain to any part of the Derivative Works, in at least one of the
@@ -197,7 +197,7 @@ reproducing the content of the NOTICE file.
 #### 7. Disclaimer of Warranty
 
 Unless required by applicable law or agreed to in writing, Licensor provides the
-Work (and each Contributor provides its Contributions) on an “AS IS” BASIS,
+Work (and each Contributor provides its Contributions) on an â€śAS ISâ€ť BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
 including, without limitation, any warranties or conditions of TITLE,
 NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are
@@ -237,7 +237,7 @@ notice, with the fields enclosed by brackets `[]` replaced with your own
 identifying information. (Don't include the brackets!) The text should be
 enclosed in the appropriate comment syntax for the file format. We also
 recommend that a file or class name and description of purpose be included on
-the same “printed page” as the copyright notice for easier identification within
+the same â€śprinted pageâ€ť as the copyright notice for easier identification within
 third-party archives.
 
     Copyright [yyyy] [name of copyright owner]
@@ -258,7 +258,7 @@ GNU General Public License
 ==========================
 
 _Version 2, June 1991_  
-_Copyright © 1989, 1991 Free Software Foundation, Inc.,_  
+_Copyright Â© 1989, 1991 Free Software Foundation, Inc.,_  
 _51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA_
 
 Everyone is permitted to copy and distribute verbatim copies
@@ -318,13 +318,13 @@ modification follow.
 
 **0.** This License applies to any program or other work which contains
 a notice placed by the copyright holder saying it may be distributed
-under the terms of this General Public License.  The “Program”, below,
-refers to any such program or work, and a “work based on the Program”
+under the terms of this General Public License.  The â€śProgramâ€ť, below,
+refers to any such program or work, and a â€śwork based on the Programâ€ť
 means either the Program or any derivative work under copyright law:
 that is to say, a work containing the Program or a portion of it,
 either verbatim or with modifications and/or translated into another
 language.  (Hereinafter, translation is included without limitation in
-the term “modification”.)  Each licensee is addressed as “you”.
+the term â€śmodificationâ€ť.)  Each licensee is addressed as â€śyouâ€ť.
 
 Activities other than copying, distribution and modification are not
 covered by this License; they are outside its scope.  The act of
@@ -493,8 +493,8 @@ be similar in spirit to the present version, but may differ in detail to
 address new problems or concerns.
 
 Each version is given a distinguishing version number.  If the Program
-specifies a version number of this License which applies to it and “any
-later version”, you have the option of following the terms and conditions
+specifies a version number of this License which applies to it and â€śany
+later versionâ€ť, you have the option of following the terms and conditions
 either of that version or of any later version published by the Free
 Software Foundation.  If the Program does not specify a version number of
 this License, you may choose any version ever published by the Free Software
@@ -513,7 +513,7 @@ of promoting the sharing and reuse of software generally.
 **11.** BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
 FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
 OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+PROVIDE THE PROGRAM â€śAS ISâ€ť WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
 OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
 TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
@@ -541,7 +541,7 @@ free software which everyone can redistribute and change under these terms.
 To do so, attach the following notices to the program.  It is safest
 to attach them to the start of each source file to most effectively
 convey the exclusion of warranty; and each file should have at least
-the “copyright” line and a pointer to where the full notice is found.
+the â€ścopyrightâ€ť line and a pointer to where the full notice is found.
 
     <one line to give the program's name and a brief idea of what it does.>
     Copyright (C) <year>  <name of author>
@@ -576,7 +576,7 @@ be called something other than `show w` and `show c`; they could even be
 mouse-clicks or menu items--whatever suits your program.
 
 You should also get your employer (if you work as a programmer) or your
-school, if any, to sign a “copyright disclaimer” for the program, if
+school, if any, to sign a â€ścopyright disclaimerâ€ť for the program, if
 necessary.  Here is a sample; alter the names:
 
     Yoyodyne, Inc., hereby disclaims all copyright interest in the program
@@ -595,7 +595,7 @@ GNU General Public License
 ==========================
 
 _Version 3, 29 June 2007_  
-_Copyright © 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_
+_Copyright Â© 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_
 
 Everyone is permitted to copy and distribute verbatim copies of this license
 document, but changing it is not allowed.
@@ -660,34 +660,34 @@ The precise terms and conditions for copying, distribution and modification foll
 
 ### 0. Definitions
 
-“This License” refers to version 3 of the GNU General Public License.
+â€śThis Licenseâ€ť refers to version 3 of the GNU General Public License.
 
-“Copyright” also means copyright-like laws that apply to other kinds of
+â€śCopyrightâ€ť also means copyright-like laws that apply to other kinds of
 works, such as semiconductor masks.
 
-“The Program” refers to any copyrightable work licensed under this
-License. Each licensee is addressed as “you”. “Licensees” and
-“recipients” may be individuals or organizations.
+â€śThe Programâ€ť refers to any copyrightable work licensed under this
+License. Each licensee is addressed as â€śyouâ€ť. â€śLicenseesâ€ť and
+â€śrecipientsâ€ť may be individuals or organizations.
 
-To “modify” a work means to copy from or adapt all or part of the work in
+To â€śmodifyâ€ť a work means to copy from or adapt all or part of the work in
 a fashion requiring copyright permission, other than the making of an exact copy. The
-resulting work is called a “modified version” of the earlier work or a
-work “based on” the earlier work.
+resulting work is called a â€śmodified versionâ€ť of the earlier work or a
+work â€śbased onâ€ť the earlier work.
 
-A “covered work” means either the unmodified Program or a work based on
+A â€ścovered workâ€ť means either the unmodified Program or a work based on
 the Program.
 
-To “propagate” a work means to do anything with it that, without
+To â€śpropagateâ€ť a work means to do anything with it that, without
 permission, would make you directly or secondarily liable for infringement under
 applicable copyright law, except executing it on a computer or modifying a private
 copy. Propagation includes copying, distribution (with or without modification),
 making available to the public, and in some countries other activities as well.
 
-To “convey” a work means any kind of propagation that enables other
+To â€śconveyâ€ť a work means any kind of propagation that enables other
 parties to make or receive copies. Mere interaction with a user through a computer
 network, with no transfer of a copy, is not conveying.
 
-An interactive user interface displays “Appropriate Legal Notices” to the
+An interactive user interface displays â€śAppropriate Legal Noticesâ€ť to the
 extent that it includes a convenient and prominently visible feature that **(1)**
 displays an appropriate copyright notice, and **(2)** tells the user that there is no
 warranty for the work (except to the extent that warranties are provided), that
@@ -697,26 +697,26 @@ menu, a prominent item in the list meets this criterion.
 
 ### 1. Source Code
 
-The “source code” for a work means the preferred form of the work for
-making modifications to it. “Object code” means any non-source form of a
+The â€śsource codeâ€ť for a work means the preferred form of the work for
+making modifications to it. â€śObject codeâ€ť means any non-source form of a
 work.
 
-A “Standard Interface” means an interface that either is an official
+A â€śStandard Interfaceâ€ť means an interface that either is an official
 standard defined by a recognized standards body, or, in the case of interfaces
 specified for a particular programming language, one that is widely used among
 developers working in that language.
 
-The “System Libraries” of an executable work include anything, other than
+The â€śSystem Librariesâ€ť of an executable work include anything, other than
 the work as a whole, that **(a)** is included in the normal form of packaging a Major
 Component, but which is not part of that Major Component, and **(b)** serves only to
 enable use of the work with that Major Component, or to implement a Standard
 Interface for which an implementation is available to the public in source code form.
-A “Major Component”, in this context, means a major essential component
+A â€śMajor Componentâ€ť, in this context, means a major essential component
 (kernel, window system, and so on) of the specific operating system (if any) on which
 the executable work runs, or a compiler used to produce the work, or an object code
 interpreter used to run it.
 
-The “Corresponding Source” for a work in object code form means all the
+The â€śCorresponding Sourceâ€ť for a work in object code form means all the
 source code needed to generate, install, and (for an executable work) run the object
 code and to modify the work, including scripts to control those activities. However,
 it does not include the work's System Libraries, or general-purpose tools or
@@ -790,7 +790,7 @@ you also meet all of these conditions:
 relevant date.
 * **b)** The work must carry prominent notices stating that it is released under this
 License and any conditions added under section 7. This requirement modifies the
-requirement in section 4 to “keep intact all notices”.
+requirement in section 4 to â€śkeep intact all noticesâ€ť.
 * **c)** You must license the entire work, as a whole, under this License to anyone who
 comes into possession of a copy. This License will therefore apply, along with any
 applicable section 7 additional terms, to the whole of the work, and all its parts,
@@ -804,7 +804,7 @@ Appropriate Legal Notices, your work need not make them do so.
 A compilation of a covered work with other separate and independent works, which are
 not by their nature extensions of the covered work, and which are not combined with
 it such as to form a larger program, in or on a volume of a storage or distribution
-medium, is called an “aggregate” if the compilation and its resulting
+medium, is called an â€śaggregateâ€ť if the compilation and its resulting
 copyright are not used to limit the access or legal rights of the compilation's users
 beyond what the individual works permit. Inclusion of a covered work in an aggregate
 does not cause this License to apply to the other parts of the aggregate.
@@ -849,19 +849,19 @@ A separable portion of the object code, whose source code is excluded from the
 Corresponding Source as a System Library, need not be included in conveying the
 object code work.
 
-A “User Product” is either **(1)** a “consumer product”, which
+A â€śUser Productâ€ť is either **(1)** a â€śconsumer productâ€ť, which
 means any tangible personal property which is normally used for personal, family, or
 household purposes, or **(2)** anything designed or sold for incorporation into a
 dwelling. In determining whether a product is a consumer product, doubtful cases
 shall be resolved in favor of coverage. For a particular product received by a
-particular user, “normally used” refers to a typical or common use of
+particular user, â€śnormally usedâ€ť refers to a typical or common use of
 that class of product, regardless of the status of the particular user or of the way
 in which the particular user actually uses, or expects or is expected to use, the
 product. A product is a consumer product regardless of whether the product has
 substantial commercial, industrial or non-consumer uses, unless such uses represent
 the only significant mode of use of the product.
 
-“Installation Information” for a User Product means any methods,
+â€śInstallation Informationâ€ť for a User Product means any methods,
 procedures, authorization keys, or other information required to install and execute
 modified versions of a covered work in that User Product from a modified version of
 its Corresponding Source. The information must suffice to ensure that the continued
@@ -891,7 +891,7 @@ special password or key for unpacking, reading or copying.
 
 ### 7. Additional Terms
 
-“Additional permissions” are terms that supplement the terms of this
+â€śAdditional permissionsâ€ť are terms that supplement the terms of this
 License by making exceptions from one or more of its conditions. Additional
 permissions that are applicable to the entire Program shall be treated as though they
 were included in this License, to the extent that they are valid under applicable
@@ -926,8 +926,8 @@ who conveys the material (or modified versions of it) with contractual assumptio
 liability to the recipient, for any liability that these contractual assumptions
 directly impose on those licensors and authors.
 
-All other non-permissive additional terms are considered “further
-restrictions” within the meaning of section 10. If the Program as you received
+All other non-permissive additional terms are considered â€śfurther
+restrictionsâ€ť within the meaning of section 10. If the Program as you received
 it, or any part of it, contains a notice stating that it is governed by this License
 along with a term that is a further restriction, you may remove that term. If a
 license document contains a further restriction but permits relicensing or conveying
@@ -984,7 +984,7 @@ from the original licensors, to run, modify and propagate that work, subject to 
 License. You are not responsible for enforcing compliance by third parties with this
 License.
 
-An “entity transaction” is a transaction transferring control of an
+An â€śentity transactionâ€ť is a transaction transferring control of an
 organization, or substantially all assets of one, or subdividing an organization, or
 merging organizations. If propagation of a covered work results from an entity
 transaction, each party to that transaction who receives a copy of the work also
@@ -1002,16 +1002,16 @@ importing the Program or any portion of it.
 
 ### 11. Patents
 
-A “contributor” is a copyright holder who authorizes use under this
+A â€ścontributorâ€ť is a copyright holder who authorizes use under this
 License of the Program or a work on which the Program is based. The work thus
-licensed is called the contributor's “contributor version”.
+licensed is called the contributor's â€ścontributor versionâ€ť.
 
-A contributor's “essential patent claims” are all patent claims owned or
+A contributor's â€śessential patent claimsâ€ť are all patent claims owned or
 controlled by the contributor, whether already acquired or hereafter acquired, that
 would be infringed by some manner, permitted by this License, of making, using, or
 selling its contributor version, but do not include claims that would be infringed
 only as a consequence of further modification of the contributor version. For
-purposes of this definition, “control” includes the right to grant patent
+purposes of this definition, â€ścontrolâ€ť includes the right to grant patent
 sublicenses in a manner consistent with the requirements of this License.
 
 Each contributor grants you a non-exclusive, worldwide, royalty-free patent license
@@ -1019,10 +1019,10 @@ under the contributor's essential patent claims, to make, use, sell, offer for s
 import and otherwise run, modify and propagate the contents of its contributor
 version.
 
-In the following three paragraphs, a “patent license” is any express
+In the following three paragraphs, a â€śpatent licenseâ€ť is any express
 agreement or commitment, however denominated, not to enforce a patent (such as an
 express permission to practice a patent or covenant not to sue for patent
-infringement). To “grant” such a patent license to a party means to make
+infringement). To â€śgrantâ€ť such a patent license to a party means to make
 such an agreement or commitment not to enforce a patent against the party.
 
 If you convey a covered work, knowingly relying on a patent license, and the
@@ -1032,7 +1032,7 @@ other readily accessible means, then you must either **(1)** cause the Correspon
 Source to be so available, or **(2)** arrange to deprive yourself of the benefit of the
 patent license for this particular work, or **(3)** arrange, in a manner consistent with
 the requirements of this License, to extend the patent license to downstream
-recipients. “Knowingly relying” means you have actual knowledge that, but
+recipients. â€śKnowingly relyingâ€ť means you have actual knowledge that, but
 for the patent license, your conveying the covered work in a country, or your
 recipient's use of the covered work in a country, would infringe one or more
 identifiable patents in that country that you have reason to believe are valid.
@@ -1044,7 +1044,7 @@ propagate, modify or convey a specific copy of the covered work, then the patent
 license you grant is automatically extended to all recipients of the covered work and
 works based on it.
 
-A patent license is “discriminatory” if it does not include within the
+A patent license is â€śdiscriminatoryâ€ť if it does not include within the
 scope of its coverage, prohibits the exercise of, or is conditioned on the
 non-exercise of one or more of the rights that are specifically granted under this
 License. You may not convey a covered work if you are a party to an arrangement with
@@ -1088,8 +1088,8 @@ General Public License from time to time. Such new versions will be similar in s
 to the present version, but may differ in detail to address new problems or concerns.
 
 Each version is given a distinguishing version number. If the Program specifies that
-a certain numbered version of the GNU General Public License “or any later
-version” applies to it, you have the option of following the terms and
+a certain numbered version of the GNU General Public License â€śor any later
+versionâ€ť applies to it, you have the option of following the terms and
 conditions either of that numbered version or of any later version published by the
 Free Software Foundation. If the Program does not specify a version number of the GNU
 General Public License, you may choose any version ever published by the Free
@@ -1107,7 +1107,7 @@ your choosing to follow a later version.
 
 THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
 EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER
+PROVIDE THE PROGRAM â€śAS ISâ€ť WITHOUT WARRANTY OF ANY KIND, EITHER
 EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE
 QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE
@@ -1142,7 +1142,7 @@ can redistribute and change under these terms.
 
 To do so, attach the following notices to the program. It is safest to attach them
 to the start of each source file to most effectively state the exclusion of warranty;
-and each file should have at least the “copyright” line and a pointer to
+and each file should have at least the â€ścopyrightâ€ť line and a pointer to
 where the full notice is found.
 
     <one line to give the program's name and a brief idea of what it does.>
@@ -1173,10 +1173,10 @@ when it starts in an interactive mode:
 
 The hypothetical commands `show w` and `show c` should show the appropriate parts of
 the General Public License. Of course, your program's commands might be different;
-for a GUI interface, you would use an “about box”.
+for a GUI interface, you would use an â€śabout boxâ€ť.
 
 You should also get your employer (if you work as a programmer) or school, if any, to
-sign a “copyright disclaimer” for the program, if necessary. For more
+sign a â€ścopyright disclaimerâ€ť for the program, if necessary. For more
 information on this, and how to apply and follow the GNU GPL, see
 &lt;<http://www.gnu.org/licenses/>&gt;.
 

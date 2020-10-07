@@ -11,7 +11,7 @@ redirect_from:
 
 {% include badge.html path="deltasplit75" %}
 
-Podzielona w 75% klawiatura (z moøliwoúciπ wyboru strony, na ktÛrej chcesz umieúciÊ klawisz b), ktÛra wykorzystuje Pro Micro (lub klon) i Serial do komunikacji miÍdzy po≥Ûwkami. Zaprojektowany przez xyxjj. Podzielona obs≥uga backspace i ISO wraz z pinoutami dla podúwietlenia RGB.
+Podzielona w 75% klawiatura (z mo≈ºliwo≈õciƒÖ wyboru strony, na kt√≥rej chcesz umie≈õciƒá klawisz b), kt√≥ra wykorzystuje Pro Micro (lub klon) i Serial do komunikacji miƒôdzy po≈Ç√≥wkami. Zaprojektowany przez xyxjj. Podzielona obs≈Çuga backspace i ISO wraz z pinoutami dla pod≈õwietlenia RGB.
 
 * Link do instrukcji tworzenia *
 

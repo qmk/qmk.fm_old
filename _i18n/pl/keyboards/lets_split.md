@@ -11,21 +11,21 @@ redirect_from:
 
 {% include badge.html path="lets_split" %}
 
-Podzielona 40% klawiatura (4x6 na ka¿d¹ po³owê), która wykorzystuje Pro Micro (lub klon) i Serial lub I2C do komunikacji miêdzy po³ówkami. Zaprojektowany przez Wootpatoot.
+Podzielona 40% klawiatura (4x6 na kaÅ¼dÄ… poÅ‚owÄ™), ktÃ³ra wykorzystuje Pro Micro (lub klon) i Serial lub I2C do komunikacji miÄ™dzy poÅ‚Ã³wkami. Zaprojektowany przez Wootpatoot.
 
-* Potrzebne linki do produktów do kupienia *
+* Potrzebne linki do produktÃ³w do kupienia *
 
 ## Pliki do wydruku 3D
 
-* [P³yta (odwracalna)](plate.stl)
+* [PÅ‚yta (odwracalna)](plate.stl)
 * [Lewa obudowa](left.stl)
 * [Prawa obudowa](right.stl)
 
-## Pliki do ciêcia laserowego
+## Pliki do ciÄ™cia laserowego
 
-* [P³yta górna i dolna](lets_split_laser.svg)
+* [PÅ‚yta gÃ³rna i dolna](lets_split_laser.svg)
 
-## Schematy po³¹czeñ
+## Schematy poÅ‚Ä…czeÅ„
 
 Okablowanie szeregowe:
 

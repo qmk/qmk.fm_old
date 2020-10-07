@@ -13,20 +13,20 @@ Proton C to oparty na Arm STM32F303xC zamiennik Pro Micro. Wykorzystuje ten sam 
 * 32-bitowy procesor Cortex-M4 72 MHz (STM32F303CCT6)
 * I2C, SPI, PWM, DMA, DAC, USART, I2S
 * 23 porty we/wy 3,3 V.
-* 1x wyjœcie 5 V dla LED'ów WS2812
-* Pamiêæ flash 256 kB
+* 1x wyjÅ›cie 5 V dla LED'Ã³w WS2812
+* PamiÄ™Ä‡ flash 256 kB
 * 40kB RAM
-* Wyjœcie na g³oœnik AST1109MLTRQ
+* WyjÅ›cie na gÅ‚oÅ›nik AST1109MLTRQ
 * Przycisk reset
 
-Wersja 2 wprowadzi³a nastêpuj¹ce zmiany:
+Wersja 2 wprowadziÅ‚a nastÄ™pujÄ…ce zmiany:
 
-* Pady do monta¿u g³oœnika po obu stronach PCB
-* Mo¿esz teraz pod³¹czyæ jedn¹ stronê g³oœnika do GND, aby uzyskaæ dodatkowy pin I / O
-* Obie strony u¿ywaj¹ przezroczystej maski lutowniczej
-* Zanurzenie w z³ocie zosta³o wykonane przed mask¹ lutownicz¹, wiêc œcie¿ki s¹ teraz z³ote
+* Pady do montaÅ¼u gÅ‚oÅ›nika po obu stronach PCB
+* MoÅ¼esz teraz podÅ‚Ä…czyÄ‡ jednÄ… stronÄ™ gÅ‚oÅ›nika do GND, aby uzyskaÄ‡ dodatkowy pin I / O
+* Obie strony uÅ¼ywajÄ… przezroczystej maski lutowniczej
+* Zanurzenie w zÅ‚ocie zostaÅ‚o wykonane przed maskÄ… lutowniczÄ…, wiÄ™c Å›cieÅ¼ki sÄ… teraz zÅ‚ote
 
-Proton C mo¿na zakupiæ pod adresem:
+Proton C moÅ¼na zakupiÄ‡ pod adresem:
 
 * [Clueboard](https://clueboard.co/parts/qmk-proton-c) (US-West)
 * [Keebio](https://keeb.io/products/qmk-proton-c) (US-East)
@@ -37,28 +37,28 @@ Proton C mo¿na zakupiæ pod adresem:
 * [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (EU)
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)
 
-Obs³uga rozdzielonych klawiatur, podœwietlenia RGB i podœwietlenia jest w trakcie opracowywania i powinna byæ wkrótce dostêpna.
+ObsÅ‚uga rozdzielonych klawiatur, podÅ›wietlenia RGB i podÅ›wietlenia jest w trakcie opracowywania i powinna byÄ‡ wkrÃ³tce dostÄ™pna.
 
-## Porównanie
+## PorÃ³wnanie
 
-Jeœli chcesz wiedzieæ, dlaczego powinieneœ wybraæ Proton C do swojego nastêpnego projektu, oto porównanie mikrokontrolerów:
+JeÅ›li chcesz wiedzieÄ‡, dlaczego powinieneÅ› wybraÄ‡ Proton C do swojego nastÄ™pnego projektu, oto porÃ³wnanie mikrokontrolerÃ³w:
 
 &nbsp;       |ATmega32U4        |AT90USB1286         |STM32F303xC                   |
 -------------|------------------|--------------------|------------------------------|
-Prêdkoœæ     |16MHz             |16MHz               |72MHz                         |
-Napiêcie     |5V                |5V                  |3.3V (niektóre piny na 5V)    |
-Pamiêæ Flash |32kB (28kB wolne) |128kB (120kB wolne) |256kB (248kB wolne)           |
-Pamiêæ EEPROM|1kB               |4kB                 |4kB (emulowane we flash'u)    |
-Pamiêæ       |2.5kB             |8kB                 |48kB                          |
+PrÄ™dkoÅ›Ä‡     |16MHz             |16MHz               |72MHz                         |
+NapiÄ™cie     |5V                |5V                  |3.3V (niektÃ³re piny na 5V)    |
+PamiÄ™Ä‡ Flash |32kB (28kB wolne) |128kB (120kB wolne) |256kB (248kB wolne)           |
+PamiÄ™Ä‡ EEPROM|1kB               |4kB                 |4kB (emulowane we flash'u)    |
+PamiÄ™Ä‡       |2.5kB             |8kB                 |48kB                          |
 Liczniki     |4 w sumie         |4 w sumie           |10 w sumie                    |
-Piny We/Wy   |25 pinów          |46 pinów            |37 pinów                      |
+Piny We/Wy   |25 pinÃ³w          |46 pinÃ³w            |37 pinÃ³w                      |
 
-STM32F303 ma 9 razy wiêksz¹ u¿yteczn¹ przestrzeñ dyskow¹ ni¿ ATmega32U4. Mo¿esz w³¹czyæ kilka funkcji i nadal mieæ du¿o miejsca. Na przyk³ad Planck EZ, który ma w pe³ni w³¹czon¹ matrycê audio i RGB (brak wy³¹czonych funkcji podrzêdnych) i ma wy³¹czon¹ opcjê optymalizacji czasu ³¹cza, wykorzystuje 45kB oprogramowania uk³adowego, wci¹¿ pozostawiaj¹c 200kB + wolnego. Mnóstwo miejsca na wszystko, co chcesz.
+STM32F303 ma 9 razy wiÄ™kszÄ… uÅ¼ytecznÄ… przestrzeÅ„ dyskowÄ… niÅ¼ ATmega32U4. MoÅ¼esz wÅ‚Ä…czyÄ‡ kilka funkcji i nadal mieÄ‡ duÅ¼o miejsca. Na przykÅ‚ad Planck EZ, ktÃ³ry ma w peÅ‚ni wÅ‚Ä…czonÄ… matrycÄ™ audio i RGB (brak wyÅ‚Ä…czonych funkcji podrzÄ™dnych) i ma wyÅ‚Ä…czonÄ… opcjÄ™ optymalizacji czasu Å‚Ä…cza, wykorzystuje 45kB oprogramowania ukÅ‚adowego, wciÄ…Å¼ pozostawiajÄ…c 200kB + wolnego. MnÃ³stwo miejsca na wszystko, co chcesz.
 
-## Ostrze¿enia
+## OstrzeÅ¼enia
 
-Niektóre p³ytki drukowane kompatybilne z Pro Micro maj¹ piny VCC (3,3 V) i RAW (5 V) pod³¹czone (zwarte) do p³ytki drukowanej. Korzystanie z Proton C spowoduje zwarcie zasilania 5 V z USB i regulowanego napiêcia 3,3 V, które jest pod³¹czone bezpoœrednio do MCU. Zwarcie tych pinów mo¿e uszkodziæ MCU na Protonie C.
+NiektÃ³re pÅ‚ytki drukowane kompatybilne z Pro Micro majÄ… piny VCC (3,3 V) i RAW (5 V) podÅ‚Ä…czone (zwarte) do pÅ‚ytki drukowanej. Korzystanie z Proton C spowoduje zwarcie zasilania 5 V z USB i regulowanego napiÄ™cia 3,3 V, ktÃ³re jest podÅ‚Ä…czone bezpoÅ›rednio do MCU. Zwarcie tych pinÃ³w moÅ¼e uszkodziÄ‡ MCU na Protonie C.
 
-Jak dot¹d wydaje siê, ¿e problem ten dotycz¹cy tylko PCB Gherkin, ale mo¿e to wp³yn¹æ na inne PCB.
+Jak dotÄ…d wydaje siÄ™, Å¼e problem ten dotyczÄ…cy tylko PCB Gherkin, ale moÅ¼e to wpÅ‚ynÄ…Ä‡ na inne PCB.
 
-W takim przypadku mo¿esz w ogóle nie pod³¹czaæ pin'u RAW.
+W takim przypadku moÅ¼esz w ogÃ³le nie podÅ‚Ä…czaÄ‡ pin'u RAW.

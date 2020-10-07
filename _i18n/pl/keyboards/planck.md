@@ -17,32 +17,32 @@ Planck to klawiatura ortho 12x4 z 47/48 klawiszami, wyprodukowany przez [olkb](h
 
 ## Puste Mapy klawiszy
 
-Oto kilka nadaj¹cych siê do wydrukowania, sk³adanych (do stania), pustych arkuszy 8,5 x 11 "na mapy klawiszy Planck. Ka¿dy z nich ma sekcjê notatek, etykiety warstw i kilka pomocnych wskazówek dotycz¹cych dostosowywania.
+Oto kilka nadajÄ…cych siÄ™ do wydrukowania, skÅ‚adanych (do stania), pustych arkuszy 8,5 x 11 "na mapy klawiszy Planck. KaÅ¼dy z nich ma sekcjÄ™ notatek, etykiety warstw i kilka pomocnych wskazÃ³wek dotyczÄ…cych dostosowywania.
 
-* [Domyœlna mapa Qwerty](/keyboards/planck/keymap-printout-default-qwerty.pdf)
-* [Domyœlna mapa Colemak](/keyboards/planck/keymap-printout-default-colemak.pdf)
-* [Domyœlna mapa Dvorak](/keyboards/planck/keymap-printout-default-dvorak.pdf)
+* [DomyÅ›lna mapa Qwerty](/keyboards/planck/keymap-printout-default-qwerty.pdf)
+* [DomyÅ›lna mapa Colemak](/keyboards/planck/keymap-printout-default-colemak.pdf)
+* [DomyÅ›lna mapa Dvorak](/keyboards/planck/keymap-printout-default-dvorak.pdf)
 * [2 puste mapy z Qwerty](/keyboards/planck/keymap-printout-blanck-qwerty.pdf)
 * [2 puste mapy z Colemak](/keyboards/planck/keymap-printout-blanck-colemak.pdf)
 * [2 puste mapy z Dvorak](/keyboards/planck/keymap-printout-blanck-dvorak.pdf)
-* [2 ca³kiem puste mapy](/keyboards/planck/keymap-printout-blanck.pdf)
-* [3 ca³kiem puste mapy](/keyboards/planck/keymap-printout-blanck-triple.pdf)
+* [2 caÅ‚kiem puste mapy](/keyboards/planck/keymap-printout-blanck.pdf)
+* [3 caÅ‚kiem puste mapy](/keyboards/planck/keymap-printout-blanck-triple.pdf)
 
-## Domyœlne mapy klawiszy Plancka
+## DomyÅ›lne mapy klawiszy Plancka
 
 * **OS**: Windows/Command
-* **Fn**: alternatywny klawisz Shift, który prze³¹cza ustawienia podœwietlenia.
+* **Fn**: alternatywny klawisz Shift, ktÃ³ry przeÅ‚Ä…cza ustawienia podÅ›wietlenia.
 * **NUHS**: Non-Us HaSh (# and ~) (S+ is shifted variant)
 * **NUBS**: Non-Us BackSlash (\\ and \|) (S+ is shifted variant)
 
-* **RESET**: prze³¹cza Plancka w tryb DFU w celu flashowania nowego oprogramowania - naciœniêcie tego przycisku (w przeciwieñstwie do przycisku z ty³u) spowoduje odg³os „wy³¹czania”.
-* **Win Mods**: zamienia miejsce Alt i OS, aby przypominaæ zwyk³¹ kolejnoœæ modów klawiatury Windows
-* **Mac Mods**: przywraca Alt i OS do pierwotnego miejsca, aby przypominaæ zwyk³¹ kolejnoœæ modyfikacji klawiatury Maca
-* **QWRTY**: umieszcza klawisze alfa klawiatury w Qwerty (domyœlnie) i odtwarza unikalny dŸwiêk
-* **CLMK**: umieszcza klawisze alfa klawiatury w Colemak i odtwarza unikalny dŸwiêk
-* **DVRK**: umieszcza klawisze alfa klawiatury w Dvorak i odtwarza unikalny dŸwiêk
-* **PLVR**: prze³¹cza klawiaturê w tryb Plover i odtwarza unikalny dŸwiêk - naciœnij klawisz Fn, aby wyjœæ
-* **Audio On/Off**: w³¹cza / wy³¹cza ca³e audio na klawiaturze
-* **Music Voice +/-**: prze³¹cza miêdzy g³osami u¿ywanymi we wszystkich sprzê¿eniach dŸwiêkowych i trybie muzycznym
-* **Music On**: wchodzi w specjalny tryb muzyczny, w którym wszystkie klawisze w 3 górnych rzêdach s¹ klawiszami muzycznymi - odtwarza dŸwiêk intro
-* **Midi On**: wchodzi w specjalny tryb Midi, który przesy³a sygna³y Midi do komputera (domyœlnie wy³¹czony w oprogramowaniu sprzêtowym - aby to dzia³a³o, musisz skompilowaæ inn¹ wersjê)
+* **RESET**: przeÅ‚Ä…cza Plancka w tryb DFU w celu flashowania nowego oprogramowania - naciÅ›niÄ™cie tego przycisku (w przeciwieÅ„stwie do przycisku z tyÅ‚u) spowoduje odgÅ‚os â€wyÅ‚Ä…czaniaâ€.
+* **Win Mods**: zamienia miejsce Alt i OS, aby przypominaÄ‡ zwykÅ‚Ä… kolejnoÅ›Ä‡ modÃ³w klawiatury Windows
+* **Mac Mods**: przywraca Alt i OS do pierwotnego miejsca, aby przypominaÄ‡ zwykÅ‚Ä… kolejnoÅ›Ä‡ modyfikacji klawiatury Maca
+* **QWRTY**: umieszcza klawisze alfa klawiatury w Qwerty (domyÅ›lnie) i odtwarza unikalny dÅºwiÄ™k
+* **CLMK**: umieszcza klawisze alfa klawiatury w Colemak i odtwarza unikalny dÅºwiÄ™k
+* **DVRK**: umieszcza klawisze alfa klawiatury w Dvorak i odtwarza unikalny dÅºwiÄ™k
+* **PLVR**: przeÅ‚Ä…cza klawiaturÄ™ w tryb Plover i odtwarza unikalny dÅºwiÄ™k - naciÅ›nij klawisz Fn, aby wyjÅ›Ä‡
+* **Audio On/Off**: wÅ‚Ä…cza / wyÅ‚Ä…cza caÅ‚e audio na klawiaturze
+* **Music Voice +/-**: przeÅ‚Ä…cza miÄ™dzy gÅ‚osami uÅ¼ywanymi we wszystkich sprzÄ™Å¼eniach dÅºwiÄ™kowych i trybie muzycznym
+* **Music On**: wchodzi w specjalny tryb muzyczny, w ktÃ³rym wszystkie klawisze w 3 gÃ³rnych rzÄ™dach sÄ… klawiszami muzycznymi - odtwarza dÅºwiÄ™k intro
+* **Midi On**: wchodzi w specjalny tryb Midi, ktÃ³ry przesyÅ‚a sygnaÅ‚y Midi do komputera (domyÅ›lnie wyÅ‚Ä…czony w oprogramowaniu sprzÄ™towym - aby to dziaÅ‚aÅ‚o, musisz skompilowaÄ‡ innÄ… wersjÄ™)

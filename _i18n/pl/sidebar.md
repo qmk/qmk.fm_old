@@ -1,4 +1,4 @@
 {% comment %}
-Ten plik zawiera pasek boczny w _includes, poniewaø jest uøywany w innych miejscach
+Ten plik zawiera pasek boczny w _includes, poniewa≈º jest u≈ºywany w innych miejscach
 {% endcomment %}
 {{ include pl_sidebar.md }}
