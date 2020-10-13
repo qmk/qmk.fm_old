@@ -337,6 +337,8 @@ ergodash/mini
 ergodash/rev1
 ergodone
 ergodox_ez
+ergodox_ez/glow
+ergodox_ez/shine
 ergodox_infinity
 ergodox_stm32
 ergosaurus
@@ -994,6 +996,7 @@ pinky/3
 pinky/4
 pistachio
 planck/ez
+planck/ez/glow
 planck/light
 planck/rev1
 planck/rev2
