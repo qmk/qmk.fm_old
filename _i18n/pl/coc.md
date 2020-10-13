@@ -9,7 +9,7 @@ permalink: /pl/coc/
 
 Celem QMK jest bycie społecznością otwartą i tolerancyjną. Zachęcamy do brania udziału każdego, niezależnie od wieku, nipełnosprawności, pochodzenia, płci fizycznej i tożsamościowej, poziomu doświadczenia, narodowości, wyglądu osobistego, przekonań politycznych, rasy, religii czy torzsamości i orientacji seksualnej.
 
-> â€śDelikatne słowo uśmierza gniew, ale ostre słowo wywołuje gniew."
+> „Delikatne słowo uśmierza gniew, ale ostre słowo wywołuje gniew.”
 
 Od naszych użytkowników, współautorów i współpracowników oczekujemy traktowania się z szacunkiem i życzliwością, zakładając dobre intencje i poprawiając łagodnie, gdy jest to możliwe, zamiast reagować uniesieniem. Chociaż naszym celem jest być jak najbardziej dokładnym, życzliwość i zrozumienie są cenniejsze niż poprawność. Niektóre przykłady zachowań, których nie będziemy tolerować, obejmują między innymi:
 
