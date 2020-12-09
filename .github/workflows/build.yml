@@ -1,0 +1,17 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container: jekyll/builder
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: jekyll build
+      run: |
+        gem install bundler:1.14.6
+        jekyll build
