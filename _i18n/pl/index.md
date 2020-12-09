@@ -1,7 +1,6 @@
 ---
 title: "Oprogramowanie open source dla klawiatur opartych na AVR i ARM"
 lang: "pl"
-permalink: /
 redirect_from: /pl/
 ---
 QMK to oprogramowanie klawiatur oparte na [tmk\_keyboard_firmware] (http://github.com/tmk/tmk_keyboard) z kilkoma użytecznymi funkcjami dla kontrolerów Atmel AVR i ARM, a konkretnie dla [linii produktów OLKB] (http://olkb.com), klawiatury [ErgoDox EZ] (http://www.ergodox-ez.com) i [linię produktów Clueboard] (http://clueboard.co/).
