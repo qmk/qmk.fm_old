@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container: jekyll/builder
+    container: jekyll/builder:3
 
     steps:
     - uses: actions/checkout@v2
@@ -14,4 +14,4 @@ jobs:
     - name: jekyll build
       run: |
         gem install bundler:1.14.6
-        jekyll build
+        jekyll build -d /tmp/
