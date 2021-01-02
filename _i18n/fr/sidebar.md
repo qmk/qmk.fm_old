@@ -2,9 +2,6 @@ Le but du projet QMK est de développer un firmware complètement personnalisabl
 
 [Voir sur <i class="fa fa-github" aria-hidden="true"></i> GitHub](https://github.com/qmk/qmk_firmware)
 
-[![Télécharger Zip](https://img.shields.io/badge/Télécharger-zip-blue.svg)](https://github.com/qmk/qmk_firmware/zipball/master)
-[![Télécharger Tar](https://img.shields.io/badge/Télécharger-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarball/master)
-
 [![Version courante](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
 [![Statut de la compilation](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg?label=discussions)](https://discord.gg/Uq7gcHh)

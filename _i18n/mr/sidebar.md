@@ -2,9 +2,6 @@
 
 [वर पहा <i class="fa fa-github" aria-hidden="true"></i> गिटहब](https://github.com/qmk/qmk_firmware)
 
-[![झिप डाउनलोड करा](https://img.shields.io/badge/download-zip-blue.svg)](https://github.com/qmk/qmk_firmware/zipball/master)
-[![डाउनलोड स्तर](https://img.shields.io/badge/download-tar-blue.svg)](https://github.com/qmk/qmk_firmware/tarball/master)
-
 [![चालू आवृत्ती](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
 [![बिल्ड स्टेटस](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
 [![डीसकॉर्ड](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
