@@ -22,3 +22,4 @@ O objetivo do projeto de software QMK é o desenvolvimento de um firmware fácil
 * [Informações de licença](/license/)
 * [Código de Conduta](/coc/)
 * [Suporte do QMK](/support/)
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox)

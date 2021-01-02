@@ -22,3 +22,4 @@ L'obiettivo di questo progetto di software QMK è sviluppare un'esperienza firmw
 * [Informazioni sulla licenza](/it/license/)
 * [Codice di condotta](/it/coc/)
 * [Come supporto QMK](/it/support/)
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox)

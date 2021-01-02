@@ -22,3 +22,4 @@ Le but du projet QMK est de développer un firmware complètement personnalisabl
 * [Licence](/license/)
 * [Code de conduite](/coc/)
 * [Comment aider QMK](/support/)
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox)

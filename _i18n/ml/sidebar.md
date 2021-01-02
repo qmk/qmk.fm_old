@@ -22,3 +22,4 @@
 * [ലൈസൻസ് വിവരങ്ങൾ](/license/)
 * [Code of Conduct](/coc/)
 * [QMKയെ എങ്ങനെ സപ്പോർട്ട് ചെയ്യാം](/support/)
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
