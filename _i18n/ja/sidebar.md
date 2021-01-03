@@ -19,4 +19,4 @@ QMK ソフトウェアプロジェクトの目標は、全てのプロジェク�
 * [ライセンス情報](/ja/license/)
 * [行動規範](/ja/coc/)
 * [QMK をサポートする方法](/ja/support/)
-* [QMK Toolbox](/ja/toolbox/)
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox)

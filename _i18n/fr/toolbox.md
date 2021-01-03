@@ -1,6 +1,6 @@
 ---
-permalink: /ja/toolbox/
-lang: "ja"
+permalink: /fr/toolbox/
+lang: "fr"
 redirect_to:
   - https://github.com/qmk/qmk_toolbox
 ---

@@ -19,3 +19,4 @@
 * [Информация о лицензии](/license/)
 * [Нормы поведения](/coc/)
 * [Как поддержать QMK](/support/)
+* [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
