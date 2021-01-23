@@ -1174,6 +1174,8 @@ primekb/prime_m
 primekb/prime_o
 primekb/prime_r
 program_yoink
+program_yoink/ortho
+program_yoink/staggered
 projectkb/alice
 projectkb/alice/rev1
 projectkb/alice/rev2
