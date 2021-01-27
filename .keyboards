@@ -656,7 +656,6 @@ handwired/swiftrax/cowfish
 handwired/swiftrax/joypad
 handwired/swiftrax/nodu
 handwired/swiftrax/pandamic
-handwired/swiftrax/retropad
 handwired/swiftrax/unsplit
 handwired/symmetric70_proto
 handwired/symmetry60
@@ -1316,6 +1315,7 @@ suihankey/rev1
 suihankey/split
 suihankey/split/alpha
 suihankey/split/rev1
+swiftrax/retropad
 switchplate/southpaw_65
 switchplate/southpaw_fullsize
 sx60
