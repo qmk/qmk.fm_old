@@ -64,6 +64,8 @@ aeboards/ext65
 aeboards/ext65/rev1
 aeboards/ext65/rev2
 afternoonlabs/breeze/rev0
+afternoonlabs/breeze/rev1
+afternoonlabs/gust/rev1
 ai03/equinox/rev0
 ai03/equinox/rev1
 ai03/lunar
@@ -514,6 +516,7 @@ handwired/42
 handwired/6key
 handwired/6macro
 handwired/aek64
+handwired/angel
 handwired/aplx2
 handwired/aranck
 handwired/arrow_pad
@@ -1257,6 +1260,7 @@ ryloo_studio/m0110
 s7_elephant
 s7_elephant/rev1
 s7_elephant/rev2
+sam/sg81m
 satt/vision
 scarletbandana
 scatter42
