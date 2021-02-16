@@ -576,6 +576,7 @@ handwired/hnah108
 handwired/hnah40
 handwired/hnah40rgb
 handwired/ibm122m
+handwired/ibm_wheelwriter
 handwired/jn68m
 handwired/jopr
 handwired/jot50
@@ -600,6 +601,7 @@ handwired/not_so_minidox
 handwired/novem
 handwired/numpad20
 handwired/obuwunkunubi/spaget
+handwired/oem_iso_fullsize
 handwired/onekey
 handwired/onekey/blackpill_f401
 handwired/onekey/blackpill_f411
@@ -1109,6 +1111,7 @@ noxary/220
 noxary/260
 noxary/268
 noxary/268_2
+noxary/268_2_rgb
 noxary/280
 noxary/vulcan
 noxary/x268
@@ -1237,6 +1240,7 @@ rart/rart45
 rart/rart4x4
 rart/rart67
 rart/rart75
+rart/rartand
 rart/rartlice
 rart/rartpad
 rect44
