@@ -554,8 +554,11 @@ handwired/co60/rev1
 handwired/co60/rev6
 handwired/co60/rev7
 handwired/colorlice
-handwired/concertina
-handwired/consolekeyboard
+handwired/concertina/64key
+handwired/consolekeyboard/18key
+handwired/consolekeyboard/20key
+handwired/consolekeyboard/27key
+handwired/consolekeyboard/30key
 handwired/curiosity
 handwired/d48
 handwired/dactyl
