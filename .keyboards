@@ -107,7 +107,8 @@ angel64
 angel64/alpha
 angel64/rev1
 aos/tkl
-aplx6
+aplyard/aplx6/rev1
+aplyard/aplx6/rev2
 arabica37/rev1
 arch_36
 ares
@@ -144,7 +145,6 @@ bastardkb/bastylmini
 bat43
 bat43/rev1
 bat43/rev2
-bear_65
 bear_face
 bear_face/v1
 bear_face/v2
@@ -485,6 +485,8 @@ foxlab/key65/universal
 foxlab/leaf60/hotswap
 foxlab/leaf60/universal
 foxlab/time80
+fr4/southpaw75
+fr4/unix60
 fractal
 freyr
 ft/mars80
@@ -539,8 +541,6 @@ handwired/bdn9_ble
 handwired/bento
 handwired/bento/rev1
 handwired/bigmac
-handwired/bluepill
-handwired/bluepill/bluepill70
 handwired/boss566y/redragon_vara
 handwired/brain
 handwired/cans12er
@@ -760,6 +760,9 @@ iron180
 ivy
 ivy/rev1
 j80
+jacky_studio/bear_65
+jacky_studio/s7_elephant/rev1
+jacky_studio/s7_elephant/rev2
 jae/j01
 jagdpietr/drakon
 jc65/v32a
@@ -1302,9 +1305,6 @@ runner3680/5x6
 runner3680/5x7
 runner3680/5x8
 ryloo_studio/m0110
-s7_elephant
-s7_elephant/rev1
-s7_elephant/rev2
 sam/s80
 sam/sg81m
 satt/vision
@@ -1315,6 +1315,7 @@ sck/m0116b
 sck/neiso
 sck/osa
 scythe
+sendyyeah/pix
 sentraq/number_pad
 sentraq/s60_x/default
 sentraq/s60_x/rgb
@@ -1343,7 +1344,6 @@ sneakbox/disarray/ortho
 sneakbox/disarray/staggered
 sofle
 sofle/rev1
-southpaw75
 southpole
 sowbug/68keys
 sowbug/ansi_tkl
@@ -1364,6 +1364,7 @@ splitreus62
 splitty
 splitty/rev1
 squiggle
+squiggle/rev1
 standaside
 staryu
 stella
@@ -1423,6 +1424,7 @@ tr60w
 trashman/ketch
 treadstone32
 treadstone32/lite
+treadstone32/rev1
 treadstone48
 treadstone48/rev1
 treadstone48/rev2
