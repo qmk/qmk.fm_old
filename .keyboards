@@ -367,6 +367,12 @@ duck/orion/v3
 duck/tcv3
 dumbo
 dumbpad
+dumbpad/v0x
+dumbpad/v0x_dualencoder
+dumbpad/v0x_right
+dumbpad/v1x
+dumbpad/v1x_dualencoder
+dumbpad/v1x_right
 durgod/k320
 dz60
 dztech/bocc
