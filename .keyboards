@@ -362,6 +362,7 @@ doro67/regular
 doro67/rgb
 dozen0
 dp60
+draytronics/daisy
 draytronics/scarlet
 dubba175
 duck/eagle_viper
@@ -702,6 +703,7 @@ handwired/swiftrax/astro65
 handwired/swiftrax/bebol
 handwired/swiftrax/beegboy
 handwired/swiftrax/cowfish
+handwired/swiftrax/equator
 handwired/swiftrax/joypad
 handwired/swiftrax/koalafications
 handwired/swiftrax/nodu
@@ -825,6 +827,7 @@ kb_elmo/m0110a_usb
 kb_elmo/m0116_usb
 kb_elmo/noah_avr
 kb_elmo/sesame
+kb_elmo/twelvekey
 kbdclack/kaishi65
 kbdfans/bella/rgb
 kbdfans/bella/rgb_iso
@@ -932,6 +935,7 @@ kmini
 knobgoblin
 knops/mini
 kona_classic
+kopibeng/xt65
 kudox
 kudox/columner
 kudox/rev1
@@ -1158,6 +1162,7 @@ nightly_boards/ph_arisu
 nightmare
 nimrod
 niu_mini
+nix_studio/oxalys80
 nk65
 nk65/v1_4
 nk87
@@ -1252,6 +1257,10 @@ ploopyco/mouse
 ploopyco/trackball
 ploopyco/trackball/rev1
 ploopyco/trackball/rev1_005
+ploopyco/trackball_mini
+ploopyco/trackball_mini/rev1_001
+ploopyco/trackball_nano
+ploopyco/trackball_nano/rev1_001
 plume/plume65
 pohjolaworks/louhi
 polilla
@@ -1535,10 +1544,13 @@ wilba_tech/wt60_c
 wilba_tech/wt60_d
 wilba_tech/wt60_g
 wilba_tech/wt60_h1
+wilba_tech/wt60_h2
+wilba_tech/wt60_h3
 wilba_tech/wt60_xt
 wilba_tech/wt65_a
 wilba_tech/wt65_b
 wilba_tech/wt65_g
+wilba_tech/wt65_g2
 wilba_tech/wt65_h1
 wilba_tech/wt65_xt
 wilba_tech/wt65_xtx
