@@ -514,6 +514,7 @@ fjlabs/bks65
 fjlabs/bks65solder
 fjlabs/bolsa65
 fjlabs/ldk65
+fjlabs/midway60
 fjlabs/polaris
 flehrad/bigswitch
 flehrad/downbubble
@@ -1049,6 +1050,7 @@ longnald/corin
 lucid/kbd8x_hs
 lucid/phantom_hs
 lucid/phantom_solder
+lucid/scarlet
 m10a
 m3n3van
 majistic
@@ -1376,6 +1378,7 @@ rabbit/rabbit68
 rabbit_capture_plan
 rainkeeb
 ramonimbao/aelith
+ramonimbao/chevron
 ramonimbao/herringbone
 ramonimbao/herringbone/pro
 ramonimbao/herringbone/v1
