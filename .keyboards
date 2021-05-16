@@ -316,6 +316,7 @@ converter/modelm101
 converter/numeric_keypad_IIe
 converter/palm_usb
 converter/palm_usb/stowaway
+converter/periboard_512
 converter/siemens_tastatur
 converter/sun_usb
 converter/sun_usb/type3
