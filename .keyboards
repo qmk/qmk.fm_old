@@ -1188,6 +1188,7 @@ miuni32
 mixi
 mode/eighty/m80h
 mode/eighty/m80s
+molecule
 monarch
 monstargear/xo87/rgb
 monstargear/xo87/solderable
@@ -1569,6 +1570,7 @@ themadnoodle/ncc1701kb/v2
 themadnoodle/noodlepad
 thevankeyboards/bananasplit
 thevankeyboards/caravan
+thevankeyboards/jetvan
 thevankeyboards/minivan
 thevankeyboards/roadkit
 tkc/candybar/lefty
