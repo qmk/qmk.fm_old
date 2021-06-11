@@ -1043,7 +1043,8 @@ lazydesigners/dimpleplus
 lazydesigners/the30
 lazydesigners/the40
 lazydesigners/the50
-lazydesigners/the60
+lazydesigners/the60/rev1
+lazydesigners/the60/rev2
 lck75
 le_chiffre
 leafcutterlabs/bigknob
@@ -1088,7 +1089,8 @@ massdrop/alt
 massdrop/ctrl
 masterworks/classy_tkl/rev_a
 matrix/cain_re
-matrix/m12og
+matrix/m12og/rev1
+matrix/m12og/rev2
 matrix/m20add
 matrix/noah
 maxipad
@@ -1690,6 +1692,9 @@ winkeyless/bface
 winkeyless/bmini
 winkeyless/bminiex
 wolfmarkclub/wm1
+work_louder/loop
+work_louder/nano
+work_louder/work_board
 wsk/alpha9
 wsk/g4m3ralpha
 wsk/gothic50
