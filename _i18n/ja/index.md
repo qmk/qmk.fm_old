@@ -3,13 +3,14 @@ title: "AVR と ARM ベースのキーボード用オープンソースファー
 permalink: /ja/
 lang: "ja"
 ---
-これは Atmel AVR と ARM コントローラ、より具体的には、[OLKB 製品](http://olkb.com)や [ErgoDox EZ](http://www.ergodox-ez.com) キーボード、[Clueboard 製品](http://clueboard.co/)用の、いくつかの役立つ機能を持つ [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) を元にするキーボードファームウェアです。
+これは Atmel AVR と ARM コントローラ、より具体的には、[OLKB 製品](http://olkb.com)や [ErgoDox EZ](http://www.ergodox-ez.com) キーボード、[Moonlander](https://www.zsa.io/moonlander/) キーボード、[Clueboard 製品](http://clueboard.co/)用の、いくつかの役立つ機能を持つ [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) を元にするキーボードファームウェアです。
 
 ## QMK で動作するキーボード
 
 * [Planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
 * [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
 * [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/)
+* [Moonlander](https://github.com/qmk/qmk_firmware/blob/master/keyboards/moonlander/)
 * [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
 * [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/17/)
 * [Gergo](https://qmk.fm/keyboards/gergo/)
