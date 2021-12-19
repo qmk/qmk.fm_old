@@ -17,7 +17,7 @@ lang: "zh-cn"
 * [Georgi](https://qmk.fm/keyboards/georgi/)
 * [Atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus/)
 
-这些键盘使用 QMK 作为官方/默认固件 ---- 您的键盘也是吗。 [告诉我们](https://github.com/qmk/qmk.fm/issues/new) 
+这些键盘使用 QMK 作为官方/默认固件 ---- 您的键盘也是吗？ [告诉我们](https://github.com/qmk/qmk.fm/issues/new) 
 
 QMK 兼容很多其他的 [社群支持的键盘及个人工程](/keyboards/)。
 
