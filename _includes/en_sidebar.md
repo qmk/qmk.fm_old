@@ -19,3 +19,4 @@ The goal of the QMK software project is to develop a completely customizable, po
 * [Code of Conduct](/coc/)
 * [How to support QMK](/support/)
 * [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
+* [Documentation](https://docs.qmk.fm/)
