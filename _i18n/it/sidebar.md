@@ -3,7 +3,6 @@ L'obiettivo di questo progetto di software QMK è sviluppare un'esperienza firmw
 [Vedere su <i class="fa fa-github" aria-hidden="true"></i> GitHub](https://github.com/qmk/qmk_firmware)
 
 [![Version corrente](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![Stato della generazione](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![Stato della documentazione](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
 [![Collaboratori su GitHub](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
