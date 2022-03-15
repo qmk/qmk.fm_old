@@ -37,8 +37,6 @@ Sie können den Proton C bei folgenden Shops kaufen:
 * [Oh, Keycaps!](https://ohkeycaps.com/products/proton-c) (US-Midwest)
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)
 
-Unterstützung für Split-Tastaturen, RGB Unterbeleuchtung und Hintergrundbeleuchtung ist noch in der Entwicklung und sollte bald verfügbar sein.
-
 ## Vergleich
 
 Wenn Sie wissen möchten, warum ihr nächstes Projekt einen Proton C verwenden sollte, ist hier eine Vergleichstabelle:

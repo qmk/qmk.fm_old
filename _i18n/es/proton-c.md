@@ -37,8 +37,6 @@ Puedes comprar el Proton C en:
 * [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (EU)
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)
 
-Estamos preparando soporte para teclados split, RGB Underglow, y retroiluminación, y debe ser disponible pronto.
-
 ## Comparación
 
 Si quieres saber porque debes elegir el Proton C para tu próximo producto, he aquí una comparación de los chips:
