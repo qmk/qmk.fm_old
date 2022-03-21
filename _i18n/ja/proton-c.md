@@ -37,8 +37,6 @@ Proton C は次の場所で購入できます:
 * [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (ヨーロッパ)
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (オーストラリア)
 
-分割キーボード、RGB アンダーグロー、バックライトのサポートは現在作業中で、まもなく利用可能になる予定です。
-
 ## 比較
 
 あなたの次の製品に Proton C を選択する理由を知りたい場合、こちらがチップの比較表です:
