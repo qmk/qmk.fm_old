@@ -21,3 +21,5 @@ The `_data/strings.yml` file also needs to have an entry for the language:
         qmk_firmware: "QMK固件"
 
 The `<<: *DEFAULT_EN` allows `zh-cn` to inherit all values from the English entry, and the keys following it override those. It's recommended to translate all entries for full coverage.
+
+A template file must be created for the auto-generated keyboards page - `_util/i18n/en/keyboard_template.md` should be used as the base template.
