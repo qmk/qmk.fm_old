@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 import os
-
+import sys
 from jinja2 import Template
 
 print('Generating /keyboards...')
+
+# Gather variables for templates
+version, short_sha, commit_date, publish_date = sys.argv[1:]
 
 with open('.keyboards', 'r') as fd:
     keyboards = fd.readlines()
@@ -48,6 +51,12 @@ for language in languages:
 
   with open(f'_i18n/{language}/keyboards.md', 'w') as fd:
       t = Template(pagetext)
-      fd.write(t.render(keyboards=keyboard_entries))
+      fd.write(t.render(
+        keyboards=keyboard_entries,
+        version=version,
+        commit=short_sha,
+        commit_date=commit_date,
+        publish_date=publish_date
+      ))
 
 print(f'/keyboards pages generated for the following languages: {languages}')

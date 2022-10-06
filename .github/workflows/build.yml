@@ -11,11 +11,19 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: set variables
+      id: variables
+      run: |
+        echo "QMK_VERSION=$(git -c 'versionsort.suffix=-' ls-remote --refs --sort='version:refname' --tags https://github.com/qmk/qmk_firmware '[0-9]*.*.*' | tail -n 1 | cut -d / -f 3)" >> $GITHUB_ENV
+        echo "SHORT_SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+        echo "COMMIT_DATE=$(date -d "@$(git show -s --format=%ct)" -u  +'%Y-%m-%d %H:%M:%S %z')" >> $GITHUB_ENV
+        echo "PUBLISH_DATE=$(date -u +'%Y-%m-%d %H:%M:%S %z')" >> $GITHUB_ENV
+
     - name: generate /keyboards pages
       run: |
         apk add --update --no-cache python3
         pip3 install --no-cache --upgrade pip jinja2
-        python3 _util/generate_keyboard_page.py
+        python3 _util/generate_keyboard_page.py "$QMK_VERSION" "$SHORT_SHA" "$COMMIT_DATE" "$PUBLISH_DATE"
 
     - name: jekyll build
       run: |

@@ -12,6 +12,12 @@ Want a qmk.fm page? [Create a `<keyboard>.md` file for it here](https://github.c
 
 Currently .hex, .bin, and .uf2 files are provided - some listed here may not be what's needed to flash the keyboard. If this is the case, [please open an issue](https://github.com/qmk/qmk.fm/issues)!
 
+| | |
+| :------------------: | :---- |
+| QMK Version (commit) | {{version}} ({{commit}}) |
+| Commit Date          | {{commit_date}} |
+| Published            | {{publish_date}} |
+
 <style>
 .fa.psi-icon {
     font-size: 14px;

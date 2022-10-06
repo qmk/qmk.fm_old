@@ -13,6 +13,12 @@ Esta página se genera automáticamente de los teclados actualmente en QMK. Los 
 
 Actualmente se proveen archivos .hex, .bin, y .uf2 - algunos de los enumerados aquí tal vez no sean lo que se necesita para flashear el teclado. Si es así, [por favor abre una propuesta](https://github.com/qmk/qmk.fm/issues)!
 
+| | |
+| :------------------: | :---- |
+| Versión de QMK (commit)  | {{version}} ({{commit}}) |
+| Fecha de commit          | {{commit_date}} |
+| Publicado                | {{publish_date}} |
+
 <style>
 .fa.psi-icon {
     font-size: 14px;
