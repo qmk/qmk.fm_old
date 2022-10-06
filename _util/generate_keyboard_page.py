@@ -4,6 +4,8 @@ import os
 
 from jinja2 import Template
 
+print('Generating /keyboards...')
+
 with open('.keyboards', 'r') as fd:
     keyboards = fd.readlines()
 
@@ -47,4 +49,5 @@ for language in languages:
   with open(f'_i18n/{language}/keyboards.md', 'w') as fd:
       t = Template(pagetext)
       fd.write(t.render(keyboards=keyboard_entries))
-#end loop
+
+print(f'/keyboards pages generated for the following languages: {languages}')

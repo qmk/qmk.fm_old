@@ -11,6 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: generate /keyboards pages
+      run: |
+        apk add --update --no-cache python3
+        pip3 install --no-cache --upgrade pip jinja2
+        python3 _util/generate_keyboard_page.py
+
     - name: jekyll build
       run: |
         gem install bundler:1.14.6
