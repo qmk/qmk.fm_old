@@ -9,7 +9,7 @@ permalink: /pl/support/
 
 * [Sklep QMK na olkb.com](https://olkb.com/parts)
 * [Sklep Teespring](https://teespring.com/stores/qmk)
-* [Przekaż darowiznę przez Donorbox](https://donorbox.org/qmk)
+* [Przekaż darowiznę przez OpenCollective](https://opencollective.com/qmk-firmware)
 * [Przyczyń się do rozwoju!](https://github.com/qmk/qmk_firmware/issues)
 
 ## Co robimy z darowiznami

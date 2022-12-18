@@ -9,7 +9,7 @@ lang: fr
 
 * [Produits dérivés QMK sur olkb.com](https://olkb.com/parts)
 * [Boutique Teespring](https://teespring.com/stores/qmk)
-* [Faites un don via Donorbox](https://donorbox.org/qmk)
+* [Faites un don via OpenCollective](https://opencollective.com/qmk-firmware)
 * [Contribuez !](https://github.com/qmk/qmk_firmware/issues)
 
 ## Comment nous utilisons vos donations

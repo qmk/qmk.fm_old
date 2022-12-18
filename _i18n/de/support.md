@@ -9,7 +9,7 @@ lang: "de"
 
 * [QMK Fan-Artikel auf olkb.com](https://olkb.com/parts)
 * [Teespring Online-Shop](https://teespring.com/de/stores/qmk)
-* [Spenden Sie via Donorbox](https://donorbox.org/qmk)
+* [Spenden Sie via OpenCollective](https://opencollective.com/qmk-firmware)
 * [Wirke mit!](https://github.com/qmk/qmk_firmware/issues)
 
 ## Wofür wir die Spenden verwenden

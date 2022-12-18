@@ -9,7 +9,7 @@ lang: "ja"
 
 * [olkb.com の QMK グッズ](https://olkb.com/parts)
 * [Teespring ストア](https://teespring.com/stores/qmk)
-* [Donorbox 経由で寄付](https://donorbox.org/qmk)
+* [OpenCollective 経由で寄付](https://opencollective.com/qmk-firmware)
 * [貢献する！](https://github.com/qmk/qmk_firmware/issues)
 
 ## 寄付金で行うこと
