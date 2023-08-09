@@ -3,7 +3,6 @@
 [वर पहा <i class="fa fa-github" aria-hidden="true"></i> गिटहब](https://github.com/qmk/qmk_firmware)
 
 [![चालू आवृत्ती](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![बिल्ड स्टेटस](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
 [![डीसकॉर्ड](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![दस्तऐवज स्थिती](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
 [![गिटहब योगदाते](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)

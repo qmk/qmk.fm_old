@@ -8,7 +8,7 @@ permalink: /support/
 
 * [QMK merch on olkb.com](https://olkb.com/parts)
 * [Teespring store](https://teespring.com/stores/qmk)
-* [Donate via Donorbox](https://donorbox.org/qmk)
+* [Donate via OpenCollective](https://opencollective.com/qmk-firmware)
 * [Contribute!](https://github.com/qmk/qmk_firmware/issues)
 
 ## What we do with donations

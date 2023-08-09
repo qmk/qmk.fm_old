@@ -37,8 +37,6 @@ Proton C można zakupić pod adresem:
 * [Mykeyboard](https://mykeyboard.eu/catalogue/qmk-proton-c-rev-2_1246/) (EU)
 * [Daily Clack](https://dailyclack.com/products/qmk-proton-c) (AUS)
 
-Obsługa rozdzielonych klawiatur, podświetlenia RGB i podświetlenia jest w trakcie opracowywania i powinna być wkrótce dostępna.
-
 ## Porównanie
 
 Jeśli chcesz wiedzieć, dlaczego powinieneś wybrać Proton C do swojego następnego projektu, oto porównanie mikrokontrolerów:
