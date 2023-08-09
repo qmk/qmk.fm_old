@@ -5,7 +5,7 @@ permalink: /keyboards/
 ---
 ## All Supported Keyboards
 
-This page was automatically generated from keyboards currently in QMK as of June 11th. We used to host/update the binaries for each keyboard here, but the tooling we used for this is no longer available to us, so both this list and the binaries are out of date.
+This page was automatically generated from keyboards currently in QMK as of 2022-02-28. We used to host/update the binaries for each keyboard here, but the tooling we used for this is no longer available to us, so both this list and the binaries are out of date.
 
 | QMK Folder | qmk.fm page |
 | --- | --- |
