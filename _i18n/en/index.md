@@ -18,6 +18,7 @@ QMK is graciously [sponsored on a monthly basis](https://opencollective.com/qmk-
 * [CannonKeys](https://cannonkeys.com/)
 * [splitkb](https://splitkb.com/)
 * [MechLovin' Studio](https://mechlovin.studio/)
+* [42. Keebs](https://42keebs.eu/)
 * [hineybush keyboards](https://hineybush.com/)
 
 ## Documentation
