@@ -3,29 +3,23 @@ title: "An open source firmware for AVR and ARM based keyboards"
 permalink: /
 redirect_from: /en/
 ---
-This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, the [Moonlander](https://www.zsa.io/moonlander/) keyboard, and the [Clueboard product line](http://clueboard.co/).
+This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers.
 
 ## Keyboards Powered by QMK
-
-* [Planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
-* [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
-* [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/)
-* [Moonlander](https://github.com/qmk/qmk_firmware/blob/master/keyboards/moonlander/)
-* [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
-* [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/17/)
-* [Gergo](https://qmk.fm/keyboards/gergo/)
-* [Georgi](https://qmk.fm/keyboards/georgi/)
-* [Atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus/)
-
-These projects use QMK as their official and default firmware - is yours missing from the list? [Let us know!](https://github.com/qmk/qmk.fm/issues/new) 
 
 QMK is compatible with [lots of other community-supported keyboards and projects](/keyboards/). 
 
 You can read more about using QMK with your keyboard [here](/powered/).
 
-## Maintainers
+## Sponsors
 
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), and the Clueboard by [Zach White](https://github.com/skullydazed).
+QMK is graciously [sponsored on a monthly basis](https://opencollective.com/qmk-firmware) by:
+
+* [CannonKeys](https://cannonkeys.com/)
+* [splitkb](https://splitkb.com/)
+* [MechLovin' Studio](https://mechlovin.studio/)
+* [42. Keebs](https://42keebs.eu/)
+* [hineybush keyboards](https://hineybush.com/)
 
 ## Documentation
 
