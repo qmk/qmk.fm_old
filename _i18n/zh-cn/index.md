@@ -3,34 +3,34 @@ title: "QMK固件"
 permalink: /zh-cn/
 lang: "zh-cn"
 ---
+这是一个基于 [tmk\_键盘固件](http://github.com/tmk/tmk_keyboard) 的键盘固件，它在 Atmel AVR 和 ARM控制器上实现一些有用的功能。 [OLKB 系列](http://olkb.com), [ErgoDox EZ](http://www.ergodox-ez.com) 键盘, [Moonlander](https://www.zsa.io/moonlander/) 键盘, 和 [Clueboard 系列](http://clueboard.co/) 使用它作为默认固件。
 
-[![当前版本](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![开发状态](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
-[![异议](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
-[![文档状态](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub贡献者](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub分支](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+## 由 QMK 驱动的键盘
 
-## 什么是 QMK 固件?
+* [Planck](https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/)
+* [Preonic](https://github.com/qmk/qmk_firmware/blob/master/keyboards/preonic/)
+* [ErgoDox EZ](https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/)
+* [Moonlander](https://github.com/qmk/qmk_firmware/blob/master/keyboards/moonlander/)
+* [Clueboard](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/)
+* [Cluepad](https://github.com/qmk/qmk_firmware/blob/master/keyboards/clueboard/17/)
+* [Gergo](https://qmk.fm/keyboards/gergo/)
+* [Georgi](https://qmk.fm/keyboards/georgi/)
+* [Atreus](https://github.com/qmk/qmk_firmware/blob/master/keyboards/atreus/)
 
-QMK (*Quantum Mechanical Keyboard*) 是一个社区维护的开源软件，包括 QMK 固件, QMK 工具箱, qmk.fm网站, 和这些文档。QMK 固件是一个基于[tmk\_keyboard](http://github.com/tmk/tmk_keyboard)的键盘固件，它在爱特梅尔AVR微控制器实现一些有用的功能,确切地说, 是在 [OLKB product line](http://olkb.com), 在 [ErgoDox EZ](http://www.ergodox-ez.com) 键盘, 和 [Clueboard product line](http://clueboard.co/). 上。它被移植到使用ChibiOS的ARM芯片上. 它可以在飞线键盘或定制PCB键盘中发挥功能.
+这些键盘使用 QMK 作为官方/默认固件 ---- 您的键盘也是吗？ [告诉我们](https://github.com/qmk/qmk.fm/issues/new) 
 
-## 如何得到它
+QMK 兼容很多其他的 [社群支持的键盘及个人工程](/keyboards/)。
 
-如果你打算贡献布局, 键盘, 或者其他QMK特性, 一下是最简单的方法：[从Github获得repo分支](https://github.com/qmk/qmk_firmware#fork-destination-box), 并克隆你的repo到本地进行编辑，推送，然后从你的分支打开 [Pull Request](https://github.com/qmk/qmk_firmware/pulls).
+你可以在[这里](/powered/)了解在您的键盘上使用 QMK。
 
-者从git克隆 (`git@github.com:qmk/qmk_firmware.git`), 或 https (`https://github.com/qmk/qmk_firmware.git`).
+## 维护者们
 
-## 如何编译
+QMK 由 OLKB 的 Jack Humbert以及QMK 社群，和 [Hasu](https://github.com/tmk) 开发并维护。 OLKB 系列是由 [Jack Humbert](https://github.com/jackhumbert) 维护，Ergodox EZ 由 [ZSA Technology Labs](https://github.com/zsa) 维护，Clueboard 由 [Zach White](https://github.com/skullydazed)维护。
 
-在你能编译之前, 你需要[部署环境](http://docs.qmk.fm/#/getting_started_build_tools) 用于 AVR or/and ARM 开发。完成后, 你可以使用 `make` 命令来编译一个键盘和布局使用以下命令:
+## 文档
 
-    make planck/rev4:default
+[官方文档](https://docs.qmk.fm) 使用 [Docsify](https://docsify.js.org/) 生成，保存在 [GitHub](https://github.com/qmk/qmk_firmware/tree/master/docs)上。 如您想编辑文档，您可以在 GitHub 上 fork QMK， 并打开一个 [pull request](https://github.com/qmk/qmk_firmware/pulls)，或者点击文档页面最下面的“Edit Document”.
 
-这将建立 `planck`的`rev4` 修订版本并使用 `default`布局。并非所有键盘都有修订版本 (也叫做子项目或文件夹)，在此情况下，修订版本可以省略，如下:
+## QMK 配置器
 
-    make preonic:default
-
-## 如何定制
-
-QMK 有许多 [特性](http://docs.qmk.fm/#/features)来探索，也有很多 [参考文档](http://docs.qmk.fm) 供您发掘。你可以通过修改 [布局](http://docs.qmk.fm/#/keymap)和[键码](http://docs.qmk.fm/#/keycodes)来利用许多特性。
+用我们的[网页配置器](https://config.qmk.fm)设计和构建您想要的固件。现时只支持 Chrome 与 Firefox。
