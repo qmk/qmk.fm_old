@@ -1661,6 +1661,7 @@ This page was automatically generated from keyboards currently in QMK as of 2022
 | <i class='fa fa-github' aria-hidden='true'></i> [planck/rev5](https://github.com/qmk/qmk_firmware/tree/master/keyboards/planck/rev5) | [planck](http://qmk.fm/keyboards/planck/) |
 | <i class='fa fa-github' aria-hidden='true'></i> [planck/rev6](https://github.com/qmk/qmk_firmware/tree/master/keyboards/planck/rev6) | [planck](http://qmk.fm/keyboards/planck/) |
 | <i class='fa fa-github' aria-hidden='true'></i> [planck/rev6_drop](https://github.com/qmk/qmk_firmware/tree/master/keyboards/planck/rev6_drop) | [planck](http://qmk.fm/keyboards/planck/) |
+| <i class='fa fa-github' aria-hidden='true'></i> [planck/rev7](https://github.com/qmk/qmk_firmware/tree/master/keyboards/planck/rev7) | [planck](http://qmk.fm/keyboards/planck/) |
 | <i class='fa fa-github' aria-hidden='true'></i> [planck/thk](https://github.com/qmk/qmk_firmware/tree/master/keyboards/planck/thk) | [planck](http://qmk.fm/keyboards/planck/) |
 | <i class='fa fa-github' aria-hidden='true'></i> [playkbtw/ca66](https://github.com/qmk/qmk_firmware/tree/master/keyboards/playkbtw/ca66) | | 
 | <i class='fa fa-github' aria-hidden='true'></i> [playkbtw/helen80](https://github.com/qmk/qmk_firmware/tree/master/keyboards/playkbtw/helen80) | | 
